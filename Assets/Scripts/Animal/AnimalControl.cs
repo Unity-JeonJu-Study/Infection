@@ -3,6 +3,12 @@ using UnityEngine;
 using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
+/*
+ *  Resouces/ Data / Animal
+ *  Scriptable Object의 애니멀 정보 값 
+ */
+
+
 [RequireComponent(typeof(NavMeshAgent))]
 public class AnimalControl : MonoBehaviour
 {

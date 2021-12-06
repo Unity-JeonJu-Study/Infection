@@ -60,7 +60,7 @@ public class AnimalDataEditor : OdinMenuEditorWindow
         public CreateNewAnimalData()
         {
             animalData = ScriptableObject.CreateInstance<AnimalData>();
-            animalData.animalName = "동물 이름을 입력하세요";
+            animalData.animalName = "Animal Name";
         }
 
         [Button("Add New Animal Data", ButtonHeight = 30)]

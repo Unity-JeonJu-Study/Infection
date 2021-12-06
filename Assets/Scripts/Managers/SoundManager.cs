@@ -7,7 +7,8 @@ using Random = UnityEngine.Random;
 [RequireComponent(typeof(AudioSource))]
 public class SoundManager : MonoBehaviour
 {
-    public static SoundManager Instance;
+    private static SoundManager instance;
+    public static SoundManager Instance => instance;
 
     public int maxMainBGMLayerCount = 8;
     public float bgmLerpDuration = 0.5f;
@@ -25,13 +26,12 @@ public class SoundManager : MonoBehaviour
     public Dictionary<string, AudioClip> audioClipsDic = new Dictionary<string, AudioClip>();
     [ReadOnly]
     public Dictionary<string, AudioClip> BGMClipsDic = new Dictionary<string, AudioClip>();
-
     [ReadOnly]
     public Dictionary<string, BGMPlayer> BGMPlayers = new Dictionary<string, BGMPlayer>();
 
     void Awake()
     {
-        Instance = this;
+        instance = this;
         audioClip = Resources.LoadAll<AudioClip>("Sounds/SFX");
         BGMClip =Resources.LoadAll<AudioClip>("Sounds/BGM");
 

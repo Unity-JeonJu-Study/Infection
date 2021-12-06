@@ -5,10 +5,10 @@ using UnityEngine;
 [ShowOdinSerializedPropertiesInInspector]
 public class AnimalData : ScriptableObject
 {
-
+    
    [BoxGroup("Animal Info"),LabelWidth(100)]
     public string animalName;
-   [BoxGroup("Animal Info"), LabelWidth(100), TextArea]
+   [BoxGroup("Animal Info"), LabelWidth(100), TextArea, GUIColor(0.53f, 1f, 0.8f)]
    public string description;
 
    [HorizontalGroup("Data", 75), PreviewField(80), HideLabel]

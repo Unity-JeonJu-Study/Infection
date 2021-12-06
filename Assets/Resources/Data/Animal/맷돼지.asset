@@ -10,14 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3023862a984b44a696be79b5f8b89b84, type: 3}
-  m_Name: Bear
+  m_Name: "\uB9F7\uB3FC\uC9C0"
   m_EditorClassIdentifier: 
-  animalName: Bear
-  description: 'can destroy obstacles
-
-    - speed 2
-
-    - jump Power - 2'
-  animalModel: {fileID: 1514481875857408, guid: fc3da0b1b2ade5f4b862ae549728831f, type: 3}
-  moveSpeed: 2
-  jumpPower: 2
+  animalName: "\uB9F7\uB3FC\uC9C0"
+  description: 
+  animalModel: {fileID: 4623556101495578335, guid: 1ef54cdace3ccbe438a80867c3b80014, type: 3}
+  moveSpeed: 1.15
+  jumpPower: 2.07

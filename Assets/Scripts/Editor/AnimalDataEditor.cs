@@ -54,14 +54,14 @@ public class AnimalDataEditor : OdinMenuEditorWindow
 
     public class CreateNewAnimalData
     {
+        [InlineEditor(ObjectFieldMode =  InlineEditorObjectFieldModes.Hidden)]
+        public AnimalData animalData;
+        
         public CreateNewAnimalData()
         {
             animalData = ScriptableObject.CreateInstance<AnimalData>();
             animalData.animalName = "동물 이름을 입력하세요";
         }
-        
-        [InlineEditor(ObjectFieldMode =  InlineEditorObjectFieldModes.Hidden)]
-        public AnimalData animalData;
 
         [Button("Add New Animal Data", ButtonHeight = 30)]
         private void CreateNewData()

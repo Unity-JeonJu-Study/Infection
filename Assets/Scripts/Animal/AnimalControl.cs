@@ -6,8 +6,8 @@ using Random = UnityEngine.Random;
 [RequireComponent(typeof(NavMeshAgent))]
 public class AnimalControl : MonoBehaviour
 {
-    private NavMeshAgent navAgnet;
-    private float wanderDistance = 3;
+    [ReadOnly] private NavMeshAgent navAgnet;
+    [ReadOnly] private float wanderDistance = 3;
 
     [OnValueChanged("LoadAnimal")]
     [InlineEditor]
@@ -51,11 +51,11 @@ public class AnimalControl : MonoBehaviour
     }
     
     /// <summary>
-    /// agnet -> 충돌을 감지하면 새로운 경로로 설정한다. (가던 방향에 부딪히면 다른 방향으로 간다.)
+    /// agent -> 충돌을 감지하면 새로운 경로로 설정한다. (가던 방향에 부딪히면 다른 방향으로 간다.)
     /// </summary>
     private void GetNewDestination()
     {
-        Vector3 nextDestination = transform.position;
+        var nextDestination = transform.position;
         nextDestination += wanderDistance * new Vector3(Random.Range(-1f, 1f),Random.Range(-1f, 1f),Random.Range(-1f, 1f));
 
         NavMeshHit hit;

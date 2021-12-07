@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Sirenix.Serialization;
 using UnityEngine.AI;
 using Quaternion = UnityEngine.Quaternion;
 using Random = UnityEngine.Random;
@@ -160,7 +161,7 @@ namespace PolyPerfect
         bool forceUpdate = false;
         float idleStateDuration;
         Vector3 startPosition;
-        Vector3 wanderTarget;
+        [OdinSerialize]Vector3 wanderTarget;
         IdleState currentIdleState;
         float idleUpdateTime;
         

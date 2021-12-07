@@ -44,7 +44,6 @@ public class SoundManager : MonoBehaviour
         BGMClipsDic = new Dictionary<string, AudioClip>();
         foreach (AudioClip a in BGMClip)
         {
-            //Debug.Log("BGM AddKey: " + a.name);
             BGMClipsDic.Add(a.name, a);
         }
         

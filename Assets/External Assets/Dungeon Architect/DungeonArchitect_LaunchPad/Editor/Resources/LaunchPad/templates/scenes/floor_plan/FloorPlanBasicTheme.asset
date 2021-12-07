@@ -195,7 +195,7 @@ MonoBehaviour:
   indexCounter:
     index: 5
   topZIndex:
-    index: 33
+    index: 36
   nodes:
   - {fileID: 11431246}
   - {fileID: 11457424}
@@ -326,7 +326,7 @@ MonoBehaviour:
   canBeSelected: 1
   canBeMoved: 1
   selected: 0
-  zIndex: 20
+  zIndex: 35
   inputPins:
   - {fileID: 11461504}
   outputPins:
@@ -785,8 +785,8 @@ MonoBehaviour:
   canBeDeleted: 1
   canBeSelected: 1
   canBeMoved: 1
-  selected: 0
-  zIndex: 28
+  selected: 1
+  zIndex: 36
   inputPins:
   - {fileID: 11410616}
   outputPins:
@@ -918,7 +918,7 @@ MonoBehaviour:
   canBeDeleted: 1
   canBeSelected: 1
   canBeMoved: 1
-  selected: 1
+  selected: 0
   zIndex: 33
   inputPins: []
   outputPins:

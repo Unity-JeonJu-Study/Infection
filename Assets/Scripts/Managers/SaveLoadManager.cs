@@ -2,12 +2,14 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
+// this script is temporary, after the core implementation is done, this script would be altered based on it
+
 public class SaveLoadManager : MonoBehaviour
 {
     public static SaveLoadManager instance;
 
     public List<SaveData> data;
-    public int maxSaveSlot;
+    private int maxSaveSlot;
 
     private string defaultSavePath;
 

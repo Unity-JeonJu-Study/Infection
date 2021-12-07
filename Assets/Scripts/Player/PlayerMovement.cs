@@ -8,24 +8,30 @@ public class PlayerMovement : MonoBehaviour
     [Header("Player Movement Information")]
     public float movementSpeed;
     public float rotationSpeed;
+    public float jumpPower;
     public bool isGround;
+    public float rayDistance;
+    public bool canJump;
 
     private Animator _animator;
     private PlayerInput playerInput;
     private Rigidbody _rigidbody;
     private static readonly int WalkHash = Animator.StringToHash("Walk");
 
+    
     private void Awake()
     {
         _animator = GetComponent<Animator>();
         playerInput = GetComponent<PlayerInput>();
         _rigidbody = GetComponent<Rigidbody>();
+        canJump = true;
     }
 
     private void FixedUpdate()
     {
         Movement();
         CheckGround();
+        Jump();
     }
 
     private void Movement()
@@ -37,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
             AnimationMovement(false);
             return;
         }
-        Vector3 dir = new Vector3(side, 0, forward);
+        Vector3 dir = new Vector3(side, _rigidbody.velocity.y, forward);
         AnimationMovement(true);
         _rigidbody.velocity = dir;
         transform.rotation = Quaternion.LookRotation(new Vector3(playerInput.InputSide, 0, playerInput.InputForward));
@@ -50,43 +56,22 @@ public class PlayerMovement : MonoBehaviour
 
     private void CheckGround()
     {
-        
-
-    }
-
-    private void OnDrawGizmos()
-    {
-        RaycastHit hit;
-        // Physics.Raycast (레이저를 발사할 위치, 발사 방향, 충돌 결과, 최대 거리)
-        bool isHit = Physics.Raycast (transform.position, -transform.up, out hit, 0);
-
-        Gizmos.color = Color.red;
-        if (isHit) {
-            Gizmos.DrawRay (transform.position, -transform.up * hit.distance);
+        if (Physics.Raycast(transform.position + new Vector3(0f, 0.2f, 0f), Vector3.down, rayDistance))
+        {
             isGround = true;
-        } else {
-            Gizmos.DrawRay (transform.position, -transform.up * 0);
+        }
+        else
+        {
             isGround = false;
         }
-        
-        // Gizmos.color = Color.black;
-        // if (Physics.BoxCast(transform.position, transform.lossyScale / 2.0f,
-        //     -transform.up, out RaycastHit hit, transform.rotation, transform.lossyScale.y / 2.0f))
-        // {
-        //     Gizmos.DrawRay(transform.position, -transform.up * hit.distance);
-        //     Gizmos.DrawWireCube(transform.position + -transform.up * hit.distance, transform.lossyScale);
-        //     isGround = true;
-        // }
-        // else
-        // {
-        //     isGround = false;
-        // }
-        //Gizmos.DrawWireCube(transform.position, transform.lossyScale / 2.0f);
-
     }
 
     private void Jump()
     {
-        
+        if (canJump && isGround && playerInput.IsJumpKeyPressed())
+        {
+            _rigidbody.AddForce(0, jumpPower, 0, ForceMode.Impulse);
+            _animator.SetTrigger("Jump");
+        }    
     }
 }

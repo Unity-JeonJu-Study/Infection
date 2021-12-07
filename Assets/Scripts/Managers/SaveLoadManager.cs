@@ -9,7 +9,7 @@ public class SaveLoadManager : MonoBehaviour
     public static SaveLoadManager instance;
 
     public List<SaveData> data;
-    private int maxSaveSlot;
+    public int maxSaveSlot;
 
     private string defaultSavePath;
 

@@ -24,7 +24,6 @@ public class SavePopup : MonoBehaviour
 
         slotIndex = 0;
         EnableCurrentSaveSlot();
-        LoadFiles();
     }
 
     private void Update() {

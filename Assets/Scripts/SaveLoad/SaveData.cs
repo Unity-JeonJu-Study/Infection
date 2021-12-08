@@ -18,7 +18,7 @@ public struct SaveData
         isLoaded = true;
 
         stageName = "temp stage";
-        saveDateTime = DateTime.MinValue;
+        saveDateTime = DateTime.Now;
         respawnPoint = Vector3.one;
         //savedAvailableWeapons = null;
         savedHealth = -1;

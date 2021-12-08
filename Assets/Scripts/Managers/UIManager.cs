@@ -12,9 +12,20 @@ public class UIManager : MonoBehaviour
 
     private void Awake() {
         instance = this;
+
+        popupSave = FindObjectOfType<SavePopup>();
+        popupSave.gameObject.SetActive(false);
     }
 
     private void Update() {
-        
+        if(Input.GetKeyDown(KeyCode.K))
+            EnableSavePopup();
+    }
+
+    public void EnableSavePopup() {
+        // GameManager.instance.DisablePlayerInput();
+        // GameManager.instance.SetTimeScale(0.01f);
+        popupSave.gameObject.SetActive(true);
+        popupSave.LoadFiles();
     }
 }

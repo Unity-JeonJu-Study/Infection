@@ -10,7 +10,7 @@ public enum GameState
     PlayingUI
 }
 public enum GameStage
-{
+{ 
     Laboratory,
     Zoo,
     Stage1,
@@ -22,7 +22,7 @@ public class GameManager : SerializedMonoBehaviour
 {
     public static GameManager Instance;
     
-    public List<GameObject> stagePrefabs = new List<GameObject>();
+    public Dictionary<GameStage, GameObject> stagePrefabs = new Dictionary<GameStage, GameObject>();
     [Tooltip("Game Stage")]
     public GameStage currentStage;
     [Tooltip("Game State")]
@@ -46,7 +46,7 @@ public class GameManager : SerializedMonoBehaviour
         
         foreach (var stage in stageResource)
         {
-            stagePrefabs.Add(Instantiate(stage.Value, roomParent));
+            stagePrefabs.Add(stage.Key,Instantiate(stage.Value, roomParent));
         }
         MoveStage();
     }
@@ -61,9 +61,9 @@ public class GameManager : SerializedMonoBehaviour
     {
         foreach (var stage in stagePrefabs)
         {
-            stage.SetActive(false);
+            stage.Value.SetActive(false);
         }
-        stagePrefabs[(int)currentStage].SetActive(true);
+        stagePrefabs[currentStage].SetActive(true);
     }
     
     #region Click Event

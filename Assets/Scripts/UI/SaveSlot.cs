@@ -6,10 +6,10 @@ using TMPro;
 
 public class SaveSlot : MonoBehaviour
 {
-    private Image imageBackgroundSelected;
-    private TextMeshProUGUI textSaveName;
-    private Color colorSelected;
-    private Color colorNotSelected;
+    [ReadOnly, SerializeField] private Image imageBackgroundSelected;
+    [ReadOnly, SerializeField] private TextMeshProUGUI textSaveName;
+    [ReadOnly, SerializeField] private Color colorSelected;
+    [ReadOnly, SerializeField] private Color colorNotSelected;
 
     private void Awake() {
         imageBackgroundSelected =  GetComponentsInChildren<Image>()[1];

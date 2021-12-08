@@ -6,10 +6,10 @@ using UnityEngine;
 
 public class SaveLoadManager : MonoBehaviour
 {
-    public static SaveLoadManager instance;
+    [ReadOnly] public static SaveLoadManager instance;
 
     public List<SaveData> data;
-    public int maxSaveSlot;
+    [ReadOnly] public int maxSaveSlot;
 
     private string defaultSavePath;
 

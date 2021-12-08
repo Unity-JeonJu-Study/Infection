@@ -6,10 +6,10 @@ using UnityEngine;
 
 public class LoadPopup : MonoBehaviour
 {
-    private SaveSlots saveSlots;
+    [ReadOnly, SerializeField] private SaveSlots saveSlots;
 
-    private string tempSlotName;
-    private int slotIndex;
+    [ReadOnly, SerializeField] private string tempSlotName;
+    [ReadOnly, SerializeField] private int slotIndex;
 
     private void Awake() {
         saveSlots = GetComponentInChildren<SaveSlots>();

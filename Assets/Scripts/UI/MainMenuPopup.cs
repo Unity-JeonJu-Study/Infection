@@ -5,7 +5,7 @@ using UnityEditor;
 #endif
 
 // this script is temporary, after the core implementation is done, this script would be altered based on it
-// things to change: start method
+// things to change: scene name
 
 public class MainMenuPopup : MonoBehaviour
 {

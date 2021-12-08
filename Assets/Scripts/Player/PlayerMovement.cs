@@ -3,6 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PlayerType
+{
+    Slime,
+    Chick,
+}
+
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Player Movement Information")]
@@ -12,66 +18,54 @@ public class PlayerMovement : MonoBehaviour
     public bool isGround;
     public float rayDistance;
     public bool canJump;
+    public Movement movement;
+    [HideInInspector] public AnimalData animalData;
+    public Animator _animator;
+    public PlayerInput playerInput;
+    public Rigidbody _rigidbody;
+    private GameObject currentAnimal;
+    private PlayerInfect playerInfect;
 
-    private Animator _animator;
-    private PlayerInput playerInput;
-    private Rigidbody _rigidbody;
-    private static readonly int WalkHash = Animator.StringToHash("Walk");
-
-    
-    private void Awake()
+    private void Start()
     {
-        _animator = GetComponent<Animator>();
-        playerInput = GetComponent<PlayerInput>();
-        _rigidbody = GetComponent<Rigidbody>();
+        currentAnimal = playerInfect.currentAnimal;
+        _animator = currentAnimal.GetComponent<Animator>();
+        playerInput = currentAnimal.GetComponent<PlayerInput>();
+        _rigidbody = currentAnimal.GetComponent<Rigidbody>();
         canJump = true;
+        InitMoveInformation("Slime");
+        movement = new SlimeMovement(this);
     }
 
     private void FixedUpdate()
     {
-        Movement();
-        CheckGround();
-        Jump();
+        movement.Excute();
     }
 
-    private void Movement()
+    public void ChangeStatus(string animalName)
     {
-        float forward = playerInput.InputForward * movementSpeed;
-        float side = playerInput.InputSide * movementSpeed;
-        if (forward == 0 && side == 0)
+        switch (animalName)
         {
-            AnimationMovement(false);
-            return;
-        }
-        Vector3 dir = new Vector3(side, _rigidbody.velocity.y, forward);
-        AnimationMovement(true);
-        _rigidbody.velocity = dir;
-        transform.rotation = Quaternion.LookRotation(new Vector3(playerInput.InputSide, 0, playerInput.InputForward));
-    }
-
-    private void AnimationMovement(bool walk)
-    {
-        _animator.SetBool(WalkHash, walk);
-    }
-
-    private void CheckGround()
-    {
-        if (Physics.Raycast(transform.position + new Vector3(0f, 0.2f, 0f), Vector3.down, rayDistance))
-        {
-            isGround = true;
-        }
-        else
-        {
-            isGround = false;
+            case "Slime":
+                InitMoveInformation(animalName);
+                movement = new SlimeMovement(this);
+                break;
+            case "Chick":
+                InitMoveInformation(animalName);
+                movement = new ChickMovement(this);
+                break;
         }
     }
 
-    private void Jump()
+    public void InitMoveInformation(string animalName)
     {
-        if (canJump && isGround && playerInput.IsJumpKeyPressed())
-        {
-            _rigidbody.AddForce(0, jumpPower, 0, ForceMode.Impulse);
-            _animator.SetTrigger("Jump");
-        }    
+        animalData = Resources.Load<AnimalData>("Data/Animal/"+animalName);
+        movementSpeed = animalData.movementSpeed;
+        rotationSpeed = animalData.rotationSpeed;
+        jumpPower = animalData.jumpPower;
+        rayDistance = animalData.rayDistance;
+        canJump = true;
     }
+    
+    
 }

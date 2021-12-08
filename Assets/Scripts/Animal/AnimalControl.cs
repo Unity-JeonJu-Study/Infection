@@ -41,11 +41,11 @@ public class AnimalControl : MonoBehaviour
         var visuals = Instantiate(data.animalModel, transform, true);
         visuals.transform.localPosition = Vector3.zero;
         visuals.transform.rotation = Quaternion.identity;
-
+        
         if (navAgnet == null)
             navAgnet = GetComponent<NavMeshAgent>();
-
-        navAgnet.speed = data.moveSpeed;
+        
+        navAgnet.speed = data.movementSpeed;
     }
 
     private void Update()

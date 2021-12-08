@@ -10,7 +10,8 @@ public class UIManager : MonoBehaviour
     [ReadOnly] public static UIManager instance;
 
     [ReadOnly, SerializeField] private SavePopup popupSave;
-    [ReadOnly, SerializeField] private LoadPopup popupLoad;
+    [ReadOnly, SerializeField] private PausePopup popupPause;
+    [ReadOnly, SerializeField] private GameOverPopup popupGameOver;
 
     private void Awake() {
         instance = this;
@@ -18,13 +19,19 @@ public class UIManager : MonoBehaviour
         popupSave = FindObjectOfType<SavePopup>();
         popupSave.gameObject.SetActive(false);
 
-        popupLoad = FindObjectOfType<LoadPopup>();
-        popupLoad.gameObject.SetActive(false);
+        popupPause = FindObjectOfType<PausePopup>();
+        popupPause.gameObject.SetActive(false);
+
+        popupGameOver = FindObjectOfType<GameOverPopup>();
+        popupGameOver.gameObject.SetActive(false);
     }
 
     private void Update() {
-        // if(Input.GetKeyDown(KeyCode.K))
-        //     EnableMainMenuPopup();
+        if(Input.GetKeyDown(KeyCode.Escape))
+            EnablePausePopup();
+
+        if(Input.GetKeyDown(KeyCode.K))
+            EnableGameOverPopup();
     }
 
     public void EnableSavePopup() {
@@ -34,8 +41,11 @@ public class UIManager : MonoBehaviour
         popupSave.LoadFiles();
     }
 
-    public void EnableLoadPopup() {
-        popupLoad.gameObject.SetActive(true);
-        popupLoad.LoadFiles();
+    public void EnablePausePopup() {
+        popupPause.gameObject.SetActive(true);
+    }
+
+    public void EnableGameOverPopup() {
+        popupGameOver.gameObject.SetActive(true);
     }
 }

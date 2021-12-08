@@ -7,7 +7,8 @@ using UnityEditor;
 public class MainMenuPopup : MonoBehaviour
 {
     public void OnClickStart() {
-        gameObject.SetActive(false);
+        // scene manager part
+        //gameObject.SetActive(false);
     }
 
     public void OnClickLoad() {

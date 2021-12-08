@@ -72,6 +72,7 @@ public class LoadPopup : MonoBehaviour
         SaveData currentData = SaveLoadManager.instance.data[slotIndex];
         if(currentData.isLoaded) {
             Debug.Log("worked " + currentData.saveDateTime);
+        // scene manager part
             // MySceneManager.instance.loadedData = currentData;
             // MySceneManager.instance.isInitial = false;
             // MySceneManager.instance.LoadScene(currentData.stageName);

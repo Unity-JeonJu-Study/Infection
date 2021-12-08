@@ -9,14 +9,11 @@ public class UIManager : MonoBehaviour
 {
     [ReadOnly] public static UIManager instance;
 
-    [ReadOnly, SerializeField] private MainMenuPopup popupMainMenu;
     [ReadOnly, SerializeField] private SavePopup popupSave;
     [ReadOnly, SerializeField] private LoadPopup popupLoad;
 
     private void Awake() {
         instance = this;
-
-        popupMainMenu = FindObjectOfType<MainMenuPopup>();
 
         popupSave = FindObjectOfType<SavePopup>();
         popupSave.gameObject.SetActive(false);
@@ -26,12 +23,8 @@ public class UIManager : MonoBehaviour
     }
 
     private void Update() {
-        if(Input.GetKeyDown(KeyCode.K))
-            EnableMainMenuPopup();
-    }
-
-    public void EnableMainMenuPopup() {
-        popupMainMenu.gameObject.SetActive(true);
+        // if(Input.GetKeyDown(KeyCode.K))
+        //     EnableMainMenuPopup();
     }
 
     public void EnableSavePopup() {

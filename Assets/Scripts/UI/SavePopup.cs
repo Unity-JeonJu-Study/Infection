@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 
 // this script is temporary, after the core implementation is done, this script would be altered based on it
+// things to change: Game manager part
 
 
 public class SavePopup : MonoBehaviour

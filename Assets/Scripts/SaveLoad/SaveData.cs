@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // this script is temporary, after the core implementation is done, this script would be altered based on it
+// things to change: everything -> proper data related to this project should be here
 
 [Serializable]
 public struct SaveData

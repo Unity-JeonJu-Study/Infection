@@ -3,6 +3,8 @@ using UnityEngine.UI;
 using TMPro;
 
 // this script is temporary, after the core implementation is done, this script would be altered based on it
+// things to change: colors for selected, not selected one
+
 
 public class SaveSlot : MonoBehaviour
 {

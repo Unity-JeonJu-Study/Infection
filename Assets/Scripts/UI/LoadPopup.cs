@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 // this script is temporary, after the core implementation is done, this script would be altered based on it
-// things to change: scene manager part
+// things to change: LoadCurrentSlot method
 
 public class LoadPopup : MonoBehaviour
 {
@@ -17,7 +17,7 @@ public class LoadPopup : MonoBehaviour
 
     private void Start() {
         LoadFiles();
-        
+
         for(slotIndex = 0; slotIndex < SaveLoadManager.instance.maxSaveSlot; slotIndex++) {
             DisableCurrentSaveSlot();
         }
@@ -76,6 +76,7 @@ public class LoadPopup : MonoBehaviour
         if(currentData.isLoaded) {
             Debug.Log("worked " + currentData.saveDateTime);
 
+            MySceneManager.instance.isInitial = false;
             MySceneManager.instance.loadedData = currentData;
             MySceneManager.instance.LoadScene("Choi Kang In");
 

@@ -9,10 +9,12 @@ public class MySceneManager : MonoBehaviour
     [ReadOnly] public SaveData loadedData;
 
     [ReadOnly] public string curSceneName;
+    [ReadOnly] public bool isInitial;
 
     private void Awake() {
         instance = this;
         curSceneName = "Temp Main Menu";
+        isInitial = true;
 
         DontDestroyOnLoad(gameObject);
     }

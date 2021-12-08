@@ -18,6 +18,11 @@ public enum GameStage
     Stage3
 }
 
+public enum BGMList
+{
+    
+}
+
 public class GameManager : SerializedMonoBehaviour
 {
     public static GameManager Instance;
@@ -51,7 +56,7 @@ public class GameManager : SerializedMonoBehaviour
         MoveStage();
     }
 
-    [Button("Execute")]
+    [Button("방 변경 트리거")]
     public void SetStage(GameStage stage)
     {
         currentStage = stage;

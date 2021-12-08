@@ -2,8 +2,7 @@ using System;
 using UnityEngine;
 
 // this script is temporary, after the core implementation is done, this script would be altered based on it
-// things to change: Game manager part
-
+// things to change: scene manager part
 
 public class LoadPopup : MonoBehaviour
 {
@@ -72,6 +71,7 @@ public class LoadPopup : MonoBehaviour
     private void LoadCurrentSlot() {
         SaveData currentData = SaveLoadManager.instance.data[slotIndex];
         if(currentData.isLoaded) {
+            Debug.Log("worked " + currentData.saveDateTime);
             // MySceneManager.instance.loadedData = currentData;
             // MySceneManager.instance.isInitial = false;
             // MySceneManager.instance.LoadScene(currentData.stageName);

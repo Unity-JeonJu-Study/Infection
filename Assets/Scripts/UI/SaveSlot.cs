@@ -10,20 +10,20 @@ public class SaveSlot : MonoBehaviour
 {
     [ReadOnly, SerializeField] private Image imageBackgroundSelected;
     [ReadOnly, SerializeField] private TextMeshProUGUI textSaveName;
-    [ReadOnly, SerializeField] private Color colorSelected;
-    [ReadOnly, SerializeField] private Color colorNotSelected;
+    [ReadOnly, SerializeField] private Color textColorSelected;
+    [ReadOnly, SerializeField] private Color textColorNotSelected;
 
     private void Awake() {
         imageBackgroundSelected =  GetComponentsInChildren<Image>()[1];
         textSaveName =  GetComponentInChildren<TextMeshProUGUI>();
 
-        colorSelected = new Color(60f, 30f, 180f);
-        colorNotSelected = new Color(227f, 227f, 227f);
+        textColorSelected = new Color(60f, 30f, 180f);
+        textColorNotSelected = new Color(227f, 227f, 227f);
     }
 
     public void EnableSelected() {
         imageBackgroundSelected.gameObject.SetActive(true);
-        textSaveName.color = colorSelected;
+        textSaveName.color = textColorSelected;
     }
 
     public bool IsSelected() {
@@ -36,6 +36,6 @@ public class SaveSlot : MonoBehaviour
 
     public void DisableSelected() {
         imageBackgroundSelected.gameObject.SetActive(false);
-        textSaveName.color = colorNotSelected;
+        textSaveName.color = textColorNotSelected;
     }
 }

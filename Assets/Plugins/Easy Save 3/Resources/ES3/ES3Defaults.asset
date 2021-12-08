@@ -47,6 +47,7 @@ MonoBehaviour:
     - Sirenix.OdinInspector.CompatibilityLayer
     - DungeonArchitect.Modules.SxEngine
     - DungeonArchitect.Modules.VisibilityGraph
+    - DaiMangou.BridgedData
     - DungeonArchitect.Editor
     - DungeonArchitect.LaunchPad
     - Sirenix.OdinInspector.CompatibilityLayer.Editor

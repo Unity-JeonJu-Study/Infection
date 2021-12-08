@@ -16,13 +16,16 @@ public class LoadPopup : MonoBehaviour
     }
 
     private void Start() {
+        LoadFiles();
+        
         for(slotIndex = 0; slotIndex < SaveLoadManager.instance.maxSaveSlot; slotIndex++) {
             DisableCurrentSaveSlot();
         }
         slotIndex = 0;
 
         EnableCurrentSaveSlot();
-        LoadFiles();
+
+        gameObject.SetActive(false);
     }
 
     private void Update() {
@@ -72,7 +75,11 @@ public class LoadPopup : MonoBehaviour
         SaveData currentData = SaveLoadManager.instance.data[slotIndex];
         if(currentData.isLoaded) {
             Debug.Log("worked " + currentData.saveDateTime);
-        // scene manager part
+
+            MySceneManager.instance.loadedData = currentData;
+            MySceneManager.instance.LoadScene("Choi Kang In");
+
+            // scene manager part
             // MySceneManager.instance.loadedData = currentData;
             // MySceneManager.instance.isInitial = false;
             // MySceneManager.instance.LoadScene(currentData.stageName);

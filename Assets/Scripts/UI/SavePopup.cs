@@ -2,14 +2,15 @@ using System;
 using UnityEngine;
 
 // this script is temporary, after the core implementation is done, this script would be altered based on it
+// things to change: Game manager part
 
 
 public class SavePopup : MonoBehaviour
 {
-    private SaveSlots saveSlots;
+    [ReadOnly, SerializeField] private SaveSlots saveSlots;
 
-    private string tempSlotName;
-    private int slotIndex;
+    [ReadOnly, SerializeField] private string tempSlotName;
+    [ReadOnly, SerializeField] private int slotIndex;
 
     private void Awake() {
         saveSlots = GetComponentInChildren<SaveSlots>();
@@ -24,7 +25,6 @@ public class SavePopup : MonoBehaviour
 
         slotIndex = 0;
         EnableCurrentSaveSlot();
-        LoadFiles();
     }
 
     private void Update() {
@@ -75,6 +75,9 @@ public class SavePopup : MonoBehaviour
         }
     }
     private void SaveToCurrentSlot() {
+        Debug.Log("Save worked");
+        SaveLoadManager.instance.SaveData(slotIndex, new SaveData(-1));
+
         // SavePoint targetSavePoint = GameManager.instance.player.playerInteraction.targetSavePoint;
         // SaveLoadManager.instance.SaveData(slotIndex, new SaveData(MySceneManager.instance.curSceneName, DateTime.Now, targetSavePoint.respawnPoint, GameManager.instance.player.playerInfo.availableWeapons, GameManager.instance.player.playerInfo.health));
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // this script is temporary, after the core implementation is done, this script would be altered based on it
+// things to change: everything -> proper data related to this project should be here
 
 [Serializable]
 public struct SaveData
@@ -13,6 +14,16 @@ public struct SaveData
     public Vector3 respawnPoint;
     //public List<AvailableWeapon> savedAvailableWeapons;
     public int savedHealth;
+
+    public SaveData(int temp) {
+        isLoaded = true;
+
+        stageName = "temp stage";
+        saveDateTime = DateTime.Now;
+        respawnPoint = Vector3.one;
+        //savedAvailableWeapons = null;
+        savedHealth = -1;
+    }
 
     public SaveData(string inputStageName, DateTime inputSaveDateTime, Vector3 inputRespawnPoint, /*List<AvailableWeapon> inputSavedAvailableWeapon,*/ int inputSavedHealth) {
         isLoaded = true;

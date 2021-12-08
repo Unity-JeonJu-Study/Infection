@@ -2,17 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// this script is temporary, after the core implementation is done, this script would be altered based on it
+// things to change: other popup object would be added
+
 public class UIManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    [ReadOnly] public static UIManager instance;
+
+    [ReadOnly, SerializeField] private SavePopup popupSave;
+    [ReadOnly, SerializeField] private LoadPopup popupLoad;
+
+    private void Awake() {
+        instance = this;
+
+        popupSave = FindObjectOfType<SavePopup>();
+        popupSave.gameObject.SetActive(false);
+
+        popupLoad = FindObjectOfType<LoadPopup>();
+        popupLoad.gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void Update() {
+        if(Input.GetKeyDown(KeyCode.K))
+            EnableLoadPopup();
+    }
+
+    public void EnableSavePopup() {
+        // GameManager.instance.DisablePlayerInput();
+        // GameManager.instance.SetTimeScale(0.01f);
+        popupSave.gameObject.SetActive(true);
+        popupSave.LoadFiles();
+    }
+
+    public void EnableLoadPopup() {
+        popupLoad.gameObject.SetActive(true);
+        popupLoad.LoadFiles();
     }
 }

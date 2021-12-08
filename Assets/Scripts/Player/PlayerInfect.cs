@@ -9,14 +9,32 @@ public class PlayerInfect : MonoBehaviour
 {
     [Header("Infection Information")] 
     public float rayDistance;
+    public Dictionary<string, GameObject> animals;
+    public GameObject currentAnimal;
 
+    private PlayerMovement playerMovement;
     private PlayerInput playerInput;
     private Vector3 rayOriginPosition;
     private SkinnedMeshRenderer meshRenderer;
 
     private void Awake()
     {
-        meshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
+        playerInput = GetComponent<PlayerInput>();
+        playerMovement = GetComponent<PlayerMovement>();
+        animals = new Dictionary<string, GameObject>();
+        InitAnimals();
+        currentAnimal = animals["Slime"];
+        meshRenderer = currentAnimal.GetComponentInChildren<SkinnedMeshRenderer>();
+    }
+
+    private void InitAnimals()
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            GameObject animal = transform.GetChild(i).gameObject;
+            Debug.Log(animal.name);
+            animals.Add(animal.name, animal);
+        }
     }
 
     private void OnDrawGizmos()
@@ -45,18 +63,12 @@ public class PlayerInfect : MonoBehaviour
             return;
         if (Physics.Raycast(rayOriginPosition, Vector3.forward, out RaycastHit hit, rayDistance, LayerMask.GetMask("Animals")))
         {
-            hit.collider.GetComponent<NavMeshAgent>().enabled = false;
-            hit.collider.GetComponent<CharacterController>().enabled = false;
-            hit.collider.GetComponent<Animal_WanderScript>().enabled = false;
-
-            switch (hit.collider.name)
-            {
-                case "Chick":
-                    hit.collider.gameObject.AddComponent<ChickMovement>();
-                    break;
-                default:
-                    break;
-            }
+            currentAnimal.SetActive(false);
+            currentAnimal =  animals[hit.collider.name.Split(' ')[0]];
+            currentAnimal.SetActive(true);
+            currentAnimal.transform.position = hit.collider.transform.position;
+            playerMovement.ChangeStatus(currentAnimal.name);
+            meshRenderer = currentAnimal.GetComponentInChildren<SkinnedMeshRenderer>();
         }
     }
 }

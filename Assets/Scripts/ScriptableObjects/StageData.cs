@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -6,7 +7,7 @@ using UnityEngine;
 public class StageData : ScriptableObject
 {
     [BoxGroup("Stage Info"), LabelWidth(100)]
-    public int stageNum;
-    [BoxGroup("Stage Info"), LabelWidth(100)]
-    public GameObject stagePrefab;
+    public Dictionary<int, GameObject> StageInfo =
+        new Dictionary<int, GameObject>();
+    
 }

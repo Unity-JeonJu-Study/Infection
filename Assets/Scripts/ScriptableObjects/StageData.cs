@@ -2,12 +2,13 @@ using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "StageData", menuName = "Data/Stage"), InlineEditor]
-[ShowOdinSerializedPropertiesInInspector]
-public class StageData : ScriptableObject
+[CreateAssetMenu(fileName = "StageData", menuName = "Data/Stage")]
+public class StageData : SerializedScriptableObject
 {
-    [BoxGroup("Stage Info"), LabelWidth(100)]
-    public Dictionary<int, GameObject> StageInfo =
-        new Dictionary<int, GameObject>();
+    public Dictionary<GameStage, GameObject> data;
+    public StageData()
+    {
+        data = new Dictionary<GameStage, GameObject>();
+    }
     
 }

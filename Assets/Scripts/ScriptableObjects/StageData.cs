@@ -10,5 +10,4 @@ public class StageData : SerializedScriptableObject
     {
         data = new Dictionary<GameStage, GameObject>();
     }
-    
 }

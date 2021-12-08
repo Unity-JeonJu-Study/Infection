@@ -2,17 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// this script is temporary, after the core implementation is done, this script would be altered based on it
+
 public class UIManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    [ReadOnly] public static UIManager instance;
+
+    [ReadOnly, SerializeField] private SavePopup popupSave;
+
+    private void Awake() {
+        instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    private void Update() {
         
     }
 }

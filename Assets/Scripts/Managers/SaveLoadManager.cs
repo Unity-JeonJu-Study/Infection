@@ -8,10 +8,10 @@ public class SaveLoadManager : MonoBehaviour
 {
     [ReadOnly] public static SaveLoadManager instance;
 
-    public List<SaveData> data;
+    [ReadOnly] public List<SaveData> data;
     [ReadOnly] public int maxSaveSlot;
 
-    private string defaultSavePath;
+    [ReadOnly, SerializeField] private string defaultSavePath;
 
     private void Awake() {
         instance = this;

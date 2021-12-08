@@ -14,6 +14,16 @@ public struct SaveData
     //public List<AvailableWeapon> savedAvailableWeapons;
     public int savedHealth;
 
+    public SaveData(int temp) {
+        isLoaded = true;
+
+        stageName = "temp stage";
+        saveDateTime = DateTime.MinValue;
+        respawnPoint = Vector3.one;
+        //savedAvailableWeapons = null;
+        savedHealth = -1;
+    }
+
     public SaveData(string inputStageName, DateTime inputSaveDateTime, Vector3 inputRespawnPoint, /*List<AvailableWeapon> inputSavedAvailableWeapon,*/ int inputSavedHealth) {
         isLoaded = true;
         

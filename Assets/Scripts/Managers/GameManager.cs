@@ -36,6 +36,8 @@ public class GameManager : SerializedMonoBehaviour
     // 맵 배치 상위 오브젝트
     public Transform roomParent;
 
+    public Player player;
+
     private void Awake() {
         Instance = this;
         
@@ -43,6 +45,8 @@ public class GameManager : SerializedMonoBehaviour
         currentState = GameState.StartUI;
 
         InitRoom();
+
+        player = FindObjectOfType<Player>();
     }
 
     private void InitRoom()

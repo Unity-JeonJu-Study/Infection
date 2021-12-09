@@ -25,7 +25,7 @@ public class PoolManager : MonoBehaviour
         }
     }
 
-    public void InitPool(GameObject poolPrefab, int count)
+    public void InitPool(GameObject poolPrefab, int count, Transform parent = null)
     {
         if (poolPrefab == null)
             return;
@@ -38,7 +38,7 @@ public class PoolManager : MonoBehaviour
 
         for (int i = 0; i < count; i++)
         {
-            var go = Instantiate(poolPrefab, transform, true);
+            var go = Instantiate(poolPrefab, parent, true);
             poolQueues[poolPrefab.name].Enqueue(go);
             go.SetActive(false);
         }

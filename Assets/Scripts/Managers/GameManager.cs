@@ -54,7 +54,7 @@ public class GameManager : SerializedMonoBehaviour
     {
         foreach (var stage in stageData.data)
         {
-            PoolManager.Instance.InitPool(stage.Value.gamePrefab, 1);
+            PoolManager.Instance.InitPool(stage.Value.gamePrefab, 1, roomParent);
         }
         MoveStage();
     }
@@ -67,9 +67,9 @@ public class GameManager : SerializedMonoBehaviour
     }
     private void MoveStage()
     {
-        foreach (var stage in stageData.data)
+        for (int i = 0; i < roomParent.childCount; i++)
         {
-            PoolManager.Instance.Despawn(stage.Value.gamePrefab);
+            PoolManager.Instance.Despawn(roomParent.GetChild(i).gameObject);
         }
         PoolManager.Instance.Spawn(stageData.data[currentStage].gamePrefab.name);
     }

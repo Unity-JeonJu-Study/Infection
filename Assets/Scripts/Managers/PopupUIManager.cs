@@ -5,9 +5,9 @@ using UnityEngine;
 // this script is temporary, after the core implementation is done, this script would be altered based on it
 // things to change: other popup object would be added
 
-public class UIManager : MonoBehaviour
+public class PopupUIManager : MonoBehaviour
 {
-    [ReadOnly] public static UIManager instance;
+    [ReadOnly] public static PopupUIManager instance;
 
     [ReadOnly, SerializeField] private SavePopup popupSave;
     [ReadOnly, SerializeField] private PausePopup popupPause;

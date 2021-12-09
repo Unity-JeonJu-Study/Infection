@@ -27,7 +27,8 @@ public class GameManager : SerializedMonoBehaviour
 {
     public static GameManager Instance;
     
-    public Dictionary<GameStage, GameObject> stagePrefabs = new Dictionary<GameStage, GameObject>();
+    //public Dictionary<GameStage, GameObject> stagePrefabs = new Dictionary<GameStage, GameObject>();
+    public StageData stageData;
     [Tooltip("Game Stage")]
     public GameStage currentStage;
     [Tooltip("Game State")]
@@ -44,36 +45,40 @@ public class GameManager : SerializedMonoBehaviour
         currentStage = GameStage.Laboratory;
         currentState = GameState.StartUI;
 
+<<<<<<< Updated upstream
         InitRoom();
 
         player = FindObjectOfType<Player>();
+=======
+        //InitRoom();
+>>>>>>> Stashed changes
     }
 
-    private void InitRoom()
-    {
-        var stageResource = Resources.Load<StageData>("Data/Stage/StageData").data;
-        
-        foreach (var stage in stageResource)
-        {
-            stagePrefabs.Add(stage.Key,Instantiate(stage.Value, roomParent));
-        }
-        MoveStage();
-    }
+    // private void InitRoom()
+    // {
+    //     var stageResource = Resources.Load<StageData>("Data/Stage/StageData").data;
+    //     
+    //     foreach (var stage in stageResource)
+    //     {
+    //         stagePrefabs.Add(stage.Key,Instantiate(stage.Value, roomParent));
+    //     }
+    //     MoveStage();
+    // }
 
-    [Button("방 변경 트리거")]
-    public void SetStage(GameStage stage)
-    {
-        currentStage = stage;
-        MoveStage();
-    }
-    private void MoveStage()
-    {
-        foreach (var stage in stagePrefabs)
-        {
-            stage.Value.SetActive(false);
-        }
-        stagePrefabs[currentStage].SetActive(true);
-    }
+    // [Button("방 변경 트리거")]
+    // public void SetStage(GameStage stage)
+    // {
+    //     currentStage = stage;
+    //     MoveStage();
+    // }
+    // private void MoveStage()
+    // {
+    //     foreach (var stage in stagePrefabs)
+    //     {
+    //         stage.Value.SetActive(false);
+    //     }
+    //     stagePrefabs[currentStage].SetActive(true);
+    // }
     
     #region Click Event
 

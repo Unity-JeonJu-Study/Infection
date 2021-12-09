@@ -17,6 +17,9 @@ public class InGameUIManager : MonoBehaviour
     private Vector2 vectorCenter;
     private WaitForSeconds waitTime;
     private WaitForSeconds waitTwoSeconds;
+    
+    private int minute, second;
+    private int curSlotIndex;
 
     private void Awake() {
         instance = this;
@@ -28,6 +31,7 @@ public class InGameUIManager : MonoBehaviour
         itemSlots = GetComponentInChildren<ItemSlots>();
 
 
+        // the order of loading is based on the Item enum type
         itemIcons = new List<Sprite>();
         // itemIcons.Add(Resources.Load<Sprite>("UIItemIcons/itemName"));
 
@@ -49,6 +53,8 @@ public class InGameUIManager : MonoBehaviour
 
     public void UpdateObjectiveText(string newObjective) {
         textObjective.text = newObjective;
+
+
         textObjective.rectTransform.pivot = vectorCenter;
         textObjective.rectTransform.anchorMin = vectorCenter;
         textObjective.rectTransform.anchorMax = vectorCenter;
@@ -56,7 +62,7 @@ public class InGameUIManager : MonoBehaviour
         textObjective.alignment = TextAlignmentOptions.Center;
 
         StartCoroutine("MoveObjectiveText");
-    }
+    }   
 
     private IEnumerator MoveObjectiveText() {
         yield return waitTwoSeconds;
@@ -81,5 +87,36 @@ public class InGameUIManager : MonoBehaviour
         textObjective.alignment = TextAlignmentOptions.Left;
 
         textObjective.fontSize = 36;
+    }
+
+    public void UpdateTimeText(int time) {
+        minute = time / 60;
+        second = time % 60;
+        if(minute == 0)
+            textTime.text = "00:";
+        else {
+            if(minute < 10)
+                textTime.text = "0" + minute + ":";
+            else
+                textTime.text = minute + ":";
+        }
+
+        if(second < 10)
+            textTime.text += "0" + second;
+        else
+            textTime.text += second;
+    }
+
+    public void UpdateItemIcons() {
+        for(curSlotIndex = 0; curSlotIndex < 3; curSlotIndex++) 
+            itemSlots.slots[curSlotIndex].gameObject.SetActive(false);
+
+        curSlotIndex = 0;
+        foreach(Item curItem in GameManager.Instance.player.inventory) {
+            itemSlots.slots[curSlotIndex].gameObject.SetActive(true);
+            itemSlots.slots[curSlotIndex].UpdateItemIcon(itemIcons[(int)curItem]);
+
+            curSlotIndex++;
+        }
     }
 }

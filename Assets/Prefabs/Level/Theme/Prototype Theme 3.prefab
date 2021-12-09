@@ -3584,6 +3584,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Bld_Wall_Doorframe_02
       objectReference: {fileID: 0}
+    - target: {fileID: 4871574090082970, guid: ceddc97abfdd06647918f15b13cfac6c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.027
+      objectReference: {fileID: 0}
     - target: {fileID: 4950033287718502, guid: ceddc97abfdd06647918f15b13cfac6c, type: 3}
       propertyPath: m_RootOrder
       value: 92

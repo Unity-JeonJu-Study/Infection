@@ -1,6 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+
+using Cinemachine;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -8,85 +7,69 @@ public class PlayerMovement : MonoBehaviour
     [Header("Player Movement Information")]
     public float movementSpeed;
     public float rotationSpeed;
+    public float jumpPower;
     public bool isGround;
+    public float groundRayDistance;
+    public bool canJump;
+    public Movement movement;
+    public CinemachineVirtualCamera _virtualCamera;
+    [HideInInspector] public AnimalData animalData;
+    [HideInInspector] public Animator _animator;
+    [HideInInspector] public PlayerInput playerInput;
+    [HideInInspector] public Rigidbody _rigidbody;
 
-    private Animator _animator;
-    private PlayerInput playerInput;
-    private Rigidbody _rigidbody;
-    private static readonly int WalkHash = Animator.StringToHash("Walk");
+    private GameObject currentAnimal;
+    private PlayerInfect playerInfect;
 
-    private void Awake()
+    private void Start()
     {
-        _animator = GetComponent<Animator>();
+        playerInfect = GetComponent<PlayerInfect>();
         playerInput = GetComponent<PlayerInput>();
         _rigidbody = GetComponent<Rigidbody>();
+        currentAnimal = playerInfect.currentAnimal;
+        _animator = currentAnimal.GetComponent<Animator>();
+        canJump = true;
+        InitMoveInformation("Slime");
+        movement = new SlimeMovement(this);
     }
 
     private void FixedUpdate()
     {
-        Movement();
-        CheckGround();
+        movement.Execute();
     }
 
-    private void Movement()
+    
+    public void InitMoveInformation(string animalName)
     {
-        float forward = playerInput.InputForward * movementSpeed;
-        float side = playerInput.InputSide * movementSpeed;
-        if (forward == 0 && side == 0)
+        animalData = Resources.Load<AnimalData>("Data/Animal/"+animalName);
+        movementSpeed = animalData.movementSpeed;
+        rotationSpeed = animalData.rotationSpeed;
+        jumpPower = animalData.jumpPower;
+        groundRayDistance = animalData.groundRayDistance;
+        playerInfect.interactRayDistance = animalData.interactRayDistance;
+        canJump = true;
+    }
+    
+    public void ChangeStatus(string animalName)
+    {
+        InitMoveInformation(animalName);
+        _animator = playerInfect.Animals[animalName].GetComponent<Animator>();
+        animalData = Resources.Load<AnimalData>("Data/Animal/" + animalName);
+        ChangeCamera(animalData.fov, animalData.cameraRotation);
+        switch (animalName)
         {
-            AnimationMovement(false);
-            return;
+            case "Slime":
+                movement = new SlimeMovement(this);
+                break;
+            case "Chick":
+                movement = new ChickMovement(this);
+                break;
         }
-        Vector3 dir = new Vector3(side, 0, forward);
-        AnimationMovement(true);
-        _rigidbody.velocity = dir;
-        transform.rotation = Quaternion.LookRotation(new Vector3(playerInput.InputSide, 0, playerInput.InputForward));
     }
 
-    private void AnimationMovement(bool walk)
+    public void ChangeCamera(float fov, Vector3 cameraRotation)
     {
-        _animator.SetBool(WalkHash, walk);
-    }
-
-    private void CheckGround()
-    {
-        
-
-    }
-
-    private void OnDrawGizmos()
-    {
-        RaycastHit hit;
-        // Physics.Raycast (레이저를 발사할 위치, 발사 방향, 충돌 결과, 최대 거리)
-        bool isHit = Physics.Raycast (transform.position, -transform.up, out hit, 0);
-
-        Gizmos.color = Color.red;
-        if (isHit) {
-            Gizmos.DrawRay (transform.position, -transform.up * hit.distance);
-            isGround = true;
-        } else {
-            Gizmos.DrawRay (transform.position, -transform.up * 0);
-            isGround = false;
-        }
-        
-        // Gizmos.color = Color.black;
-        // if (Physics.BoxCast(transform.position, transform.lossyScale / 2.0f,
-        //     -transform.up, out RaycastHit hit, transform.rotation, transform.lossyScale.y / 2.0f))
-        // {
-        //     Gizmos.DrawRay(transform.position, -transform.up * hit.distance);
-        //     Gizmos.DrawWireCube(transform.position + -transform.up * hit.distance, transform.lossyScale);
-        //     isGround = true;
-        // }
-        // else
-        // {
-        //     isGround = false;
-        // }
-        //Gizmos.DrawWireCube(transform.position, transform.lossyScale / 2.0f);
-
-    }
-
-    private void Jump()
-    {
-        
+        _virtualCamera.m_Lens.FieldOfView = fov;
+        _virtualCamera.transform.rotation = Quaternion.Euler(cameraRotation);
     }
 }

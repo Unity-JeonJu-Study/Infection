@@ -41,16 +41,20 @@ MonoBehaviour:
     - DungeonArchitect.Modules.Graph
     - DungeonArchitect.Builders
     - DungeonArchitect.Modules.Grammar
+    - DaiMangou.BridgedData
     - DungeonArchitect.Modules.Common
     - DungeonArchitect.Modules.Meshing
     - DungeonArchitect.Modules.Navigation2D
     - Sirenix.OdinInspector.CompatibilityLayer
     - DungeonArchitect.Modules.SxEngine
     - DungeonArchitect.Modules.VisibilityGraph
-    - DaiMangou.BridgedData
+    - FMODUnity
+    - FMODUnityResonance
     - DungeonArchitect.Editor
     - DungeonArchitect.LaunchPad
     - Sirenix.OdinInspector.CompatibilityLayer.Editor
+    - FMODUnityEditor
+    - FMODUnityResonanceEditor
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1

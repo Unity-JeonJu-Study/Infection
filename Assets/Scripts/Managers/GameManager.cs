@@ -41,44 +41,38 @@ public class GameManager : SerializedMonoBehaviour
 
     private void Awake() {
         Instance = this;
-        
+
+        stageData = Resources.Load<StageData>("Data/Stage/StageData");
         currentStage = GameStage.Laboratory;
         currentState = GameState.StartUI;
-
-<<<<<<< Updated upstream
-        InitRoom();
-
+        
         player = FindObjectOfType<Player>();
-=======
-        //InitRoom();
->>>>>>> Stashed changes
+        InitRoom();
     }
 
-    // private void InitRoom()
-    // {
-    //     var stageResource = Resources.Load<StageData>("Data/Stage/StageData").data;
-    //     
-    //     foreach (var stage in stageResource)
-    //     {
-    //         stagePrefabs.Add(stage.Key,Instantiate(stage.Value, roomParent));
-    //     }
-    //     MoveStage();
-    // }
+    private void InitRoom()
+    {
+        foreach (var stage in stageData.data)
+        {
+            PoolManager.Instance.InitPool(stage.Value.gamePrefab, 1);
+        }
+        MoveStage();
+    }
 
-    // [Button("방 변경 트리거")]
-    // public void SetStage(GameStage stage)
-    // {
-    //     currentStage = stage;
-    //     MoveStage();
-    // }
-    // private void MoveStage()
-    // {
-    //     foreach (var stage in stagePrefabs)
-    //     {
-    //         stage.Value.SetActive(false);
-    //     }
-    //     stagePrefabs[currentStage].SetActive(true);
-    // }
+    [Button("방 변경 트리거")]
+    public void SetStage(GameStage stage)
+    {
+        currentStage = stage;
+        MoveStage();
+    }
+    private void MoveStage()
+    {
+        foreach (var stage in stageData.data)
+        {
+            PoolManager.Instance.Despawn(stage.Value.gamePrefab);
+        }
+        PoolManager.Instance.Spawn(stageData.data[currentStage].gamePrefab.name);
+    }
     
     #region Click Event
 

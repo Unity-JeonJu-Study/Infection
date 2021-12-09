@@ -1,29 +1,22 @@
+using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
-using TMPro;
 using UnityEngine;
-
 
 public class QuestData
 {
-    public Dictionary<string, QuestList> Quests = new Dictionary<string, QuestList>();
+    private Dictionary<GameStage, QuestList> quests = new Dictionary<GameStage, QuestList>();
 }
 
-[CreateAssetMenu(fileName = "QuestData", menuName = "Data/Quest")]
+[CreateAssetMenu(fileName = "QuestList", menuName = "Data/Quest")]
 public class QuestList : SerializedScriptableObject
 {
-    public string flag;
+    public string stage;
     public Queue<Quest> questList;
 
-    public QuestList()
-    {
-        this.flag = "default";
-        questList = new Queue<Quest>();
-    }
-    
     public QuestList(string flag)
     {
-        this.flag = flag;
+        this.stage = flag;
         questList = new Queue<Quest>();
     }
 }

@@ -29,27 +29,11 @@ MonoBehaviour:
     referenceMode: 2
     serializationDepthLimit: 64
     assemblyNames:
-    - DungeonArchitect.Modules.UI
     - Assembly-CSharp-firstpass
-    - DungeonArchitect.Modules.Flow
-    - DungeonArchitect.Samples
     - Assembly-CSharp
-    - DungeonArchitect.Core
     - Cinemachine
-    - DungeonArchitect.ThirdParty
-    - DungeonArchitect.Modules.Flow.Implementations
-    - DungeonArchitect.Modules.Graph
-    - DungeonArchitect.Builders
-    - DungeonArchitect.Modules.Grammar
     - DaiMangou.BridgedData
-    - DungeonArchitect.Modules.Common
-    - DungeonArchitect.Modules.Meshing
-    - DungeonArchitect.Modules.Navigation2D
     - Sirenix.OdinInspector.CompatibilityLayer
-    - DungeonArchitect.Modules.SxEngine
-    - DungeonArchitect.Modules.VisibilityGraph
-    - DungeonArchitect.Editor
-    - DungeonArchitect.LaunchPad
     - Sirenix.OdinInspector.CompatibilityLayer.Editor
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0

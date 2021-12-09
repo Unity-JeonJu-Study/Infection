@@ -2,27 +2,30 @@ using System;
 using UnityEngine;
 
 // this script is temporary, after the core implementation is done, this script would be altered based on it
-
+// things to change: LoadCurrentSlot method
 
 public class LoadPopup : MonoBehaviour
 {
-    private SaveSlots saveSlots;
+    [ReadOnly, SerializeField] private SaveSlots saveSlots;
 
-    private string tempSlotName;
-    private int slotIndex;
+    [ReadOnly, SerializeField] private string tempSlotName;
+    [ReadOnly, SerializeField] private int slotIndex;
 
     private void Awake() {
         saveSlots = GetComponentInChildren<SaveSlots>();
     }
 
     private void Start() {
+        LoadFiles();
+
         for(slotIndex = 0; slotIndex < SaveLoadManager.instance.maxSaveSlot; slotIndex++) {
             DisableCurrentSaveSlot();
         }
         slotIndex = 0;
 
         EnableCurrentSaveSlot();
-        LoadFiles();
+
+        gameObject.SetActive(false);
     }
 
     private void Update() {
@@ -71,6 +74,13 @@ public class LoadPopup : MonoBehaviour
     private void LoadCurrentSlot() {
         SaveData currentData = SaveLoadManager.instance.data[slotIndex];
         if(currentData.isLoaded) {
+            Debug.Log("worked " + currentData.saveDateTime);
+
+            MySceneManager.instance.isInitial = false;
+            MySceneManager.instance.loadedData = currentData;
+            MySceneManager.instance.LoadScene("Choi Kang In");
+
+            // scene manager part
             // MySceneManager.instance.loadedData = currentData;
             // MySceneManager.instance.isInitial = false;
             // MySceneManager.instance.LoadScene(currentData.stageName);

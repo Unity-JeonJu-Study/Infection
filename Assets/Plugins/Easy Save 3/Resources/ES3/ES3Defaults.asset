@@ -33,6 +33,7 @@ MonoBehaviour:
     - Assembly-CSharp-firstpass
     - DungeonArchitect.Modules.Flow
     - DungeonArchitect.Samples
+    - Assembly-CSharp
     - DungeonArchitect.Core
     - Cinemachine
     - DungeonArchitect.ThirdParty
@@ -40,13 +41,13 @@ MonoBehaviour:
     - DungeonArchitect.Modules.Graph
     - DungeonArchitect.Builders
     - DungeonArchitect.Modules.Grammar
-    - Assembly-CSharp
     - DungeonArchitect.Modules.Common
     - DungeonArchitect.Modules.Meshing
     - DungeonArchitect.Modules.Navigation2D
     - Sirenix.OdinInspector.CompatibilityLayer
     - DungeonArchitect.Modules.SxEngine
     - DungeonArchitect.Modules.VisibilityGraph
+    - DaiMangou.BridgedData
     - DungeonArchitect.Editor
     - DungeonArchitect.LaunchPad
     - Sirenix.OdinInspector.CompatibilityLayer.Editor

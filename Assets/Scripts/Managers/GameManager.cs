@@ -39,6 +39,9 @@ public class GameManager : SerializedMonoBehaviour
 
     public Player player;
 
+
+    public int stageTime;
+
     private void Awake() {
         Instance = this;
 
@@ -81,5 +84,9 @@ public class GameManager : SerializedMonoBehaviour
     public void OnClickResume() => currentState = GameState.PlayingUI;
 
     #endregion
-}
 
+
+    // public void ResetStageTime() {
+    //     stageTime = GameManager.Instance.stageData.data[GameManager.Instance.currentStage].limitTime;
+    // }
+}

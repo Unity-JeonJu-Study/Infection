@@ -89,6 +89,10 @@ public class InGameUIManager : MonoBehaviour
         textObjective.fontSize = 36;
     }
 
+    public void ResetTimeText() {
+        UpdateTimeText(((int)GameManager.Instance.stageData.data[GameManager.Instance.currentStage].limitTime));
+    }
+
     public void UpdateTimeText(int time) {
         minute = time / 60;
         second = time % 60;

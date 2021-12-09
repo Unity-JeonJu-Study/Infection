@@ -30,22 +30,8 @@ MonoBehaviour:
     serializationDepthLimit: 64
     assemblyNames:
     - Assembly-CSharp-firstpass
-    - DungeonArchitect.Modules.Flow
-    - DungeonArchitect.Samples
-    - DungeonArchitect.Core
-    - Cinemachine
-    - DungeonArchitect.ThirdParty
-    - DungeonArchitect.Modules.Flow.Implementations
-    - DungeonArchitect.Modules.Graph
-    - DungeonArchitect.Builders
-    - DungeonArchitect.Modules.Grammar
     - Assembly-CSharp
-    - DungeonArchitect.Modules.Common
-    - DungeonArchitect.Modules.Meshing
-    - DungeonArchitect.Modules.Navigation2D
-    - Sirenix.OdinInspector.CompatibilityLayer
-    - DungeonArchitect.Modules.SxEngine
-    - DungeonArchitect.Modules.VisibilityGraph
+    - Cinemachine
     - DaiMangou.BridgedData
     - Sirenix.OdinInspector.CompatibilityLayer
     - Sirenix.OdinInspector.CompatibilityLayer.Editor

@@ -27,16 +27,16 @@ public class PopupUIManager : MonoBehaviour
     }
 
     private void Update() {
-        if(Input.GetKeyDown(KeyCode.Escape))
-            EnablePausePopup();
+        // this code exists for debug purpose only
+        
+        // if(Input.GetKeyDown(KeyCode.Escape))
+        //     EnablePausePopup();
 
-        if(Input.GetKeyDown(KeyCode.K))
-            EnableGameOverPopup();
+        // if(Input.GetKeyDown(KeyCode.K))
+        //     EnableGameOverPopup();
     }
 
     public void EnableSavePopup() {
-        // GameManager.instance.DisablePlayerInput();
-        // GameManager.instance.SetTimeScale(0.01f);
         popupSave.gameObject.SetActive(true);
         popupSave.LoadFiles();
     }

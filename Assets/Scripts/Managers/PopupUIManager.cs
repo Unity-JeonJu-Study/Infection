@@ -16,19 +16,19 @@ public class PopupUIManager : MonoBehaviour
     private void Awake() {
         instance = this;
 
-        popupSave = FindObjectOfType<SavePopup>();
+        popupSave = GetComponentInChildren<SavePopup>();
         popupSave.gameObject.SetActive(false);
 
-        popupPause = FindObjectOfType<PausePopup>();
+        popupPause = GetComponentInChildren<PausePopup>();
         popupPause.gameObject.SetActive(false);
 
-        popupGameOver = FindObjectOfType<GameOverPopup>();
+        popupGameOver = GetComponentInChildren<GameOverPopup>();
         popupGameOver.gameObject.SetActive(false);
     }
 
     private void Update() {
         // this code exists for debug purpose only
-        
+
         // if(Input.GetKeyDown(KeyCode.Escape))
         //     EnablePausePopup();
 

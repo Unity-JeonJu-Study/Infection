@@ -47,7 +47,7 @@ public class PlayerInfect : MonoBehaviour
         meshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
         Debug.Log(meshRenderer);
         rayOriginPosition =  meshRenderer.bounds.center;
-        if(sensor.CheckForward())
+        if (sensor.CheckForward())
         {
             Gizmos.color = Color.blue;
             Gizmos.DrawRay(rayOriginPosition, transform.forward );

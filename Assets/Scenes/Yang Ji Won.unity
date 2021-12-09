@@ -519,6 +519,7 @@ GameObject:
   - component: {fileID: 961707711}
   - component: {fileID: 961707710}
   - component: {fileID: 961707712}
+  - component: {fileID: 961707714}
   - component: {fileID: 961707713}
   m_Layer: 0
   m_Name: Player
@@ -555,6 +556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0cc96d748d166640bb12e390b0bb24c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventory: 
 --- !u!114 &961707710
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -567,7 +569,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a42c0f41e474184a8d50091291a7f32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactRayDistance: 0
   currentAnimal: {fileID: 0}
   infectAnimal: {fileID: 0}
 --- !u!114 &961707711
@@ -598,13 +599,13 @@ MonoBehaviour:
   rotationSpeed: 1
   jumpPower: 3
   isGround: 0
-  groundRayDistance: 0
   canJump: 0
   _virtualCamera: {fileID: 207405646}
   animalData: {fileID: 0}
   _animator: {fileID: 0}
   playerInput: {fileID: 0}
   _rigidbody: {fileID: 0}
+  sensor: {fileID: 0}
 --- !u!54 &961707713
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -621,6 +622,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &961707714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961707707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bc7d7c6125871b4fb016d9ad3f0d3f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundNormal: 0
+  groundDistance: 0
+  groundRayDistance: 0
+  interactRayDistance: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

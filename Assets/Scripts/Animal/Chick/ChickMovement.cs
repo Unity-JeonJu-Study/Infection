@@ -46,7 +46,7 @@ public class ChickMovement : Movement
                                 0.2f,
                                 0f),
             Vector3.down,
-            playerMovement.groundRayDistance))
+            sensor.groundRayDistance))
         {
             playerMovement.isGround = true;
         }
@@ -67,12 +67,6 @@ public class ChickMovement : Movement
         {
             base.Jump();
         }    
-    }
-
-    public IEnumerator Panelty()
-    {
-        _rigidbody.AddForce(0, 3f, 0, ForceMode.Impulse);
-        yield return new WaitForSeconds(3f);
     }
 
 }

@@ -10,6 +10,7 @@ public abstract class Movement
     protected PlayerInput playerInput;
     protected Rigidbody _rigidbody;
     protected Animator _animator;
+    protected Sensor sensor;
     
     private static readonly int WalkHash = Animator.StringToHash("Walk");
     private static readonly int JumpHash = Animator.StringToHash("Jump");
@@ -20,6 +21,7 @@ public abstract class Movement
         playerInput = playerMovement.playerInput;
         _rigidbody = playerMovement._rigidbody;
         _animator = playerMovement._animator;
+        sensor = playerMovement.sensor;
     }
     
     public abstract void Execute();

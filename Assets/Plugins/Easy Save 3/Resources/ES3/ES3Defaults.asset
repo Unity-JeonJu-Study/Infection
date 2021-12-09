@@ -29,7 +29,6 @@ MonoBehaviour:
     referenceMode: 2
     serializationDepthLimit: 64
     assemblyNames:
-    - DungeonArchitect.Modules.UI
     - Assembly-CSharp-firstpass
     - DungeonArchitect.Modules.Flow
     - DungeonArchitect.Samples
@@ -48,8 +47,7 @@ MonoBehaviour:
     - DungeonArchitect.Modules.SxEngine
     - DungeonArchitect.Modules.VisibilityGraph
     - DaiMangou.BridgedData
-    - DungeonArchitect.Editor
-    - DungeonArchitect.LaunchPad
+    - Sirenix.OdinInspector.CompatibilityLayer
     - Sirenix.OdinInspector.CompatibilityLayer.Editor
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0

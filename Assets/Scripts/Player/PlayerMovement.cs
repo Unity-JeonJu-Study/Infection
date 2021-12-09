@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpPower;
     public bool isGround;
     public float groundRayDistance;
+    public float interactRayDistance;
     public bool canJump;
     public Movement movement;
     public CinemachineVirtualCamera _virtualCamera;
@@ -46,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
         rotationSpeed = animalData.rotationSpeed;
         jumpPower = animalData.jumpPower;
         groundRayDistance = animalData.groundRayDistance;
-        playerInfect.interactRayDistance = animalData.interactRayDistance;
+        interactRayDistance = animalData.interactRayDistance;
         canJump = true;
     }
     

@@ -69,4 +69,10 @@ public class ChickMovement : Movement
         }    
     }
 
+    public IEnumerator Panelty()
+    {
+        _rigidbody.AddForce(0, 3f, 0, ForceMode.Impulse);
+        yield return new WaitForSeconds(3f);
+    }
+
 }

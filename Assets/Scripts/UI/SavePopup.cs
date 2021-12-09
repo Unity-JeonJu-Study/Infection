@@ -69,7 +69,9 @@ public class SavePopup : MonoBehaviour
 
     public void LoadFiles() {
         SaveLoadManager.instance.LoadAllData();
-        for(int curIndex = 0; curIndex < SaveLoadManager.instance.maxSaveSlot; curIndex++) {
+
+        saveSlots.slots[0].UpdateSaveName("auto save: " + SaveLoadManager.instance.data[0].GetSaveSlotName());
+        for(int curIndex = 1; curIndex < SaveLoadManager.instance.maxSaveSlot; curIndex++) {
             saveSlots.slots[curIndex].UpdateSaveName(curIndex + ": " + SaveLoadManager.instance.data[curIndex].GetSaveSlotName());
         }
     }

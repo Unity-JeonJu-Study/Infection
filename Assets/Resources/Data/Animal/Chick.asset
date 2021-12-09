@@ -15,7 +15,10 @@ MonoBehaviour:
   animalName: Chick
   description: "\uBCD1\uC544\uB9AC"
   animalModel: {fileID: 0}
-  movementSpeed: 0.63
-  rotationSpeed: 0.91
-  jumpPower: 2.53
-  rayDistance: 0.25
+  movementSpeed: 3
+  rotationSpeed: 1
+  jumpPower: 2
+  groundRayDistance: 1
+  interactRayDistance: 1.5
+  fov: 60
+  cameraRotation: {x: 45, y: 0, z: 0}

@@ -1,13 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-public enum PlayerType
-{
-    Slime,
-    Chick,
-}
+using Cinemachine;
+using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -16,22 +9,25 @@ public class PlayerMovement : MonoBehaviour
     public float rotationSpeed;
     public float jumpPower;
     public bool isGround;
-    public float rayDistance;
+    public float groundRayDistance;
     public bool canJump;
     public Movement movement;
+    public CinemachineVirtualCamera _virtualCamera;
     [HideInInspector] public AnimalData animalData;
-    public Animator _animator;
-    public PlayerInput playerInput;
-    public Rigidbody _rigidbody;
+    [HideInInspector] public Animator _animator;
+    [HideInInspector] public PlayerInput playerInput;
+    [HideInInspector] public Rigidbody _rigidbody;
+
     private GameObject currentAnimal;
     private PlayerInfect playerInfect;
 
     private void Start()
     {
+        playerInfect = GetComponent<PlayerInfect>();
+        playerInput = GetComponent<PlayerInput>();
+        _rigidbody = GetComponent<Rigidbody>();
         currentAnimal = playerInfect.currentAnimal;
         _animator = currentAnimal.GetComponent<Animator>();
-        playerInput = currentAnimal.GetComponent<PlayerInput>();
-        _rigidbody = currentAnimal.GetComponent<Rigidbody>();
         canJump = true;
         InitMoveInformation("Slime");
         movement = new SlimeMovement(this);
@@ -39,33 +35,41 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        movement.Excute();
+        movement.Execute();
     }
 
-    public void ChangeStatus(string animalName)
-    {
-        switch (animalName)
-        {
-            case "Slime":
-                InitMoveInformation(animalName);
-                movement = new SlimeMovement(this);
-                break;
-            case "Chick":
-                InitMoveInformation(animalName);
-                movement = new ChickMovement(this);
-                break;
-        }
-    }
-
+    
     public void InitMoveInformation(string animalName)
     {
         animalData = Resources.Load<AnimalData>("Data/Animal/"+animalName);
         movementSpeed = animalData.movementSpeed;
         rotationSpeed = animalData.rotationSpeed;
         jumpPower = animalData.jumpPower;
-        rayDistance = animalData.rayDistance;
+        groundRayDistance = animalData.groundRayDistance;
+        playerInfect.interactRayDistance = animalData.interactRayDistance;
         canJump = true;
     }
     
-    
+    public void ChangeStatus(string animalName)
+    {
+        InitMoveInformation(animalName);
+        _animator = playerInfect.Animals[animalName].GetComponent<Animator>();
+        animalData = Resources.Load<AnimalData>("Data/Animal/" + animalName);
+        ChangeCamera(animalData.fov, animalData.cameraRotation);
+        switch (animalName)
+        {
+            case "Slime":
+                movement = new SlimeMovement(this);
+                break;
+            case "Chick":
+                movement = new ChickMovement(this);
+                break;
+        }
+    }
+
+    public void ChangeCamera(float fov, Vector3 cameraRotation)
+    {
+        _virtualCamera.m_Lens.FieldOfView = fov;
+        _virtualCamera.transform.rotation = Quaternion.Euler(cameraRotation);
+    }
 }

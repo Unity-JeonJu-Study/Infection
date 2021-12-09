@@ -1,14 +1,33 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
 public class SlimeMovement : Movement
 {
-    public override void Excute()
+    
+    public SlimeMovement(PlayerMovement playerMovement) : base(playerMovement)
+    {
+        
+    }
+    
+    public override void Execute()
     {
         Move();
         CheckGround();
         Jump();
+    }
+
+    public override void Move()
+    {
+        if (playerInput.InputForward == 0 && playerInput.InputSide == 0)
+        {
+            AnimationWalk(false);
+            return;
+        }
+        base.Move();
+        AnimationWalk(true);
     }
 
     protected void CheckGround()
@@ -18,7 +37,7 @@ public class SlimeMovement : Movement
                                 0.2f,
                                 0f),
             Vector3.down,
-             playerMovement.rayDistance))
+             playerMovement.groundRayDistance))
         {
             playerMovement.isGround = true;
         }
@@ -34,9 +53,5 @@ public class SlimeMovement : Movement
         {
             base.Jump();
         }    
-    }
-    public SlimeMovement(PlayerMovement playerMovement) : base(playerMovement)
-    {
-        
     }
 }

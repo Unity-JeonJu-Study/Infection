@@ -4,11 +4,39 @@ using UnityEngine;
 
 public class ChickMovement : Movement
 {
-    public override void Excute()
+    private static readonly int RunHash = Animator.StringToHash("Run");
+
+    public ChickMovement(PlayerMovement playerMovement) : base(playerMovement)
+    {
+        
+    }
+    
+    public override void Execute()
     {
         Move();
         CheckGround();
         Jump();
+    }
+
+    public override void Move()
+    {
+        if (playerInput.InputForward == 0 && playerInput.InputSide == 0)
+        {
+            AnimationWalk(false);
+            return;
+        }   
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            playerInput.InputForward *= 1.2f;
+            AnimationWalk(false);
+            AnimationRun(true);
+        }
+        else
+        {
+            AnimationRun(false);
+            AnimationWalk(true);
+        }
+        base.Move();
     }
 
     protected void CheckGround()
@@ -18,7 +46,7 @@ public class ChickMovement : Movement
                                 0.2f,
                                 0f),
             Vector3.down,
-            playerMovement.rayDistance))
+            playerMovement.groundRayDistance))
         {
             playerMovement.isGround = true;
         }
@@ -26,6 +54,11 @@ public class ChickMovement : Movement
         {
             playerMovement.isGround = false;
         }
+    }
+
+    public void AnimationRun(bool run)
+    {
+        playerMovement._animator.SetBool(RunHash, run);
     }
     
     public override void Jump()
@@ -35,8 +68,5 @@ public class ChickMovement : Movement
             base.Jump();
         }    
     }
-    public ChickMovement(PlayerMovement playerMovement) : base(playerMovement)
-    {
-        
-    }
+
 }

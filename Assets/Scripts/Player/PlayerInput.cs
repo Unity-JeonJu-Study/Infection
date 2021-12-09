@@ -10,6 +10,7 @@ public class PlayerInput : MonoBehaviour
     private float inputSide;
     private float jump;
     private bool infectKeyPressed;
+    private bool cureKeyPressed;
 
     public float InputForward
     {
@@ -35,13 +36,19 @@ public class PlayerInput : MonoBehaviour
         set => infectKeyPressed = value;
     }
 
+    public bool CureKeyPressed
+    {
+        get => cureKeyPressed;
+        set => cureKeyPressed = value;
+    }
+
     private void Update()
     {
         inputSide = Input.GetAxis("Horizontal");
         inputForward = Input.GetAxis("Vertical");
         jump = Input.GetAxisRaw("Jump");
         infectKeyPressed = Input.GetKey(KeyCode.Mouse0);
-        
+        cureKeyPressed = Input.GetKey(KeyCode.Mouse1);
     }
     
 

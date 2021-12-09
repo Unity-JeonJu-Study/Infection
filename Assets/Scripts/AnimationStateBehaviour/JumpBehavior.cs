@@ -8,7 +8,7 @@ public class JumpBehavior : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        playerMovement = animator.GetComponent<PlayerMovement>();
+        playerMovement = animator.transform.parent.GetComponent<PlayerMovement>();
         playerMovement.canJump = false;
     }
 

@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -41,7 +42,9 @@ public class GameManager : SerializedMonoBehaviour
     [TabGroup("Stage Info")]
     public Queue<Quest> CurrentQuestList;
     [TabGroup("Stage Info")]
-    public int stageTime;
+    [ReadOnly, SerializeField] private int currentStageTime;
+    [ReadOnly, SerializeField] private Coroutine stageTimer;
+    [ReadOnly, SerializeField] private bool isTimerPaused;
 
     #endregion
 
@@ -56,6 +59,7 @@ public class GameManager : SerializedMonoBehaviour
     public Transform roomParent;
 
     public Player player;
+    private WaitForSeconds waitForOneSecond;
 
     private void Awake() {
         Instance = this;
@@ -66,6 +70,8 @@ public class GameManager : SerializedMonoBehaviour
 
         player = FindObjectOfType<Player>();
         InitStage();
+
+        waitForOneSecond = new WaitForSeconds(1f);
     }
 
     private void InitStage()
@@ -112,7 +118,45 @@ public class GameManager : SerializedMonoBehaviour
 
     #endregion
 
-    // public void ResetStageTime() {
-    //     stageTime = GameManager.Instance.stageData.data[GameManager.Instance.currentStage].limitTime;
-    // }
+
+    public void StartStage() {
+        currentStageTime = ((int)GameManager.Instance.stageData.data[GameManager.Instance.currentStage].limitTime);
+        isTimerPaused = false;
+
+        stageTimer = StartCoroutine("StartStageTimer");
+
+        // add some codes required for stage start part
+
+    }
+
+    public IEnumerator StartStageTimer() {
+        while(currentStageTime > 0) {
+            if(isTimerPaused == false) {
+                InGameUIManager.instance.UpdateTimeText(currentStageTime);
+                currentStageTime--;
+                yield return waitForOneSecond;
+            }
+        }
+
+        StartGameOver();
+    }
+
+    public void PauseStageTimer() {
+        isTimerPaused = true;
+    }
+
+    public void ResumeStageTimer() {
+        isTimerPaused = false;
+    }
+
+    public void StopStageTimer() {
+        if(stageTimer != null)
+            StopCoroutine("StartStageTimer");
+    }
+
+    private void StartGameOver() {
+        PopupUIManager.instance.EnableGameOverPopup();
+
+        // add some codes required for game over part
+    }
 }

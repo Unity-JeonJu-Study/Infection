@@ -37,6 +37,7 @@ MonoBehaviour:
     - Assembly-CSharp
     - DungeonArchitect.Core
     - Cinemachine
+<<<<<<< HEAD
     - DungeonArchitect.ThirdParty
     - DungeonArchitect.Modules.Flow.Implementations
     - DungeonArchitect.Modules.Graph
@@ -56,6 +57,9 @@ MonoBehaviour:
 =======
     - DocCodeExamples
 >>>>>>> bbe54aafb4970280700d65521de198530196f3d3
+=======
+    - Sirenix.OdinInspector.CompatibilityLayer
+>>>>>>> parent of f8f69cb9 (수정본입니다.)
     - Sirenix.OdinInspector.CompatibilityLayer.Editor
     - FMODUnityEditor
     - FMODUnityResonanceEditor

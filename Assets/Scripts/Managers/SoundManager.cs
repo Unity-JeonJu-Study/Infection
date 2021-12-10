@@ -29,11 +29,14 @@ public class SoundManager : MonoBehaviour
     [ReadOnly]
     public Dictionary<string, BGMPlayer> BGMPlayers = new Dictionary<string, BGMPlayer>();
 
+    public Transform BGMTransform;
+    public Transform SFXTransform;
+
     void Awake()
     {
         instance = this;
-        audioClip = Resources.LoadAll<AudioClip>("Sounds/SFX");
-        BGMClip =Resources.LoadAll<AudioClip>("Sounds/BGM");
+        audioClip = Resources.LoadAll<AudioClip>("Sound Player/SFX");
+        BGMClip =Resources.LoadAll<AudioClip>("Sound Player/BGM");
 
         audioClipsDic = new Dictionary<string, AudioClip>();
         foreach (AudioClip a in audioClip)
@@ -52,8 +55,8 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        PoolManager.Instance.InitPool(Resources.Load<GameObject>("SoundPlayer"), 10); 
-        PoolManager.Instance.InitPool(Resources.Load<GameObject>("BGMPlayer"), 3); 
+        PoolManager.Instance.InitPool(Resources.Load<GameObject>("Sound Player/SoundPlayer"), 10, SFXTransform); 
+        PoolManager.Instance.InitPool(Resources.Load<GameObject>("Sound Player/BGMPlayer"), 3, BGMTransform); 
     }
 
     public void PlayBGM(string a_name, float a_volume = 1f)

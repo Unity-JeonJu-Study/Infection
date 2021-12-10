@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -21,7 +19,13 @@ public enum GameStage
 
 public enum BGMList
 {
-    
+    Intro,
+    Pause,
+    IntroScene,
+    Laboratory,
+    Stage1,
+    Stage2,
+    Stage3
 }
 
 public class GameManager : SerializedMonoBehaviour
@@ -61,10 +65,10 @@ public class GameManager : SerializedMonoBehaviour
         currentState = GameState.StartUI;
 
         player = FindObjectOfType<Player>();
-        InitRoom();
+        InitStage();
     }
 
-    private void InitRoom()
+    private void InitStage()
     {
         foreach (var stage in stageData.data)
         {
@@ -90,7 +94,15 @@ public class GameManager : SerializedMonoBehaviour
     }
 
     [Button("Give me next Quest"),TabGroup("Quest Info")]
-    public void NextQuest() => currentGoal = CurrentQuestList.Dequeue();
+    public void NextQuest()
+    {
+        if (CurrentQuestList.Peek() == null)
+        {
+            Debug.Log("No More Quest Here");
+            return;
+        }
+        currentGoal = CurrentQuestList.Dequeue();
+    }
 
     #region Click Event
 

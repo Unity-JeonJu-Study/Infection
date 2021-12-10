@@ -129,7 +129,7 @@ public class GameManager : SerializedMonoBehaviour
         InGameUIManager.instance.UpdateItemIcons();
 
         // add other codes required for stage start part
-
+        // for instance, bgm can be started here
     }
 
     public IEnumerator StartStageTimer() {

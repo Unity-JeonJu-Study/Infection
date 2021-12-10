@@ -30,28 +30,11 @@ MonoBehaviour:
     serializationDepthLimit: 64
     assemblyNames:
     - Assembly-CSharp-firstpass
+    - DaiMangou.BridgedData
     - Assembly-CSharp
-    - DungeonArchitect.Core
     - Cinemachine
     - Sirenix.OdinInspector.CompatibilityLayer
-<<<<<<< HEAD
-<<<<<<< HEAD
-    - FMODUnity
-    - FMODUnityResonance
-    - DungeonArchitect.Editor
-    - DungeonArchitect.LaunchPad
-
-    - DocCodeExamples
-
-    - Sirenix.OdinInspector.CompatibilityLayer
-
-=======
->>>>>>> parent of f8f69cb9 (수정본입니다.)
-=======
->>>>>>> parent of f8f69cb9 (수정본입니다.)
     - Sirenix.OdinInspector.CompatibilityLayer.Editor
-    - FMODUnityEditor
-    - FMODUnityResonanceEditor
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1

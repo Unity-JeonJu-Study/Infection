@@ -9,12 +9,16 @@ public class PopupUIManager : MonoBehaviour
 {
     [ReadOnly] public static PopupUIManager instance;
 
+    [ReadOnly, SerializeField] private TutorialPopup popupTutorial;
     [ReadOnly, SerializeField] private SavePopup popupSave;
     [ReadOnly, SerializeField] private PausePopup popupPause;
     [ReadOnly, SerializeField] private GameOverPopup popupGameOver;
 
     private void Awake() {
         instance = this;
+
+        popupTutorial = GetComponentInChildren<TutorialPopup>();
+        popupTutorial.gameObject.SetActive(false);
 
         popupSave = GetComponentInChildren<SavePopup>();
         popupSave.gameObject.SetActive(false);
@@ -24,6 +28,16 @@ public class PopupUIManager : MonoBehaviour
 
         popupGameOver = GetComponentInChildren<GameOverPopup>();
         popupGameOver.gameObject.SetActive(false);
+    }
+
+    private void Update() {
+        // this code exists for debug purpose only
+        // if(Input.GetKeyDown(KeyCode.K))
+        //     EnableTutorialPopup();
+    }
+
+    public void EnableTutorialPopup() {
+        popupTutorial.gameObject.SetActive(true);
     }
 
     public void EnableSavePopup() {

@@ -43,12 +43,10 @@ public class InGameUIManager : MonoBehaviour
 
     private void Update() {
         // this code exists for debug purpose only
-        
         // if(Input.GetKeyDown(KeyCode.Escape))
         //     PopupUIManager.instance.EnablePausePopup();
-
-        if(Input.GetKeyDown(KeyCode.K))
-            UpdateObjectiveText("This is new objective");
+        // if(Input.GetKeyDown(KeyCode.K))
+        //     UpdateObjectiveText("This is new objective");
     }
 
     public void UpdateObjectiveText(string newObjective) {

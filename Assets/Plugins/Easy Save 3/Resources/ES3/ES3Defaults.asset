@@ -34,6 +34,7 @@ MonoBehaviour:
     - DungeonArchitect.Core
     - Cinemachine
     - Sirenix.OdinInspector.CompatibilityLayer
+<<<<<<< HEAD
     - FMODUnity
     - FMODUnityResonance
     - DungeonArchitect.Editor
@@ -43,6 +44,8 @@ MonoBehaviour:
 
     - Sirenix.OdinInspector.CompatibilityLayer
 
+=======
+>>>>>>> parent of f8f69cb9 (수정본입니다.)
     - Sirenix.OdinInspector.CompatibilityLayer.Editor
     - FMODUnityEditor
     - FMODUnityResonanceEditor

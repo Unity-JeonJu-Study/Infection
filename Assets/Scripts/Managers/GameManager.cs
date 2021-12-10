@@ -120,12 +120,15 @@ public class GameManager : SerializedMonoBehaviour
 
 
     public void StartStage() {
+        InGameUIManager.instance.UpdateObjectiveText(currentGoal.description);
+
         currentStageTime = ((int)GameManager.Instance.stageData.data[GameManager.Instance.currentStage].limitTime);
         isTimerPaused = false;
-
         stageTimer = StartCoroutine("StartStageTimer");
 
-        // add some codes required for stage start part
+        InGameUIManager.instance.UpdateItemIcons();
+
+        // add other codes required for stage start part
 
     }
 

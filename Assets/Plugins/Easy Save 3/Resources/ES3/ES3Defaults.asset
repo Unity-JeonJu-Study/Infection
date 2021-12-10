@@ -29,41 +29,20 @@ MonoBehaviour:
     referenceMode: 2
     serializationDepthLimit: 64
     assemblyNames:
-<<<<<<< HEAD
-    - DungeonArchitect.Modules.UI
     - Assembly-CSharp-firstpass
-    - DungeonArchitect.Modules.Flow
-    - DungeonArchitect.Samples
     - Assembly-CSharp
     - DungeonArchitect.Core
     - Cinemachine
-<<<<<<< HEAD
-<<<<<<< HEAD
-    - DungeonArchitect.ThirdParty
-    - DungeonArchitect.Modules.Flow.Implementations
-    - DungeonArchitect.Modules.Graph
-    - DungeonArchitect.Builders
-    - DungeonArchitect.Modules.Grammar
-    - DaiMangou.BridgedData
-    - DungeonArchitect.Modules.Common
-    - DungeonArchitect.Modules.Meshing
-    - DungeonArchitect.Modules.Navigation2D
     - Sirenix.OdinInspector.CompatibilityLayer
-    - DungeonArchitect.Modules.SxEngine
-    - DungeonArchitect.Modules.VisibilityGraph
     - FMODUnity
     - FMODUnityResonance
     - DungeonArchitect.Editor
     - DungeonArchitect.LaunchPad
-=======
+
     - DocCodeExamples
->>>>>>> bbe54aafb4970280700d65521de198530196f3d3
-=======
+
     - Sirenix.OdinInspector.CompatibilityLayer
->>>>>>> parent of f8f69cb9 (수정본입니다.)
-=======
-    - Sirenix.OdinInspector.CompatibilityLayer
->>>>>>> parent of f8f69cb9 (수정본입니다.)
+
     - Sirenix.OdinInspector.CompatibilityLayer.Editor
     - FMODUnityEditor
     - FMODUnityResonanceEditor

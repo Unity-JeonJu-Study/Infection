@@ -72,7 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5132179415738327875}
   m_Layer: 0
-  m_Name: ZooStage
+  m_Name: _Zoo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

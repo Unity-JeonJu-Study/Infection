@@ -5271,7 +5271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4170359476343074581}
   m_Layer: 0
-  m_Name: MainStage
+  m_Name: _Laboratory - ProtoType
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

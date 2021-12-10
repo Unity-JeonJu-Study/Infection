@@ -3,11 +3,6 @@ using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class QuestData
-{
-    private Dictionary<GameStage, QuestList> quests = new Dictionary<GameStage, QuestList>();
-}
-
 [CreateAssetMenu(fileName = "QuestList", menuName = "Data/Quest")]
 public class QuestList : SerializedScriptableObject
 {

@@ -347,6 +347,8 @@ MonoBehaviour:
   stageData: {fileID: 0}
   currentStage: 0
   currentState: 0
+  CurrentQuestList: {fileID: 0}
+  stageTime: 0
   roomParent: {fileID: 1546630422}
   player: {fileID: 0}
 --- !u!1 &963194225

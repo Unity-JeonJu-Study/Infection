@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Sirenix.OdinInspector;
@@ -26,21 +27,31 @@ public enum BGMList
 public class GameManager : SerializedMonoBehaviour
 {
     public static GameManager Instance;
-    
-    //public Dictionary<GameStage, GameObject> stagePrefabs = new Dictionary<GameStage, GameObject>();
-    public StageData stageData;
-    [Tooltip("Game Stage")]
-    public GameStage currentStage;
-    [Tooltip("Game State")]
-    public GameState currentState;
 
+    #region Stage Information
+    
+    [TabGroup("Stage Info")]
+    public StageData stageData;
+    [TabGroup("Stage Info")]
+    public GameStage currentStage;
+    [TabGroup("Stage Info")]
+    public Queue<Quest> CurrentQuestList;
+    [TabGroup("Stage Info")]
+    public int stageTime;
+
+    #endregion
+
+    // 현재 스테이지의 퀘스트를 하나씩 완료할 때 마다 CurrentQuestList에서 Deque를 호출
+    [TabGroup("Quest Info")]
+    public Quest currentGoal;
+    
+    public GameState currentState;
+    
     // 맵 배치 상위 오브젝트
+    
     public Transform roomParent;
 
     public Player player;
-
-
-    public int stageTime;
 
     private void Awake() {
         Instance = this;
@@ -48,7 +59,7 @@ public class GameManager : SerializedMonoBehaviour
         stageData = Resources.Load<StageData>("Data/Stage/StageData");
         currentStage = GameStage.Laboratory;
         currentState = GameState.StartUI;
-        
+
         player = FindObjectOfType<Player>();
         InitRoom();
     }
@@ -59,24 +70,28 @@ public class GameManager : SerializedMonoBehaviour
         {
             PoolManager.Instance.InitPool(stage.Value.gamePrefab, 1, roomParent);
         }
-        MoveStage();
+        UpdateStage(currentStage);
     }
 
-    [Button("방 변경 트리거")]
-    public void SetStage(GameStage stage)
+    [Button("Update Stage Info & Prefab")]
+    private void UpdateStage(GameStage stage)
     {
+        // Update stage information
         currentStage = stage;
-        MoveStage();
-    }
-    private void MoveStage()
-    {
+        CurrentQuestList = new Queue<Quest>(stageData.data[currentStage].quest.questList); // copy queue
+        currentGoal = CurrentQuestList.Dequeue();
+        
+        // Activate stage
         for (int i = 0; i < roomParent.childCount; i++)
         {
             PoolManager.Instance.Despawn(roomParent.GetChild(i).gameObject);
         }
         PoolManager.Instance.Spawn(stageData.data[currentStage].gamePrefab.name);
     }
-    
+
+    [Button("Give me next Quest"),TabGroup("Quest Info")]
+    public void NextQuest() => currentGoal = CurrentQuestList.Dequeue();
+
     #region Click Event
 
     public void OnClickPause() => currentState = GameState.PauseUI;
@@ -84,7 +99,6 @@ public class GameManager : SerializedMonoBehaviour
     public void OnClickResume() => currentState = GameState.PlayingUI;
 
     #endregion
-
 
     // public void ResetStageTime() {
     //     stageTime = GameManager.Instance.stageData.data[GameManager.Instance.currentStage].limitTime;

@@ -13386,7 +13386,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 56
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -13411,8 +13411,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793388493170364137}
-  m_LocalRotation: {x: 0.5252246, y: 0.4898828, z: -0.18549299, w: 0.67063135}
-  m_LocalPosition: {x: -23.10057, y: 1.6010551, z: -13.859446}
+  m_LocalRotation: {x: 0, y: 0.81314486, z: 0, w: 0.5820614}
+  m_LocalPosition: {x: -19.876806, y: 6.42, z: -7.2510085}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -30983,11 +30983,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dcf6805ba2c44f69a5c394d31a3392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NodeId: 4c3f9fb8-4827-4c01-821d-48e46056939b
-  dungeon: {fileID: 0}
-  affectsNavigation: 1
-  userData: -1
-  externallyManaged: 0
 --- !u!114 &5638332098367002595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31000,11 +30995,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dcf6805ba2c44f69a5c394d31a3392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NodeId: 4c3f9fb8-4827-4c01-821d-48e46056939b
-  dungeon: {fileID: 0}
-  affectsNavigation: 1
-  userData: -1
-  externallyManaged: 0
 --- !u!114 &5638332098427984831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31017,11 +31007,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dcf6805ba2c44f69a5c394d31a3392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NodeId: 4c3f9fb8-4827-4c01-821d-48e46056939b
-  dungeon: {fileID: 0}
-  affectsNavigation: 1
-  userData: -1
-  externallyManaged: 0
 --- !u!114 &5638332098940167828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31034,11 +31019,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dcf6805ba2c44f69a5c394d31a3392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NodeId: 4c3f9fb8-4827-4c01-821d-48e46056939b
-  dungeon: {fileID: 0}
-  affectsNavigation: 1
-  userData: -1
-  externallyManaged: 0
 --- !u!114 &5638332099165763333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31051,11 +31031,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dcf6805ba2c44f69a5c394d31a3392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NodeId: 4c3f9fb8-4827-4c01-821d-48e46056939b
-  dungeon: {fileID: 0}
-  affectsNavigation: 1
-  userData: -1
-  externallyManaged: 0
 --- !u!114 &5638332099291547159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31068,11 +31043,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dcf6805ba2c44f69a5c394d31a3392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NodeId: 4c3f9fb8-4827-4c01-821d-48e46056939b
-  dungeon: {fileID: 0}
-  affectsNavigation: 1
-  userData: -1
-  externallyManaged: 0
 --- !u!114 &5638332099299621629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31085,11 +31055,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dcf6805ba2c44f69a5c394d31a3392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NodeId: 4c3f9fb8-4827-4c01-821d-48e46056939b
-  dungeon: {fileID: 0}
-  affectsNavigation: 1
-  userData: -1
-  externallyManaged: 0
 --- !u!114 &5638332099786360096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31102,11 +31067,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dcf6805ba2c44f69a5c394d31a3392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NodeId: 4c3f9fb8-4827-4c01-821d-48e46056939b
-  dungeon: {fileID: 0}
-  affectsNavigation: 1
-  userData: -1
-  externallyManaged: 0
 --- !u!4 &5648116714450943716
 Transform:
   m_ObjectHideFlags: 0
@@ -49657,11 +49617,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dcf6805ba2c44f69a5c394d31a3392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NodeId: 28cc952e-22cf-45f6-82a5-c16b1dc7bcf3
-  dungeon: {fileID: 0}
-  affectsNavigation: 1
-  userData: -1
-  externallyManaged: 0
 --- !u!95 &8689992140878060724
 Animator:
   serializedVersion: 3
@@ -50065,11 +50020,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dcf6805ba2c44f69a5c394d31a3392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NodeId: 28cc952e-22cf-45f6-82a5-c16b1dc7bcf3
-  dungeon: {fileID: 0}
-  affectsNavigation: 1
-  userData: -1
-  externallyManaged: 0
 --- !u!1 &8689992141296870089
 GameObject:
   m_ObjectHideFlags: 0
@@ -50733,11 +50683,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dcf6805ba2c44f69a5c394d31a3392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NodeId: 28cc952e-22cf-45f6-82a5-c16b1dc7bcf3
-  dungeon: {fileID: 0}
-  affectsNavigation: 1
-  userData: -1
-  externallyManaged: 0
 --- !u!4 &8689992141800783928
 Transform:
   m_ObjectHideFlags: 0
@@ -51217,11 +51162,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dcf6805ba2c44f69a5c394d31a3392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NodeId: 28cc952e-22cf-45f6-82a5-c16b1dc7bcf3
-  dungeon: {fileID: 0}
-  affectsNavigation: 1
-  userData: -1
-  externallyManaged: 0
 --- !u!114 &8689992141983547711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51234,11 +51174,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dcf6805ba2c44f69a5c394d31a3392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NodeId: 28cc952e-22cf-45f6-82a5-c16b1dc7bcf3
-  dungeon: {fileID: 0}
-  affectsNavigation: 1
-  userData: -1
-  externallyManaged: 0
 --- !u!4 &8689992142006702648
 Transform:
   m_ObjectHideFlags: 0
@@ -51644,11 +51579,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dcf6805ba2c44f69a5c394d31a3392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NodeId: 28cc952e-22cf-45f6-82a5-c16b1dc7bcf3
-  dungeon: {fileID: 0}
-  affectsNavigation: 1
-  userData: -1
-  externallyManaged: 0
 --- !u!4 &8689992142110138240
 Transform:
   m_ObjectHideFlags: 0
@@ -52147,11 +52077,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dcf6805ba2c44f69a5c394d31a3392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NodeId: 28cc952e-22cf-45f6-82a5-c16b1dc7bcf3
-  dungeon: {fileID: 0}
-  affectsNavigation: 1
-  userData: -1
-  externallyManaged: 0
 --- !u!114 &8689992142347404014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52164,11 +52089,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dcf6805ba2c44f69a5c394d31a3392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NodeId: 28cc952e-22cf-45f6-82a5-c16b1dc7bcf3
-  dungeon: {fileID: 0}
-  affectsNavigation: 1
-  userData: -1
-  externallyManaged: 0
 --- !u!1 &8689992142365205177
 GameObject:
   m_ObjectHideFlags: 0
@@ -52274,11 +52194,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dcf6805ba2c44f69a5c394d31a3392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NodeId: 28cc952e-22cf-45f6-82a5-c16b1dc7bcf3
-  dungeon: {fileID: 0}
-  affectsNavigation: 1
-  userData: -1
-  externallyManaged: 0
 --- !u!114 &8689992142479508013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52291,11 +52206,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dcf6805ba2c44f69a5c394d31a3392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NodeId: 28cc952e-22cf-45f6-82a5-c16b1dc7bcf3
-  dungeon: {fileID: 0}
-  affectsNavigation: 1
-  userData: -1
-  externallyManaged: 0
 --- !u!114 &8689992142563207694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52308,11 +52218,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dcf6805ba2c44f69a5c394d31a3392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NodeId: 28cc952e-22cf-45f6-82a5-c16b1dc7bcf3
-  dungeon: {fileID: 0}
-  affectsNavigation: 1
-  userData: -1
-  externallyManaged: 0
 --- !u!1 &8689992142596410321
 GameObject:
   m_ObjectHideFlags: 0
@@ -52604,11 +52509,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dcf6805ba2c44f69a5c394d31a3392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NodeId: 28cc952e-22cf-45f6-82a5-c16b1dc7bcf3
-  dungeon: {fileID: 0}
-  affectsNavigation: 1
-  userData: -1
-  externallyManaged: 0
 --- !u!95 &8689992142715392237
 Animator:
   serializedVersion: 3
@@ -52752,11 +52652,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dcf6805ba2c44f69a5c394d31a3392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NodeId: 28cc952e-22cf-45f6-82a5-c16b1dc7bcf3
-  dungeon: {fileID: 0}
-  affectsNavigation: 1
-  userData: -1
-  externallyManaged: 0
 --- !u!114 &8689992142912569852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52769,11 +52664,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dcf6805ba2c44f69a5c394d31a3392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NodeId: 28cc952e-22cf-45f6-82a5-c16b1dc7bcf3
-  dungeon: {fileID: 0}
-  affectsNavigation: 1
-  userData: -1
-  externallyManaged: 0
 --- !u!114 &8689992142914535426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52786,11 +52676,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dcf6805ba2c44f69a5c394d31a3392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NodeId: 28cc952e-22cf-45f6-82a5-c16b1dc7bcf3
-  dungeon: {fileID: 0}
-  affectsNavigation: 1
-  userData: -1
-  externallyManaged: 0
 --- !u!108 &8689992142981840152
 Light:
   m_ObjectHideFlags: 0

@@ -37,7 +37,7 @@ public class SlimeMovement : Movement
                                 0.2f,
                                 0f),
             Vector3.down,
-             playerMovement.groundRayDistance))
+             sensor.groundRayDistance))
         {
             playerMovement.isGround = true;
         }

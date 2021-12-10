@@ -4,10 +4,10 @@ using UnityEngine;
 public class PlayerInfect : MonoBehaviour
 {
     [Header("Infection Information")] 
-    public float interactRayDistance;
     public GameObject currentAnimal;
     public GameObject infectAnimal;
 
+    private Sensor sensor;
     private Transform parentTransform;
     private Vector3 currentPosition;
     private PlayerMovement playerMovement;
@@ -30,6 +30,7 @@ public class PlayerInfect : MonoBehaviour
         InitAnimals();
         currentAnimal = animals["Slime"];
         meshRenderer = currentAnimal.GetComponentInChildren<SkinnedMeshRenderer>();
+        sensor = GetComponent<Sensor>();
     }
 
     private void InitAnimals()
@@ -46,8 +47,7 @@ public class PlayerInfect : MonoBehaviour
         meshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
         Debug.Log(meshRenderer);
         rayOriginPosition =  meshRenderer.bounds.center;
-        if (Physics.BoxCast(transform.position, transform.lossyScale / 2.0f, transform.forward * 0.8f, out RaycastHit hit,
-            transform.rotation, interactRayDistance))
+        if (sensor.CheckForward())
         {
             Gizmos.color = Color.blue;
             Gizmos.DrawRay(rayOriginPosition, transform.forward );
@@ -76,12 +76,11 @@ public class PlayerInfect : MonoBehaviour
         if (!playerInput.InfectKeyPressed)
             return;
         
-        if (Physics.BoxCast(transform.position, transform.lossyScale / 2.0f, transform.forward * 0.8f, out RaycastHit hit,
-            transform.rotation, interactRayDistance, LayerMask.GetMask("Animal")))
+        if (sensor.CheckForward())
         {
             currentAnimal.SetActive(false);
             
-            infectAnimal = hit.collider.gameObject;
+            infectAnimal = sensor.hit.collider.gameObject;
             infectAnimal.SetActive(false);
 
             ChangeToInfectAnimal();

@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
     public float rotationSpeed;
     public float jumpPower;
     public bool isGround;
-    public float groundRayDistance;
     public bool canJump;
     public Movement movement;
     public CinemachineVirtualCamera _virtualCamera;
@@ -17,12 +16,14 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public Animator _animator;
     [HideInInspector] public PlayerInput playerInput;
     [HideInInspector] public Rigidbody _rigidbody;
-
+    [HideInInspector]public Sensor sensor;
+    
     private GameObject currentAnimal;
     private PlayerInfect playerInfect;
 
     private void Start()
     {
+        sensor = GetComponent<Sensor>();
         playerInfect = GetComponent<PlayerInfect>();
         playerInput = GetComponent<PlayerInput>();
         _rigidbody = GetComponent<Rigidbody>();
@@ -45,8 +46,8 @@ public class PlayerMovement : MonoBehaviour
         movementSpeed = animalData.movementSpeed;
         rotationSpeed = animalData.rotationSpeed;
         jumpPower = animalData.jumpPower;
-        groundRayDistance = animalData.groundRayDistance;
-        playerInfect.interactRayDistance = animalData.interactRayDistance;
+        sensor.groundRayDistance = animalData.groundRayDistance;
+        sensor.interactRayDistance = animalData.interactRayDistance;
         canJump = true;
     }
     

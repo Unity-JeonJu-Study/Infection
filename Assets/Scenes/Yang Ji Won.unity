@@ -608,7 +608,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 70
+  field of view: 15
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -633,13 +633,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.26075724, y: 0, z: 0, w: 0.96540445}
-  m_LocalPosition: {x: 2.8190396, y: 6.204691, z: -9.010114}
+  m_LocalRotation: {x: -0.008726465, y: 0, z: 0, w: 0.999962}
+  m_LocalPosition: {x: 2.8190396, y: 0.995444, z: -10.368478}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 30.23, y: 0, z: -0.007}
+  m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
 --- !u!114 &963194229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3057,22 +3057,22 @@ PrefabInstance:
     - target: {fileID: 8627658518785016114, guid: d7b13916712964d45b02d3561564f38f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.204691
+      value: 0.995444
       objectReference: {fileID: 0}
     - target: {fileID: 8627658518785016114, guid: d7b13916712964d45b02d3561564f38f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.010114
+      value: -10.368478
       objectReference: {fileID: 0}
     - target: {fileID: 8627658518785016114, guid: d7b13916712964d45b02d3561564f38f,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.96540445
+      value: 0.999962
       objectReference: {fileID: 0}
     - target: {fileID: 8627658518785016114, guid: d7b13916712964d45b02d3561564f38f,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.26075724
+      value: -0.008726465
       objectReference: {fileID: 0}
     - target: {fileID: 8627658518785016114, guid: d7b13916712964d45b02d3561564f38f,
         type: 3}
@@ -3087,7 +3087,7 @@ PrefabInstance:
     - target: {fileID: 8627658518785016114, guid: d7b13916712964d45b02d3561564f38f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 30.23
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 8627658518785016114, guid: d7b13916712964d45b02d3561564f38f,
         type: 3}
@@ -3104,6 +3104,11 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 961707708}
+    - target: {fileID: 8627658518785016115, guid: d7b13916712964d45b02d3561564f38f,
+        type: 3}
+      propertyPath: m_Lens.FieldOfView
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7b13916712964d45b02d3561564f38f, type: 3}
 --- !u!1 &9125741797957002753

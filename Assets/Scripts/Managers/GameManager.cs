@@ -97,6 +97,8 @@ public class GameManager : SerializedMonoBehaviour
             PoolManager.Instance.Despawn(roomParent.GetChild(i).gameObject);
         }
         PoolManager.Instance.Spawn(stageData.data[currentStage].gamePrefab.name);
+
+        InitInGameUIForCurrentStage();
     }
 
     [Button("Give me next Quest"),TabGroup("Quest Info")]

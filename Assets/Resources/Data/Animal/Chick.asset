@@ -18,7 +18,8 @@ MonoBehaviour:
   movementSpeed: 3
   rotationSpeed: 1
   jumpPower: 2
-  groundRayDistance: 1
-  interactRayDistance: 1.5
+  groundRayDistance: 0.5
+  interactRayDistance: 0.1
   fov: 60
   cameraRotation: {x: 45, y: 0, z: 0}
+  rayOriginOffset: {x: 0, y: 0, z: 0}

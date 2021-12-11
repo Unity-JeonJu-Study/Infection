@@ -29,15 +29,16 @@ public class Sensor : MonoBehaviour
         meshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
         extents = meshRenderer.bounds.extents;
         rayRadius = extents.y / 2.0f;
+        rayOriginOffset = new Vector3(0, 0, meshRenderer.bounds.extents.x / 2.0f);
     }
     
     private void OnDrawGizmos()
     {
-        rayOriginPosition = meshRenderer.bounds.center;
+        rayOriginPosition = meshRenderer.bounds.center + rayOriginOffset;
         if (CheckForward())
         {
             Gizmos.color = Color.blue;
-            Gizmos.DrawRay(rayOriginPosition, transform.forward * hitForward.distance );
+            Gizmos.DrawRay(rayOriginPosition, transform.forward * hitForward.distance);
 
             // Hit된 지점에 박스를 그려준다.
             Gizmos.DrawWireCube(rayOriginPosition + transform.forward * hitForward.distance , extents);
@@ -50,22 +51,23 @@ public class Sensor : MonoBehaviour
             // Hit된 지점에 박스를 그려준다.
             Gizmos.DrawWireCube(rayOriginPosition + transform.forward, extents);
         }
+        rayOriginPosition = meshRenderer.bounds.center;
 
         if (playerMovement.isGround)
         {
             Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(transform.position - rayOriginOffset +  Vector3.down * hitGround.distance, rayRadius);
+            Gizmos.DrawWireSphere(rayOriginPosition +  Vector3.down * hitGround.distance, rayRadius);
         }
         else
         {
             Gizmos.color = Color.green;
-            Gizmos.DrawWireSphere(transform.position - rayOriginOffset + Vector3.down, rayRadius);
+            Gizmos.DrawWireSphere(rayOriginPosition + Vector3.down * hitGround.distance, rayRadius);
         }
     }
 
     public bool CheckForward()
     {
-        rayOriginPosition = meshRenderer.bounds.center;
+        rayOriginPosition = meshRenderer.bounds.center + rayOriginOffset;
         
         cast = Physics.BoxCast(rayOriginPosition, extents, transform.forward,
                                     out hitForward,
@@ -77,11 +79,17 @@ public class Sensor : MonoBehaviour
     public void CheckGround()
     {
         rayOriginPosition = meshRenderer.bounds.center;
-        cast = Physics.SphereCast(transform.position - rayOriginOffset,
-                                    extents.y / 2.0f,
-                                    Vector3.down,
-                                    out hitGround,
-                                    groundRayDistance);
+        cast = Physics.SphereCast(rayOriginPosition,
+                                rayRadius,
+                                Vector3.down,
+                                out hitGround,
+                                groundRayDistance);
+        Debug.Log("땅 체크 : " + cast);
         playerMovement.isGround = cast;
+    }
+
+    public void CalculateOffset()
+    {
+        
     }
 }

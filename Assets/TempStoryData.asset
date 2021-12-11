@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8785612383385877558
+--- !u!114 &-7400324017467869986
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,46 +10,46 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -1432923298, guid: 55ffa4d6529f10b4aba0ad6d5d3d05ec, type: 3}
-  m_Name: 2_Dialogue
+  m_Name: 
   m_EditorClassIdentifier: 
-  Name: 2_Dialogue
+  Name: 1_Dialogue
   StoryProject: {fileID: 11400000}
-  UID: a2d66c76-fe4a-42e8-af79-2ee72479b5d6
+  UID: 47885303-280f-4513-be31-60512b6910b1
   Drag: {fileID: 0}
   UseCustomDragArea: 0
   IndexInList: 2
   NodeRect:
     serializedVersion: 2
-    x: 97.87662
-    y: -5.157898
+    x: 284.8889
+    y: 163.11111
     width: 330
     height: 120
   InputArea:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
+    x: 279.8889
+    y: 218.11111
+    width: 10
+    height: 10
   OutputArea:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
+    x: 609.8889
+    y: 218.11111
+    width: 10
+    height: 10
   NodesIMadeConnectionsTo: []
   NodesThatMadeAConnectionToMe:
-  - {fileID: 1060484493187818142}
+  - {fileID: -770938991444952315}
   UsesText: 1
   HasInputArea: 1
   HasOutputArea: 1
-  ChainingColour: {r: 1, g: 0.8352941, b: 0, a: 1}
+  ChainingColour: {r: 0.9764706, g: 0, b: 1, a: 1}
   UsesTime: 1
   MaxMinutes: 5
-  DelayTimeInSeconds: 0
+  DelayTimeInSeconds: 0.010000001
   TimeInSeconds: 1
-  NodeDurationSum: 2
-  StartingTime: 1
-  CallingNode: {fileID: -7074620676901180887}
+  NodeDurationSum: 1.01
+  StartingTime: 0.010000001
+  CallingNode: {fileID: -770938991444952315}
   Environment: {fileID: 0}
   Text: 
   Tag: 
@@ -59,19 +59,19 @@ MonoBehaviour:
   pushTime: 1
   OverrideTime: 0
   LocalizedText:
-  - 'Hello
+  - 'Today is the day.
 
-'
+    Go and throw Viruses!'
   MaxInputConnections: 10000
   MaxOutputConnections: 10000
   Lock: 0
   LockTime: 0
   Expand: 1
-  ShowImageArea: 1
+  ShowImageArea: 0
   LocalizedSoundEffects:
   - {fileID: 0}
   CachedTimeInSeconds: -1
-  wordCount: 1
+  wordCount: 8
   MyStoryboardImageScalesToFit: 0
   StoryboardImagePath: 
   LocalizedVoiceRecordings:
@@ -80,7 +80,7 @@ MonoBehaviour:
   MaximizedStoryboardArea: 0
   _textAreaScrollView: {x: 0, y: 0}
   SoundEffectWaveform: {fileID: 0}
---- !u!114 &-7074620676901180887
+--- !u!114 &-4210377920883874849
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -90,46 +90,46 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -392598514, guid: 55ffa4d6529f10b4aba0ad6d5d3d05ec, type: 3}
-  m_Name: Doctor Han
+  m_Name: 
   m_EditorClassIdentifier: 
-  Name: Doctor Han
+  Name: St. Meggie
   StoryProject: {fileID: 11400000}
-  UID: 7544592b-cde2-450f-92a0-275289d6f417
+  UID: 798035d9-63a0-457e-827d-2b610fd26de0
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 0
+  IndexInList: 1
   NodeRect:
     serializedVersion: 2
-    x: -241.2533
-    y: -71.57123
+    x: 18.444427
+    y: 324.8333
     width: 200
     height: 85
   InputArea:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
+    x: 13.4444275
+    y: 362.3333
+    width: 10
+    height: 10
   OutputArea:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
+    x: 213.44443
+    y: 362.3333
+    width: 10
+    height: 10
   NodesIMadeConnectionsTo:
-  - {fileID: 1060484493187818142}
+  - {fileID: 5128598990307191728}
   NodesThatMadeAConnectionToMe: []
   UsesText: 0
   HasInputArea: 0
   HasOutputArea: 1
-  ChainingColour: {r: 1, g: 0.8352941, b: 0, a: 1}
+  ChainingColour: {r: 0, g: 1, b: 0.2784314, a: 1}
   UsesTime: 0
   MaxMinutes: 1
   DelayTimeInSeconds: 0
   TimeInSeconds: 0
   NodeDurationSum: 0
   StartingTime: 0
-  CallingNode: {fileID: -7074620676901180887}
+  CallingNode: {fileID: -4210377920883874849}
   Environment: {fileID: 0}
   Text: 
   Tag: 
@@ -144,16 +144,14 @@ MonoBehaviour:
   MaxOutputConnections: 10000
   Lock: 0
   LockTime: 0
-  sample: 0
+  sample: 1
   AddedToStoriesCharacterList: 1
   NodesInMyChain:
-  - {fileID: 1060484493187818142}
-  - {fileID: -8785612383385877558}
+  - {fileID: 5128598990307191728}
   NodesInMyChainWithRoutes:
-  - {fileID: 1060484493187818142}
-  - {fileID: -8785612383385877558}
+  - {fileID: 5128598990307191728}
   CharacterBios:
-  - CharacterName: Doctor Han
+  - CharacterName: St. Meggie
     CharacterSex: 0
     CharacterType: 0
     Age: '?'
@@ -278,9 +276,205 @@ MonoBehaviour:
   HideInTimeline: 0
   SortingID: 0
   ShowInTimeline: 1
+--- !u!114 &-770938991444952315
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -392598514, guid: 55ffa4d6529f10b4aba0ad6d5d3d05ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Prof. Han
+  StoryProject: {fileID: 11400000}
+  UID: 89312c13-916f-43a0-9a85-5d335ad60a23
+  Drag: {fileID: 0}
+  UseCustomDragArea: 0
+  IndexInList: 0
+  NodeRect:
+    serializedVersion: 2
+    x: 9
+    y: 181.5
+    width: 200
+    height: 85
+  InputArea:
+    serializedVersion: 2
+    x: 4
+    y: 219
+    width: 10
+    height: 10
+  OutputArea:
+    serializedVersion: 2
+    x: 204
+    y: 219
+    width: 10
+    height: 10
+  NodesIMadeConnectionsTo:
+  - {fileID: -7400324017467869986}
+  NodesThatMadeAConnectionToMe: []
+  UsesText: 0
+  HasInputArea: 0
+  HasOutputArea: 1
+  ChainingColour: {r: 0.9764706, g: 0, b: 1, a: 1}
+  UsesTime: 0
+  MaxMinutes: 1
+  DelayTimeInSeconds: 0
+  TimeInSeconds: 0
+  NodeDurationSum: 0
+  StartingTime: 0
+  CallingNode: {fileID: -770938991444952315}
+  Environment: {fileID: 0}
+  Text: 
+  Tag: 
+  Pass: 0
+  MySceneId: 0
+  IOofset: {x: 5, y: 0}
+  pushTime: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  MaxInputConnections: 10000
+  MaxOutputConnections: 10000
+  Lock: 0
+  LockTime: 0
+  sample: 1
+  AddedToStoriesCharacterList: 1
+  NodesInMyChain:
+  - {fileID: -7400324017467869986}
+  NodesInMyChainWithRoutes:
+  - {fileID: -7400324017467869986}
+  CharacterBios:
+  - CharacterName: Prof. Han
+    CharacterSex: 0
+    CharacterType: 0
+    Age: '?'
+    Backstory: No Backstory
+    Race: Human
+    Height: '?'
+    Motivation: ' No Motivation'
+    PhysicalAppearance: 
+    CharacterImageFilePath: file:///C:/Users/tldk4/Pictures/Capture/Crew_Man.png
+    Birthday: mm/dd/yy
+    Family: []
+    Friends: []
+    VoiceSamples: []
+    CustomBioDataset: []
+    Personality:
+      NegativeTraits:
+        Angry: 0
+        Arrogantt: 0
+        Careless: 0
+        Childish: 0
+        Cowardly: 0
+        Crafty: 0
+        Crazy: 0
+        Cruel: 0
+        Dependent: 0
+        Destructive: 0
+        Devious: 0
+        Disloyal: 0
+        Disobedient: 0
+        Disorderly: 0
+        Disorganized: 0
+        Fearful: 0
+        Fickle: 0
+        Foolish: 0
+        Forgetful: 0
+        Frightening: 0
+        Frivolous: 0
+        Graceless: 0
+        Gullible: 0
+        Hostile: 0
+        Impractical: 0
+        Irritable: 0
+        Lazy: 0
+        Meddlesome: 0
+        Miserable: 0
+        Neglectful: 0
+        Opportunistic: 0
+        Provocative: 0
+        Slow: 0
+        Timid: 0
+        Uncooperative: 0
+        Unreliable: 0
+        Weak: 0
+        WeakWilled: 0
+      NeutralTraits:
+        Aggressive: 0
+        Deceptive: 0
+        Dominating: 0
+        Enigmatic: 0
+        Experimental: 0
+        Iconoclastic: 0
+        Idiosyncratic: 0
+        Impassive: 0
+        Obedient: 0
+        Progressive: 0
+        Questioning: 0
+        Reserved: 0
+        Stubborn: 0
+      PositiveTraits:
+        Accessible: 0
+        Active: 0
+        Adaptable: 0
+        Adventurous: 0
+        Alert: 0
+        Brilliant: 0
+        Calm: 0
+        Capable: 0
+        Challenging: 0
+        Charismatic: 0
+        Clever: 0
+        Confident: 0
+        Cooperative: 0
+        Courageous: 0
+        Curious: 0
+        Daring: 0
+        Decisive: 0
+        Discreet: 0
+        Efficient: 0
+        Energetic: 0
+        Focused: 0
+        Helpful: 0
+        Independent: 0
+        Individualistic: 0
+        Innovative: 0
+        Intelligent: 0
+        Leaderly: 0
+        Logical: 0
+        Loyal: 0
+        Methodical: 0
+        Orderly: 0
+        Organized: 0
+        Patient: 0
+        Patriotic: 0
+        Peaceful: 0
+        Reliable: 0
+        Resourceful: 0
+        Responsible: 0
+        Responsive: 0
+        Sane: 0
+        Selfless: 0
+        Serious: 0
+        Skillful: 0
+        Stoic: 0
+        Strong: 0
+    image: {fileID: 0}
+    expandPersonalityFoldout: 0
+    expandVoiceSampleFoldout: 0
+    expandCustomDataFoldout: 0
+    expandCustomBioDataFoldout: 0
+  LinkedCharacter: {fileID: 0}
+  BioID: 0
+  HideInTimeline: 0
+  SortingID: 1
+  ShowInTimeline: 1
 --- !u!114 &11400000
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 61
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -288,32 +482,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 1758785420, guid: 55ffa4d6529f10b4aba0ad6d5d3d05ec, type: 3}
-  m_Name: Testing Story Backup
+  m_Name: New Story
   m_EditorClassIdentifier: 
-  Uid: 5f2f9b45-3d35-44dc-9e3c-1ad10fbc081d
-  Name: Testing Story Backup
+  Uid: 27cda29f-3a19-4203-be6e-9fc38d125c38
+  Name: New Story
   Info: 
   CharacterNodes:
-  - {fileID: -7074620676901180887}
+  - {fileID: -4210377920883874849}
+  - {fileID: -770938991444952315}
   EnvironmentNodes: []
   RouteNodes: []
   Scenes:
-  - SceneName: ProtoType
-    UID: fa067037-c9cc-4a80-9850-9940497f0db4
-    Pan: {x: -526.0363, y: -467.21313}
-    Zoom: 0.8800001
+  - SceneName: Intro log
+    UID: e382c2e3-14a2-470e-9167-fb77e8d2f5e3
+    Pan: {x: 42.883255, y: -9.014511}
+    Zoom: 0.7600002
     NodeElements:
-    - {fileID: -7074620676901180887}
-    - {fileID: 1060484493187818142}
-    - {fileID: -8785612383385877558}
+    - {fileID: -770938991444952315}
+    - {fileID: -4210377920883874849}
+    - {fileID: -7400324017467869986}
+    - {fileID: 5128598990307191728}
     Characters:
-    - {fileID: -7074620676901180887}
+    - {fileID: -4210377920883874849}
+    - {fileID: -770938991444952315}
     Environments: []
     Overview: no Overview
     Theme: no Theme
     Plot: no plot
     CustomSceneDataset: []
-    Duration: 2
+    Duration: 3.1100001
     ShowProjectInfo: 1
     ShowGrid: 1
     alwaysShowNodeNames: 0
@@ -326,51 +523,27 @@ MonoBehaviour:
     image: {fileID: 0}
     expandCustomSceneDataFoldout: 0
     seneDrag: {fileID: 0}
-  - SceneName: TT
-    UID: 7841b7a9-d1d1-4b45-9596-840a9c82a87c
-    Pan: {x: 0, y: 0}
-    Zoom: 1
-    NodeElements: []
-    Characters: []
-    Environments: []
-    Overview: no Overview
-    Theme: no Theme
-    Plot: no plot
-    CustomSceneDataset: []
-    Duration: 0
-    ShowProjectInfo: 1
-    ShowGrid: 1
-    alwaysShowNodeNames: 0
-    VisualizeStoryFlow: 1
-    ShowChainingColourInTimeline: 0
-    TimelineData:
-      PanScroll: {x: 0, y: 0}
-      Zoom: 20
-    SceneImagePath: 
-    image: {fileID: 0}
-    expandCustomSceneDataFoldout: 0
-    seneDrag: {fileID: 0}
   LastSavedScene: 0
   ProjectType: 0
   image: {fileID: 0}
   CoverImagePath: 
   Summary: ' Summary'
-  TempName: Testing Story
+  TempName: 
   AudioSetings:
     DeviceName: 
     MaxFrequency: 0
     MinFrequency: 0
   TimeStamp:
-    Stamp: 2021-12-10 PM 12:25:53
+    Stamp: 2021-12-10 PM 3:48:27
   CreatedDataFolders: 1
-  ProjectDataFolder: {fileID: 102900000, guid: 302d6e98a3e1e9a45b16436e6db6a259, type: 3}
-  AudioFileFolder: {fileID: 102900000, guid: 3af2f5fbfc97f8e4cacfe6380733d97a, type: 3}
-  ImageFileFolder: {fileID: 102900000, guid: 44490f5c5bf5b0143893c35a56132235, type: 3}
+  ProjectDataFolder: {fileID: 102900000, guid: ca07807b5db3e454ab8a01041031dac9, type: 3}
+  AudioFileFolder: {fileID: 102900000, guid: 0427e7ed5ab6dd8429e444f127b0af87, type: 3}
+  ImageFileFolder: {fileID: 102900000, guid: b101a1934c412804db6199d060b6ac02, type: 3}
   CustomExportFolderLocation: 
   FullDuration: 0
   Year: yyyy
   Genre: Action
-  StoryboardMode: 1
+  StoryboardMode: 0
   TextMode: 1
   UseAutoTimeTextDialogue: 0
   AutoTimedTextDataset:
@@ -435,23 +608,23 @@ MonoBehaviour:
   ShowTipsAndShortcuts: 1
   TimelineZoomThreashold: 100
   Languages:
-  - Name: nglishh
+  - Name: English
     CountryCode: en-US
     Active: 1
     Default: 1
   LanguageIndex: 0
   DefaultLanguageIndex: 0
-  UpdatedLanguage: 1
+  UpdatedLanguage: 0
   ShowStoryboardImagesInStorySampleEditor: 0
   ShowInteractionTypeInStorySamepleEditor: 0
   MaxSampleDisplay: 2
   BackupStory: {fileID: 0}
-  IsBackup: 1
+  IsBackup: 0
   AllowBackup: 1
   SaveImagesToStoryFile: 0
   StoryImageFiles: []
   HasSaveError: 1
---- !u!114 &1060484493187818142
+--- !u!114 &5128598990307191728
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -461,47 +634,46 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -1432923298, guid: 55ffa4d6529f10b4aba0ad6d5d3d05ec, type: 3}
-  m_Name: 1_Dialogue
+  m_Name: 
   m_EditorClassIdentifier: 
-  Name: 1_Dialogue
+  Name: 2_Dialogue
   StoryProject: {fileID: 11400000}
-  UID: 5406a75e-3332-4866-8f75-52f6dda92a9d
+  UID: 711931fd-6f37-49c5-aec2-2e85dc7a091b
   Drag: {fileID: 0}
   UseCustomDragArea: 0
-  IndexInList: 1
+  IndexInList: 3
   NodeRect:
     serializedVersion: 2
-    x: 94.61575
-    y: -194.2883
+    x: 290.7779
+    y: 318.2222
     width: 330
     height: 120
   InputArea:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
+    x: 285.7779
+    y: 373.2222
+    width: 10
+    height: 10
   OutputArea:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
-  NodesIMadeConnectionsTo:
-  - {fileID: -8785612383385877558}
+    x: 615.7779
+    y: 373.2222
+    width: 10
+    height: 10
+  NodesIMadeConnectionsTo: []
   NodesThatMadeAConnectionToMe:
-  - {fileID: -7074620676901180887}
+  - {fileID: -4210377920883874849}
   UsesText: 1
   HasInputArea: 1
   HasOutputArea: 1
-  ChainingColour: {r: 1, g: 0.8352941, b: 0, a: 1}
+  ChainingColour: {r: 0, g: 1, b: 0.2784314, a: 1}
   UsesTime: 1
   MaxMinutes: 5
-  DelayTimeInSeconds: 0
-  TimeInSeconds: 1
-  NodeDurationSum: 1
-  StartingTime: 0
-  CallingNode: {fileID: -7074620676901180887}
+  DelayTimeInSeconds: 1.49
+  TimeInSeconds: 1.62
+  NodeDurationSum: 3.1100001
+  StartingTime: 1.49
+  CallingNode: {fileID: -4210377920883874849}
   Environment: {fileID: 0}
   Text: 
   Tag: 
@@ -511,13 +683,15 @@ MonoBehaviour:
   pushTime: 1
   OverrideTime: 0
   LocalizedText:
-  - I'm Going!
+  - 'Yes Professor!
+
+'
   MaxInputConnections: 10000
   MaxOutputConnections: 10000
   Lock: 0
   LockTime: 0
   Expand: 1
-  ShowImageArea: 1
+  ShowImageArea: 0
   LocalizedSoundEffects:
   - {fileID: 0}
   CachedTimeInSeconds: -1

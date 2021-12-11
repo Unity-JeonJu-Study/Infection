@@ -11,6 +11,7 @@ namespace RootMotion.Demos {
 	{
 
 		public Transform parentTransform;
+		public Transform originTransform;
 		public GameObject pickupObject;
 		
 		[Tooltip("The object to interact to")]
@@ -54,6 +55,7 @@ namespace RootMotion.Demos {
 		public void InteractionEnd()
 		{
 			interactionSystem.ResumeAll();
+			pickupObject.transform.SetParent(originTransform);
 		}
 
 		public void ActivateAvatar()

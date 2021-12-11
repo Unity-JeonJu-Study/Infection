@@ -1,0 +1,396 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5594178100211510142
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 2_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 2_Dialogue
+  Text: 
+  UID: 711931fd-6f37-49c5-aec2-2e85dc7a091b
+  CharacterName: St. Meggie
+  CallingNodeData: {fileID: 9219288674232759528}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: 9219288674232759528}
+  DataIconnectedTo: []
+  Duration: 1
+  Delay: 1.1
+  RealtimeDelay: 0
+  StartTime: 1.1
+  DurationSum: 2.1
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 'Yes Professor!
+
+'
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &-2921133686126012968
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 1_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 1_Dialogue
+  Text: 
+  UID: 47885303-280f-4513-be31-60512b6910b1
+  CharacterName: Prof. Han
+  CallingNodeData: {fileID: 7183350558890318924}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: 7183350558890318924}
+  DataIconnectedTo: []
+  Duration: 1
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 1
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 'Today is the day.
+
+    Go and throw Viruses!'
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 898e24b5475626c4e801ae0a3c8a1e90, type: 3}
+  m_Name: New SceneData
+  m_EditorClassIdentifier: 
+  UID: e382c2e3-14a2-470e-9167-fb77e8d2f5e3
+  UpdateUID: e335d8da-c13c-4fb0-9ae9-41bbca87cefb
+  SceneID: 0
+  FullCharacterDialogueSet:
+  - {fileID: 7183350558890318924}
+  - {fileID: -2921133686126012968}
+  - {fileID: 9219288674232759528}
+  - {fileID: -5594178100211510142}
+  ActiveCharacterDialogueSet: []
+  Characters:
+  - {fileID: 9219288674232759528}
+  - {fileID: 7183350558890318924}
+  Languages:
+  - Name: English
+    CountryCode: en-US
+    Active: 0
+    Default: 0
+  LanguageIndex: 0
+  LanguageNameArray:
+  - English
+--- !u!114 &7183350558890318924
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f62fd303fe32d84d939ad01a51f9fdb, type: 3}
+  m_Name: Prof. Han
+  m_EditorClassIdentifier: 
+  Name: Prof. Han
+  Text: 
+  UID: 89312c13-916f-43a0-9a85-5d335ad60a23
+  CharacterName: Prof. Han
+  CallingNodeData: {fileID: 7183350558890318924}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe: []
+  DataIconnectedTo:
+  - {fileID: -2921133686126012968}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  NodeDataInMyChain:
+  - {fileID: 7183350558890318924}
+  - {fileID: -2921133686126012968}
+  CharacterImage: {fileID: 0}
+  CharacterPersonality:
+    NegativeTraits:
+      Angry: 0
+      Arrogantt: 0
+      Careless: 0
+      Childish: 0
+      Cowardly: 0
+      Crafty: 0
+      Crazy: 0
+      Cruel: 0
+      Dependent: 0
+      Destructive: 0
+      Devious: 0
+      Disloyal: 0
+      Disobedient: 0
+      Disorderly: 0
+      Disorganized: 0
+      Fearful: 0
+      Fickle: 0
+      Foolish: 0
+      Forgetful: 0
+      Frightening: 0
+      Frivolous: 0
+      Graceless: 0
+      Gullible: 0
+      Hostile: 0
+      Impractical: 0
+      Irritable: 0
+      Lazy: 0
+      Meddlesome: 0
+      Miserable: 0
+      Neglectful: 0
+      Opportunistic: 0
+      Provocative: 0
+      Slow: 0
+      Timid: 0
+      Uncooperative: 0
+      Unreliable: 0
+      Weak: 0
+      WeakWilled: 0
+    NeutralTraits:
+      Aggressive: 0
+      Deceptive: 0
+      Dominating: 0
+      Enigmatic: 0
+      Experimental: 0
+      Iconoclastic: 0
+      Idiosyncratic: 0
+      Impassive: 0
+      Obedient: 0
+      Progressive: 0
+      Questioning: 0
+      Reserved: 0
+      Stubborn: 0
+    PositiveTraits:
+      Accessible: 0
+      Active: 0
+      Adaptable: 0
+      Adventurous: 0
+      Alert: 0
+      Brilliant: 0
+      Calm: 0
+      Capable: 0
+      Challenging: 0
+      Charismatic: 0
+      Clever: 0
+      Confident: 0
+      Cooperative: 0
+      Courageous: 0
+      Curious: 0
+      Daring: 0
+      Decisive: 0
+      Discreet: 0
+      Efficient: 0
+      Energetic: 0
+      Focused: 0
+      Helpful: 0
+      Independent: 0
+      Individualistic: 0
+      Innovative: 0
+      Intelligent: 0
+      Leaderly: 0
+      Logical: 0
+      Loyal: 0
+      Methodical: 0
+      Orderly: 0
+      Organized: 0
+      Patient: 0
+      Patriotic: 0
+      Peaceful: 0
+      Reliable: 0
+      Resourceful: 0
+      Responsible: 0
+      Responsive: 0
+      Sane: 0
+      Selfless: 0
+      Serious: 0
+      Skillful: 0
+      Stoic: 0
+      Strong: 0
+  SortingID: 1
+--- !u!114 &9219288674232759528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f62fd303fe32d84d939ad01a51f9fdb, type: 3}
+  m_Name: St. Meggie
+  m_EditorClassIdentifier: 
+  Name: St. Meggie
+  Text: 
+  UID: 798035d9-63a0-457e-827d-2b610fd26de0
+  CharacterName: St. Meggie
+  CallingNodeData: {fileID: 9219288674232759528}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe: []
+  DataIconnectedTo:
+  - {fileID: -5594178100211510142}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  NodeDataInMyChain:
+  - {fileID: 9219288674232759528}
+  - {fileID: -5594178100211510142}
+  CharacterImage: {fileID: 0}
+  CharacterPersonality:
+    NegativeTraits:
+      Angry: 0
+      Arrogantt: 0
+      Careless: 0
+      Childish: 0
+      Cowardly: 0
+      Crafty: 0
+      Crazy: 0
+      Cruel: 0
+      Dependent: 0
+      Destructive: 0
+      Devious: 0
+      Disloyal: 0
+      Disobedient: 0
+      Disorderly: 0
+      Disorganized: 0
+      Fearful: 0
+      Fickle: 0
+      Foolish: 0
+      Forgetful: 0
+      Frightening: 0
+      Frivolous: 0
+      Graceless: 0
+      Gullible: 0
+      Hostile: 0
+      Impractical: 0
+      Irritable: 0
+      Lazy: 0
+      Meddlesome: 0
+      Miserable: 0
+      Neglectful: 0
+      Opportunistic: 0
+      Provocative: 0
+      Slow: 0
+      Timid: 0
+      Uncooperative: 0
+      Unreliable: 0
+      Weak: 0
+      WeakWilled: 0
+    NeutralTraits:
+      Aggressive: 0
+      Deceptive: 0
+      Dominating: 0
+      Enigmatic: 0
+      Experimental: 0
+      Iconoclastic: 0
+      Idiosyncratic: 0
+      Impassive: 0
+      Obedient: 0
+      Progressive: 0
+      Questioning: 0
+      Reserved: 0
+      Stubborn: 0
+    PositiveTraits:
+      Accessible: 0
+      Active: 0
+      Adaptable: 0
+      Adventurous: 0
+      Alert: 0
+      Brilliant: 0
+      Calm: 0
+      Capable: 0
+      Challenging: 0
+      Charismatic: 0
+      Clever: 0
+      Confident: 0
+      Cooperative: 0
+      Courageous: 0
+      Curious: 0
+      Daring: 0
+      Decisive: 0
+      Discreet: 0
+      Efficient: 0
+      Energetic: 0
+      Focused: 0
+      Helpful: 0
+      Independent: 0
+      Individualistic: 0
+      Innovative: 0
+      Intelligent: 0
+      Leaderly: 0
+      Logical: 0
+      Loyal: 0
+      Methodical: 0
+      Orderly: 0
+      Organized: 0
+      Patient: 0
+      Patriotic: 0
+      Peaceful: 0
+      Reliable: 0
+      Resourceful: 0
+      Responsible: 0
+      Responsive: 0
+      Sane: 0
+      Selfless: 0
+      Serious: 0
+      Skillful: 0
+      Stoic: 0
+      Strong: 0
+  SortingID: 0

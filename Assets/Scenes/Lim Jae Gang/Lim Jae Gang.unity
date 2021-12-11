@@ -655,14 +655,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 219998835}
-  m_LocalRotation: {x: 0.5570124, y: 0.24193043, z: -0.0023376793, w: 0.7944819}
-  m_LocalPosition: {x: -0.059001192, y: 0.80000055, z: -0.04700172}
+  m_LocalRotation: {x: 0.11131667, y: 0.768982, z: -0.13944513, w: 0.61386514}
+  m_LocalPosition: {x: 3.602417, y: -7.7199583, z: -4.838153}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1525986057}
-  m_Father: {fileID: 3046174338504799195}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 62.4, y: 55.5, z: 35.01}
+  m_Father: {fileID: 1147132024}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &219998837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -681,10 +681,10 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 0}
+  m_LookAt: {fileID: 5648116714450943716}
+  m_Follow: {fileID: 5648116714450943716}
   m_Lens:
-    FieldOfView: 60
+    FieldOfView: 50
     OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
@@ -813,7 +813,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1147132024}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 88.82, z: 0}
 --- !u!1 &328611466
 GameObject:
@@ -1721,7 +1721,7 @@ Transform:
   m_Children:
   - {fileID: 93313007}
   m_Father: {fileID: 1147132024}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &636892067
 MonoBehaviour:
@@ -3055,13 +3055,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1043993823}
-  m_LocalRotation: {x: 0.12028528, y: -0.8458701, z: 0.21508585, w: 0.473047}
-  m_LocalPosition: {x: 12.631549, y: -6.2049723, z: -12.017652}
+  m_LocalRotation: {x: 0.2533175, y: 0.23819338, z: -0.0645071, w: 0.93537855}
+  m_LocalPosition: {x: 6.8954506, y: -6.218566, z: -4.514879}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1417142838}
   m_Father: {fileID: 1147132024}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1052687958
 GameObject:
@@ -3241,6 +3241,7 @@ Transform:
   m_LocalPosition: {x: -28.417, y: 8.564227, z: -9.324565}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 219998836}
   - {fileID: 1043993825}
   - {fileID: 1193034787}
   - {fileID: 636892066}
@@ -3313,7 +3314,7 @@ Transform:
   m_Children:
   - {fileID: 2129122947}
   m_Father: {fileID: 1147132024}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 108.809, z: 0}
 --- !u!114 &1193034788
 MonoBehaviour:
@@ -4234,19 +4235,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1525986056}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa7155796051b734daa718462081dc5f, type: 3}
+  m_Script: {fileID: 11500000, guid: bd6043bde05a7fc4cba197d06915c1e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 0, z: -10}
-  m_XDamping: 1
-  m_YDamping: 1
-  m_ZDamping: 1
-  m_AngularDampingMode: 0
-  m_PitchDamping: 0
-  m_YawDamping: 0
-  m_RollDamping: 0
-  m_AngularDamping: 0
+  Damping: {x: 0.1, y: 0.5, z: 0.3}
+  ShoulderOffset: {x: 0.5, y: -0.4, z: 0}
+  VerticalArmLength: 0.4
+  CameraSide: 1
+  CameraDistance: 2
+  CameraCollisionFilter:
+    serializedVersion: 2
+    m_Bits: 0
+  IgnoreTag: 
+  CameraRadius: 0.2
 --- !u!114 &1525986059
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -5045,7 +5046,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Path: {fileID: 304847003}
-  m_PathPosition: -0.1020408
+  m_PathPosition: 0.9854227
   m_PositionUnits: 0
   m_PathOffset: {x: 0, y: 0, z: 0}
   m_XDamping: 0
@@ -8588,7 +8589,12 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'IndexFinger_02'\n\tTransform 'Finger_02 1'\n\tTransform
+    'Elbow_R'\n\tTransform 'Finger_02'\n\tTransform 'Finger_03'\n\tTransform 'Ball_L'\n\tTransform
+    'Finger_03 1'\n\tTransform 'Thumb_02'\n\tTransform 'Ball_R'\n\tTransform 'Clavicle_L'\n\tand
+    more ..."
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -14542,8 +14548,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1793388493170364137}
-  m_LocalRotation: {x: 0, y: 0.81314486, z: 0, w: 0.5820614}
-  m_LocalPosition: {x: -29.72894, y: 6.42, z: -7.454}
+  m_LocalRotation: {x: 0, y: 0.81314486, z: 0, w: 0.61386514}
+  m_LocalPosition: {x: -19.876806, y: 6.42, z: -7.2510085}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -15633,7 +15639,7 @@ GameObject:
   - component: {fileID: 4183003714591836340}
   - component: {fileID: 1974226306}
   m_Layer: 0
-  m_Name: Case
+  m_Name: SlimeCase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19891,7 +19897,6 @@ Transform:
   - {fileID: 8240397612333519343}
   - {fileID: 336707397}
   - {fileID: 357922022}
-  - {fileID: 219998836}
   - {fileID: 5648116714450943716}
   m_Father: {fileID: 8080904296252883402}
   m_RootOrder: 236
@@ -23161,7 +23166,12 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'IndexFinger_02'\n\tTransform 'Finger_02 1'\n\tTransform
+    'Elbow_R'\n\tTransform 'Finger_02'\n\tTransform 'Finger_03'\n\tTransform 'Ball_L'\n\tTransform
+    'Finger_03 1'\n\tTransform 'Thumb_02'\n\tTransform 'Ball_R'\n\tTransform 'Clavicle_L'\n\tand
+    more ..."
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -32212,7 +32222,7 @@ Transform:
   - {fileID: 5648575983326178034}
   - {fileID: 5648295301521554152}
   m_Father: {fileID: 3046174338504799195}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 23.8606, y: 22.31341, z: 48.75204}
 --- !u!4 &5648124825639605912
 Transform:

@@ -17,8 +17,9 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 2811247332768160770, guid: be714612071e44944afca3d3c58ff39e, type: 3}
-    - {fileID: 11400000, guid: 93aca627c90456f4399b979a8d46ea36, type: 2}
+    - {fileID: 11400000, guid: aa35df142c59db44ba1fcabb58ff2fcd, type: 2}
     - {fileID: 2278225374728594199, guid: 513960a77122fd6438a7f23951ef0283, type: 3}
+    - {fileID: 11400000, guid: 497a3b24920b9294482cc0a0f53d65a9, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -84,8 +85,8 @@ MonoBehaviour:
       Entry: 4
       Data: 0
     - Name: quest
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 3
     - Name: 
       Entry: 8
       Data: 

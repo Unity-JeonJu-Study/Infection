@@ -1071,8 +1071,8 @@ namespace DaiMangou.BridgedData
             }
             // we also deactivate the buttons BEFORE 
             if(UseRouteButton)
-            foreach (var button in RouteButtons)
-                button.gameObject.SetActive(false);
+                foreach (var button in RouteButtons)
+                    button.gameObject.SetActive(false);
 
             // set back to false
             TargetReflectedData.DialogueSpecificData.VoiceClipWasPlayed = false;

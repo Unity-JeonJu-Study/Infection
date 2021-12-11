@@ -37,6 +37,7 @@ public class PopupUIManager : MonoBehaviour
     }
 
     public void EnableTutorialPopup() {
+        GameManager.Instance.PauseStageTimer();
         popupTutorial.gameObject.SetActive(true);
     }
 
@@ -46,6 +47,7 @@ public class PopupUIManager : MonoBehaviour
     }
 
     public void EnablePausePopup() {
+        GameManager.Instance.PauseStageTimer();
         popupPause.gameObject.SetActive(true);
     }
 

@@ -118,6 +118,10 @@ public class GameManager : SerializedMonoBehaviour
 
     #endregion
 
+    private void Update() {
+        if(Input.GetKeyDown(KeyCode.Escape))
+            PopupUIManager.instance.EnablePausePopup();
+    }
 
     public void StartStage() {
         InGameUIManager.instance.UpdateObjectiveText(currentGoal.description);

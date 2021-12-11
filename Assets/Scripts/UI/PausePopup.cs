@@ -6,6 +6,7 @@ using UnityEngine;
 public class PausePopup : MonoBehaviour
 {
     public void OnClickResume() {
+        GameManager.Instance.ResumeStageTimer();
         gameObject.SetActive(false);
     }
 

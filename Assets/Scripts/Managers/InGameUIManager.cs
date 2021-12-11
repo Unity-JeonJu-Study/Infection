@@ -87,7 +87,7 @@ public class InGameUIManager : MonoBehaviour
         textObjective.rectTransform.pivot = Vector2.up;
         textObjective.rectTransform.anchorMin = Vector2.up;
         textObjective.rectTransform.anchorMax = Vector2.up;
-        textObjective.alignment = TextAlignmentOptions.Left;
+        textObjective.alignment = TextAlignmentOptions.Center;
 
         textObjective.fontSize = 36;
     }

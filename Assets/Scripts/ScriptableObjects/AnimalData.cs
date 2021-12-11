@@ -25,8 +25,12 @@ public class AnimalData : ScriptableObject
     public float interactRayDistance;
     [VerticalGroup("Data/Stats"), LabelWidth(200), Range(0f, 200f)][GUIColor(1f,1f,0.5f)]
     public float fov;
+    [VerticalGroup("Data/Stats"), LabelWidth(5), Range(0f, 5f)][GUIColor(1f,0.2f,0.5f)]
+    public float rayRadius;
     [VerticalGroup("Data/Stats"), LabelWidth(100)] [GUIColor(0.8f, 1f, 1f)]
     public Vector3 cameraRotation;
+    [VerticalGroup("Data/Stats"), LabelWidth(100)] [GUIColor(0.8f, 0.1f, 1f)]
+    public Vector3 rayOriginOffset;
 
 }
 

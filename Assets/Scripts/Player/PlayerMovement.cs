@@ -51,6 +51,8 @@ public class PlayerMovement : MonoBehaviour
         jumpPower = animalData.jumpPower;
         sensor.groundRayDistance = animalData.groundRayDistance;
         sensor.interactRayDistance = animalData.interactRayDistance;
+        sensor.rayRadius = animalData.rayRadius;
+        sensor.rayOriginOffset = animalData.rayOriginOffset;
         canJump = true;
     }
     

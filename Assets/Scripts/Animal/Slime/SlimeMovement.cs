@@ -15,7 +15,7 @@ public class SlimeMovement : Movement
     public override void Execute()
     {
         Move();
-        CheckGround();
+        sensor.CheckGround();
         Jump();
     }
 
@@ -30,22 +30,7 @@ public class SlimeMovement : Movement
         AnimationWalk(true);
     }
 
-    protected void CheckGround()
-    {
-        if (Physics.Raycast(playerMovement.transform.position +
-                            new Vector3(0f,
-                                0.2f,
-                                0f),
-            Vector3.down,
-             sensor.groundRayDistance))
-        {
-            playerMovement.isGround = true;
-        }
-        else
-        {
-            playerMovement.isGround = false;
-        }
-    }
+    
     
     public override void Jump()
     {

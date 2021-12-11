@@ -12,8 +12,6 @@ public class PlayerInfect : MonoBehaviour
     private Vector3 currentPosition;
     private PlayerMovement playerMovement;
     private PlayerInput playerInput;
-    private Vector3 rayOriginPosition;
-    private SkinnedMeshRenderer meshRenderer;
     private Dictionary<string, GameObject> animals;
 
     public Dictionary<string, GameObject> Animals
@@ -29,7 +27,6 @@ public class PlayerInfect : MonoBehaviour
         animals = new Dictionary<string, GameObject>();
         InitAnimals();
         currentAnimal = animals["Slime"];
-        meshRenderer = currentAnimal.GetComponentInChildren<SkinnedMeshRenderer>();
         sensor = GetComponent<Sensor>();
     }
 
@@ -41,29 +38,7 @@ public class PlayerInfect : MonoBehaviour
             animals.Add(animal.name, animal);
         }
     }
-
-    private void OnDrawGizmos()
-    {
-        meshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
-        Debug.Log(meshRenderer);
-        rayOriginPosition =  meshRenderer.bounds.center;
-        if (sensor.CheckForward())
-        {
-            Gizmos.color = Color.blue;
-            Gizmos.DrawRay(rayOriginPosition, transform.forward );
-
-            // Hit된 지점에 박스를 그려준다.
-            Gizmos.DrawWireCube(rayOriginPosition + transform.forward , transform.lossyScale / 2.0f);
-        }
-        else
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawRay(rayOriginPosition, transform.forward);
-
-            // Hit된 지점에 박스를 그려준다.
-            Gizmos.DrawWireCube(rayOriginPosition + transform.forward, transform.lossyScale / 2.0f);
-        }
-    }
+    
 
     private void Update()
     {
@@ -76,7 +51,7 @@ public class PlayerInfect : MonoBehaviour
         if (!playerInput.InfectKeyPressed)
             return;
         
-        if (sensor.CheckForward())
+        if (sensor.CheckForward() && sensor.hit.collider.gameObject.layer == LayerMask.NameToLayer("Animal"))
         {
             currentAnimal.SetActive(false);
             
@@ -118,6 +93,6 @@ public class PlayerInfect : MonoBehaviour
         currentAnimal.transform.parent.position = infectAnimal.transform.position;
             
         playerMovement.ChangeStatus(currentAnimal.name);
-        meshRenderer = currentAnimal.GetComponentInChildren<SkinnedMeshRenderer>();
+        sensor.MeshRenderer = currentAnimal.GetComponentInChildren<SkinnedMeshRenderer>();
     }
 }

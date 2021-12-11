@@ -16,6 +16,8 @@ public class StageData : SerializedScriptableObject
     {
         public GameObject gamePrefab;
         public float limitTime;
+        public int minSlimCount;
+        public int maxSlimCount;
         public QuestList quest;
 
         [Button("Load Quest")]

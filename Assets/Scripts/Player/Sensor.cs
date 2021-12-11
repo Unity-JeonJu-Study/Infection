@@ -54,12 +54,12 @@ public class Sensor : MonoBehaviour
         if (playerMovement.isGround)
         {
             Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(transform.position - rayOriginOffset +  Vector3.down * hitGround.distance, rayRadius);
+            Gizmos.DrawWireSphere(rayOriginPosition +  Vector3.down * hitGround.distance, rayRadius);
         }
         else
         {
             Gizmos.color = Color.green;
-            Gizmos.DrawWireSphere(transform.position - rayOriginOffset + Vector3.down, rayRadius);
+            Gizmos.DrawWireSphere(rayOriginPosition + Vector3.down * hitGround.distance, rayRadius);
         }
     }
 
@@ -77,11 +77,12 @@ public class Sensor : MonoBehaviour
     public void CheckGround()
     {
         rayOriginPosition = meshRenderer.bounds.center;
-        cast = Physics.SphereCast(transform.position - rayOriginOffset,
-                                    extents.y / 2.0f,
-                                    Vector3.down,
-                                    out hitGround,
-                                    groundRayDistance);
+        cast = Physics.SphereCast(rayOriginPosition,
+                                rayRadius,
+                                Vector3.down,
+                                out hitGround,
+                                groundRayDistance);
+        Debug.Log("땅 체크 : " + cast);
         playerMovement.isGround = cast;
     }
 }

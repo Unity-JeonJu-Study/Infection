@@ -9,6 +9,7 @@ public class InGameUIManager : MonoBehaviour
     [ReadOnly] public static InGameUIManager instance;
 
     [ReadOnly, SerializeField] private TextMeshProUGUI textObjective;
+    [ReadOnly, SerializeField] private SlimSlots slimSlots;
     [ReadOnly, SerializeField] private TextMeshProUGUI textTime;
     [ReadOnly, SerializeField] private ItemSlots itemSlots;
 
@@ -28,6 +29,7 @@ public class InGameUIManager : MonoBehaviour
         textObjective = texts[0];
         textTime = texts[1];
 
+        slimSlots = GetComponentInChildren<SlimSlots>();
         itemSlots = GetComponentInChildren<ItemSlots>();
 
 
@@ -46,7 +48,10 @@ public class InGameUIManager : MonoBehaviour
         // if(Input.GetKeyDown(KeyCode.Escape))
         //     PopupUIManager.instance.EnablePausePopup();
         // if(Input.GetKeyDown(KeyCode.K))
-        //     UpdateObjectiveText("This is new objective");
+        //     ResetSlimSlots();
+
+        // if(Input.GetKeyDown(KeyCode.L))
+        //     AddOneRescuedSlimSlot();
     }
 
     public void UpdateObjectiveText(string newObjective) {
@@ -87,6 +92,13 @@ public class InGameUIManager : MonoBehaviour
         textObjective.fontSize = 36;
     }
 
+    public void ResetSlimSlots() {
+        slimSlots.ResetSlimSlots();
+    }
+
+    public void AddOneRescuedSlimSlot() {
+        slimSlots.AddOneRescuedSlimSlot();
+    }
     public void UpdateTimeText(int time) {
         minute = time / 60;
         second = time % 60;

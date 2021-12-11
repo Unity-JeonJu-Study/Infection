@@ -123,17 +123,16 @@ public class GameManager : SerializedMonoBehaviour
             PopupUIManager.instance.EnablePausePopup();
     }
 
-    public void StartStage() {
+    public void InitInGameUIForCurrentStage() {
         InGameUIManager.instance.UpdateObjectiveText(currentGoal.description);
 
-        currentStageTime = ((int)GameManager.Instance.stageData.data[GameManager.Instance.currentStage].limitTime);
+        InGameUIManager.instance.ResetSlimSlots();
+
+        currentStageTime = ((int)stageData.data[GameManager.Instance.currentStage].limitTime);
         isTimerPaused = false;
         stageTimer = StartCoroutine("StartStageTimer");
 
         InGameUIManager.instance.UpdateItemIcons();
-
-        // add other codes required for stage start part
-        // for instance, bgm can be started here
     }
 
     public IEnumerator StartStageTimer() {

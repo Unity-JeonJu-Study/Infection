@@ -29,9 +29,14 @@ public abstract class Movement
     public virtual void Move()
     {
         
-        float forward = sensor.CheckForward() ? 0 : playerInput.InputForward * playerMovement.movementSpeed;
+        float forward = playerInput.InputForward * playerMovement.movementSpeed;
         float side = playerInput.InputSide * playerMovement.movementSpeed;
         Debug.Log(forward + "\t" + side);
+        if (sensor.CheckForward())
+        {
+            forward = 0;
+            side = 0;
+        }
         Vector3 dir = new Vector3(side, _rigidbody.velocity.y, forward);
         _rigidbody.velocity = dir;
         playerMovement.transform.rotation = Quaternion.LookRotation(new Vector3(playerInput.InputSide * playerMovement.rotationSpeed,

@@ -51,11 +51,11 @@ public class PlayerInfect : MonoBehaviour
         if (!playerInput.InfectKeyPressed)
             return;
         
-        if (sensor.CheckForward() && sensor.hit.collider.gameObject.layer == LayerMask.NameToLayer("Animal"))
+        if (sensor.CheckForward() && sensor.hitForward.collider.gameObject.layer == LayerMask.NameToLayer("Animal"))
         {
             currentAnimal.SetActive(false);
             
-            infectAnimal = sensor.hit.collider.gameObject;
+            infectAnimal = sensor.hitForward.collider.gameObject;
             infectAnimal.SetActive(false);
 
             ChangeToInfectAnimal();
@@ -82,7 +82,10 @@ public class PlayerInfect : MonoBehaviour
         currentAnimal.SetActive(true);
         currentPosition = parentTransform.position;
         parentTransform.position = new Vector3(currentPosition.x, currentPosition.y + 5f, currentPosition.z);
-        
+        sensor.MeshRenderer = currentAnimal.GetComponentInChildren<SkinnedMeshRenderer>();
+        sensor.extents = sensor.MeshRenderer.bounds.extents;
+        sensor.rayRadius = sensor.extents.y / 2.0f;
+
         playerMovement.ChangeStatus(currentAnimal.name);
     }
 
@@ -94,5 +97,6 @@ public class PlayerInfect : MonoBehaviour
             
         playerMovement.ChangeStatus(currentAnimal.name);
         sensor.MeshRenderer = currentAnimal.GetComponentInChildren<SkinnedMeshRenderer>();
+        sensor.extents = sensor.MeshRenderer.bounds.extents;
     }
 }

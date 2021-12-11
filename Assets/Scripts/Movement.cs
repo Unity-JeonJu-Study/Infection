@@ -31,7 +31,7 @@ public abstract class Movement
         
         float forward = playerInput.InputForward * playerMovement.movementSpeed;
         float side = playerInput.InputSide * playerMovement.movementSpeed;
-        if (sensor.CheckForward())
+        if (!playerMovement.isGround && sensor.CheckForward())
         {
             forward = 0;
             side = 0;

@@ -130,9 +130,15 @@ public class GameManager : SerializedMonoBehaviour
 
         InGameUIManager.instance.ResetSlimSlots();
 
-        currentStageTime = ((int)stageData.data[GameManager.Instance.currentStage].limitTime);
-        isTimerPaused = false;
-        stageTimer = StartCoroutine("StartStageTimer");
+        if(GameManager.Instance.currentStage == GameStage.Laboratory)
+            InGameUIManager.instance.DisableTimeText();
+        else {
+            InGameUIManager.instance.EnableTimeText();
+
+            currentStageTime = ((int)stageData.data[GameManager.Instance.currentStage].limitTime);
+            isTimerPaused = false;
+            stageTimer = StartCoroutine("StartStageTimer");
+        }
 
         InGameUIManager.instance.UpdateItemIcons();
     }

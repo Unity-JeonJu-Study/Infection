@@ -99,6 +99,14 @@ public class InGameUIManager : MonoBehaviour
     public void AddOneRescuedSlimSlot() {
         slimSlots.AddOneRescuedSlimSlot();
     }
+
+    public void EnableTimeText() {
+        textTime.gameObject.SetActive(true);
+    }
+    public void DisableTimeText() {
+        textTime.gameObject.SetActive(false);
+    }
+
     public void UpdateTimeText(int time) {
         minute = time / 60;
         second = time % 60;

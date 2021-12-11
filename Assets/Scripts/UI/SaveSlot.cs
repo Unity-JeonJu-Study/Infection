@@ -9,21 +9,26 @@ using TMPro;
 public class SaveSlot : MonoBehaviour
 {
     [ReadOnly, SerializeField] private Image imageBackgroundSelected;
+    [ReadOnly, SerializeField] private TextMeshProUGUI textSaveSlot;
     [ReadOnly, SerializeField] private TextMeshProUGUI textSaveName;
     [ReadOnly, SerializeField] private Color textColorSelected;
     [ReadOnly, SerializeField] private Color textColorNotSelected;
 
     private void Awake() {
         imageBackgroundSelected =  GetComponentsInChildren<Image>()[1];
-        textSaveName =  GetComponentInChildren<TextMeshProUGUI>();
+        TextMeshProUGUI[] texts = GetComponentsInChildren<TextMeshProUGUI>();
+        textSaveSlot = texts[0];
+        textSaveName =  texts[1];
 
-        textColorSelected = new Color(60f, 30f, 180f);
-        textColorNotSelected = new Color(227f, 227f, 227f);
+        textColorSelected = new Color(1, 1, 1);
+        textColorNotSelected = new Color(0.18f, 0.68f, 0.33f);
     }
 
     public void EnableSelected() {
-        imageBackgroundSelected.gameObject.SetActive(true);
+        textSaveSlot.color = textColorSelected;
         textSaveName.color = textColorSelected;
+
+        imageBackgroundSelected.gameObject.SetActive(true);
     }
 
     public bool IsSelected() {
@@ -35,7 +40,9 @@ public class SaveSlot : MonoBehaviour
     }
 
     public void DisableSelected() {
-        imageBackgroundSelected.gameObject.SetActive(false);
+        textSaveSlot.color = textColorNotSelected;
         textSaveName.color = textColorNotSelected;
+
+        imageBackgroundSelected.gameObject.SetActive(false);
     }
 }

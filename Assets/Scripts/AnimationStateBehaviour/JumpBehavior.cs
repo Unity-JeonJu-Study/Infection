@@ -5,11 +5,14 @@ using UnityEngine;
 public class JumpBehavior : StateMachineBehaviour
 {
     private PlayerMovement playerMovement;
+    private static readonly int JumpHash = Animator.StringToHash("Jump");
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         playerMovement = animator.transform.parent.GetComponent<PlayerMovement>();
         playerMovement.canJump = false;
+        animator.SetBool(JumpHash, false);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

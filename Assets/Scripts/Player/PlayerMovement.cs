@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
         currentAnimal = playerInfect.currentAnimal;
         _animator = currentAnimal.GetComponent<Animator>();
         canJump = true;
-        InitMoveInformation("Slime");
+        ChangeStatus("Slime");
         movement = new SlimeMovement(this);
     }
 

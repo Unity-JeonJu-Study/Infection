@@ -15,11 +15,11 @@ MonoBehaviour:
   animalName: Chick
   description: "\uBCD1\uC544\uB9AC"
   animalModel: {fileID: 0}
-  movementSpeed: 3
+  movementSpeed: 1.5
   rotationSpeed: 1
-  jumpPower: 2
+  jumpPower: 1
   groundRayDistance: 0.5
   interactRayDistance: 0.1
-  fov: 60
-  cameraRotation: {x: 45, y: 0, z: 0}
+  fov: 20
+  cameraRotation: {x: 10, y: 0, z: 0}
   rayOriginOffset: {x: 0, y: 0, z: 0}

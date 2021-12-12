@@ -51,7 +51,7 @@ public abstract class Movement
     public virtual void Jump()
     {
         _rigidbody.AddForce(0,  playerMovement.jumpPower, 0, ForceMode.Impulse);
-        _animator.SetTrigger(JumpHash);
+        _animator.SetBool(JumpHash, true);
     }
 
  

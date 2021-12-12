@@ -82,10 +82,8 @@ public class PlayerInfect : MonoBehaviour
         currentAnimal.SetActive(true);
         currentPosition = parentTransform.position;
         parentTransform.position = new Vector3(currentPosition.x, currentPosition.y + 5f, currentPosition.z);
-        sensor.MeshRenderer = currentAnimal.GetComponentInChildren<SkinnedMeshRenderer>();
-        sensor.extents = sensor.MeshRenderer.bounds.extents;
-        sensor.rayRadius = sensor.extents.y / 2.0f;
-        sensor.rayOriginOffset = new Vector3(0, 0, sensor.extents.x / 2.0f);
+        
+        ChangeInitSensor();
 
         playerMovement.ChangeStatus(currentAnimal.name);
     }
@@ -95,11 +93,15 @@ public class PlayerInfect : MonoBehaviour
         currentAnimal = animals[infectAnimal.name.Split(' ')[0]];
         currentAnimal.SetActive(true);
         currentAnimal.transform.parent.position = infectAnimal.transform.position;
-        
+        ChangeInitSensor();
         playerMovement.ChangeStatus(currentAnimal.name);
-        sensor.MeshRenderer = currentAnimal.GetComponentInChildren<SkinnedMeshRenderer>();
-        sensor.extents = sensor.MeshRenderer.bounds.extents;
-        sensor.rayOriginOffset = new Vector3(0, 0, sensor.extents.x / 2.0f);
+        
+    }
 
+    private void ChangeInitSensor()
+    {
+        sensor.MeshRenderer = currentAnimal.GetComponentInChildren<SkinnedMeshRenderer>();
+        sensor.extents = sensor.MeshRenderer.bounds.extents / 2;
+        sensor.rayRadius = sensor.extents.y / 2.0f;
     }
 }

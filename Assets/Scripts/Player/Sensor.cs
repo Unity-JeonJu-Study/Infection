@@ -80,7 +80,6 @@ public class Sensor : MonoBehaviour
                                 Vector3.down,
                                 out hitGround,
                                 groundRayDistance);
-        Debug.Log("땅 체크 : " + cast);
         playerMovement.isGround = cast;
     }
     

@@ -1,0 +1,3650 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8693313839973001659
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 10_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 10_Dialogue
+  Text: Lovely weather we are having today isnt it
+  UID: 91f8b69c-681b-4811-ad9d-29955870ccb1
+  CharacterName: Endou
+  CallingNodeData: {fileID: 2571234746193862579}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -1935267704393998680}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: 3990172004760884226}
+  DataIconnectedTo:
+  - {fileID: 5670444760103668115}
+  Duration: 1
+  Delay: 0.5862156
+  RealtimeDelay: 0
+  StartTime: 14.619047
+  DurationSum: 15.619047
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - Nice weather, its't it
+  - "\u4ECA\u65E5\u306E\u5929\u6C17\u306F\u3044\u3044\u3067\u3059\u306D\uFF1F"
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &-8684936977227114330
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 66_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 66_Dialogue
+  Text: oh wow
+  UID: da707f48-0650-49ee-b0f0-b3d95ce06fcf
+  CharacterName: Toby
+  CallingNodeData: {fileID: -1494441702109977147}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: 5447887741799242537}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: 1826693251132842045}
+  DataIconnectedTo: []
+  Duration: 1
+  Delay: 1.865147
+  RealtimeDelay: 0
+  StartTime: 16.993328
+  DurationSum: 17.993328
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - oh wow
+  - "\u3059\u3054\u3044\uFF01"
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &-8418434171071775808
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f62813ceb95dd48802f541722e4a38, type: 3}
+  m_Name: 47_Link
+  m_EditorClassIdentifier: 
+  Name: 47_Link
+  Text: 
+  UID: 062dd1e4-d7bb-4250-9a73-adbd88e7bba5
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: 3963134003310448917}
+  DataIconnectedTo:
+  - {fileID: 3402910658135544935}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  Loop: 0
+  LoopValue: 0
+  loopRoute: {fileID: 0}
+  _iterationCount: 0
+--- !u!114 &-8270097159538944955
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86362742d6c0d284f9349e0245004411, type: 3}
+  m_Name: 21_Route
+  m_EditorClassIdentifier: 
+  Name: 21_Route
+  Text: 
+  UID: f9c63e70-1a22-4d18-b15a-e973e53d5cbd
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: 5013763141510485831}
+  DataIconnectedTo:
+  - {fileID: 440565993219087120}
+  - {fileID: -6432613420388197511}
+  - {fileID: 4329112526627465203}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 12.136096
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  RouteID: 2
+  TempRouteID: 0
+  LinkedRoute: {fileID: 3990172004760884226}
+  AutoSwitchValue: 0
+  RoutesLinkedToMe: []
+  ConvergenceMode: 0
+  ControllingLinkNode: {fileID: 0}
+--- !u!114 &-7830345280676361441
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c74f5891de31f5248a76eef5fbfae5e3, type: 3}
+  m_Name: 74_End
+  m_EditorClassIdentifier: 
+  Name: 74_End
+  Text: 
+  UID: 0fae29c6-8911-4798-8dcf-4fd1fe5b6c4d
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: 6680967362953363918}
+  DataIconnectedTo: []
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+--- !u!114 &-7572436268901403183
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 19_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 19_Dialogue
+  Text: 'why so suddenly ? '
+  UID: c357264c-718b-403e-a900-8b5138348476
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: -7197564058273475037}
+  DataIconnectedTo:
+  - {fileID: -4783646125271057657}
+  Duration: 1
+  Delay: 0.5135629
+  RealtimeDelay: 0
+  StartTime: 18.292456
+  DurationSum: 19.292456
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 'why so suddenly ? '
+  - "\u306A\u305C\u305D\u3093\u306A\u306B\u6025\u306B\u3002"
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &-7197564058273475037
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c8dd975dbe0cf1489594b86179f85ba, type: 3}
+  m_Name: 17_Action
+  m_EditorClassIdentifier: 
+  Name: 17_Action
+  Text: laughs
+  UID: 7ce1bd1a-077c-4710-81b5-866e05cdd218
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: 5013763141510485831}
+  DataIconnectedTo:
+  - {fileID: -7572436268901403183}
+  Duration: 1.176
+  Delay: 4.466797
+  RealtimeDelay: 0
+  StartTime: 16.602894
+  DurationSum: 17.778893
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - laughs
+  - "\u7B11\u3046"
+  ActionName: 
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &-6616046182814484744
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c74f5891de31f5248a76eef5fbfae5e3, type: 3}
+  m_Name: 70_End
+  m_EditorClassIdentifier: 
+  Name: 70_End
+  Text: 
+  UID: 45bbf5cb-9a8b-4167-9f5e-1e670ebcf376
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: 5816769314200947075}
+  DataIconnectedTo: []
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+--- !u!114 &-6432613420388197511
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 23_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 23_Dialogue
+  Text: yup, i'm about to get back to work
+  UID: c8e11eeb-9f90-4e15-b3c4-7eb649cb2d22
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: -8270097159538944955}
+  DataIconnectedTo:
+  - {fileID: -4088500195224635668}
+  Duration: 1
+  Delay: 4.399302
+  RealtimeDelay: 0
+  StartTime: 16.535398
+  DurationSum: 17.535398
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - yup, i'm about to get back to work
+  - "\u3042\u30FC\u3001\u306F\u3044\u4ECA\u304B\u3089\u4ED5\u4E8B\u306B\u623B\u308A\u307E\u3059\u3002"
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &-6388524756016807122
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 7_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 7_Dialogue
+  Text: Eh ! Endou ?
+  UID: c07654ef-509f-478c-be61-23332eadf2fe
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: 5196945285965947106}
+  DataIconnectedTo:
+  - {fileID: 5013763141510485831}
+  Duration: 1.5481799
+  Delay: 5.891328
+  RealtimeDelay: 0
+  StartTime: 10.587915
+  DurationSum: 12.136096
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - Eh ! Endou ?
+  - "\u3048\u30FC\u3001\u9060\u85E4\u30FC\u3055\u3093\u3002"
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &-6373514205417286270
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a265cf13074dfb4686236b730c086c4, type: 3}
+  m_Name: Family Restaurant
+  m_EditorClassIdentifier: 
+  Name: Family Restaurant
+  Text: 
+  UID: 90d70c23-9de5-4c1e-9301-faf01022a751
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: 2226949171257170156}
+  DataIconnectedTo:
+  - {fileID: 6106910529790081779}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+--- !u!114 &-6262362137891863842
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 5_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 5_Dialogue
+  Text: 'A,a,a, Ayumi ! '
+  UID: c10f5e89-cf82-4ee3-a2a5-15e823ad2d50
+  CharacterName: Endou
+  CallingNodeData: {fileID: 2571234746193862579}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -1935267704393998680}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: -1935267704393998680}
+  DataIconnectedTo:
+  - {fileID: 5819397350125273792}
+  Duration: 2.1991434
+  Delay: 6.581088
+  RealtimeDelay: 0
+  StartTime: 6.581088
+  DurationSum: 8.780231
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 'A,a,a, Ayumi ! '
+  - "\u3042\u30FC\u3001\u30A2\u30E6\u30DF"
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &-6186397776735692710
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c8dd975dbe0cf1489594b86179f85ba, type: 3}
+  m_Name: 12_Action
+  m_EditorClassIdentifier: 
+  Name: 12_Action
+  Text: Bring Up a Random topic
+  UID: 4eafbb66-36a8-4cd4-ba13-2c0ace184258
+  CharacterName: Endou
+  CallingNodeData: {fileID: 2571234746193862579}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -1935267704393998680}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: 5819397350125273792}
+  DataIconnectedTo:
+  - {fileID: 3990172004760884226}
+  Duration: 0.45182014
+  Delay: 4.80078
+  RealtimeDelay: 0
+  StartTime: 13.581011
+  DurationSum: 14.032831
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - Bring Up a Random topic
+  - "\u3079\u3064\u306E\u306F\u306A\u3057"
+  ActionName: 
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &-5661338532770505800
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 14_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 14_Dialogue
+  Text: is your break finished ?
+  UID: 444182fc-c8c9-4458-b719-6c388724ca4a
+  CharacterName: Endou
+  CallingNodeData: {fileID: 2571234746193862579}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -1935267704393998680}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: 3990172004760884226}
+  DataIconnectedTo:
+  - {fileID: 2671929207173142830}
+  Duration: 1
+  Delay: 1.4614383
+  RealtimeDelay: 0
+  StartTime: 15.494269
+  DurationSum: 16.49427
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - is your break finished ?
+  - "\u663C\u4F11\u307F\u304A\u308F\u308A\u307E\u3059\u304B\uFF1F"
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &-5472859822942885666
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 26_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 26_Dialogue
+  Text: My favorite weather
+  UID: def7e909-7615-4f0f-b2de-9cd0d790b918
+  CharacterName: Endou
+  CallingNodeData: {fileID: 2571234746193862579}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -1935267704393998680}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: 2439130894948148791}
+  DataIconnectedTo: []
+  Duration: 1
+  Delay: 2.1440208
+  RealtimeDelay: 0
+  StartTime: 17.763067
+  DurationSum: 18.763067
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - My favorite weather
+  - "\u79C1\u306E\u597D\u304D\u306A\u5929\u6C17\u3002"
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &-5086071029627352186
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f62fd303fe32d84d939ad01a51f9fdb, type: 3}
+  m_Name: jane
+  m_EditorClassIdentifier: 
+  Name: jane
+  Text: 
+  UID: 2ac4a1ca-7a9b-4d3c-aae2-1d4141a06153
+  CharacterName: jane
+  CallingNodeData: {fileID: -5086071029627352186}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe: []
+  DataIconnectedTo:
+  - {fileID: -913779063319088680}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  NodeDataInMyChain:
+  - {fileID: -913779063319088680}
+  - {fileID: 7411508416667623627}
+  - {fileID: 19283958208303513}
+  - {fileID: 4840701286651820937}
+  - {fileID: -1186541906045997508}
+  - {fileID: -5086071029627352186}
+  CharacterImage: {fileID: 0}
+  CharacterPersonality:
+    NegativeTraits:
+      Angry: 0
+      Arrogantt: 0
+      Careless: 0
+      Childish: 0
+      Cowardly: 0
+      Crafty: 0
+      Crazy: 0
+      Cruel: 0
+      Dependent: 0
+      Destructive: 0
+      Devious: 0
+      Disloyal: 0
+      Disobedient: 0
+      Disorderly: 0
+      Disorganized: 0
+      Fearful: 0
+      Fickle: 0
+      Foolish: 0
+      Forgetful: 0
+      Frightening: 0
+      Frivolous: 0
+      Graceless: 0
+      Gullible: 0
+      Hostile: 0
+      Impractical: 0
+      Irritable: 0
+      Lazy: 0
+      Meddlesome: 0
+      Miserable: 0
+      Neglectful: 0
+      Opportunistic: 0
+      Provocative: 0
+      Slow: 0
+      Timid: 0
+      Uncooperative: 0
+      Unreliable: 0
+      Weak: 0
+      WeakWilled: 0
+    NeutralTraits:
+      Aggressive: 0
+      Deceptive: 0
+      Dominating: 0
+      Enigmatic: 0
+      Experimental: 0
+      Iconoclastic: 0
+      Idiosyncratic: 0
+      Impassive: 0
+      Obedient: 0
+      Progressive: 0
+      Questioning: 0
+      Reserved: 0
+      Stubborn: 0
+    PositiveTraits:
+      Accessible: 0
+      Active: 0
+      Adaptable: 0
+      Adventurous: 0
+      Alert: 0
+      Brilliant: 0
+      Calm: 0
+      Capable: 0
+      Challenging: 0
+      Charismatic: 0
+      Clever: 0
+      Confident: 0
+      Cooperative: 0
+      Courageous: 0
+      Curious: 0
+      Daring: 0
+      Decisive: 0
+      Discreet: 0
+      Efficient: 0
+      Energetic: 0
+      Focused: 0
+      Helpful: 0
+      Independent: 0
+      Individualistic: 0
+      Innovative: 0
+      Intelligent: 0
+      Leaderly: 0
+      Logical: 0
+      Loyal: 0
+      Methodical: 0
+      Orderly: 0
+      Organized: 0
+      Patient: 0
+      Patriotic: 0
+      Peaceful: 0
+      Reliable: 0
+      Resourceful: 0
+      Responsible: 0
+      Responsive: 0
+      Sane: 0
+      Selfless: 0
+      Serious: 0
+      Skillful: 0
+      Stoic: 0
+      Strong: 0
+  SortingID: 0
+--- !u!114 &-4783646125271057657
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 20_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 20_Dialogue
+  Text: Can we talk about this next time , I have to to get back to work
+  UID: a027934c-f385-44b4-a87c-47f1ed09498c
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: -7572436268901403183}
+  DataIconnectedTo:
+  - {fileID: -1897013850892487246}
+  Duration: 1
+  Delay: 0.7418131
+  RealtimeDelay: 0
+  StartTime: 20.03427
+  DurationSum: 21.03427
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - Can we talk about this next time , I have to to get back to work
+  - "\u3042\u306E\u306D\u30FC\u3001\u3053\u306E\u8A71\u3057\u3042\u3068\u3067\u3044\u3044\u3067\u3059\u304B\uFF1F"
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &-4723842617294534670
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f62813ceb95dd48802f541722e4a38, type: 3}
+  m_Name: 38_Link
+  m_EditorClassIdentifier: 
+  Name: 38_Link
+  Text: 
+  UID: 8aec6c25-7c49-4bf6-87ee-7df01e56ed93
+  CharacterName: Endou
+  CallingNodeData: {fileID: 2571234746193862579}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -1935267704393998680}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: 2671929207173142830}
+  DataIconnectedTo:
+  - {fileID: -2988103773524440371}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  Loop: 0
+  LoopValue: 0
+  loopRoute: {fileID: 0}
+  _iterationCount: 0
+--- !u!114 &-4622634042351326886
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 34_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 34_Dialogue
+  Text: hahaha, you're weird , Endou
+  UID: e0d3a581-2618-4a8d-a873-9d32058483f2
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: -2296112270056491868}
+  DataIconnectedTo:
+  - {fileID: 8747474528741848191}
+  Duration: 1
+  Delay: 1.5834857
+  RealtimeDelay: 0
+  StartTime: 19.118885
+  DurationSum: 20.118885
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - hahaha, you're weird , Endou
+  - "\uFF08\u7B11\uFF09\u5909\u306A\u4EBA\u3002"
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &-4527944627610519147
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 9_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 9_Dialogue
+  Text: Please go on a date with me !
+  UID: ee5db224-68e1-4153-80a8-e8778c24927c
+  CharacterName: Endou
+  CallingNodeData: {fileID: 2571234746193862579}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -1935267704393998680}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: 5906613156708332535}
+  DataIconnectedTo: []
+  Duration: 1.433576
+  Delay: 0.3865889
+  RealtimeDelay: 0
+  StartTime: 14.41942
+  DurationSum: 15.852996
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - Please go on a date with me !
+  - "\u79C1\u3068\u30C7\u30FC\u30C8\u3057\u3066\u304F\u3060\u3055\u3044\u3002"
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &-4088500195224635668
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f62813ceb95dd48802f541722e4a38, type: 3}
+  m_Name: 49_Link
+  m_EditorClassIdentifier: 
+  Name: 49_Link
+  Text: 
+  UID: 547296fc-bf60-4903-8328-be31ea2bce8e
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: -6432613420388197511}
+  DataIconnectedTo:
+  - {fileID: -1130869594695773098}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  Loop: 0
+  LoopValue: 0
+  loopRoute: {fileID: 0}
+  _iterationCount: 0
+--- !u!114 &-3808510174295869117
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f62813ceb95dd48802f541722e4a38, type: 3}
+  m_Name: 42_Link
+  m_EditorClassIdentifier: 
+  Name: 42_Link
+  Text: 
+  UID: 82fe5c4e-94a7-4511-b885-824d5eed1331
+  CharacterName: Endou
+  CallingNodeData: {fileID: 2571234746193862579}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -1935267704393998680}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: -1373402096841234349}
+  DataIconnectedTo:
+  - {fileID: 7078235209048517398}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  Loop: 0
+  LoopValue: 0
+  loopRoute: {fileID: 0}
+  _iterationCount: 0
+--- !u!114 &-2988103773524440371
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86362742d6c0d284f9349e0245004411, type: 3}
+  m_Name: 37_Route
+  m_EditorClassIdentifier: 
+  Name: 37_Route
+  Text: 
+  UID: 9998b4d4-50c0-4d89-b769-caabca83d002
+  CharacterName: Endou
+  CallingNodeData: {fileID: 2571234746193862579}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -1935267704393998680}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: -4723842617294534670}
+  DataIconnectedTo:
+  - {fileID: -1896923639518892434}
+  - {fileID: 753163933312387635}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  RouteID: 1
+  TempRouteID: 0
+  LinkedRoute: {fileID: 0}
+  AutoSwitchValue: 0
+  RoutesLinkedToMe:
+  - {fileID: -2353073825443507514}
+  ConvergenceMode: 0
+  ControllingLinkNode: {fileID: 0}
+--- !u!114 &-2353073825443507514
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86362742d6c0d284f9349e0245004411, type: 3}
+  m_Name: 46_Route
+  m_EditorClassIdentifier: 
+  Name: 46_Route
+  Text: 
+  UID: cd83a2ea-080b-4406-9a25-d36a81bdfe9d
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: -1130869594695773098}
+  DataIconnectedTo:
+  - {fileID: 4789917012868746830}
+  - {fileID: 6680967362953363918}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  RouteID: 1
+  TempRouteID: 0
+  LinkedRoute: {fileID: -2988103773524440371}
+  AutoSwitchValue: 0
+  RoutesLinkedToMe: []
+  ConvergenceMode: 0
+  ControllingLinkNode: {fileID: 0}
+--- !u!114 &-2296112270056491868
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86362742d6c0d284f9349e0245004411, type: 3}
+  m_Name: 35_Route
+  m_EditorClassIdentifier: 
+  Name: 35_Route
+  Text: 
+  UID: 7274bb61-decd-4787-b40d-395ce11339fb
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: 1610164386191759217}
+  DataIconnectedTo:
+  - {fileID: -4622634042351326886}
+  - {fileID: 4830461976649785275}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  RouteID: 1
+  TempRouteID: 0
+  LinkedRoute: {fileID: 2439130894948148791}
+  AutoSwitchValue: 0
+  RoutesLinkedToMe: []
+  ConvergenceMode: 0
+  ControllingLinkNode: {fileID: 0}
+--- !u!114 &-1935267704393998680
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a265cf13074dfb4686236b730c086c4, type: 3}
+  m_Name: Family Restaurant
+  m_EditorClassIdentifier: 
+  Name: Family Restaurant
+  Text: 
+  UID: 62bb64de-b106-4569-9f1a-86d29304d042
+  CharacterName: Endou
+  CallingNodeData: {fileID: 2571234746193862579}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -1935267704393998680}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: 2571234746193862579}
+  - {fileID: 0}
+  DataIconnectedTo:
+  - {fileID: -6262362137891863842}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+--- !u!114 &-1897013850892487246
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c74f5891de31f5248a76eef5fbfae5e3, type: 3}
+  m_Name: 21_End
+  m_EditorClassIdentifier: 
+  Name: 21_End
+  Text: 
+  UID: 00fb5c78-d527-4389-8748-d6bdef51538d
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: -4783646125271057657}
+  DataIconnectedTo: []
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+--- !u!114 &-1896923639518892434
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 39_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 39_Dialogue
+  Text: want to go out for food later ?
+  UID: b290060b-3316-434d-bf4c-61fa7e3e6281
+  CharacterName: Endou
+  CallingNodeData: {fileID: 2571234746193862579}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -1935267704393998680}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: -2988103773524440371}
+  DataIconnectedTo: []
+  Duration: 1
+  Delay: 1.6087487
+  RealtimeDelay: 0
+  StartTime: 18.10302
+  DurationSum: 19.10302
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - want to go out for food later ?
+  - "\u3042\u3068\u3067\u79C1\u3068\u98EF\u306B\u884C\u3053\u3046\u3067\u3059\u304B\uFF1F"
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &-1494441702109977147
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f62fd303fe32d84d939ad01a51f9fdb, type: 3}
+  m_Name: Toby
+  m_EditorClassIdentifier: 
+  Name: Toby
+  Text: 
+  UID: b5905229-d0c4-471e-95c0-555cf628baae
+  CharacterName: Toby
+  CallingNodeData: {fileID: -1494441702109977147}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe: []
+  DataIconnectedTo:
+  - {fileID: 5447887741799242537}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  NodeDataInMyChain:
+  - {fileID: 5447887741799242537}
+  - {fileID: 8209370272285698144}
+  - {fileID: -1026537826216676954}
+  - {fileID: -8684936977227114330}
+  - {fileID: 1826693251132842045}
+  - {fileID: 795878806020979496}
+  - {fileID: 3068661127501479863}
+  - {fileID: -1494441702109977147}
+  CharacterImage: {fileID: 0}
+  CharacterPersonality:
+    NegativeTraits:
+      Angry: 0
+      Arrogantt: 0
+      Careless: 0
+      Childish: 0
+      Cowardly: 0
+      Crafty: 0
+      Crazy: 0
+      Cruel: 0
+      Dependent: 0
+      Destructive: 0
+      Devious: 0
+      Disloyal: 0
+      Disobedient: 0
+      Disorderly: 0
+      Disorganized: 0
+      Fearful: 0
+      Fickle: 0
+      Foolish: 0
+      Forgetful: 0
+      Frightening: 0
+      Frivolous: 0
+      Graceless: 0
+      Gullible: 0
+      Hostile: 0
+      Impractical: 0
+      Irritable: 0
+      Lazy: 0
+      Meddlesome: 0
+      Miserable: 0
+      Neglectful: 0
+      Opportunistic: 0
+      Provocative: 0
+      Slow: 0
+      Timid: 0
+      Uncooperative: 0
+      Unreliable: 0
+      Weak: 0
+      WeakWilled: 0
+    NeutralTraits:
+      Aggressive: 0
+      Deceptive: 0
+      Dominating: 0
+      Enigmatic: 0
+      Experimental: 0
+      Iconoclastic: 0
+      Idiosyncratic: 0
+      Impassive: 0
+      Obedient: 0
+      Progressive: 0
+      Questioning: 0
+      Reserved: 0
+      Stubborn: 0
+    PositiveTraits:
+      Accessible: 0
+      Active: 0
+      Adaptable: 0
+      Adventurous: 0
+      Alert: 0
+      Brilliant: 0
+      Calm: 0
+      Capable: 0
+      Challenging: 0
+      Charismatic: 0
+      Clever: 0
+      Confident: 0
+      Cooperative: 0
+      Courageous: 0
+      Curious: 0
+      Daring: 0
+      Decisive: 0
+      Discreet: 0
+      Efficient: 0
+      Energetic: 0
+      Focused: 0
+      Helpful: 0
+      Independent: 0
+      Individualistic: 0
+      Innovative: 0
+      Intelligent: 0
+      Leaderly: 0
+      Logical: 0
+      Loyal: 0
+      Methodical: 0
+      Orderly: 0
+      Organized: 0
+      Patient: 0
+      Patriotic: 0
+      Peaceful: 0
+      Reliable: 0
+      Resourceful: 0
+      Responsible: 0
+      Responsive: 0
+      Sane: 0
+      Selfless: 0
+      Serious: 0
+      Skillful: 0
+      Stoic: 0
+      Strong: 0
+  SortingID: 1
+--- !u!114 &-1373402096841234349
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f62813ceb95dd48802f541722e4a38, type: 3}
+  m_Name: 30_Link
+  m_EditorClassIdentifier: 
+  Name: 30_Link
+  Text: 
+  UID: 30f4a087-f631-416a-b991-b7b00ee1a545
+  CharacterName: Endou
+  CallingNodeData: {fileID: 2571234746193862579}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -1935267704393998680}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: 6157675325017017966}
+  DataIconnectedTo:
+  - {fileID: -3808510174295869117}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  Loop: 0
+  LoopValue: 0
+  loopRoute: {fileID: 0}
+  _iterationCount: 0
+--- !u!114 &-1186541906045997508
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c74f5891de31f5248a76eef5fbfae5e3, type: 3}
+  m_Name: 70_End
+  m_EditorClassIdentifier: 
+  Name: 70_End
+  Text: 
+  UID: e787b0ba-a3f9-4aea-ab79-8559b1aedbd4
+  CharacterName: jane
+  CallingNodeData: {fileID: -5086071029627352186}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -913779063319088680}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: 19283958208303513}
+  DataIconnectedTo: []
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+--- !u!114 &-1130869594695773098
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f62813ceb95dd48802f541722e4a38, type: 3}
+  m_Name: 45_Link
+  m_EditorClassIdentifier: 
+  Name: 45_Link
+  Text: 
+  UID: caa3d4e1-dfbf-4ba3-b53b-a2dccce4d313
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: -4088500195224635668}
+  DataIconnectedTo:
+  - {fileID: -2353073825443507514}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  Loop: 0
+  LoopValue: 0
+  loopRoute: {fileID: 0}
+  _iterationCount: 0
+--- !u!114 &-1026537826216676954
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c8dd975dbe0cf1489594b86179f85ba, type: 3}
+  m_Name: 61_Action
+  m_EditorClassIdentifier: 
+  Name: 61_Action
+  Text: continues washing dishes
+  UID: 871fe98e-3804-4515-aabf-6733813007af
+  CharacterName: Toby
+  CallingNodeData: {fileID: -1494441702109977147}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: 5447887741799242537}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: 8209370272285698144}
+  DataIconnectedTo:
+  - {fileID: 1826693251132842045}
+  Duration: 1
+  Delay: 2.0827827
+  RealtimeDelay: 0
+  StartTime: 14.1281805
+  DurationSum: 15.1281805
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - continues washing dishes
+  - "\u304A\u76BF\u3092\u6D17\u3063\u3066"
+  ActionName: 
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &-913779063319088680
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a265cf13074dfb4686236b730c086c4, type: 3}
+  m_Name: Family Restaurant
+  m_EditorClassIdentifier: 
+  Name: Family Restaurant
+  Text: 
+  UID: b5fb07bd-df5f-4a55-99c8-94d78a47f70e
+  CharacterName: jane
+  CallingNodeData: {fileID: -5086071029627352186}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -913779063319088680}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: -5086071029627352186}
+  DataIconnectedTo:
+  - {fileID: 4840701286651820937}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+--- !u!114 &-377760412554762217
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c74f5891de31f5248a76eef5fbfae5e3, type: 3}
+  m_Name: 72_End
+  m_EditorClassIdentifier: 
+  Name: 72_End
+  Text: 
+  UID: 803613e4-849c-484c-9eae-680713052453
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: 4830461976649785275}
+  DataIconnectedTo: []
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+--- !u!114 &-74051215624340482
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 43_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 43_Dialogue
+  Text: I have no idea , but I think you both attend the same college
+  UID: 377708a9-2da0-413a-8117-c8784f7e6642
+  CharacterName: Endou
+  CallingNodeData: {fileID: 2571234746193862579}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -1935267704393998680}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: 7078235209048517398}
+  DataIconnectedTo: []
+  Duration: 1
+  Delay: 1.7731143
+  RealtimeDelay: 0
+  StartTime: 18.068653
+  DurationSum: 19.068653
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - I have no idea , but I think you both attend the same college
+  - "\u77E5\u308A\u307E\u305B\u3093\u304C\u3067\u3059\u3051\u3069\u304B\u308C\u3068\u30A2\u30E6\u30DF\u306F\u540C\u3058\u5927\u5B66\u6821\u306B\u53D6\u3063\u3066\u3044\u308A\u3068\u601D\u3063\u3066\u307E\u3059\u3002"
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 898e24b5475626c4e801ae0a3c8a1e90, type: 3}
+  m_Name: New SceneData
+  m_EditorClassIdentifier: 
+  UID: 2362ba9e-8c61-48f3-9091-b70e05774f73
+  UpdateUID: 7389fdd5-457b-481c-9e6f-be776003861b
+  SceneID: 0
+  FullCharacterDialogueSet:
+  - {fileID: 5447887741799242537}
+  - {fileID: -913779063319088680}
+  - {fileID: 1610164386191759217}
+  - {fileID: -2296112270056491868}
+  - {fileID: -4088500195224635668}
+  - {fileID: -1130869594695773098}
+  - {fileID: -2353073825443507514}
+  - {fileID: -8418434171071775808}
+  - {fileID: 3402910658135544935}
+  - {fileID: 5670444760103668115}
+  - {fileID: 2439130894948148791}
+  - {fileID: -2988103773524440371}
+  - {fileID: -3808510174295869117}
+  - {fileID: 7078235209048517398}
+  - {fileID: 2671929207173142830}
+  - {fileID: -4723842617294534670}
+  - {fileID: -8270097159538944955}
+  - {fileID: -1897013850892487246}
+  - {fileID: 8747474528741848191}
+  - {fileID: -377760412554762217}
+  - {fileID: 236589249018562843}
+  - {fileID: -7830345280676361441}
+  - {fileID: 1047484526585052161}
+  - {fileID: -6616046182814484744}
+  - {fileID: 2719241764656448303}
+  - {fileID: 1826693251132842045}
+  - {fileID: 19283958208303513}
+  - {fileID: 795878806020979496}
+  - {fileID: 3963134003310448917}
+  - {fileID: -1373402096841234349}
+  - {fileID: 5434342986361476771}
+  - {fileID: -6373514205417286270}
+  - {fileID: 5819397350125273792}
+  - {fileID: -1186541906045997508}
+  - {fileID: -1935267704393998680}
+  - {fileID: 2226949171257170156}
+  - {fileID: 6106910529790081779}
+  - {fileID: -5086071029627352186}
+  - {fileID: -1494441702109977147}
+  - {fileID: 3990172004760884226}
+  - {fileID: 5013763141510485831}
+  - {fileID: 2571234746193862579}
+  - {fileID: 5196945285965947106}
+  - {fileID: 3068661127501479863}
+  - {fileID: 4840701286651820937}
+  - {fileID: -6262362137891863842}
+  - {fileID: -6388524756016807122}
+  - {fileID: 8209370272285698144}
+  - {fileID: 5906613156708332535}
+  - {fileID: -6186397776735692710}
+  - {fileID: -1026537826216676954}
+  - {fileID: -4527944627610519147}
+  - {fileID: -8693313839973001659}
+  - {fileID: 6157675325017017966}
+  - {fileID: -5661338532770505800}
+  - {fileID: 7411508416667623627}
+  - {fileID: -6432613420388197511}
+  - {fileID: 4329112526627465203}
+  - {fileID: 440565993219087120}
+  - {fileID: -7197564058273475037}
+  - {fileID: -8684936977227114330}
+  - {fileID: 6121314144461101442}
+  - {fileID: 316492783621615615}
+  - {fileID: -5472859822942885666}
+  - {fileID: -74051215624340482}
+  - {fileID: -1896923639518892434}
+  - {fileID: -7572436268901403183}
+  - {fileID: 753163933312387635}
+  - {fileID: 5816769314200947075}
+  - {fileID: -4622634042351326886}
+  - {fileID: 3925950866721032547}
+  - {fileID: 4830461976649785275}
+  - {fileID: 4789917012868746830}
+  - {fileID: 6680967362953363918}
+  - {fileID: -4783646125271057657}
+  ActiveCharacterDialogueSet: []
+  Characters:
+  - {fileID: -5086071029627352186}
+  - {fileID: -1494441702109977147}
+  - {fileID: 2226949171257170156}
+  - {fileID: 2571234746193862579}
+  Languages:
+  - Name: English
+    CountryCode: en-US
+    Active: 0
+    Default: 0
+  - Name: "\u65E5\u672C\u8A9E"
+    CountryCode: jp-JPN
+    Active: 0
+    Default: 0
+  LanguageIndex: 0
+  LanguageNameArray:
+  - English
+  - "\u65E5\u672C\u8A9E"
+--- !u!114 &19283958208303513
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86362742d6c0d284f9349e0245004411, type: 3}
+  m_Name: 68_Route
+  m_EditorClassIdentifier: 
+  Name: 68_Route
+  Text: 
+  UID: b814e929-63ed-498b-b2ce-a0e91e68219f
+  CharacterName: jane
+  CallingNodeData: {fileID: -5086071029627352186}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -913779063319088680}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: 4840701286651820937}
+  DataIconnectedTo:
+  - {fileID: 7411508416667623627}
+  - {fileID: -1186541906045997508}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 6.3068166
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  RouteID: 0
+  TempRouteID: 0
+  LinkedRoute: {fileID: 5819397350125273792}
+  AutoSwitchValue: 0
+  RoutesLinkedToMe: []
+  ConvergenceMode: 0
+  ControllingLinkNode: {fileID: 0}
+--- !u!114 &236589249018562843
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c74f5891de31f5248a76eef5fbfae5e3, type: 3}
+  m_Name: 73_End
+  m_EditorClassIdentifier: 
+  Name: 73_End
+  Text: 
+  UID: 4f4c9a71-3e6b-467b-b352-23d6220317f4
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: 4789917012868746830}
+  DataIconnectedTo: []
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+--- !u!114 &316492783621615615
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 44_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 44_Dialogue
+  Text: no idea
+  UID: 17c14216-b8fc-416d-81bb-032c90fd8236
+  CharacterName: Endou
+  CallingNodeData: {fileID: 2571234746193862579}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -1935267704393998680}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: 7078235209048517398}
+  DataIconnectedTo: []
+  Duration: 1
+  Delay: 1.3361884
+  RealtimeDelay: 0
+  StartTime: 17.631727
+  DurationSum: 18.631727
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - no idea
+  - "\u3054\u3081\u3093\u3001\u77E5\u308A\u307E\u305B\u3093\u3002"
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &440565993219087120
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 22_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 22_Dialogue
+  Text: It's raining
+  UID: 21729c3a-eeab-4777-a7ab-3b35b989304e
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: -8270097159538944955}
+  DataIconnectedTo:
+  - {fileID: 2719241764656448303}
+  Duration: 1
+  Delay: 4.399302
+  RealtimeDelay: 0
+  StartTime: 16.535398
+  DurationSum: 17.535398
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - It's raining
+  - "\u96E8\u304C\u3075\u3063\u3066\u3044\u307E\u3059\u3051\u3069\u3002"
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &753163933312387635
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 40_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 40_Dialogue
+  Text: keep up the good work
+  UID: d222f4d4-9c07-4941-ac3f-d4e1721e9602
+  CharacterName: Endou
+  CallingNodeData: {fileID: 2571234746193862579}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -1935267704393998680}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: -2988103773524440371}
+  DataIconnectedTo: []
+  Duration: 1.1771548
+  Delay: 2.1105552
+  RealtimeDelay: 0
+  StartTime: 18.604826
+  DurationSum: 19.78198
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - keep up the good work
+  - "\u304A\u75B2\u308C\u69D8\u3067\u3059"
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &795878806020979496
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c74f5891de31f5248a76eef5fbfae5e3, type: 3}
+  m_Name: 67_End
+  m_EditorClassIdentifier: 
+  Name: 67_End
+  Text: 
+  UID: 1825de91-af75-448c-bc8c-9d996969bbad
+  CharacterName: Toby
+  CallingNodeData: {fileID: -1494441702109977147}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: 5447887741799242537}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: 1826693251132842045}
+  DataIconnectedTo: []
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+--- !u!114 &1047484526585052161
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c74f5891de31f5248a76eef5fbfae5e3, type: 3}
+  m_Name: 75_End
+  m_EditorClassIdentifier: 
+  Name: 75_End
+  Text: 
+  UID: adc9fc40-c098-409e-b757-0663d042b64a
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: 3925950866721032547}
+  DataIconnectedTo: []
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+--- !u!114 &1610164386191759217
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f62813ceb95dd48802f541722e4a38, type: 3}
+  m_Name: 33_Link
+  m_EditorClassIdentifier: 
+  Name: 33_Link
+  Text: 
+  UID: 110d5637-f974-4e59-b639-0d2eed7b3305
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: 2719241764656448303}
+  DataIconnectedTo:
+  - {fileID: -2296112270056491868}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  Loop: 0
+  LoopValue: 0
+  loopRoute: {fileID: 0}
+  _iterationCount: 0
+--- !u!114 &1826693251132842045
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86362742d6c0d284f9349e0245004411, type: 3}
+  m_Name: 65_Route
+  m_EditorClassIdentifier: 
+  Name: 65_Route
+  Text: 
+  UID: bdf768fb-cfb5-4330-93df-1b26512ad98d
+  CharacterName: Toby
+  CallingNodeData: {fileID: -1494441702109977147}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: 5447887741799242537}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: -1026537826216676954}
+  DataIconnectedTo:
+  - {fileID: -8684936977227114330}
+  - {fileID: 795878806020979496}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 15.1281805
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  RouteID: 0
+  TempRouteID: 0
+  LinkedRoute: {fileID: 5819397350125273792}
+  AutoSwitchValue: 0
+  RoutesLinkedToMe: []
+  ConvergenceMode: 0
+  ControllingLinkNode: {fileID: 0}
+--- !u!114 &2226949171257170156
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f62fd303fe32d84d939ad01a51f9fdb, type: 3}
+  m_Name: "\u30A2\u30E6\u30DF(Ayumi)"
+  m_EditorClassIdentifier: 
+  Name: "\u30A2\u30E6\u30DF(Ayumi)"
+  Text: 
+  UID: df16beef-e8a0-4bcd-ad88-dd10d2570c12
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe: []
+  DataIconnectedTo:
+  - {fileID: -6373514205417286270}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  NodeDataInMyChain:
+  - {fileID: 1610164386191759217}
+  - {fileID: -2296112270056491868}
+  - {fileID: -4088500195224635668}
+  - {fileID: -1130869594695773098}
+  - {fileID: -2353073825443507514}
+  - {fileID: -8418434171071775808}
+  - {fileID: 3402910658135544935}
+  - {fileID: -8270097159538944955}
+  - {fileID: -1897013850892487246}
+  - {fileID: 8747474528741848191}
+  - {fileID: -377760412554762217}
+  - {fileID: 236589249018562843}
+  - {fileID: -7830345280676361441}
+  - {fileID: 1047484526585052161}
+  - {fileID: -6616046182814484744}
+  - {fileID: -7572436268901403183}
+  - {fileID: -4783646125271057657}
+  - {fileID: -6432613420388197511}
+  - {fileID: 4329112526627465203}
+  - {fileID: 440565993219087120}
+  - {fileID: 2719241764656448303}
+  - {fileID: -4622634042351326886}
+  - {fileID: 4830461976649785275}
+  - {fileID: 4789917012868746830}
+  - {fileID: 6680967362953363918}
+  - {fileID: 3925950866721032547}
+  - {fileID: 5816769314200947075}
+  - {fileID: 5196945285965947106}
+  - {fileID: 3963134003310448917}
+  - {fileID: -6373514205417286270}
+  - {fileID: 2226949171257170156}
+  - {fileID: 6106910529790081779}
+  - {fileID: -6388524756016807122}
+  - {fileID: -7197564058273475037}
+  - {fileID: 5013763141510485831}
+  CharacterImage: {fileID: 0}
+  CharacterPersonality:
+    NegativeTraits:
+      Angry: 0
+      Arrogantt: 0
+      Careless: 0
+      Childish: 0
+      Cowardly: 0
+      Crafty: 0
+      Crazy: 0
+      Cruel: 0
+      Dependent: 0
+      Destructive: 0
+      Devious: 0
+      Disloyal: 0
+      Disobedient: 0
+      Disorderly: 0
+      Disorganized: 0
+      Fearful: 0
+      Fickle: 0
+      Foolish: 0
+      Forgetful: 0
+      Frightening: 0
+      Frivolous: 0
+      Graceless: 0
+      Gullible: 0
+      Hostile: 0
+      Impractical: 0
+      Irritable: 0
+      Lazy: 0
+      Meddlesome: 0
+      Miserable: 0
+      Neglectful: 0
+      Opportunistic: 0
+      Provocative: 0
+      Slow: 0
+      Timid: 0
+      Uncooperative: 0
+      Unreliable: 0
+      Weak: 0
+      WeakWilled: 0
+    NeutralTraits:
+      Aggressive: 0
+      Deceptive: 0
+      Dominating: 0
+      Enigmatic: 0
+      Experimental: 0
+      Iconoclastic: 0
+      Idiosyncratic: 0
+      Impassive: 0
+      Obedient: 0
+      Progressive: 0
+      Questioning: 0
+      Reserved: 0
+      Stubborn: 0
+    PositiveTraits:
+      Accessible: 0
+      Active: 0
+      Adaptable: 0
+      Adventurous: 0
+      Alert: 0
+      Brilliant: 0
+      Calm: 0
+      Capable: 0
+      Challenging: 0
+      Charismatic: 0
+      Clever: 0
+      Confident: 0
+      Cooperative: 0
+      Courageous: 0
+      Curious: 0
+      Daring: 0
+      Decisive: 0
+      Discreet: 0
+      Efficient: 0
+      Energetic: 0
+      Focused: 0
+      Helpful: 0
+      Independent: 0
+      Individualistic: 0
+      Innovative: 0
+      Intelligent: 0
+      Leaderly: 0
+      Logical: 0
+      Loyal: 0
+      Methodical: 0
+      Orderly: 0
+      Organized: 0
+      Patient: 0
+      Patriotic: 0
+      Peaceful: 0
+      Reliable: 0
+      Resourceful: 0
+      Responsible: 0
+      Responsive: 0
+      Sane: 0
+      Selfless: 0
+      Serious: 0
+      Skillful: 0
+      Stoic: 0
+      Strong: 0
+  SortingID: 2
+--- !u!114 &2439130894948148791
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86362742d6c0d284f9349e0245004411, type: 3}
+  m_Name: 25_Route
+  m_EditorClassIdentifier: 
+  Name: 25_Route
+  Text: 
+  UID: 2d03fcbd-8fe6-48b7-bb3b-3b33ab91424f
+  CharacterName: Endou
+  CallingNodeData: {fileID: 2571234746193862579}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -1935267704393998680}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: 5434342986361476771}
+  DataIconnectedTo:
+  - {fileID: -5472859822942885666}
+  - {fileID: 6121314144461101442}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  RouteID: 1
+  TempRouteID: 0
+  LinkedRoute: {fileID: 0}
+  AutoSwitchValue: 0
+  RoutesLinkedToMe:
+  - {fileID: -2296112270056491868}
+  ConvergenceMode: 0
+  ControllingLinkNode: {fileID: 0}
+--- !u!114 &2571234746193862579
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f62fd303fe32d84d939ad01a51f9fdb, type: 3}
+  m_Name: Endou
+  m_EditorClassIdentifier: 
+  Name: Endou
+  Text: 
+  UID: 8a39a9f6-1b27-4a15-a445-0a9074211b4d
+  CharacterName: Endou
+  CallingNodeData: {fileID: 2571234746193862579}
+  EnvironmentName: 
+  Environment: {fileID: 0}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe: []
+  DataIconnectedTo:
+  - {fileID: -1935267704393998680}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  NodeDataInMyChain:
+  - {fileID: 5670444760103668115}
+  - {fileID: 2439130894948148791}
+  - {fileID: -2988103773524440371}
+  - {fileID: -3808510174295869117}
+  - {fileID: 7078235209048517398}
+  - {fileID: 2671929207173142830}
+  - {fileID: -4723842617294534670}
+  - {fileID: -8693313839973001659}
+  - {fileID: 6121314144461101442}
+  - {fileID: -1896923639518892434}
+  - {fileID: 753163933312387635}
+  - {fileID: -74051215624340482}
+  - {fileID: 316492783621615615}
+  - {fileID: -5661338532770505800}
+  - {fileID: 5906613156708332535}
+  - {fileID: -1373402096841234349}
+  - {fileID: -5472859822942885666}
+  - {fileID: 6157675325017017966}
+  - {fileID: 5434342986361476771}
+  - {fileID: 5819397350125273792}
+  - {fileID: -1935267704393998680}
+  - {fileID: -4527944627610519147}
+  - {fileID: -6262362137891863842}
+  - {fileID: -6186397776735692710}
+  - {fileID: 3990172004760884226}
+  - {fileID: 2571234746193862579}
+  CharacterImage: {fileID: 0}
+  CharacterPersonality:
+    NegativeTraits:
+      Angry: 0
+      Arrogantt: 0
+      Careless: 0
+      Childish: 0
+      Cowardly: 0
+      Crafty: 0
+      Crazy: 0
+      Cruel: 0
+      Dependent: 0
+      Destructive: 0
+      Devious: 0
+      Disloyal: 0
+      Disobedient: 0
+      Disorderly: 0
+      Disorganized: 0
+      Fearful: 0
+      Fickle: 0
+      Foolish: 0
+      Forgetful: 0
+      Frightening: 0
+      Frivolous: 0
+      Graceless: 0
+      Gullible: 0
+      Hostile: 0
+      Impractical: 0
+      Irritable: 0
+      Lazy: 0
+      Meddlesome: 0
+      Miserable: 0
+      Neglectful: 0
+      Opportunistic: 0
+      Provocative: 0
+      Slow: 0
+      Timid: 0
+      Uncooperative: 0
+      Unreliable: 0
+      Weak: 0
+      WeakWilled: 0
+    NeutralTraits:
+      Aggressive: 0
+      Deceptive: 0
+      Dominating: 0
+      Enigmatic: 0
+      Experimental: 0
+      Iconoclastic: 0
+      Idiosyncratic: 0
+      Impassive: 0
+      Obedient: 0
+      Progressive: 0
+      Questioning: 0
+      Reserved: 0
+      Stubborn: 0
+    PositiveTraits:
+      Accessible: 0
+      Active: 0
+      Adaptable: 0
+      Adventurous: 0
+      Alert: 0
+      Brilliant: 0
+      Calm: 0
+      Capable: 0
+      Challenging: 0
+      Charismatic: 0
+      Clever: 0
+      Confident: 0
+      Cooperative: 0
+      Courageous: 0
+      Curious: 0
+      Daring: 0
+      Decisive: 0
+      Discreet: 0
+      Efficient: 0
+      Energetic: 0
+      Focused: 0
+      Helpful: 0
+      Independent: 0
+      Individualistic: 0
+      Innovative: 0
+      Intelligent: 0
+      Leaderly: 0
+      Logical: 0
+      Loyal: 0
+      Methodical: 0
+      Orderly: 0
+      Organized: 0
+      Patient: 0
+      Patriotic: 0
+      Peaceful: 0
+      Reliable: 0
+      Resourceful: 0
+      Responsible: 0
+      Responsive: 0
+      Sane: 0
+      Selfless: 0
+      Serious: 0
+      Skillful: 0
+      Stoic: 0
+      Strong: 0
+  SortingID: 3
+--- !u!114 &2671929207173142830
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f62813ceb95dd48802f541722e4a38, type: 3}
+  m_Name: 29_Link
+  m_EditorClassIdentifier: 
+  Name: 29_Link
+  Text: 
+  UID: 6469961e-8212-4c61-a503-2fadcf103a78
+  CharacterName: Endou
+  CallingNodeData: {fileID: 2571234746193862579}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -1935267704393998680}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: -5661338532770505800}
+  DataIconnectedTo:
+  - {fileID: -4723842617294534670}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  Loop: 0
+  LoopValue: 0
+  loopRoute: {fileID: 0}
+  _iterationCount: 0
+--- !u!114 &2719241764656448303
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f62813ceb95dd48802f541722e4a38, type: 3}
+  m_Name: 32_Link
+  m_EditorClassIdentifier: 
+  Name: 32_Link
+  Text: 
+  UID: 4fa97c79-a591-4cc3-ba68-b9a7fb0c91e0
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: 440565993219087120}
+  DataIconnectedTo:
+  - {fileID: 1610164386191759217}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  Loop: 0
+  LoopValue: 0
+  loopRoute: {fileID: 0}
+  _iterationCount: 0
+--- !u!114 &3068661127501479863
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 59_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 59_Dialogue
+  Text: Good morning guys
+  UID: 1a4d9238-2e14-4b9b-b9a9-d3f49b7556de
+  CharacterName: Toby
+  CallingNodeData: {fileID: -1494441702109977147}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: 5447887741799242537}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: 5447887741799242537}
+  DataIconnectedTo:
+  - {fileID: 8209370272285698144}
+  Duration: 2.7
+  Delay: 4.9501762
+  RealtimeDelay: 0
+  StartTime: 4.9501762
+  DurationSum: 7.650176
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - Good morning guys
+  - "\u304A\u306F\u3088\u3046\u3054\u3056\u3044\u307E\u3059"
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &3402910658135544935
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86362742d6c0d284f9349e0245004411, type: 3}
+  m_Name: 48_Route
+  m_EditorClassIdentifier: 
+  Name: 48_Route
+  Text: 
+  UID: 84e83f56-90fa-46f4-a59e-620765c0348f
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: -8418434171071775808}
+  DataIconnectedTo:
+  - {fileID: 3925950866721032547}
+  - {fileID: 5816769314200947075}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 17.535398
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  RouteID: 1
+  TempRouteID: 0
+  LinkedRoute: {fileID: 7078235209048517398}
+  AutoSwitchValue: 0
+  RoutesLinkedToMe: []
+  ConvergenceMode: 0
+  ControllingLinkNode: {fileID: 0}
+--- !u!114 &3925950866721032547
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 53_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 53_Dialogue
+  Text: ooh, maybe it was hideyoshi
+  UID: 7ef696c7-8405-4f23-ac47-901a52b66063
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: 3402910658135544935}
+  DataIconnectedTo:
+  - {fileID: 1047484526585052161}
+  Duration: 1
+  Delay: 1.591799
+  RealtimeDelay: 0
+  StartTime: 19.127197
+  DurationSum: 20.127197
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - ooh, maybe it was hideyoshi
+  - "\u3072\u3067\u3088\u3057\u3085\u30FC\u3055\u3093\u304B\u3082\u3057\u3089\u306A\u3044\u3002"
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &3963134003310448917
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f62813ceb95dd48802f541722e4a38, type: 3}
+  m_Name: 50_Link
+  m_EditorClassIdentifier: 
+  Name: 50_Link
+  Text: 
+  UID: 5f08502c-2853-4920-8c98-0a3fbb4c03ab
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: 4329112526627465203}
+  DataIconnectedTo:
+  - {fileID: -8418434171071775808}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  Loop: 0
+  LoopValue: 0
+  loopRoute: {fileID: 0}
+  _iterationCount: 0
+--- !u!114 &3990172004760884226
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86362742d6c0d284f9349e0245004411, type: 3}
+  m_Name: 13_Route
+  m_EditorClassIdentifier: 
+  Name: 13_Route
+  Text: 
+  UID: 918ca80e-e1f3-43ef-8293-5458c218962c
+  CharacterName: Endou
+  CallingNodeData: {fileID: 2571234746193862579}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -1935267704393998680}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: -6186397776735692710}
+  DataIconnectedTo:
+  - {fileID: -8693313839973001659}
+  - {fileID: -5661338532770505800}
+  - {fileID: 6157675325017017966}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 14.032831
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  RouteID: 2
+  TempRouteID: 0
+  LinkedRoute: {fileID: 0}
+  AutoSwitchValue: 0
+  RoutesLinkedToMe:
+  - {fileID: -8270097159538944955}
+  ConvergenceMode: 0
+  ControllingLinkNode: {fileID: 0}
+--- !u!114 &4329112526627465203
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 24_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 24_Dialogue
+  Text: who was it ?
+  UID: b5c3e0cd-04d3-42ad-a437-6de4dc0bcf64
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: -8270097159538944955}
+  DataIconnectedTo:
+  - {fileID: 3963134003310448917}
+  Duration: 1
+  Delay: 4.3993025
+  RealtimeDelay: 0
+  StartTime: 16.535398
+  DurationSum: 17.535398
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - who was it ?
+  - "\u3060\u308C\u3067\u3059\u304B\uFF1F"
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &4789917012868746830
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 51_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 51_Dialogue
+  Text: hmmmm, maybe. depends on where you want to go
+  UID: 2462e8e7-5bcb-4815-ad0e-e7513a562491
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: -2353073825443507514}
+  DataIconnectedTo:
+  - {fileID: 236589249018562843}
+  Duration: 1
+  Delay: 1.8545327
+  RealtimeDelay: 0
+  StartTime: 19.38993
+  DurationSum: 20.38993
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - hmmmm, maybe. depends on where you want to go
+  - "\u3048\u30FC\u3001\u884C\u304D\u305F\u3044\u3070\u3057\u3087\u3092\u4F9D\u5B58\u3059\u308B\u3002"
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &4830461976649785275
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 36_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 36_Dialogue
+  Text: I have to get back to work now
+  UID: 65ddb303-8b25-490e-895e-a67cd3c71847
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: -2296112270056491868}
+  DataIconnectedTo:
+  - {fileID: -377760412554762217}
+  Duration: 1
+  Delay: 1.7130622
+  RealtimeDelay: 0
+  StartTime: 19.24846
+  DurationSum: 20.24846
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - I have to get back to work now
+  - "\u4ECA\u304B\u3089\u4ED5\u4E8B\u306B\u3082\u3069\u308A\u306A\u304D\u3083\u3002"
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &4840701286651820937
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 64_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 64_Dialogue
+  Text: Hi everyone
+  UID: c8df9d49-f995-478b-a774-0ed6c5024f18
+  CharacterName: jane
+  CallingNodeData: {fileID: -5086071029627352186}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -913779063319088680}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: -913779063319088680}
+  DataIconnectedTo:
+  - {fileID: 19283958208303513}
+  Duration: 1
+  Delay: 5.3068166
+  RealtimeDelay: 0
+  StartTime: 5.3068166
+  DurationSum: 6.3068166
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - Hi everyone
+  - "\u304A\u306F\u3088\u3046\u3054\u3056\u3044\u307E\u3059\u307F\u306A\u3055\u3093\u3002"
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: shy tone
+--- !u!114 &5013763141510485831
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86362742d6c0d284f9349e0245004411, type: 3}
+  m_Name: 16_Route
+  m_EditorClassIdentifier: 
+  Name: 16_Route
+  Text: 
+  UID: c0b8cc09-a70b-47f7-9300-3b21879f6c1d
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: -6388524756016807122}
+  DataIconnectedTo:
+  - {fileID: -7197564058273475037}
+  - {fileID: -8270097159538944955}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 12.136096
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  RouteID: 0
+  TempRouteID: 0
+  LinkedRoute: {fileID: 5819397350125273792}
+  AutoSwitchValue: 0
+  RoutesLinkedToMe: []
+  ConvergenceMode: 0
+  ControllingLinkNode: {fileID: 0}
+--- !u!114 &5196945285965947106
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 6_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 6_Dialogue
+  Text: now then , i'ts time to bet back to work
+  UID: 5bf1ab7a-a26d-4dd8-8ba9-cc024ab34580
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: 6106910529790081779}
+  DataIconnectedTo:
+  - {fileID: -6388524756016807122}
+  Duration: 1.411135
+  Delay: 0.18545327
+  RealtimeDelay: 0
+  StartTime: 3.285453
+  DurationSum: 4.696588
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - now then , i'ts time to bet back to work
+  - "\u3055\u3066\u3068\u3001\u4ED5\u4E8B\u3067\u3082\u3069\u308A\u307E\u3057\u3087\u3046\u304B\u3002"
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &5434342986361476771
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f62813ceb95dd48802f541722e4a38, type: 3}
+  m_Name: 31_Link
+  m_EditorClassIdentifier: 
+  Name: 31_Link
+  Text: 
+  UID: f25906d2-8c59-496a-85f5-ce028e68ca2f
+  CharacterName: Endou
+  CallingNodeData: {fileID: 2571234746193862579}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -1935267704393998680}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: 5670444760103668115}
+  DataIconnectedTo:
+  - {fileID: 2439130894948148791}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  Loop: 0
+  LoopValue: 0
+  loopRoute: {fileID: 0}
+  _iterationCount: 0
+--- !u!114 &5447887741799242537
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a265cf13074dfb4686236b730c086c4, type: 3}
+  m_Name: Family Restaurant
+  m_EditorClassIdentifier: 
+  Name: Family Restaurant
+  Text: 
+  UID: f4f6f69f-5bce-4481-ac9c-d964ba1571c1
+  CharacterName: Toby
+  CallingNodeData: {fileID: -1494441702109977147}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: 5447887741799242537}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: -1494441702109977147}
+  DataIconnectedTo:
+  - {fileID: 3068661127501479863}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+--- !u!114 &5670444760103668115
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f62813ceb95dd48802f541722e4a38, type: 3}
+  m_Name: 28_Link
+  m_EditorClassIdentifier: 
+  Name: 28_Link
+  Text: 
+  UID: 59f021bf-434f-4b54-8e8a-a71939c15b03
+  CharacterName: Endou
+  CallingNodeData: {fileID: 2571234746193862579}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -1935267704393998680}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: -8693313839973001659}
+  DataIconnectedTo:
+  - {fileID: 5434342986361476771}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  Loop: 0
+  LoopValue: 0
+  loopRoute: {fileID: 0}
+  _iterationCount: 0
+--- !u!114 &5816769314200947075
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 54_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 54_Dialogue
+  Text: oh well. i'll see you later. i have to get back to work now!
+  UID: ab19ec96-c7bc-47d1-81c9-90cebdee20ef
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: 3402910658135544935}
+  DataIconnectedTo:
+  - {fileID: -6616046182814484744}
+  Duration: 1
+  Delay: 1.3704497
+  RealtimeDelay: 0
+  StartTime: 18.905848
+  DurationSum: 19.905848
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - oh well. i'll see you later. i have to get back to work now!
+  - "\u307E\u30FC\u3001\u307E\u305F\u3042\u3068\u3067\u3067\u3002\u4ECA\u304B\u3089\u4ED5\u4E8B\u306B\u3082\u3069\u308C\u306A\u304D\u3083"
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &5819397350125273792
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86362742d6c0d284f9349e0245004411, type: 3}
+  m_Name: first choice
+  m_EditorClassIdentifier: 
+  Name: first choice
+  Text: 
+  UID: a0c37daa-8817-4775-a36b-e0f4121db65a
+  CharacterName: Endou
+  CallingNodeData: {fileID: 2571234746193862579}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -1935267704393998680}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: -6262362137891863842}
+  DataIconnectedTo:
+  - {fileID: 5906613156708332535}
+  - {fileID: -6186397776735692710}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 8.780231
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  RouteID: 0
+  TempRouteID: 0
+  LinkedRoute: {fileID: 0}
+  AutoSwitchValue: 0
+  RoutesLinkedToMe:
+  - {fileID: 1826693251132842045}
+  - {fileID: 19283958208303513}
+  - {fileID: 5013763141510485831}
+  ConvergenceMode: 0
+  ControllingLinkNode: {fileID: 0}
+--- !u!114 &5906613156708332535
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c8dd975dbe0cf1489594b86179f85ba, type: 3}
+  m_Name: 11_Action
+  m_EditorClassIdentifier: 
+  Name: 11_Action
+  Text: ask her out on a date
+  UID: 17ed6d5c-af39-4eb2-9c30-e08c2c9803be
+  CharacterName: Endou
+  CallingNodeData: {fileID: 2571234746193862579}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -1935267704393998680}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: 5819397350125273792}
+  DataIconnectedTo:
+  - {fileID: -4527944627610519147}
+  Duration: 0.45182016
+  Delay: 4.80078
+  RealtimeDelay: 0
+  StartTime: 13.581011
+  DurationSum: 14.032831
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - ask her out on a date
+  - "\u30C7\u30FC\u30C8"
+  ActionName: 
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &6106910529790081779
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c8dd975dbe0cf1489594b86179f85ba, type: 3}
+  m_Name: 2_Action
+  m_EditorClassIdentifier: 
+  Name: 2_Action
+  Text: 'streatches with her arms upward '
+  UID: 290f3ab8-082e-428f-a078-2ebedb618d2a
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: -6373514205417286270}
+  DataIconnectedTo:
+  - {fileID: 5196945285965947106}
+  Duration: 3.1
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 3.1
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 'streatches with her arms upward '
+  - "\u4E0A\u306B\u624B\u3092\u4F38\u3070\u3057\u3066"
+  ActionName: 
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &6121314144461101442
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 27_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 27_Dialogue
+  Text: oh, yeah
+  UID: c4e47d2d-8fd2-4ef0-af46-36e87c784f07
+  CharacterName: Endou
+  CallingNodeData: {fileID: 2571234746193862579}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -1935267704393998680}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: 2439130894948148791}
+  DataIconnectedTo: []
+  Duration: 1
+  Delay: 1.7301927
+  RealtimeDelay: 0
+  StartTime: 17.34924
+  DurationSum: 18.34924
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - oh, yeah
+  - "\u3042\u30FC\u3001\u305D\u3046\u3067\u306D\u3002"
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &6157675325017017966
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 15_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 15_Dialogue
+  Text: A customer who was at Table three had asked for you by name
+  UID: c9d0a46f-6ab9-400c-84cd-9aacf457ff71
+  CharacterName: Endou
+  CallingNodeData: {fileID: 2571234746193862579}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -1935267704393998680}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: 3990172004760884226}
+  DataIconnectedTo:
+  - {fileID: -1373402096841234349}
+  Duration: 1
+  Delay: 1.2627066
+  RealtimeDelay: 0
+  StartTime: 15.295538
+  DurationSum: 16.295538
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - A customer who was at Table three had asked for you by name
+  - "3\u756A\u5E2D\u306E\u304A\u5BA2\u69D8\u306F\u540D\u524D\u3067\u30A2\u30E6\u30DF\u3092\u3088\u3093\u3067\u307E\u3059\u3002"
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &6680967362953363918
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 52_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 52_Dialogue
+  Text: same to you !
+  UID: 246efb48-0c89-40d6-9289-cff99acf6fb7
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: -2353073825443507514}
+  DataIconnectedTo:
+  - {fileID: -7830345280676361441}
+  Duration: 1.0354309
+  Delay: 2.3920233
+  RealtimeDelay: 0
+  StartTime: 19.927422
+  DurationSum: 20.962852
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - same to you !
+  - "\u3053\u3061\u3089\u3053\u305D\u3002"
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &7078235209048517398
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86362742d6c0d284f9349e0245004411, type: 3}
+  m_Name: 41_Route
+  m_EditorClassIdentifier: 
+  Name: 41_Route
+  Text: 
+  UID: ef991033-aaef-4ff0-98d9-de0ec57ddb8e
+  CharacterName: Endou
+  CallingNodeData: {fileID: 2571234746193862579}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -1935267704393998680}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: -3808510174295869117}
+  DataIconnectedTo:
+  - {fileID: -74051215624340482}
+  - {fileID: 316492783621615615}
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 16.295538
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 
+  RouteID: 1
+  TempRouteID: 0
+  LinkedRoute: {fileID: 0}
+  AutoSwitchValue: 0
+  RoutesLinkedToMe:
+  - {fileID: 3402910658135544935}
+  ConvergenceMode: 0
+  ControllingLinkNode: {fileID: 0}
+--- !u!114 &7411508416667623627
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c8dd975dbe0cf1489594b86179f85ba, type: 3}
+  m_Name: 69_Action
+  m_EditorClassIdentifier: 
+  Name: 69_Action
+  Text: gasps in shock
+  UID: dec1675b-013f-4b35-befc-b9885adc030e
+  CharacterName: jane
+  CallingNodeData: {fileID: -5086071029627352186}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -913779063319088680}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: 19283958208303513}
+  DataIconnectedTo: []
+  Duration: 1
+  Delay: 9.375209
+  RealtimeDelay: 0
+  StartTime: 15.682026
+  DurationSum: 16.682026
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - gasps in shock
+  - "\u30B7\u30E7\u30C3\u30AF\u306B\u3042\u3048\u304E\u3002"
+  ActionName: 
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &8209370272285698144
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebf1569bde5e9b2488d32c839a2baee5, type: 3}
+  m_Name: 60_Dialogue
+  m_EditorClassIdentifier: 
+  Name: 60_Dialogue
+  Text: ...okay, i guess i'm just keep working then since I am being ignored...
+  UID: b429284b-d760-4dc1-a93b-4efd2eb081d2
+  CharacterName: Toby
+  CallingNodeData: {fileID: -1494441702109977147}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: 5447887741799242537}
+  Pass: 0
+  Runtime_Pass: 0
+  DataConnectedToMe:
+  - {fileID: 3068661127501479863}
+  DataIconnectedTo:
+  - {fileID: -1026537826216676954}
+  Duration: 1
+  Delay: 3.3952217
+  RealtimeDelay: 0
+  StartTime: 11.045398
+  DurationSum: 12.045398
+  useTime: 1
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - ...okay, i guess i'm just keep working then since I am being ignored...
+  - "\u307E\u3044\u3044\u30FC\u3001\u79C1\u3092\u7121\u8996\u3057\u3066\u306A\u3089\u4ED5\u4E8B\u306B\u3064\u305A\u304D\u3060\u3051\u3002"
+  LocalizedVoiceRecordings:
+  - {fileID: 0}
+  - {fileID: 0}
+  LocalizedSoundEffects:
+  - {fileID: 0}
+  - {fileID: 0}
+  StoryboardImage: {fileID: 0}
+  Tag: 
+--- !u!114 &8747474528741848191
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c74f5891de31f5248a76eef5fbfae5e3, type: 3}
+  m_Name: 71_End
+  m_EditorClassIdentifier: 
+  Name: 71_End
+  Text: 
+  UID: d9614288-1a50-4eb8-bd07-5f3522669e01
+  CharacterName: "\u30A2\u30E6\u30DF(Ayumi)"
+  CallingNodeData: {fileID: 2226949171257170156}
+  EnvironmentName: Family Restaurant
+  Environment: {fileID: -6373514205417286270}
+  Pass: 1
+  Runtime_Pass: 1
+  DataConnectedToMe:
+  - {fileID: -4622634042351326886}
+  DataIconnectedTo: []
+  Duration: 0
+  Delay: 0
+  RealtimeDelay: 0
+  StartTime: 0
+  DurationSum: 0
+  useTime: 0
+  IsInControl: 0
+  OverrideTime: 0
+  LocalizedText:
+  - 

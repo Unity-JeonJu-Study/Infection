@@ -16,6 +16,7 @@ public class SoundManager : MonoBehaviour
 
     public float masterVolumeSFX = 1f;
     public float masterVolumeBGM = 1f;
+    
 
     [ReadOnly]
     public AudioClip[] BGMClip; // 오디오 소스들 지정.
@@ -168,14 +169,30 @@ public class SoundManager : MonoBehaviour
     }
 
     #region 옵션에서 볼륨조절
+    [Button("SetVolume SFX")]
     public void SetVolumeSFX(float a_volume)
     {
         masterVolumeSFX = a_volume;
     }
-
+    [Button("SetVolume BGM")]
     public void SetVolumeBGM(float a_volume)
     {
         masterVolumeBGM = a_volume;
+        foreach (var players in BGMPlayers)
+        {
+            if (players.Value._audioSource.clip.name.Contains("Industrial Combat LAYER")
+                && players.Value._audioSource.clip.name != $"Industrial Combat LAYER {currentMainBGMLayer}")
+            {
+                continue;
+            }
+            players.Value.SetVolume();
+        }
+    }
+    [Button("SetVolume Master")]
+    public void SetVolumeMaster(float a_volume)
+    {
+        masterVolumeBGM = a_volume;
+        masterVolumeSFX = a_volume;
         foreach (var players in BGMPlayers)
         {
             if (players.Value._audioSource.clip.name.Contains("Industrial Combat LAYER")

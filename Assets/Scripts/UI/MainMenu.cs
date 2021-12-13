@@ -10,9 +10,14 @@ using UnityEditor;
 public class MainMenu : MonoBehaviour
 {
     [ReadOnly, SerializeField] private LoadPopup popupLoad;
+    [ReadOnly, SerializeField] private SettingPopup popupSetting;
 
     private void Awake() {
         popupLoad = FindObjectOfType<LoadPopup>();
+        popupLoad.gameObject.SetActive(false);
+
+        popupSetting = FindObjectOfType<SettingPopup>();
+        popupSetting.gameObject.SetActive(false);
     }
 
     public void OnClickStart() {
@@ -23,6 +28,10 @@ public class MainMenu : MonoBehaviour
     public void OnClickLoad() {
         popupLoad.gameObject.SetActive(true);
         popupLoad.LoadFiles();
+    }
+
+    public void OnClickSetting() {
+        popupSetting.gameObject.SetActive(true);
     }
 
     public void OnClickExit() {

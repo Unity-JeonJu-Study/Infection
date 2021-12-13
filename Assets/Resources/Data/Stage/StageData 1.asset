@@ -1,0 +1,217 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 196c5506ba4dd3646b98effbb0b92faf, type: 3}
+  m_Name: StageData 1
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 1746664512360453197, guid: 59ed373ec755539459c0806ae2243954, type: 3}
+    - {fileID: 11400000, guid: aa35df142c59db44ba1fcabb58ff2fcd, type: 2}
+    - {fileID: 11400000, guid: 497a3b24920b9294482cc0a0f53d65a9, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: data
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[GameStage, Assembly-CSharp],[StageData+Stage,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[GameStage, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 5
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 0
+    - Name: $v
+      Entry: 7
+      Data: 2|StageData+Stage, Assembly-CSharp
+    - Name: gamePrefab
+      Entry: 10
+      Data: 0
+    - Name: quest
+      Entry: 10
+      Data: 1
+    - Name: bgm
+      Entry: 1
+      Data: Laboratory
+    - Name: limitTime
+      Entry: 4
+      Data: 0
+    - Name: minSlimCount
+      Entry: 3
+      Data: 0
+    - Name: maxSlimCount
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 1
+    - Name: $v
+      Entry: 7
+      Data: 3|StageData+Stage, Assembly-CSharp
+    - Name: gamePrefab
+      Entry: 6
+      Data: 
+    - Name: quest
+      Entry: 10
+      Data: 2
+    - Name: bgm
+      Entry: 6
+      Data: 
+    - Name: limitTime
+      Entry: 4
+      Data: 0
+    - Name: minSlimCount
+      Entry: 3
+      Data: 0
+    - Name: maxSlimCount
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 2
+    - Name: $v
+      Entry: 7
+      Data: 4|StageData+Stage, Assembly-CSharp
+    - Name: gamePrefab
+      Entry: 6
+      Data: 
+    - Name: quest
+      Entry: 6
+      Data: 
+    - Name: bgm
+      Entry: 6
+      Data: 
+    - Name: limitTime
+      Entry: 4
+      Data: 0
+    - Name: minSlimCount
+      Entry: 3
+      Data: 0
+    - Name: maxSlimCount
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 3
+    - Name: $v
+      Entry: 7
+      Data: 5|StageData+Stage, Assembly-CSharp
+    - Name: gamePrefab
+      Entry: 6
+      Data: 
+    - Name: quest
+      Entry: 6
+      Data: 
+    - Name: bgm
+      Entry: 6
+      Data: 
+    - Name: limitTime
+      Entry: 4
+      Data: 0
+    - Name: minSlimCount
+      Entry: 3
+      Data: 0
+    - Name: maxSlimCount
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 4
+    - Name: $v
+      Entry: 7
+      Data: 6|StageData+Stage, Assembly-CSharp
+    - Name: gamePrefab
+      Entry: 6
+      Data: 
+    - Name: quest
+      Entry: 6
+      Data: 
+    - Name: bgm
+      Entry: 6
+      Data: 
+    - Name: limitTime
+      Entry: 4
+      Data: 0
+    - Name: minSlimCount
+      Entry: 3
+      Data: 0
+    - Name: maxSlimCount
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 

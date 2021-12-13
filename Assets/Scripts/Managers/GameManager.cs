@@ -69,9 +69,13 @@ public class GameManager : SerializedMonoBehaviour
         currentState = GameState.StartUI;
 
         player = FindObjectOfType<Player>();
-        InitStage();
 
         waitForOneSecond = new WaitForSeconds(1f);
+    }
+
+    private void Start()
+    {
+        InitStage();    
     }
 
     private void InitStage()
@@ -89,7 +93,7 @@ public class GameManager : SerializedMonoBehaviour
         // Update stage information
         currentStage = stage;
         CurrentQuestList = new Queue<Quest>(stageData.data[currentStage].quest.questList); // copy queue
-        currentGoal = CurrentQuestList.Dequeue();
+        currentGoal = CurrentQuestList.Peek();
         
         // Activate stage
         for (int i = 0; i < roomParent.childCount; i++)
@@ -97,6 +101,10 @@ public class GameManager : SerializedMonoBehaviour
             PoolManager.Instance.Despawn(roomParent.GetChild(i).gameObject);
         }
         PoolManager.Instance.Spawn(stageData.data[currentStage].gamePrefab.name);
+        
+        // switch BGM when stage changed
+        SoundManager.Instance.ClearBGM();
+        SoundManager.Instance.PlayBGM(stageData.data[currentStage].bgm);
 
         InitInGameUIForCurrentStage();
     }
@@ -104,12 +112,15 @@ public class GameManager : SerializedMonoBehaviour
     [Button("Give me next Quest"),TabGroup("Quest Info")]
     public void NextQuest()
     {
-        if (CurrentQuestList.Peek() == null)
+        if (CurrentQuestList.Count == 0)
         {
             Debug.Log("No More Quest Here");
             return;
         }
-        currentGoal = CurrentQuestList.Dequeue();
+        CurrentQuestList.Dequeue();
+        currentGoal = CurrentQuestList.Peek();
+        InitInGameUIForCurrentStage();
+
     }
 
     #region Click Event
@@ -169,6 +180,7 @@ public class GameManager : SerializedMonoBehaviour
     }
 
     private void StartGameOver() {
+        StopStageTimer();
         PopupUIManager.instance.EnableGameOverPopup();
 
         // add some codes required for game over part

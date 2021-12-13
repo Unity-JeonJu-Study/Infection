@@ -21,7 +21,7 @@ public class StageData : SerializedScriptableObject
             if (File.Exists("Assets/Resources/Data/Quest/_" + gameStage + ".asset"))
                 data[gameStage].quest = Resources.Load<QuestList>("Data/Quest/_" + gameStage);
             if (File.Exists("Assets/Resources/Sound Player/BGM/" + gameStage + ".wav"))
-                data[gameStage].bgm = Resources.Load("Sound Player/BGM/" + gameStage).ToString();
+                data[gameStage].bgm = Resources.Load<AudioClip>("Sound Player/BGM/" + gameStage).name;
         }
     }
 

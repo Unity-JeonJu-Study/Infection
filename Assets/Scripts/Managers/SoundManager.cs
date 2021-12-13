@@ -168,14 +168,30 @@ public class SoundManager : MonoBehaviour
     }
 
     #region 옵션에서 볼륨조절
+    [Button("SetVolume")]
     public void SetVolumeSFX(float a_volume)
     {
         masterVolumeSFX = a_volume;
     }
-
+    [Button("SetVolume")]
     public void SetVolumeBGM(float a_volume)
     {
         masterVolumeBGM = a_volume;
+        foreach (var players in BGMPlayers)
+        {
+            if (players.Value._audioSource.clip.name.Contains("Industrial Combat LAYER")
+                && players.Value._audioSource.clip.name != $"Industrial Combat LAYER {currentMainBGMLayer}")
+            {
+                continue;
+            }
+            players.Value.SetVolume();
+        }
+    }
+
+    public void SetVolumeMaster(float a_volume)
+    {
+        masterVolumeBGM = a_volume;
+        masterVolumeSFX = a_volume;
         foreach (var players in BGMPlayers)
         {
             if (players.Value._audioSource.clip.name.Contains("Industrial Combat LAYER")

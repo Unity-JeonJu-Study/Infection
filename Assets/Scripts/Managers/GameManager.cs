@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
@@ -109,7 +108,7 @@ public class GameManager : SerializedMonoBehaviour
     [Button("Give me next Quest"),TabGroup("Quest Info")]
     public void NextQuest()
     {
-        if (CurrentQuestList.Peek() == null)
+        if (CurrentQuestList.Count == 0)
         {
             Debug.Log("No More Quest Here");
             return;

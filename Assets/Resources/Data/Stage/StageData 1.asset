@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 196c5506ba4dd3646b98effbb0b92faf, type: 3}
-  m_Name: StageData
+  m_Name: StageData 1
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 1746664512360453197, guid: cd7ea00d958256644867f38c66fe80c7, type: 3}
+    - {fileID: 1746664512360453197, guid: 59ed373ec755539459c0806ae2243954, type: 3}
     - {fileID: 11400000, guid: aa35df142c59db44ba1fcabb58ff2fcd, type: 2}
-    - {fileID: 5989366734077091978, guid: 43ee4c3b65ccc7640b08f5e0c4a3ad8a, type: 3}
     - {fileID: 11400000, guid: 497a3b24920b9294482cc0a0f53d65a9, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
@@ -44,7 +43,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 5
+      Data: 2
     - Name: 
       Entry: 7
       Data: 
@@ -57,6 +56,12 @@ MonoBehaviour:
     - Name: gamePrefab
       Entry: 10
       Data: 0
+    - Name: quest
+      Entry: 10
+      Data: 1
+    - Name: bgm
+      Entry: 1
+      Data: Laboratory (UnityEngine.AudioClip)
     - Name: limitTime
       Entry: 4
       Data: 0
@@ -66,12 +71,6 @@ MonoBehaviour:
     - Name: maxSlimCount
       Entry: 3
       Data: 0
-    - Name: quest
-      Entry: 10
-      Data: 1
-    - Name: bgm
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -88,39 +87,12 @@ MonoBehaviour:
       Entry: 7
       Data: 3|StageData+Stage, Assembly-CSharp
     - Name: gamePrefab
-      Entry: 10
-      Data: 2
-    - Name: limitTime
-      Entry: 4
-      Data: 0
-    - Name: minSlimCount
-      Entry: 3
-      Data: 0
-    - Name: maxSlimCount
-      Entry: 3
-      Data: 0
+      Entry: 6
+      Data: 
     - Name: quest
       Entry: 10
-      Data: 3
-    - Name: bgm
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
       Data: 2
-    - Name: $v
-      Entry: 7
-      Data: 4|StageData+Stage, Assembly-CSharp
-    - Name: gamePrefab
+    - Name: bgm
       Entry: 6
       Data: 
     - Name: limitTime
@@ -132,78 +104,6 @@ MonoBehaviour:
     - Name: maxSlimCount
       Entry: 3
       Data: 0
-    - Name: quest
-      Entry: 6
-      Data: 
-    - Name: bgm
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 3
-    - Name: $v
-      Entry: 7
-      Data: 5|StageData+Stage, Assembly-CSharp
-    - Name: gamePrefab
-      Entry: 6
-      Data: 
-    - Name: limitTime
-      Entry: 4
-      Data: 0
-    - Name: minSlimCount
-      Entry: 3
-      Data: 0
-    - Name: maxSlimCount
-      Entry: 3
-      Data: 0
-    - Name: quest
-      Entry: 6
-      Data: 
-    - Name: bgm
-      Entry: 6
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4
-    - Name: $v
-      Entry: 7
-      Data: 6|StageData+Stage, Assembly-CSharp
-    - Name: gamePrefab
-      Entry: 6
-      Data: 
-    - Name: limitTime
-      Entry: 4
-      Data: 0
-    - Name: minSlimCount
-      Entry: 3
-      Data: 0
-    - Name: maxSlimCount
-      Entry: 3
-      Data: 0
-    - Name: quest
-      Entry: 6
-      Data: 
-    - Name: bgm
-      Entry: 6
-      Data: 
     - Name: 
       Entry: 8
       Data: 

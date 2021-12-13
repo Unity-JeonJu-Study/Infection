@@ -1340,7 +1340,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4520861329540325490}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Zoo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

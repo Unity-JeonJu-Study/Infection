@@ -24,7 +24,7 @@ public class StageData : SerializedScriptableObject
         private void LoadQuest()
         {
             if (File.Exists("Assets/Resources/Data/Quest/_" + gamePrefab.name + ".asset"))
-                quest = Resources.Load<QuestList>("Data/Quest/" + gamePrefab.name);
+                quest = Resources.Load<QuestList>("Data/Quest/_" + gamePrefab.name);
             else 
                 Debug.LogError("File does not exist");
         }

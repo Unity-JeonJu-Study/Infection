@@ -16,7 +16,7 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 2811247332768160770, guid: be714612071e44944afca3d3c58ff39e, type: 3}
+    - {fileID: 1746664512360453197, guid: cd7ea00d958256644867f38c66fe80c7, type: 3}
     - {fileID: 11400000, guid: aa35df142c59db44ba1fcabb58ff2fcd, type: 2}
     - {fileID: 2278225374728594199, guid: 513960a77122fd6438a7f23951ef0283, type: 3}
     - {fileID: 11400000, guid: 497a3b24920b9294482cc0a0f53d65a9, type: 2}
@@ -60,6 +60,12 @@ MonoBehaviour:
     - Name: limitTime
       Entry: 4
       Data: 0
+    - Name: minSlimCount
+      Entry: 3
+      Data: 0
+    - Name: maxSlimCount
+      Entry: 3
+      Data: 0
     - Name: quest
       Entry: 10
       Data: 1
@@ -83,6 +89,12 @@ MonoBehaviour:
       Data: 2
     - Name: limitTime
       Entry: 4
+      Data: 0
+    - Name: minSlimCount
+      Entry: 3
+      Data: 0
+    - Name: maxSlimCount
+      Entry: 3
       Data: 0
     - Name: quest
       Entry: 10
@@ -108,6 +120,12 @@ MonoBehaviour:
     - Name: limitTime
       Entry: 4
       Data: 0
+    - Name: minSlimCount
+      Entry: 3
+      Data: 0
+    - Name: maxSlimCount
+      Entry: 3
+      Data: 0
     - Name: quest
       Entry: 6
       Data: 
@@ -132,6 +150,12 @@ MonoBehaviour:
     - Name: limitTime
       Entry: 4
       Data: 0
+    - Name: minSlimCount
+      Entry: 3
+      Data: 0
+    - Name: maxSlimCount
+      Entry: 3
+      Data: 0
     - Name: quest
       Entry: 6
       Data: 
@@ -155,6 +179,12 @@ MonoBehaviour:
       Data: 
     - Name: limitTime
       Entry: 4
+      Data: 0
+    - Name: minSlimCount
+      Entry: 3
+      Data: 0
+    - Name: maxSlimCount
+      Entry: 3
       Data: 0
     - Name: quest
       Entry: 6

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
@@ -69,9 +70,13 @@ public class GameManager : SerializedMonoBehaviour
         currentState = GameState.StartUI;
 
         player = FindObjectOfType<Player>();
-        InitStage();
 
         waitForOneSecond = new WaitForSeconds(1f);
+    }
+
+    private void Start()
+    {
+        InitStage();    
     }
 
     private void InitStage()
@@ -89,7 +94,7 @@ public class GameManager : SerializedMonoBehaviour
         // Update stage information
         currentStage = stage;
         CurrentQuestList = new Queue<Quest>(stageData.data[currentStage].quest.questList); // copy queue
-        currentGoal = CurrentQuestList.Dequeue();
+        currentGoal = CurrentQuestList.Peek();
         
         // Activate stage
         for (int i = 0; i < roomParent.childCount; i++)
@@ -109,7 +114,10 @@ public class GameManager : SerializedMonoBehaviour
             Debug.Log("No More Quest Here");
             return;
         }
-        currentGoal = CurrentQuestList.Dequeue();
+        CurrentQuestList.Dequeue();
+        currentGoal = CurrentQuestList.Peek();
+        InitInGameUIForCurrentStage();
+
     }
 
     #region Click Event

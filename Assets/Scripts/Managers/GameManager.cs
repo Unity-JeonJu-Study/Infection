@@ -176,6 +176,7 @@ public class GameManager : SerializedMonoBehaviour
     }
 
     private void StartGameOver() {
+        StopStageTimer();
         PopupUIManager.instance.EnableGameOverPopup();
 
         // add some codes required for game over part

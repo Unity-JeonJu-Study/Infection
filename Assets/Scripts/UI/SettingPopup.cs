@@ -10,7 +10,9 @@ public class SettingPopup : MonoBehaviour
         Slider[] sliders = GetComponentsInChildren<Slider>();
         sliderSFXSound = sliders[0];
         sliderBGMSound = sliders[1];
+    }
 
+    private void Start() {
         sliderSFXSound.value = SoundManager.Instance.masterVolumeSFX * 100;
         sliderBGMSound.value = SoundManager.Instance.masterVolumeBGM * 100;
     }

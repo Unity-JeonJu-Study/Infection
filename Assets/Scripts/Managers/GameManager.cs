@@ -101,6 +101,10 @@ public class GameManager : SerializedMonoBehaviour
             PoolManager.Instance.Despawn(roomParent.GetChild(i).gameObject);
         }
         PoolManager.Instance.Spawn(stageData.data[currentStage].gamePrefab.name);
+        
+        // switch BGM when stage changed
+        SoundManager.Instance.ClearBGM();
+        SoundManager.Instance.PlayBGM(stageData.data[currentStage].bgm);
 
         InitInGameUIForCurrentStage();
     }

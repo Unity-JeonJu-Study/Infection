@@ -17,4 +17,8 @@ public class PausePopup : MonoBehaviour
         Destroy(MySceneManager.instance.gameObject);
         Destroy(SaveLoadManager.instance.gameObject);
     }
+
+    public void OnClickSetting() {
+        PopupUIManager.instance.EnableSettingPopup();
+    }
 }

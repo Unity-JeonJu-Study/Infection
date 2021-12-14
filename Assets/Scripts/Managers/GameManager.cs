@@ -12,7 +12,6 @@ public enum GameState
 public enum GameStage
 { 
     Laboratory,
-    Zoo,
     Stage1,
     Stage2,
     Stage3
@@ -64,23 +63,30 @@ public class GameManager : SerializedMonoBehaviour
     private void Awake() {
         Instance = this;
 
+        DontDestroyOnLoad(gameObject);
+        
         stageData = Resources.Load<StageData>("Data/Stage/StageData");
         currentStage = GameStage.Laboratory;
         currentState = GameState.StartUI;
 
         player = FindObjectOfType<Player>();
-        InitStage();
 
         waitForOneSecond = new WaitForSeconds(1f);
+        
+        InitStage();
     }
 
+    public void StartTutorialScene()
+    {
+        MySceneManager.instance.LoadScene("Tutorial");
+    }
+    
     private void InitStage()
     {
         foreach (var stage in stageData.data)
         {
             PoolManager.Instance.InitPool(stage.Value.gamePrefab, 1, roomParent);
         }
-        UpdateStage(currentStage);
     }
 
     [Button("Update Stage Info & Prefab")]
@@ -89,7 +95,7 @@ public class GameManager : SerializedMonoBehaviour
         // Update stage information
         currentStage = stage;
         CurrentQuestList = new Queue<Quest>(stageData.data[currentStage].quest.questList); // copy queue
-        currentGoal = CurrentQuestList.Dequeue();
+        currentGoal = CurrentQuestList.Peek();
         
         // Activate stage
         for (int i = 0; i < roomParent.childCount; i++)
@@ -97,6 +103,10 @@ public class GameManager : SerializedMonoBehaviour
             PoolManager.Instance.Despawn(roomParent.GetChild(i).gameObject);
         }
         PoolManager.Instance.Spawn(stageData.data[currentStage].gamePrefab.name);
+        
+        // switch BGM when stage changed
+        SoundManager.Instance.ClearBGM();
+        SoundManager.Instance.PlayBGM(stageData.data[currentStage].bgm);
 
         InitInGameUIForCurrentStage();
     }
@@ -104,12 +114,15 @@ public class GameManager : SerializedMonoBehaviour
     [Button("Give me next Quest"),TabGroup("Quest Info")]
     public void NextQuest()
     {
-        if (CurrentQuestList.Peek() == null)
+        if (CurrentQuestList.Count == 0)
         {
             Debug.Log("No More Quest Here");
             return;
         }
-        currentGoal = CurrentQuestList.Dequeue();
+        CurrentQuestList.Dequeue();
+        currentGoal = CurrentQuestList.Peek();
+        InitInGameUIForCurrentStage();
+
     }
 
     #region Click Event
@@ -169,6 +182,7 @@ public class GameManager : SerializedMonoBehaviour
     }
 
     private void StartGameOver() {
+        StopStageTimer();
         PopupUIManager.instance.EnableGameOverPopup();
 
         // add some codes required for game over part

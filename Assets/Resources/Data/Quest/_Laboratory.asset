@@ -32,10 +32,10 @@ MonoBehaviour:
       Data: 1|Quest, Assembly-CSharp
     - Name: questName
       Entry: 1
-      Data: Enter name
+      Data: Find MasterKey
     - Name: description
       Entry: 1
-      Data: Enter description
+      Data: Find MasterKey
     - Name: isComplete
       Entry: 5
       Data: false
@@ -47,10 +47,10 @@ MonoBehaviour:
       Data: 2|Quest, Assembly-CSharp
     - Name: questName
       Entry: 1
-      Data: Heidldn
+      Data: Escape Lab
     - Name: description
       Entry: 1
-      Data: djsaldn
+      Data: Escape Lab
     - Name: isComplete
       Entry: 5
       Data: false

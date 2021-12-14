@@ -26,6 +26,7 @@ public class MySceneManager : MonoBehaviour
 
     public void LoadCutScene(string sceneName)
     {
+        curSceneName = sceneName;
         SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
     }
 

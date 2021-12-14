@@ -9414,6 +9414,7 @@ MonoBehaviour:
   popupTutorial: {fileID: 0}
   popupSave: {fileID: 0}
   popupPause: {fileID: 0}
+  popupSetting: {fileID: 0}
   popupGameOver: {fileID: 0}
 --- !u!224 &8274245865967807672
 RectTransform:

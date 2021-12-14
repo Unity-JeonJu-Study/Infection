@@ -18,8 +18,7 @@ MonoBehaviour:
     ReferencedUnityObjects:
     - {fileID: 1746664512360453197, guid: 59ed373ec755539459c0806ae2243954, type: 3}
     - {fileID: 11400000, guid: aa35df142c59db44ba1fcabb58ff2fcd, type: 2}
-    - {fileID: 5989366734077091978, guid: 43ee4c3b65ccc7640b08f5e0c4a3ad8a, type: 3}
-    - {fileID: 11400000, guid: 497a3b24920b9294482cc0a0f53d65a9, type: 2}
+    - {fileID: 11400000, guid: 965f6c8c67785614390d067b76ffddca, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -44,7 +43,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 5
+      Data: 4
     - Name: 
       Entry: 7
       Data: 
@@ -88,11 +87,11 @@ MonoBehaviour:
       Entry: 7
       Data: 3|StageData+Stage, Assembly-CSharp
     - Name: gamePrefab
-      Entry: 10
-      Data: 2
+      Entry: 6
+      Data: 
     - Name: quest
       Entry: 10
-      Data: 3
+      Data: 2
     - Name: bgm
       Entry: 6
       Data: 
@@ -153,39 +152,6 @@ MonoBehaviour:
     - Name: $v
       Entry: 7
       Data: 5|StageData+Stage, Assembly-CSharp
-    - Name: gamePrefab
-      Entry: 6
-      Data: 
-    - Name: quest
-      Entry: 6
-      Data: 
-    - Name: bgm
-      Entry: 6
-      Data: 
-    - Name: limitTime
-      Entry: 4
-      Data: 0
-    - Name: minSlimCount
-      Entry: 3
-      Data: 0
-    - Name: maxSlimCount
-      Entry: 3
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
-      Data: 4
-    - Name: $v
-      Entry: 7
-      Data: 6|StageData+Stage, Assembly-CSharp
     - Name: gamePrefab
       Entry: 6
       Data: 

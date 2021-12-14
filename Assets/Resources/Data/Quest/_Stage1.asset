@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99d94263ed8032940844ee95ed5ccd31, type: 3}
-  m_Name: _Zoo
+  m_Name: _Stage1
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -26,16 +26,31 @@ MonoBehaviour:
       Data: 0|System.Collections.Generic.Queue`1[[Quest, Assembly-CSharp]], System
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
       Data: 1|Quest, Assembly-CSharp
     - Name: questName
       Entry: 1
-      Data: zoodasmkl
+      Data: Find friends
     - Name: description
       Entry: 1
-      Data: sgdfds
+      Data: FInd friens
+    - Name: isComplete
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|Quest, Assembly-CSharp
+    - Name: questName
+      Entry: 1
+      Data: Find Battery
+    - Name: description
+      Entry: 1
+      Data: Find Battery
     - Name: isComplete
       Entry: 5
       Data: false

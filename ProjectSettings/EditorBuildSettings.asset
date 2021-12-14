@@ -21,6 +21,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Choi Kang In/Temp Main Menu.unity
     guid: 61f7976ca4f51a843bb1d312c8df037d
   - enabled: 1
+    path: Assets/Scenes/Lim Jae Gang/Tutorial.unity
+    guid: 95e9b92a78649b34a9bc2c6e64a2a30a
+  - enabled: 1
     path: Assets/Scenes/Choi Kang In/Choi Kang In.unity
     guid: 587e7661b6b95ac4a8a829ac10b2ad6c
+  - enabled: 1
+    path: Assets/Scenes/Main Play Scene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}

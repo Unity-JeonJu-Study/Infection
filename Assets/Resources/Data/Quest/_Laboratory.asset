@@ -47,10 +47,10 @@ MonoBehaviour:
       Data: 2|Quest, Assembly-CSharp
     - Name: questName
       Entry: 1
-      Data: Go Stage 1
+      Data: Escape Lab
     - Name: description
       Entry: 1
-      Data: Go Stage 1
+      Data: Escape Lab
     - Name: isComplete
       Entry: 5
       Data: false

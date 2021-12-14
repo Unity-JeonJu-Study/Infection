@@ -12,7 +12,6 @@ public enum GameState
 public enum GameStage
 { 
     Laboratory,
-    Zoo,
     Stage1,
     Stage2,
     Stage3
@@ -64,6 +63,8 @@ public class GameManager : SerializedMonoBehaviour
     private void Awake() {
         Instance = this;
 
+        DontDestroyOnLoad(gameObject);
+        
         stageData = Resources.Load<StageData>("Data/Stage/StageData");
         currentStage = GameStage.Laboratory;
         currentState = GameState.StartUI;
@@ -71,20 +72,21 @@ public class GameManager : SerializedMonoBehaviour
         player = FindObjectOfType<Player>();
 
         waitForOneSecond = new WaitForSeconds(1f);
+        
+        InitStage();
     }
 
-    private void Start()
+    public void StartTutorialScene()
     {
-        InitStage();    
+        MySceneManager.instance.LoadScene("Tutorial");
     }
-
+    
     private void InitStage()
     {
         foreach (var stage in stageData.data)
         {
             PoolManager.Instance.InitPool(stage.Value.gamePrefab, 1, roomParent);
         }
-        UpdateStage(currentStage);
     }
 
     [Button("Update Stage Info & Prefab")]

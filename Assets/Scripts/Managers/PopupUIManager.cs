@@ -17,7 +17,9 @@ public class PopupUIManager : MonoBehaviour
 
     private void Awake() {
         instance = this;
+    }
 
+    private void Start() {
         popupTutorial = GetComponentInChildren<TutorialPopup>();
         popupTutorial.gameObject.SetActive(false);
 

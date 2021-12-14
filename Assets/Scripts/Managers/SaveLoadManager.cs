@@ -19,8 +19,6 @@ public class SaveLoadManager : MonoBehaviour
         maxSaveSlot = 5;
 
         LoadAllData();
-
-        DontDestroyOnLoad(gameObject);
     }
 
     public void LoadAllData() {

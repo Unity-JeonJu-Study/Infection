@@ -39,8 +39,8 @@ MonoBehaviour:
     - Boxophobic.PolyverseSkies.Runtime
     - Boxophobic.PolyverseSkies.Scripts
     - Sirenix.OdinInspector.CompatibilityLayer.Editor
-    - Sirenix.OdinInspector.Modules.UnityMathematics
     - StylizedWaterForURPEditor
+    - Sirenix.OdinInspector.Modules.UnityMathematics
     - Boxophobic.Utils.Editor
     - Boxophobic.PolyverseSkies.Editor
     showAdvancedSettings: 0

@@ -30,11 +30,14 @@ MonoBehaviour:
     serializationDepthLimit: 64
     assemblyNames:
     - Assembly-CSharp-firstpass
-    - DaiMangou.BridgedData
     - Assembly-CSharp
     - Cinemachine
+    - DaiMangou.BridgedData
     - Sirenix.OdinInspector.CompatibilityLayer
+    - StylizedWaterForURP
     - Sirenix.OdinInspector.CompatibilityLayer.Editor
+    - Sirenix.OdinInspector.Modules.UnityMathematics
+    - StylizedWaterForURPEditor
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1

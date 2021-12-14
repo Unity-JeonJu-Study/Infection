@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+<<<<<<< HEAD
+guid: bdb195e998f549042b7ca6a663d477c1
+TextScriptImporter:
+=======
+<<<<<<< HEAD:Assets/External Assets/Stylized Water For URP/Demos/Water/Water Demo.unity.meta
+guid: f17ac9a45a318314293b56725344445a
+DefaultImporter:
+=======
+guid: c128b2f7eff41b54183c3546edc719b8
+TextScriptImporter:
+>>>>>>> dc3cb75ef6028ecdfa463641e04f0198f848405c:Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Mathematics/manifest.txt.meta
+>>>>>>> dc3cb75ef6028ecdfa463641e04f0198f848405c
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

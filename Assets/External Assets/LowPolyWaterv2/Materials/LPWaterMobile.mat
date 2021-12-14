@@ -9,8 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: LPWaterMobile
   m_Shader: {fileID: 4800000, guid: 8165be4dd0b12774d80426d906df9c38, type: 3}
-  m_ShaderKeywords: LPW_HQFOAM _DISTORT_ON _EDGEBLEND_ON _EMISSION _HQFOAM_ON _LIGHTABS_ON
-    _POINTLIGHTS_ON _SHADING_FLAT _WAVES_HIGHQUALITY _ZWRITE_ON
+  m_ShaderKeywords: LPW_HQFOAM _CULL_ON _DISTORT_ON _EDGEBLEND_ON _EMISSION _HQFOAM_ON
+    _LIGHTABS_ON _POINTLIGHTS_ON _SHADING_FLAT _WAVES_HIGHQUALITY _ZWRITE_ON
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -44,10 +44,10 @@ Material:
     m_Floats:
     - _Absorption: 10
     - _BumpScale: 35
-    - _BumpScale_: 51.30598
+    - _BumpScale_: 72.00567
     - _BumpSpeed: 0.2
-    - _Cull: 0
-    - _Cull_: 2
+    - _Cull: 1
+    - _Cull_: 0
     - _Diffuse: 1
     - _Direction: 180
     - _Distort: 1
@@ -60,38 +60,38 @@ Material:
     - _FresPower: 1.5
     - _HQFoam: 1
     - _Height: 0.4
-    - _Height_: 0.5863541
+    - _Height_: 0.82292193
     - _Length: 8.38
     - _LightAbs: 1
     - _NormalOffset: 1
     - _Opacity: 0.78
     - _PointLights: 1
     - _RHeight: 0.2
-    - _RHeight_: 0.29317704
+    - _RHeight_: 0.41146097
     - _RSpeed: 0.8
-    - _RSpeed_: 1.1727082
+    - _RSpeed_: 1.6458439
     - _Reflection: 1.2
     - _Refraction: 2
     - _Scale: 1
-    - _Scale_: 1.4658852
+    - _Scale_: 2.0573049
     - _Shading: 0
     - _Shadow: 0.6
     - _ShoreDistance: 0.49
     - _ShoreIntensity: 1
     - _Specular: 92
     - _Speed: 0.5
-    - _Speed_: 0.7329426
+    - _Speed_: 1.0286524
     - _Steepness: 0.15
     - _Stretch: 18.31
-    - _TexSize_: 93.81665
+    - _TexSize_: 131.66751
     - _Time_: 0
-    - _TransformScale_: 1.4658852
+    - _TransformScale_: 2.0573049
     - _Waves: 2
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.11035956, g: 0.62117136, b: 0.754717, a: 1}
     - _DeepColor: {r: 0, g: 0.20955881, b: 0.41911763, a: 1}
-    - _Direction_: {r: -1, g: -0.00000008742278, b: -1.8426178, a: -0.00000016108676}
+    - _Direction_: {r: -1, g: -0.00000008742278, b: -2.5860324, a: -0.00000022607813}
     - _FresColor: {r: 0.19117124, g: 0.2264151, b: 0.19179814, a: 1}
     - _ShoreColor: {r: 0.83971167, g: 0.941349, b: 0.9622642, a: 1}
     - _SpecColor: {r: 0.6764706, g: 0.6359274, b: 0.2785467, a: 1}

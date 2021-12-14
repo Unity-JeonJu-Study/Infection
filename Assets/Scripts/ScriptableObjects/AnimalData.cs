@@ -17,7 +17,7 @@ public class AnimalData : ScriptableObject
     public float movementSpeed;
     [VerticalGroup("Data/Stats"), LabelWidth(150), Range(0f, 100f)][GUIColor(0.3f,0.5f,1f)]
     public float rotationSpeed;
-    [VerticalGroup("Data/Stats"), LabelWidth(150), Range(1f, 200f)][GUIColor(0.5f,1f,0.5f)]
+    [VerticalGroup("Data/Stats"), LabelWidth(150), Range(0f, 200f)][GUIColor(0.5f,1f,0.5f)]
     public float jumpPower;
     [VerticalGroup("Data/Stats"), LabelWidth(150), Range(0f, 100f)][GUIColor(0.5f,0.8f,0.5f)]
     public float groundRayDistance;

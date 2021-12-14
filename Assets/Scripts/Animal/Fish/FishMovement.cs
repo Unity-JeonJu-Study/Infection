@@ -1,10 +1,10 @@
 using System;
+using UnityEngine;
 
 [Serializable]
-public class SlimeMovement : Movement
+public class FishMovement : Movement
 {
-    
-    public SlimeMovement(PlayerMovement playerMovement) : base(playerMovement)
+    public FishMovement(PlayerMovement playerMovement) : base(playerMovement)
     {
         
     }
@@ -14,6 +14,7 @@ public class SlimeMovement : Movement
         Move();
         sensor.CheckGround();
         Jump();
+        Buoyancy();
     }
 
     public override void Move()
@@ -27,13 +28,20 @@ public class SlimeMovement : Movement
         AnimationWalk(true);
     }
 
-    
-    
     public override void Jump()
     {
-        if (playerMovement.isInWater || (playerMovement.canJump && playerMovement.isGround && playerInput.IsJumpKeyPressed()))
+        if (playerMovement.isInWater && playerInput.IsJumpKeyPressed())
         {
             base.Jump();
         }
+    }
+
+    public void Buoyancy()
+    {
+        if (playerMovement.isInWater)
+        {
+            playerMovement._constantForce.force = new Vector3(0, 9f, 0);
+            Debug.Log("나 부력있다!");
+        }    
     }
 }

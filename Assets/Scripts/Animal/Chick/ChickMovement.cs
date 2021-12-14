@@ -39,17 +39,17 @@ public class ChickMovement : Movement
         base.Move();
     }
 
-    public void AnimationRun(bool run)
+    private void AnimationRun(bool run)
     {
         playerMovement._animator.SetBool(RunHash, run);
     }
     
     public override void Jump()
     {
-        if (playerMovement.canJump && playerMovement.isGround && playerInput.IsJumpKeyPressed())
+        if (!playerMovement.isInWater && playerMovement.canJump && playerMovement.isGround && playerInput.IsJumpKeyPressed())
         {
             base.Jump();
-        }    
+        }
     }
 
 }

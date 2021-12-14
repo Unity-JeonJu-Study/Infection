@@ -1,8 +1,5 @@
 
 using Cinemachine;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -13,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpPower;
     public bool isGround;
     public bool canJump;
+    public bool isInWater;
     public Movement movement;
     public CinemachineVirtualCamera _virtualCamera;
     [HideInInspector] public AnimalData animalData;
@@ -20,12 +18,14 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector] public PlayerInput playerInput;
     [HideInInspector] public Rigidbody _rigidbody;
     [HideInInspector]public Sensor sensor;
+    [HideInInspector]public ConstantForce _constantForce;
     
     private GameObject currentAnimal;
     private PlayerInfect playerInfect;
 
     private void Start()
     {
+        _constantForce = GetComponent<ConstantForce>();
         sensor = GetComponent<Sensor>();
         playerInfect = GetComponent<PlayerInfect>();
         playerInput = GetComponent<PlayerInput>();
@@ -61,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
         _animator = playerInfect.Animals[animalName].GetComponent<Animator>();
         animalData = Resources.Load<AnimalData>("Data/Animal/" + animalName);
         ChangeCamera(animalData.fov, animalData.cameraRotation);
+        _constantForce.force = Vector3.zero;
         switch (animalName)
         {
             case "Slime":
@@ -68,6 +69,9 @@ public class PlayerMovement : MonoBehaviour
                 break;
             case "Chick":
                 movement = new ChickMovement(this);
+                break;
+            case "Fish":
+                movement = new FishMovement(this);
                 break;
         }
     }

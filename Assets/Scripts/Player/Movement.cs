@@ -7,6 +7,7 @@ using UnityEngine;
 public abstract class Movement
 {
     protected PlayerMovement playerMovement;
+    protected ConstantForce _constantForce;
     protected PlayerInput playerInput;
     protected Rigidbody _rigidbody;
     protected Animator _animator;
@@ -22,6 +23,7 @@ public abstract class Movement
         _rigidbody = playerMovement._rigidbody;
         _animator = playerMovement._animator;
         sensor = playerMovement.sensor;
+        _constantForce = playerMovement._constantForce;
     }
     
     public abstract void Execute();

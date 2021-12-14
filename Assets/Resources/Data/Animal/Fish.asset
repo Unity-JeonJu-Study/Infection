@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3023862a984b44a696be79b5f8b89b84, type: 3}
+  m_Name: Fish
+  m_EditorClassIdentifier: 
+  animalName: Fish
+  description: "\uB09C \uBB3C\uACE0\uAE30"
+  animalModel: {fileID: 0}
+  movementSpeed: 1
+  rotationSpeed: 1
+  jumpPower: 0.1
+  groundRayDistance: 0.3
+  interactRayDistance: 0.1
+  fov: 15
+  cameraRotation: {x: 10, y: 0, z: 0}
+  rayOriginOffset: {x: 0, y: 0, z: 0}

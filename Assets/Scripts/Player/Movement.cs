@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+[Serializable]
 public abstract class Movement
 {
     protected PlayerMovement playerMovement;
@@ -50,9 +51,10 @@ public abstract class Movement
         playerMovement._animator.SetBool(WalkHash, walk);
     }
 
-    public virtual void Jump()
+    public virtual void Jump(float jumpPower)
     {
-        _rigidbody.AddForce(0,  playerMovement.jumpPower, 0, ForceMode.Impulse);
+        Debug.Log(jumpPower + "점프파워");
+        _rigidbody.AddForce(0,  jumpPower, 0, ForceMode.Impulse);
         _animator.SetBool(JumpHash, true);
     }
 

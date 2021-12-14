@@ -77,12 +77,12 @@ public class PlayerInfect : MonoBehaviour
     private void ChangeToSlime()
     {
         parentTransform = currentAnimal.transform.parent;
+        currentPosition = parentTransform.position;
+        parentTransform.position = new Vector3(currentPosition.x, sensor.MeshRenderer.bounds.extents.y + currentPosition.y, currentPosition.z);
         
         currentAnimal = animals["Slime"];
         currentAnimal.SetActive(true);
-        currentPosition = parentTransform.position;
-        parentTransform.position = new Vector3(currentPosition.x, currentPosition.y + 5f, currentPosition.z);
-        
+
         ChangeInitSensor();
 
         playerMovement.ChangeStatus(currentAnimal.name);

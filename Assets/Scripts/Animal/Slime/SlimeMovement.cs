@@ -1,19 +1,21 @@
 using System;
+using UnityEngine;
 
 [Serializable]
 public class SlimeMovement : Movement
 {
-    
+    [SerializeField, ReadOnly] private float jumpPowerInWater;
     public SlimeMovement(PlayerMovement playerMovement) : base(playerMovement)
     {
-        
+        jumpPowerInWater = playerMovement.jumpPower * 0.1f;
     }
     
     public override void Execute()
     {
         Move();
         sensor.CheckGround();
-        Jump();
+        Buoyancy();
+        Jump(playerMovement.jumpPower);
     }
 
     public override void Move()
@@ -27,13 +29,27 @@ public class SlimeMovement : Movement
         AnimationWalk(true);
     }
 
-    
-    
-    public override void Jump()
+    public override void Jump(float jumpPower)
     {
-        if (playerMovement.isInWater || (playerMovement.canJump && playerMovement.isGround && playerInput.IsJumpKeyPressed()))
+        if (playerMovement.canJump && playerMovement.isGround && playerInput.IsJumpKeyPressed())
         {
-            base.Jump();
+            base.Jump(jumpPower);
+        }
+        else if (playerMovement.isInWater && playerInput.IsJumpKeyPressed())
+        {
+            base.Jump(jumpPowerInWater);
+        }
+    }
+    
+    public void Buoyancy()
+    {
+        if (playerMovement.isInWater)
+        {
+            playerMovement._constantForce.force = new Vector3(0, 9f, 0);
+        }
+        else
+        {
+            playerMovement._constantForce.force = Vector3.zero;
         }
     }
 }

@@ -4,6 +4,8 @@ using UnityEngine;
 [Serializable]
 public class FishMovement : Movement
 {
+    private static readonly int RunHash = Animator.StringToHash("Run");
+
     public FishMovement(PlayerMovement playerMovement) : base(playerMovement)
     {
         
@@ -13,7 +15,7 @@ public class FishMovement : Movement
     {
         Move();
         sensor.CheckGround();
-        Jump();
+        Jump(playerMovement.jumpPower);
         Buoyancy();
     }
 
@@ -24,15 +26,27 @@ public class FishMovement : Movement
             AnimationWalk(false);
             return;
         }
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            playerInput.InputForward *= 1.2f;
+            AnimationWalk(false);
+            AnimationRun(true);
+        }
+        else
+        {
+            AnimationRun(false);
+            AnimationWalk(true);
+        }
+
         base.Move();
-        AnimationWalk(true);
     }
 
-    public override void Jump()
+    public override void Jump(float jumpPower)
     {
         if (playerMovement.isInWater && playerInput.IsJumpKeyPressed())
         {
-            base.Jump();
+            base.Jump(jumpPower);
         }
     }
 
@@ -41,7 +55,15 @@ public class FishMovement : Movement
         if (playerMovement.isInWater)
         {
             playerMovement._constantForce.force = new Vector3(0, 9f, 0);
-            Debug.Log("나 부력있다!");
-        }    
+        }
+        else
+        {
+            playerMovement._constantForce.force = Vector3.zero;
+        }
+    }
+    
+    private void AnimationRun(bool run)
+    {
+        playerMovement._animator.SetBool(RunHash, run);
     }
 }

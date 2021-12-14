@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -259,6 +259,7 @@ Transform:
   - {fileID: 795777179}
   - {fileID: 365580160}
   - {fileID: 659982289}
+  - {fileID: 886668258}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -570,7 +571,14 @@ MonoBehaviour:
   isTimerPaused: 0
   currentState: 0
   roomParent: {fileID: 1546630422}
+  mainCam: {fileID: 0}
   player: {fileID: 0}
+--- !u!4 &886668258 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1925759375395718060, guid: 36e496ad391ec094db6bea1bfe72d6d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1491248180}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,6 +591,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -689,6 +698,108 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &963194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+--- !u!1001 &1491248180
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 377173774}
+    m_Modifications:
+    - target: {fileID: 1925759375395718060, guid: 36e496ad391ec094db6bea1bfe72d6d9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925759375395718060, guid: 36e496ad391ec094db6bea1bfe72d6d9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925759375395718060, guid: 36e496ad391ec094db6bea1bfe72d6d9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925759375395718060, guid: 36e496ad391ec094db6bea1bfe72d6d9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925759375395718060, guid: 36e496ad391ec094db6bea1bfe72d6d9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925759375395718060, guid: 36e496ad391ec094db6bea1bfe72d6d9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925759375395718060, guid: 36e496ad391ec094db6bea1bfe72d6d9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925759375395718060, guid: 36e496ad391ec094db6bea1bfe72d6d9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925759375395718060, guid: 36e496ad391ec094db6bea1bfe72d6d9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925759375395718060, guid: 36e496ad391ec094db6bea1bfe72d6d9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925759375395718060, guid: 36e496ad391ec094db6bea1bfe72d6d9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1925759375395718067, guid: 36e496ad391ec094db6bea1bfe72d6d9,
+        type: 3}
+      propertyPath: m_Name
+      value: SceneManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36e496ad391ec094db6bea1bfe72d6d9, type: 3}
 --- !u!1 &1546630421
 GameObject:
   m_ObjectHideFlags: 0
@@ -8941,12 +9052,14 @@ MonoBehaviour:
   jumpPower: 3
   isGround: 0
   canJump: 0
+  isInWater: 0
   _virtualCamera: {fileID: 1232347762818682535}
   animalData: {fileID: 0}
   _animator: {fileID: 0}
   playerInput: {fileID: 0}
   _rigidbody: {fileID: 0}
   sensor: {fileID: 0}
+  _constantForce: {fileID: 0}
 --- !u!54 &5288151410633673749
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -8958,7 +9071,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
@@ -8991,7 +9104,7 @@ Transform:
   m_GameObject: {fileID: 5288151410633673839}
   m_LocalRotation: {x: -0.033997305, y: -0.047844443, z: -0.009405015, w: -0.99823177}
   m_LocalPosition: {x: -17.148367, y: 0.6292608, z: 1.6006417}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 4830089710435310796}
   - {fileID: 5292313697796219605}

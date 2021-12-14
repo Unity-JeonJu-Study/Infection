@@ -1,7 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Playables;
+using UnityEngine.Timeline;
 
 public enum GameState
 {
@@ -54,9 +57,9 @@ public class GameManager : SerializedMonoBehaviour
     public GameState currentState;
     
     // 맵 배치 상위 오브젝트
-    
     public Transform roomParent;
 
+    public GameObject mainCam;
     public Player player;
     private WaitForSeconds waitForOneSecond;
 
@@ -70,15 +73,23 @@ public class GameManager : SerializedMonoBehaviour
         currentState = GameState.StartUI;
 
         player = FindObjectOfType<Player>();
+        mainCam = GameObject.FindWithTag("MainCamera");
 
         waitForOneSecond = new WaitForSeconds(1f);
         
         InitStage();
     }
-
+    
+    [Button]
     public void StartTutorialScene()
     {
-        MySceneManager.instance.LoadScene("Tutorial");
+        mainCam.SetActive(false);
+        MySceneManager.instance.LoadCutScene("Tutorial");
+    }
+    public void EndTutorialScene()
+    {
+        mainCam.SetActive(true);
+        UpdateStage(GameStage.Laboratory);
     }
     
     private void InitStage()

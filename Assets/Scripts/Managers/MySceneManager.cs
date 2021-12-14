@@ -23,4 +23,14 @@ public class MySceneManager : MonoBehaviour
         curSceneName = sceneName;
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
+
+    public void LoadCutScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Additive);
+    }
+
+    public void UnLoadCutScene()
+    {
+        SceneManager.UnloadSceneAsync(curSceneName);
+    }
 }

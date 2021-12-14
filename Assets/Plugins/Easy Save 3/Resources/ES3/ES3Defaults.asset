@@ -34,8 +34,10 @@ MonoBehaviour:
     - Cinemachine
     - DaiMangou.BridgedData
     - Sirenix.OdinInspector.CompatibilityLayer
+    - StylizedWaterForURP
     - Sirenix.OdinInspector.CompatibilityLayer.Editor
     - Sirenix.OdinInspector.Modules.UnityMathematics
+    - StylizedWaterForURPEditor
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1

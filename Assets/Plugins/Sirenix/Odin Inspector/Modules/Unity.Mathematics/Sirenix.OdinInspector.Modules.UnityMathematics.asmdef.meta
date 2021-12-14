@@ -1,6 +1,16 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: ad968d605628d06499b62cdc30f11cf8
 AssemblyDefinitionImporter:
+=======
+<<<<<<< HEAD:Assets/External Assets/Stylized Water For URP/Demos/Windwaker/Windwaker Demo.unity.meta
+guid: f843a16fd9e15704d8eb8d7bb7f7b724
+DefaultImporter:
+=======
+guid: ad968d605628d06499b62cdc30f11cf8
+AssemblyDefinitionImporter:
+>>>>>>> dc3cb75ef6028ecdfa463641e04f0198f848405c:Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Mathematics/Sirenix.OdinInspector.Modules.UnityMathematics.asmdef.meta
+>>>>>>> dc3cb75ef6028ecdfa463641e04f0198f848405c
   externalObjects: {}
   userData: 
   assetBundleName: 

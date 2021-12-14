@@ -104,13 +104,13 @@ MonoBehaviour:
     value: 100
   lift:
     overrideState: 0
-    value: {x: 1, y: 1, z: 1, w: 0}
+    value: {x: 0.5032772, y: 1, z: 0.5392572, w: 0}
   gamma:
     overrideState: 0
-    value: {x: 1, y: 1, z: 1, w: 0}
+    value: {x: 0.7004154, y: 1, z: 0.72427154, w: 0}
   gain:
     overrideState: 0
-    value: {x: 1, y: 1, z: 1, w: 0}
+    value: {x: 0.78244936, y: 1, z: 0.84145284, w: 0}
   masterCurve:
     overrideState: 0
     value:
@@ -1328,14 +1328,14 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   spectralLut:
-    overrideState: 0
+    overrideState: 1
     value: {fileID: 0}
     defaultState: 1
   intensity:
-    overrideState: 0
+    overrideState: 1
     value: 0
   fastMode:
-    overrideState: 0
+    overrideState: 1
     value: 0
 --- !u!114 &-3171402457971208642
 MonoBehaviour:

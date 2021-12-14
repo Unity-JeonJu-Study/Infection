@@ -1,5 +1,10 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/External Assets/Stylized Water For URP/Demos/Buoyancy/Buoyancy Demo.unity.meta
 guid: fb16140bbbb6e634db72f909ec22e599
+=======
+guid: 9a742fb702f4af648a126dd27798807c
+folderAsset: yes
+>>>>>>> dc3cb75ef6028ecdfa463641e04f0198f848405c:Assets/Plugins/Sirenix/Odin Inspector/Modules/Unity.Mathematics.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

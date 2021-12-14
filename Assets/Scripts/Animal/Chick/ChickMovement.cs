@@ -13,7 +13,7 @@ public class ChickMovement : Movement
     {
         Move();
         sensor.CheckGround();
-        Jump();
+        Jump(playerMovement.jumpPower);
     }
 
     public override void Move()
@@ -44,11 +44,11 @@ public class ChickMovement : Movement
         playerMovement._animator.SetBool(RunHash, run);
     }
     
-    public override void Jump()
+    public override void Jump(float jumpPower)
     {
         if (!playerMovement.isInWater && playerMovement.canJump && playerMovement.isGround && playerInput.IsJumpKeyPressed())
         {
-            base.Jump();
+            base.Jump(jumpPower);
         }
     }
 

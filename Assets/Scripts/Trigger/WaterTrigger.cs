@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WaterTrigger : MonoBehaviour
@@ -9,7 +6,6 @@ public class WaterTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log(other.transform.parent.name);
             other.transform.parent.GetComponent<PlayerMovement>().isInWater = true;
         }
     }

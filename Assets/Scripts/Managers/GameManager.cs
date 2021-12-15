@@ -86,6 +86,7 @@ public class GameManager : SerializedMonoBehaviour
     public void StartTutorialScene()
     {
         InGameUIManager.instance.DisableAllInGameUIs();
+
         mainCam.SetActive(false);
         MySceneManager.instance.LoadCutScene("Tutorial");
     }
@@ -93,6 +94,9 @@ public class GameManager : SerializedMonoBehaviour
     {
         InGameUIManager.instance.EnableAllInGameUIs();
         mainCam.SetActive(true);
+
+        MySceneManager.instance.EnableLoadingPopup();
+        
         UpdateStage(GameStage.Laboratory);
     }
     private void InitStage()

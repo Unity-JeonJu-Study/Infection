@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1276373842203002350}
   - component: {fileID: 1266277010545372676}
   - component: {fileID: 1236010992620731524}
+  - component: {fileID: 4249633536464483854}
   m_Layer: 0
   m_Name: PressObject
   m_TagString: Untagged
@@ -95,3 +96,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.5, y: 0.22654709, z: 2.5}
   m_Center: {x: -1.25, y: -0.09353587, z: 1.25}
+--- !u!95 &4249633536464483854
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281061496211576666}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 474322484f3707a468f64eb209155cfa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

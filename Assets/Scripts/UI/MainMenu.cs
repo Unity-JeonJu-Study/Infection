@@ -4,9 +4,6 @@ using UnityEngine;
 using UnityEditor;
 #endif
 
-// this script is temporary, after the core implementation is done, this script would be altered based on it
-// things to change: scene name
-
 public class MainMenu : MonoBehaviour
 {
     [ReadOnly, SerializeField] private LoadPopup popupLoad;
@@ -22,7 +19,7 @@ public class MainMenu : MonoBehaviour
 
     public void OnClickStart() {
         // scene manager part
-        MySceneManager.instance.LoadScene("Choi Kang In");
+        MySceneManager.instance.LoadScene("Main Play Scene");
     }
 
     public void OnClickLoad() {

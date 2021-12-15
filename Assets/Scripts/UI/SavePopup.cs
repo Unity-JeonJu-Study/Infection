@@ -77,6 +77,8 @@ public class SavePopup : MonoBehaviour
     private void SaveToCurrentSlot() {
         Debug.Log("Save worked");
         SaveLoadManager.instance.SaveData(slotIndex, new SaveData(-1));
+        //SaveLoadManager.instance.SaveData(slotIndex, new SaveData(GameManager.Instance.currentStage, DateTime.Now, ));
+
 
         // SavePoint targetSavePoint = GameManager.instance.player.playerInteraction.targetSavePoint;
         // SaveLoadManager.instance.SaveData(slotIndex, new SaveData(MySceneManager.instance.curSceneName, DateTime.Now, targetSavePoint.respawnPoint, GameManager.instance.player.playerInfo.availableWeapons, GameManager.instance.player.playerInfo.health));

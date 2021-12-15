@@ -25,10 +25,15 @@ public struct SaveData
         savedHealth = -1;
     }
 
-    public SaveData(string inputStageName, DateTime inputSaveDateTime, Vector3 inputRespawnPoint, /*List<AvailableWeapon> inputSavedAvailableWeapon,*/ int inputSavedHealth) {
+    public SaveData(GameStage currentStage, DateTime inputSaveDateTime, Vector3 inputRespawnPoint, /*List<AvailableWeapon> inputSavedAvailableWeapon,*/ int inputSavedHealth) {
         isLoaded = true;
         
-        stageName = inputStageName;
+        switch(currentStage) {
+            case GameStage.Stage1: stageName = "Stage1"; break;
+            case GameStage.Stage2: stageName = "Stage2"; break;
+            case GameStage.Stage3: stageName = "Stage3"; break;
+            default: stageName = "Laboratory"; break;
+        }
         saveDateTime = inputSaveDateTime;
         respawnPoint = inputRespawnPoint;
 

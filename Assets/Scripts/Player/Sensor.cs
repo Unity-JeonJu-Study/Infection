@@ -6,7 +6,6 @@ public class Sensor : MonoBehaviour
     public float rayRadius;
     public float groundRayDistance;
     public float interactRayDistance;
-    public Vector3 rayOriginOffset;
     public Vector3 rayOriginPosition;
     public Vector3 extents;
     public RaycastHit hitForward;

@@ -8,6 +8,7 @@ TagManager:
   - MainThruster
   - NPC
   - DeadZone
+  - HeavyObject
   layers:
   - Default
   - TransparentFX

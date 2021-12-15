@@ -94,8 +94,8 @@ MonoBehaviour:
       Entry: 10
       Data: 3
     - Name: bgm
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: Stage1
     - Name: limitTime
       Entry: 4
       Data: 0

@@ -65,8 +65,6 @@ public class GameManager : SerializedMonoBehaviour
 
     private void Awake() {
         Instance = this;
-
-        DontDestroyOnLoad(gameObject);
         
         stageData = Resources.Load<StageData>("Data/Stage/StageData");
         currentStage = GameStage.Laboratory;
@@ -80,7 +78,12 @@ public class GameManager : SerializedMonoBehaviour
         
         InitStage();
     }
-    
+
+    private void Start()
+    {
+        StartTutorialScene();   
+    }
+
     [Button]
     public void StartTutorialScene()
     {

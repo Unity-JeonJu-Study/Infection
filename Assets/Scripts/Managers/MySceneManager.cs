@@ -9,6 +9,7 @@ public class MySceneManager : MonoBehaviour
     [ReadOnly] public string curSceneName;
     [ReadOnly] public bool isInitial;
     [ReadOnly, SerializeField] private LoadingPopup loadingPopup;
+    [ReadOnly, SerializeField] private bool isLoadingPopupDisabled;
 
     private void Awake() {
         instance = this;
@@ -16,12 +17,14 @@ public class MySceneManager : MonoBehaviour
         isInitial = true;
         loadingPopup = FindObjectOfType<LoadingPopup>();
         DisableLoadingPopup();
+        isLoadingPopupDisabled = true;
 
         DontDestroyOnLoad(gameObject);
     }
 
     public void LoadScene(string sceneName) {
         curSceneName = sceneName;
+        EnableLoadingPopup();
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 
@@ -41,10 +44,16 @@ public class MySceneManager : MonoBehaviour
     }
 
     public void EnableLoadingPopup() {
-        loadingPopup.gameObject.SetActive(true);
+        if(isLoadingPopupDisabled) {
+            loadingPopup.gameObject.SetActive(true);
+            isLoadingPopupDisabled = false;
+        }
     }
 
     public void DisableLoadingPopup() {
-        loadingPopup.gameObject.SetActive(false);
+        if(!isLoadingPopupDisabled) {
+            loadingPopup.gameObject.SetActive(false);
+            isLoadingPopupDisabled = true;
+        }
     }
 }

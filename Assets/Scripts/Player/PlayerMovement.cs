@@ -13,25 +13,29 @@ public class PlayerMovement : MonoBehaviour
     public bool isInWater;
     public Movement movement;
     public CinemachineVirtualCamera _virtualCamera;
+    [HideInInspector] public PlayerKinematics playerKinematics;
     [HideInInspector] public AnimalData animalData;
     [HideInInspector] public Animator _animator;
     [HideInInspector] public PlayerInput playerInput;
     [HideInInspector] public Rigidbody _rigidbody;
-    [HideInInspector]public Sensor sensor;
-    [HideInInspector]public ConstantForce _constantForce;
+    [HideInInspector] public Sensor sensor;
+    [HideInInspector] public ConstantForce _constantForce;
     
     private GameObject currentAnimal;
     private PlayerInfect playerInfect;
-
+    private CinemachineFramingTransposer framingTransposer;
+    
     private void Start()
     {
         _constantForce = GetComponent<ConstantForce>();
         sensor = GetComponent<Sensor>();
+        playerKinematics = GetComponent<PlayerKinematics>();
         playerInfect = GetComponent<PlayerInfect>();
         playerInput = GetComponent<PlayerInput>();
         _rigidbody = GetComponent<Rigidbody>();
         currentAnimal = playerInfect.currentAnimal;
         _animator = currentAnimal.GetComponent<Animator>();
+        framingTransposer = _virtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
         canJump = true;
         ChangeStatus("Slime");
         movement = new SlimeMovement(this);
@@ -51,7 +55,8 @@ public class PlayerMovement : MonoBehaviour
         jumpPower = animalData.jumpPower;
         sensor.groundRayDistance = animalData.groundRayDistance;
         sensor.interactRayDistance = animalData.interactRayDistance;
-        sensor.rayOriginOffset = animalData.rayOriginOffset;
+        playerKinematics.power = animalData.power;
+        
         canJump = true;
     }
     
@@ -60,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
         InitMoveInformation(animalName);
         _animator = playerInfect.Animals[animalName].GetComponent<Animator>();
         animalData = Resources.Load<AnimalData>("Data/Animal/" + animalName);
-        ChangeCamera(animalData.fov, animalData.cameraRotation);
+        ChangeCamera(animalData.fov, animalData.cameraRotation, animalData.cameraDistance);
         _constantForce.force = Vector3.zero;
         switch (animalName)
         {
@@ -73,12 +78,17 @@ public class PlayerMovement : MonoBehaviour
             case "Fish":
                 movement = new FishMovement(this);
                 break;
+            case "Bear":
+                movement = new BearMovement(this);
+                break;
         }
     }
 
-    public void ChangeCamera(float fov, Vector3 cameraRotation)
+    public void ChangeCamera(float fov, Vector3 cameraRotation, float cameraDistance)
     {
         _virtualCamera.m_Lens.FieldOfView = fov;
         _virtualCamera.transform.rotation = Quaternion.Euler(cameraRotation);
+        framingTransposer.m_CameraDistance = cameraDistance;
+
     }
 }

@@ -8,10 +8,10 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Windwaker
-  m_Shader: {fileID: -6465566751694194690, guid: a9aea49e19495174f80f910ddb189a37,
+  m_Shader: {fileID: -6465566751694194690, guid: b85c5e2c0d0c9774ab24e77078fc44cb,
     type: 3}
-  m_ShaderKeywords: FOAM_SHADOWS_ON INTERSECTION_EFFECTS_ON REFRACTION_ON SURFACE_FOAM_ON
-    WATER_LIGHTING_ON WORLD_SPACE_UV_ON
+  m_ShaderKeywords: FOAM_SHADOWS_ON INTERSECTION_EFFECTS_ON SURFACE_FOAM_ON WATER_LIGHTING_ON
+    WORLD_SPACE_UV_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -21,12 +21,24 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _CausticsTexture:
+        m_Texture: {fileID: 2800000, guid: f2c40b951cee11943a1f6d5ec1b42f2c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _IntersectionFoamTexture:
         m_Texture: {fileID: 2800000, guid: 772031b03d9d46e4ab03e15c8e17718c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _NormalsTexture:
+        m_Texture: {fileID: 2800000, guid: a41da5f5671718b47bbc71e9ef691103, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SurfaceFoamTexture:
         m_Texture: {fileID: 2800000, guid: 0a33360c1c6b85c45bb8a19af0c4e87a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WaterColorGradientTexture:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -42,38 +54,95 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - FOAM_SHADOWS: 1
     - INTERSECTION_EFFECTS: 1
     - REFRACTION: 0
+    - SHORE_MOVEMENT: 0
     - SURFACE_FOAM: 1
+    - WATER_LIGHTING: 1
     - WORLD_SPACE_UV: 1
+    - _CausticsDepth: 0.6
+    - _CausticsScale: 2.41
+    - _CausticsShadowMask: 1
+    - _CausticsSpeed: 0.219
+    - _CausticsSplit: 0.318
+    - _CausticsStrength: 2.09
+    - _FoamShadowDepth: 10
+    - _FoamShadowStrength: 0.45
+<<<<<<< Updated upstream
     - _IntersectionFoamBlend: 1
     - _IntersectionFoamDepth: 0.87
     - _IntersectionFoamScale: 0.19
+=======
+    - _IntersectionFoamBlend: 0
+    - _IntersectionFoamDepth: 0
+    - _IntersectionFoamScale: 0
+>>>>>>> Stashed changes
+    - _IntersectionFoamShadowProjection: 4.6
     - _IntersectionWaterBlend: 0
+    - _LightingHardness: 0
+    - _LightingSmoothness: 1
+    - _NormalsStrength: 0.29
+    - _PlanarReflectionFresnel: 2.5
+    - _PlanarReflectionStrength: 0.82
     - _RefractionStrength: 0.017
     - _ShoreBlend: 0.12
-    - _ShoreDepth: 0.35
+    - _ShoreDepth: 0.717
     - _ShoreFade: 0.12
+    - _ShoreFoamBreakupScale: 0
+    - _ShoreFoamBreakupStrength: 0
+    - _ShoreFoamFrequency: 0
+    - _ShoreFoamSpeed: 0
+    - _ShoreFoamWidth: 0
     - _SurfaceFoamBlend: 0.2
+    - _SurfaceFoamHeightMask: 0
+    - _SurfaceFoamHeightMaskSmoothness: 0
+    - _SurfaceFoamShadowProjection: 15
+    - _UnderwaterRefractionStrength: 0.099
+<<<<<<< Updated upstream
     - _WaterColorDepth: 2.59
+=======
+    - _WaterColorDepth: 2.75
+>>>>>>> Stashed changes
     - _WaterColorHorizonDistance: 20
     m_Colors:
-    - _IntersectionFoamColor: {r: 1, g: 1, b: 1, a: 1}
+    - _IntersectionFoamColor: {r: 0, g: 0, b: 0, a: 0}
     - _IntersectionFoamMovement: {r: 0, g: 0, b: 0, a: 0}
+<<<<<<< Updated upstream
     - _IntersectionFoamSampling: {r: 0.31, g: 0, b: 0, a: 0}
+    - _LightingDiffuseColor: {r: 0, g: 0, b: 0, a: 0}
+    - _LightingSpecularColor: {r: 1, g: 1, b: 1, a: 0}
     - _NormalsMovement: {r: 0.04, g: 0.36, b: 0, a: 0}
-    - _ShoreColor: {r: 0.0047169924, g: 1, b: 0.936302, a: 0.08}
-    - _SurfaceFoamColor1: {r: 0.56830716, g: 0.8794725, b: 0.9339623, a: 0.29803923}
-    - _SurfaceFoamColor2: {r: 0.37063587, g: 0.5943711, b: 0.6603774, a: 0.7294118}
+    - _ShoreColor: {r: 0.043279216, g: 0, b: 0.8962264, a: 0.08}
+=======
+    - _IntersectionFoamSampling: {r: 0, g: 0, b: 0, a: 0}
+    - _LightingDiffuseColor: {r: 0, g: 0, b: 0, a: 0}
+    - _LightingSpecularColor: {r: 1, g: 1, b: 1, a: 0}
+    - _NormalsMovement: {r: 0.04, g: 0.36, b: 0, a: 0}
+    - _ShoreColor: {r: 0.04326369, g: 0, b: 0.8962264, a: 0.08}
+>>>>>>> Stashed changes
+    - _SurfaceFoamColor1: {r: 0.47347802, g: 0.71237993, b: 0.75471693, a: 0.29803923}
+    - _SurfaceFoamColor2: {r: 0, g: 0.78082204, b: 1, a: 0.7294118}
     - _SurfaceFoamMovement: {r: 0.47, g: 0.5, b: 0.41, a: 0.42}
     - _SurfaceFoamSampling: {r: 0.7, g: 1.2, b: 0, a: 0}
     - _SurfaceFoamTilingAndOffset: {r: -1, g: -1, b: 1.46, a: 0.35}
-    - _WaterColorDeep: {r: 0, g: 0.42679513, b: 0.67058825, a: 1}
-    - _WaterColorHorizon: {r: 0, g: 0.8580704, b: 1, a: 1}
-    - _WaterColorShallow: {r: 0, g: 0.6313726, b: 1, a: 1}
-    - _WaveColor: {r: 0, g: 0.81568635, b: 1, a: 0}
-    - _WaveDirections: {r: 0.67, g: 0.27, b: 0.6, a: 0.31}
+<<<<<<< Updated upstream
+    - _WaterColorDeep: {r: 0.04159338, g: 0.36675432, b: 0.5188676, a: 1}
+    - _WaterColorHorizon: {r: 0.016464932, g: 0.3541059, b: 0.6981132, a: 1}
+    - _WaterColorShallow: {r: 0.09017979, g: 0.67336744, b: 0.83137256, a: 1}
+    - _WaterColorUnderwater: {r: 0.3294101, g: 0.411763, b: 0.57647055, a: 0}
+    - _WaveColor: {r: 0.026032386, g: 0.5049829, b: 0.6132076, a: 0}
+    - _WaveDirections: {r: 0.02, g: 0.27, b: 0.6, a: 0.79}
     - _WaveVisuals: {r: 0.019, g: 7.9, b: 1.38, a: 0}
+=======
+    - _WaterColorDeep: {r: 0.041576676, g: 0.36673087, b: 0.5188676, a: 1}
+    - _WaterColorHorizon: {r: 0.016464932, g: 0.35408244, b: 0.6981132, a: 1}
+    - _WaterColorShallow: {r: 0.090160556, g: 0.67336744, b: 0.83137256, a: 1}
+    - _WaterColorUnderwater: {r: 0.3294117, g: 0.41176462, b: 0.57647055, a: 0}
+    - _WaveColor: {r: 0.026032386, g: 0.5049829, b: 0.6132076, a: 0}
+    - _WaveDirections: {r: 0.67, g: 0.27, b: 0.6, a: 0.31}
+    - _WaveVisuals: {r: 0, g: 7.9, b: 1.38, a: 0}
+>>>>>>> Stashed changes
   m_BuildTextureStacks: []
 --- !u!114 &3884871068361501984
 MonoBehaviour:

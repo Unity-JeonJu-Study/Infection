@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - MainThruster
   - NPC
+  - DeadZone
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - Animal
   - Movable
   - PostProcessing
-  - 
+  - DeadZone
   - FirstPersonWeapon
   - 
   - 

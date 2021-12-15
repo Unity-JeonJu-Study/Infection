@@ -87,11 +87,13 @@ public class GameManager : SerializedMonoBehaviour
     [Button]
     public void StartTutorialScene()
     {
+        InGameUIManager.instance.DisableAllInGameUIs();
         mainCam.SetActive(false);
         MySceneManager.instance.LoadCutScene("Tutorial");
     }
     public void EndTutorialScene()
     {
+        InGameUIManager.instance.EnableAllInGameUIs();
         mainCam.SetActive(true);
         UpdateStage(GameStage.Laboratory);
     }

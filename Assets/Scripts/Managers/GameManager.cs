@@ -94,9 +94,6 @@ public class GameManager : SerializedMonoBehaviour
     {
         InGameUIManager.instance.EnableAllInGameUIs();
         mainCam.SetActive(true);
-
-        MySceneManager.instance.EnableLoadingPopup();
-        
         UpdateStage(GameStage.Laboratory);
     }
     private void InitStage()

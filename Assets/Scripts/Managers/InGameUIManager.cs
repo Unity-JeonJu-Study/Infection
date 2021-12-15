@@ -55,17 +55,11 @@ public class InGameUIManager : MonoBehaviour
     }
 
     public void DisableAllInGameUIs() {
-        textObjective.gameObject.SetActive(false);
-        slimSlots.gameObject.SetActive(false);
-        textTime.gameObject.SetActive(false);
-        itemSlots.gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 
     public void EnableAllInGameUIs() {
-        textObjective.gameObject.SetActive(true);
-        slimSlots.gameObject.SetActive(true);
-        textTime.gameObject.SetActive(true);
-        itemSlots.gameObject.SetActive(true);
+        gameObject.SetActive(true);
     }
 
     public void UpdateObjectiveText(string newObjective) {

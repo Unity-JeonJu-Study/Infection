@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// this script exists for test purpose only
+
 public class TestObject : MonoBehaviour
 {
     Rigidbody curRigidbody;

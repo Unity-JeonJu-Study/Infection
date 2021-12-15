@@ -73,6 +73,7 @@ public class GameManager : SerializedMonoBehaviour
         currentState = GameState.StartUI;
 
         player = FindObjectOfType<Player>();
+        player.transform.parent.gameObject.SetActive(false);
         mainCam = GameObject.FindWithTag("MainCamera");
 
         waitForOneSecond = new WaitForSeconds(1f);

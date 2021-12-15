@@ -1,0 +1,55 @@
+using UnityEngine;
+
+public class BearMovement : Movement
+{
+    private static readonly int RunHash = Animator.StringToHash("Run");
+
+    public BearMovement(PlayerMovement playerMovement) : base(playerMovement)
+    {
+        
+    }
+    
+    public override void Execute()
+    {
+        Move();
+        sensor.CheckGround();
+        Jump(playerMovement.jumpPower);
+    }
+
+    public override void Move()
+    {
+        if (playerInput.InputForward == 0 && playerInput.InputSide == 0)
+        {
+            AnimationWalk(false);
+            return;
+        }
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            playerInput.InputForward *= 2f;
+            AnimationWalk(false);
+            AnimationRun(true);
+        }
+        else
+        {
+            AnimationRun(false);
+            AnimationWalk(true);
+        }
+
+        base.Move();
+    }
+
+    private void AnimationRun(bool run)
+    {
+        playerMovement._animator.SetBool(RunHash, run);
+    }
+    
+    public override void Jump(float jumpPower)
+    {
+        if (!playerMovement.isInWater && playerMovement.canJump && playerMovement.isGround && playerInput.IsJumpKeyPressed())
+        {
+            base.Jump(jumpPower);
+        }
+    }
+
+}

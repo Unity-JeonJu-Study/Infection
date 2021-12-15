@@ -18,6 +18,14 @@ MonoBehaviour:
     - speed 2
 
     - jump Power - 2'
-  animalModel: {fileID: 1514481875857408, guid: fc3da0b1b2ade5f4b862ae549728831f, type: 3}
-  moveSpeed: 2
+  animalModel: {fileID: 1514481875857408, guid: fc3da0b1b2ade5f4b862ae549728831f,
+    type: 3}
+  movementSpeed: 2
+  rotationSpeed: 1
   jumpPower: 2
+  groundRayDistance: 0
+  interactRayDistance: 0
+  fov: 80
+  cameraRotation: {x: 30, y: 0, z: 0}
+  power: 1
+  cameraDistance: 10

@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerKinematics : MonoBehaviour
 {
+    public float power;
+    
     private Sensor sensor;
 
     private void Awake()
@@ -28,7 +30,6 @@ public class PlayerKinematics : MonoBehaviour
     {
         if (!CanPush())
             return;
-        Debug.Log("밀 수 있다!!");
-        sensor.hitForward.collider.transform.position += transform.forward * Time.deltaTime;
+        sensor.hitForward.collider.GetComponent<Rigidbody>().AddForce(transform.forward * power);
     }
 }

@@ -7,7 +7,10 @@ public class SpawnPoint : MonoBehaviour
 {
    private void Awake()
    {
-      GameManager.Instance.player.gameObject.SetActive(true);
-      GameManager.Instance.player.gameObject.transform.position = transform.position;
+       //GameManager.Instance.player.gameObject.transform.position = transform.position;
+   }
+   private void Start()
+   {
+       GameManager.Instance.player.transform.parent.gameObject.SetActive(true);
    }
 }

@@ -220,9 +220,15 @@ Material:
     - _SurfaceFoamMovement: {r: 0.7, g: 0, b: 0.47, a: 0.01}
     - _SurfaceFoamSampling: {r: 0.62, g: 0, b: 0, a: 0}
     - _SurfaceFoamTilingAndOffset: {r: -1, g: -1, b: 0.57, a: 0.22}
+<<<<<<< Updated upstream
     - _WaterColorDeep: {r: 0, g: 0.24868226, b: 0.6784314, a: 1}
     - _WaterColorHorizon: {r: 0, g: 0.22744387, b: 0.8, a: 1}
     - _WaterColorShallow: {r: 0.08391964, g: 0.72384137, b: 0.7735849, a: 1}
+=======
+    - _WaterColorDeep: {r: 0, g: 0.24868304, b: 0.6784314, a: 1}
+    - _WaterColorHorizon: {r: 0, g: 0.22744465, b: 0.8, a: 1}
+    - _WaterColorShallow: {r: 0.08392043, g: 0.72384137, b: 0.7735849, a: 1}
+>>>>>>> Stashed changes
     - _WaterColorUnderwater: {r: 0, g: 0, b: 0, a: 0}
     - _WaterDeepColor: {r: 0.14117648, g: 0.60784316, b: 0.86274517, a: 1}
     - _WaterShallowColor: {r: 0.35154858, g: 0.7287703, b: 0.9433962, a: 1}

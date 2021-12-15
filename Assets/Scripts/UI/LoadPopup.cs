@@ -78,7 +78,7 @@ public class LoadPopup : MonoBehaviour
 
             MySceneManager.instance.isInitial = false;
             MySceneManager.instance.loadedData = currentData;
-            MySceneManager.instance.LoadScene("Choi Kang In");
+            MySceneManager.instance.LoadScene("Main Play Scene");
 
             // scene manager part
             // MySceneManager.instance.loadedData = currentData;

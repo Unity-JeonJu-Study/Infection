@@ -1,8 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// this script is temporary, after the core implementation is done, this script would be altered based on it
-// things to change: cur scene name
 public class MySceneManager : MonoBehaviour
 {
     [ReadOnly] public static MySceneManager instance;
@@ -13,7 +11,7 @@ public class MySceneManager : MonoBehaviour
 
     private void Awake() {
         instance = this;
-        curSceneName = "Temp Main Menu";
+        curSceneName = "Main Menu Scene";
         isInitial = true;
 
         DontDestroyOnLoad(gameObject);

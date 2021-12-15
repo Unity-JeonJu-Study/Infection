@@ -1,8 +1,5 @@
 using UnityEngine;
 
-// this script is temporary, after the core implementation is done, this script would be altered based on it
-// things to change: scene names
-
 public class GameOverPopup : MonoBehaviour
 {
     public void OnClickRestart() {
@@ -13,14 +10,13 @@ public class GameOverPopup : MonoBehaviour
         else
             MySceneManager.instance.isInitial = true;
 
-        MySceneManager.instance.LoadScene("Choi Kang In");
+        MySceneManager.instance.LoadScene("Main Play Scene");
     }
 
     public void OnClickMainMenu() {
         // scene manager part
-        MySceneManager.instance.LoadScene("Temp Main Menu");
+        MySceneManager.instance.LoadScene("Main Menu Scene");
 
         Destroy(MySceneManager.instance.gameObject);
-        Destroy(SaveLoadManager.instance.gameObject);
     }
 }

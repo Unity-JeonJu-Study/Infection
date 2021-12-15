@@ -976,17 +976,17 @@ PrefabInstance:
     - target: {fileID: 6178222724272415958, guid: bad90282bf4f46f41a41d6591bd6f2cd,
         type: 3}
       propertyPath: deepColor.g
-      value: 0.2486791
+      value: 0.2486763
       objectReference: {fileID: 0}
     - target: {fileID: 6178222724272415958, guid: bad90282bf4f46f41a41d6591bd6f2cd,
         type: 3}
       propertyPath: horizonColor.g
-      value: 0.22744071
+      value: 0.22743791
       objectReference: {fileID: 0}
     - target: {fileID: 6178222724272415958, guid: bad90282bf4f46f41a41d6591bd6f2cd,
         type: 3}
       propertyPath: shallowColor.r
-      value: 0.08391654
+      value: 0.08391378
       objectReference: {fileID: 0}
     - target: {fileID: 6178222724585706428, guid: bad90282bf4f46f41a41d6591bd6f2cd,
         type: 3}
@@ -1051,72 +1051,77 @@ PrefabInstance:
     - target: {fileID: 7218147720098536548, guid: bad90282bf4f46f41a41d6591bd6f2cd,
         type: 3}
       propertyPath: deepColor.g
-      value: 0.36674777
+      value: 0.36672506
       objectReference: {fileID: 0}
     - target: {fileID: 7218147720098536548, guid: bad90282bf4f46f41a41d6591bd6f2cd,
         type: 3}
       propertyPath: deepColor.r
-      value: 0.0415887
+      value: 0.041572534
       objectReference: {fileID: 0}
     - target: {fileID: 7218147720098536548, guid: bad90282bf4f46f41a41d6591bd6f2cd,
         type: 3}
       propertyPath: shoreColor.r
-      value: 0.043274887
+      value: 0.043259814
       objectReference: {fileID: 0}
     - target: {fileID: 7218147720098536548, guid: bad90282bf4f46f41a41d6591bd6f2cd,
         type: 3}
       propertyPath: horizonColor.g
-      value: 0.35409933
+      value: 0.35407662
       objectReference: {fileID: 0}
     - target: {fileID: 7218147720098536548, guid: bad90282bf4f46f41a41d6591bd6f2cd,
         type: 3}
       propertyPath: shallowColor.r
-      value: 0.0901744
+      value: 0.09015579
       objectReference: {fileID: 0}
     - target: {fileID: 7218147720098536548, guid: bad90282bf4f46f41a41d6591bd6f2cd,
         type: 3}
       propertyPath: underwaterColor.g
-      value: 0.41175643
+      value: 0.41173375
       objectReference: {fileID: 0}
     - target: {fileID: 7218147720098536548, guid: bad90282bf4f46f41a41d6591bd6f2cd,
         type: 3}
       propertyPath: underwaterColor.r
-      value: 0.32940352
+      value: 0.3293808
       objectReference: {fileID: 0}
     - target: {fileID: 8544680238257074130, guid: bad90282bf4f46f41a41d6591bd6f2cd,
         type: 3}
       propertyPath: deepColor.g
-      value: 0.36674774
+      value: 0.36672503
       objectReference: {fileID: 0}
     - target: {fileID: 8544680238257074130, guid: bad90282bf4f46f41a41d6591bd6f2cd,
         type: 3}
       propertyPath: deepColor.r
-      value: 0.04158868
+      value: 0.04157251
+      objectReference: {fileID: 0}
+    - target: {fileID: 8544680238257074130, guid: bad90282bf4f46f41a41d6591bd6f2cd,
+        type: 3}
+      propertyPath: shoreColor.a
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 8544680238257074130, guid: bad90282bf4f46f41a41d6591bd6f2cd,
         type: 3}
       propertyPath: shoreColor.r
-      value: 0.043274865
+      value: 0.043259792
       objectReference: {fileID: 0}
     - target: {fileID: 8544680238257074130, guid: bad90282bf4f46f41a41d6591bd6f2cd,
         type: 3}
       propertyPath: horizonColor.g
-      value: 0.3540993
+      value: 0.3540766
       objectReference: {fileID: 0}
     - target: {fileID: 8544680238257074130, guid: bad90282bf4f46f41a41d6591bd6f2cd,
         type: 3}
       propertyPath: shallowColor.r
-      value: 0.09017437
+      value: 0.09015577
       objectReference: {fileID: 0}
     - target: {fileID: 8544680238257074130, guid: bad90282bf4f46f41a41d6591bd6f2cd,
         type: 3}
       propertyPath: underwaterColor.g
-      value: 0.4117564
+      value: 0.41173372
       objectReference: {fileID: 0}
     - target: {fileID: 8544680238257074130, guid: bad90282bf4f46f41a41d6591bd6f2cd,
         type: 3}
       propertyPath: underwaterColor.r
-      value: 0.3294035
+      value: 0.32938078
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bad90282bf4f46f41a41d6591bd6f2cd, type: 3}

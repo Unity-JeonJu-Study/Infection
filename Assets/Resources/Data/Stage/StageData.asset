@@ -16,8 +16,9 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 1746664512360453197, guid: 59ed373ec755539459c0806ae2243954, type: 3}
+    - {fileID: 1746664512360453197, guid: cd7ea00d958256644867f38c66fe80c7, type: 3}
     - {fileID: 11400000, guid: aa35df142c59db44ba1fcabb58ff2fcd, type: 2}
+    - {fileID: 5532897409819142687, guid: c1392a8092641fb4eb0713b674d5f03e, type: 3}
     - {fileID: 11400000, guid: 965f6c8c67785614390d067b76ffddca, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
@@ -87,11 +88,11 @@ MonoBehaviour:
       Entry: 7
       Data: 3|StageData+Stage, Assembly-CSharp
     - Name: gamePrefab
-      Entry: 6
-      Data: 
-    - Name: quest
       Entry: 10
       Data: 2
+    - Name: quest
+      Entry: 10
+      Data: 3
     - Name: bgm
       Entry: 6
       Data: 

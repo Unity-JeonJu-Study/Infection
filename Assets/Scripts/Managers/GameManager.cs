@@ -92,17 +92,16 @@ public class GameManager : SerializedMonoBehaviour
         mainCam.SetActive(true);
         UpdateStage(GameStage.Laboratory);
     }
-    
     private void InitStage()
     {
         foreach (var stage in stageData.data)
         {
-            PoolManager.Instance.InitPool(stage.Value.gamePrefab, 1, roomParent);
+                PoolManager.Instance.InitPool(stage.Value.gamePrefab, 1, roomParent);
         }
     }
 
     [Button("Update Stage Info & Prefab")]
-    private void UpdateStage(GameStage stage)
+    public void UpdateStage(GameStage stage)
     {
         // Update stage information
         currentStage = stage;

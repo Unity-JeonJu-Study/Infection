@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 
@@ -9,9 +8,14 @@ public class PressableObject : MonoBehaviour
     Collider curCollider;
     Animator animator;
 
+    Vector3 startPos, endPos;
+
     private void Awake() {
         curCollider = GetComponent<Collider>();
         animator = GetComponent<Animator>();
+
+        startPos = transform.position;
+        endPos = new Vector3(startPos.x, startPos.y - 0.3f, startPos.z);
     }
 
     private void OnTriggerEnter(Collider other) {
@@ -34,11 +38,20 @@ public class PressableObject : MonoBehaviour
 
     [Button("Activate Event")]
     private void ActivateEvent() {
-        Debug.Log("activate event");
+        StartCoroutine(MoveObject(startPos, endPos));
+    }
+
+    private IEnumerator MoveObject(Vector3 posA, Vector3 posB) {
+        float curValue = 0f;
+        while(curValue < 1) {
+            transform.position = Vector3.Lerp(posA, posB, curValue);
+            curValue += 0.01f;
+            yield return null;
+        }
     }
 
     [Button("Deactivate Event")]
     private void DeactivateEvent() {
-        Debug.Log("deactivate event");
+        StartCoroutine(MoveObject(endPos, startPos));
     }
 }

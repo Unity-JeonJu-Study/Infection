@@ -2,11 +2,5 @@ using UnityEngine;
 
 public class LoadingPopup : MonoBehaviour
 {
-    public static LoadingPopup instance;
-
-    private void Awake() {
-        instance = this;
-
-        DontDestroyOnLoad(gameObject);
-    }
+    // this script exists for helping my scene manager script to find loading popup object through script
 }

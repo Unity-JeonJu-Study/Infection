@@ -8,11 +8,14 @@ public class MySceneManager : MonoBehaviour
 
     [ReadOnly] public string curSceneName;
     [ReadOnly] public bool isInitial;
+    [ReadOnly, SerializeField] private LoadingPopup loadingPopup;
 
     private void Awake() {
         instance = this;
         curSceneName = "Main Menu Scene";
         isInitial = true;
+        loadingPopup = FindObjectOfType<LoadingPopup>();
+        DisableLoadingPopup();
 
         DontDestroyOnLoad(gameObject);
     }
@@ -31,5 +34,17 @@ public class MySceneManager : MonoBehaviour
     public void UnLoadCutScene()
     {
         SceneManager.UnloadSceneAsync(curSceneName);
+    }
+
+    public void UpdateLoadingPopup(LoadingPopup inputLoadingPopup) {
+        loadingPopup = inputLoadingPopup;
+    }
+
+    public void EnableLoadingPopup() {
+        loadingPopup.gameObject.SetActive(true);
+    }
+
+    public void DisableLoadingPopup() {
+        loadingPopup.gameObject.SetActive(false);
     }
 }

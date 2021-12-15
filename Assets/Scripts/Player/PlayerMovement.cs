@@ -89,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
     {
         _virtualCamera.m_Lens.FieldOfView = fov;
         _virtualCamera.transform.rotation = Quaternion.Euler(cameraRotation);
-        framingTransposer.m_CameraDistance = cameraDistance;
+        //framingTransposer.m_CameraDistance = cameraDistance;
 
     }
 }

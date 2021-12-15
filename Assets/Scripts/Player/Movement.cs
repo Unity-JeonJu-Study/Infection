@@ -34,17 +34,27 @@ public abstract class Movement
         
         float forward = playerInput.InputForward * playerMovement.movementSpeed;
         float side = playerInput.InputSide * playerMovement.movementSpeed;
+
+        var cameraTransform = Camera.main.transform;
+
+        var cameraForward = cameraTransform.rotation * Vector3.forward;
+        var cameraRight = cameraTransform.rotation * Vector3.right;
+
+        var lookForward = new Vector3(cameraForward.x, 0f, cameraForward.z).normalized;
+        var lookRight = new Vector3(cameraRight.x, 0f, cameraRight.z).normalized;
+        var moveDir = lookForward * playerInput.InputForward + lookRight * playerInput.InputSide * 0.1f;
+        
         if (!playerMovement.isGround && sensor.CheckForward())
         {
             forward = 0;
             side = 0;
         }
-        Vector3 dir = new Vector3(side, _rigidbody.velocity.y, forward);
-        _rigidbody.velocity = dir;
-        
-        playerMovement.transform.rotation = Quaternion.LookRotation( new Vector3(playerInput.InputSide * playerMovement.rotationSpeed,
-            0f,
-            playerInput.InputForward * playerMovement.rotationSpeed));
+        playerMovement.transform.forward = moveDir;
+        Vector3 dir = new Vector3(side , _rigidbody.velocity.y, forward);
+        _rigidbody.velocity = moveDir * playerMovement.movementSpeed;
+        // playerMovement.transform.rotation = Quaternion.LookRotation(new Vector3(playerInput.InputSide * playerMovement.rotationSpeed,
+        //     0,
+        //     playerInput.InputForward * playerMovement.rotationSpeed));
     }
 
     protected virtual void AnimationWalk(bool walk)

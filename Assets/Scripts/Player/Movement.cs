@@ -41,8 +41,9 @@ public abstract class Movement
         }
         Vector3 dir = new Vector3(side, _rigidbody.velocity.y, forward);
         _rigidbody.velocity = dir;
-        playerMovement.transform.rotation = Quaternion.LookRotation(new Vector3(playerInput.InputSide * playerMovement.rotationSpeed,
-            0,
+        
+        playerMovement.transform.rotation = Quaternion.LookRotation( new Vector3(playerInput.InputSide * playerMovement.rotationSpeed,
+            0f,
             playerInput.InputForward * playerMovement.rotationSpeed));
     }
 

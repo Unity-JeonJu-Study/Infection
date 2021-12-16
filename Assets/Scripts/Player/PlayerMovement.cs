@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     
     private GameObject currentAnimal;
     private PlayerInfect playerInfect;
-    private CinemachineFramingTransposer framingTransposer;
+    // private CinemachineFramingTransposer framingTransposer;
     
     private void Start()
     {
@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
         currentAnimal = playerInfect.currentAnimal;
         _animator = currentAnimal.GetComponent<Animator>();
-        framingTransposer = _virtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
+        // framingTransposer = _virtualCamera.GetCinemachineComponent<CinemachineFramingTransposer>();
         canJump = true;
         ChangeStatus("Slime");
         movement = new SlimeMovement(this);
@@ -89,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
     {
         _virtualCamera.m_Lens.FieldOfView = fov;
         _virtualCamera.transform.rotation = Quaternion.Euler(cameraRotation);
-        framingTransposer.m_CameraDistance = cameraDistance;
+        // framingTransposer.m_CameraDistance = cameraDistance;
 
     }
 }

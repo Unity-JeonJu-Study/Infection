@@ -11,6 +11,8 @@ public class MySceneManager : MonoBehaviour
     [ReadOnly] public bool isInitial;
     [ReadOnly, SerializeField] private LoadingPopup loadingPopup;
     [ReadOnly, SerializeField] private bool isLoadingPopupDisabled;
+    private WaitForSeconds waitTimeForLoading;
+
 
     private void Awake() {
         MySceneManager[] objects = FindObjectsOfType<MySceneManager>();
@@ -20,6 +22,8 @@ public class MySceneManager : MonoBehaviour
             instance = this;
             curSceneName = "Main Menu Scene";
             isInitial = true;
+
+            waitTimeForLoading = new WaitForSeconds(0.01f);
 
             DontDestroyOnLoad(gameObject);
         }
@@ -33,16 +37,17 @@ public class MySceneManager : MonoBehaviour
 
     public void LoadScene(string sceneName) {
         curSceneName = sceneName;
-        EnableLoadingPopup();
         StartCoroutine(LoadAsynchronously(sceneName));
     }
 
     private IEnumerator LoadAsynchronously(string sceneName) {
+        EnableLoadingPopup();
+
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Single);
 
         while(!operation.isDone) {
             loadingPopup.progressBar.currentPercent = operation.progress * 100f;
-            yield return null;
+            yield return waitTimeForLoading;
         }
 
         DisableLoadingPopup();

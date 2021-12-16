@@ -77,7 +77,6 @@ public class GameManager : SerializedMonoBehaviour
 
     private void Start()
     {
-        // MySceneManager.instance.DisableLoadingPopup();
         if(MySceneManager.instance.isInitial)
             StartTutorialScene();       
     }

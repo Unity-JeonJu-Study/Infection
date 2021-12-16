@@ -3,7 +3,7 @@ using Michsky.UI.ModernUIPack;
 
 public class LoadingPopup : MonoBehaviour
 {
-    public ProgressBar progressBar;
+    [ReadOnly] public ProgressBar progressBar;
 
     private void Awake() {
         LoadingPopup[] objects = FindObjectsOfType<LoadingPopup>();

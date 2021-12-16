@@ -16,7 +16,5 @@ public class GameOverPopup : MonoBehaviour
     public void OnClickMainMenu() {
         // scene manager part
         MySceneManager.instance.LoadScene("Main Menu Scene");
-
-        Destroy(MySceneManager.instance.gameObject);
     }
 }

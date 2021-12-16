@@ -10,8 +10,6 @@ public class PausePopup : MonoBehaviour
     public void OnClickMainMenu() {
         // scene manager part
         MySceneManager.instance.LoadScene("Main Menu Scene");
-
-        Destroy(MySceneManager.instance.gameObject);
     }
 
     public void OnClickSetting() {

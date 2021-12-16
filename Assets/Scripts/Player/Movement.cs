@@ -36,18 +36,61 @@ public abstract class Movement
 
     public virtual void Move()
     {
+        var cameraTransform = Camera.main.transform;
+        var cameraRotation = cameraTransform.rotation.eulerAngles.y;
+        // var cameraForward = cameraTransform.rotation * Vector3.forward;
+        // var cameraRight = cameraTransform.rotation * Vector3.right;
+        //
+        // var lookForward = new Vector3(cameraForward.x, 0f, cameraForward.z).normalized;
+        // var lookRight = new Vector3(cameraRight.x, 0f, cameraRight.z).normalized;
+        // moveDir = lookForward * playerInput.InputForward + lookRight * playerInput.InputSide;
+        // _rigidbody.velocity = moveDir * playerMovement.movementSpeed;
+        // playerMovement.transform.forward = moveDir;
+        // if(moveDir.z > 0)
+        //     playerMovement.transform.forward = moveDir;
+        // else if(moveDir.z <0)
+        //     playerMovement.transform.forward = -moveDir;
         float forward = playerInput.InputForward * playerMovement.movementSpeed;
         float side = playerInput.InputSide * playerMovement.movementSpeed;
         if (!playerMovement.isGround && sensor.CheckForward())
-        {
+        {    
             forward = 0;
             side = 0;
         }
-        Vector3 dir = new Vector3(side, _rigidbody.velocity.y, forward);
+
+        Debug.Log("카메라 y : " + cameraRotation);
+        Vector3 dir = Vector3.zero;
+        if (225 <= cameraRotation && cameraRotation <= 315)
+        {   
+            Debug.Log("방향 바뀜");
+            dir = new Vector3(-forward, _rigidbody.velocity.y, side);
+            newRotation = Quaternion.LookRotation( new Vector3(playerInput.InputForward * playerMovement.rotationSpeed,
+                0f,
+                playerInput.InputSide * playerMovement.rotationSpeed));
+        }
+        if (45 <= cameraRotation && cameraRotation <= 135)
+        {
+            dir = new Vector3(forward, _rigidbody.velocity.y, side);
+            newRotation = Quaternion.LookRotation( new Vector3(playerInput.InputForward * playerMovement.rotationSpeed,
+                0f,
+                playerInput.InputSide * playerMovement.rotationSpeed));
+        }
+        if (135 <= cameraRotation && cameraRotation <= 225)
+        {
+            dir = new Vector3(side, _rigidbody.velocity.y, -forward);
+            newRotation = Quaternion.LookRotation( new Vector3(playerInput.InputSide * playerMovement.rotationSpeed,
+                0f,
+                playerInput.InputForward * playerMovement.rotationSpeed));
+        }
+        if ((0 <= cameraRotation && cameraRotation <= 45) || cameraRotation >= 315)
+        {
+            dir = new Vector3(side, _rigidbody.velocity.y, forward);
+            newRotation = Quaternion.LookRotation( new Vector3(playerInput.InputSide * playerMovement.rotationSpeed,
+                0f,
+                playerInput.InputForward * playerMovement.rotationSpeed));
+        }
         _rigidbody.velocity = dir;
-        newRotation = Quaternion.LookRotation( new Vector3(playerInput.InputSide * playerMovement.rotationSpeed,
-            0f,
-            playerInput.InputForward * playerMovement.rotationSpeed));
+       
         playerMovement.transform.rotation = Quaternion.Lerp(_rigidbody.rotation, newRotation, 0.01f);
     }
 

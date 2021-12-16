@@ -20,6 +20,6 @@ public class Pendulum : MonoBehaviour
     void Update()
     {
 		float angle = limit * Mathf.Sin(Time.time + random * speed);
-		transform.localRotation = Quaternion.Euler(0, 0, angle);
+		transform.localRotation = Quaternion.Euler(angle, 0, 0);
 	}
 }

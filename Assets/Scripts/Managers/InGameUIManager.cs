@@ -54,6 +54,14 @@ public class InGameUIManager : MonoBehaviour
         //     AddOneRescuedSlimSlot();
     }
 
+    public void DisableAllInGameUIs() {
+        gameObject.SetActive(false);
+    }
+
+    public void EnableAllInGameUIs() {
+        gameObject.SetActive(true);
+    }
+
     public void UpdateObjectiveText(string newObjective) {
         textObjective.text = newObjective;
 

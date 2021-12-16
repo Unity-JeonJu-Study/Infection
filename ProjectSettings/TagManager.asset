@@ -9,6 +9,7 @@ TagManager:
   - NPC
   - DeadZone
   - HeavyObject
+  - PressableObject
   layers:
   - Default
   - TransparentFX

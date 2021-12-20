@@ -188,6 +188,7 @@ public class GameManager : SerializedMonoBehaviour
 
             currentStageTime = ((int)stageData.data[GameManager.Instance.currentStage].limitTime);
             isTimerPaused = false;
+            StopStageTimer();
             stageTimer = StartCoroutine("StartStageTimer");
         }
 

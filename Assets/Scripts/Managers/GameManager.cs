@@ -12,7 +12,6 @@ public enum GameState
 public enum GameStage
 { 
     Laboratory,
-    Zoo,
     Stage1,
     Stage2,
     Stage3

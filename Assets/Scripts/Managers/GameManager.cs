@@ -215,7 +215,8 @@ public class GameManager : SerializedMonoBehaviour
 
     public void ResumeStageTimer() {
         isTimerPaused = false;
-        stageTimer = StartCoroutine("StartStageTimer");
+        if(GameManager.Instance.currentStage != GameStage.Laboratory)
+            stageTimer = StartCoroutine("StartStageTimer");
     }
 
     public void StopStageTimer() {
@@ -225,7 +226,6 @@ public class GameManager : SerializedMonoBehaviour
 
     private void StartStageClear() {
         PopupUIManager.instance.EnableStageClearPopup(InGameUIManager.instance.GetRescuedSlimeCount(), stageData.data[currentStage].maxSlimeCount);
-
     }
 
     private void StartGameOver() {

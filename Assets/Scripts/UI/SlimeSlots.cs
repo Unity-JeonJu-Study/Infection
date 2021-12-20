@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SlimSlots : MonoBehaviour
+public class SlimeSlots : MonoBehaviour
 {
     [ReadOnly] public SlimeSlot [] slots;
     [ReadOnly, SerializeField] private int maxSlotsCount;

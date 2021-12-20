@@ -13,7 +13,7 @@ public class InGameUIManager : MonoBehaviour
     [ReadOnly, SerializeField] private GameObject gameObjectObjectiveTexts;
     [ReadOnly, SerializeField] private TextMeshProUGUI textMainObjective;
     [ReadOnly, SerializeField] private TextMeshProUGUI textSubObjective;
-    [ReadOnly, SerializeField] private SlimSlots slimSlots;
+    [ReadOnly, SerializeField] private SlimeSlots slimeSlots;
     [ReadOnly, SerializeField] private TextMeshProUGUI textTime;
     [ReadOnly, SerializeField] private ItemSlots itemSlots;
 
@@ -37,7 +37,7 @@ public class InGameUIManager : MonoBehaviour
         textSubObjective = texts[1];
         textTime = texts[2];
 
-        slimSlots = GetComponentInChildren<SlimSlots>();
+        slimeSlots = GetComponentInChildren<SlimeSlots>();
         itemSlots = GetComponentInChildren<ItemSlots>();
 
 
@@ -139,14 +139,15 @@ public class InGameUIManager : MonoBehaviour
             textObjective.fontSize = 36;
 
         textObjective.gameObject.transform.SetParent(gameObjectObjectiveTexts.transform);
+        gameObjectObjectiveTexts.transform.position = new Vector3(-50, 620, 0);
     }
 
     public void ResetSlimeSlots() {
-        slimSlots.ResetSlimeSlots();
+        slimeSlots.ResetSlimeSlots();
     }
 
     public void AddOneRescuedSlimeSlot() {
-        slimSlots.AddOneRescuedSlimeSlot();
+        slimeSlots.AddOneRescuedSlimeSlot();
     }
 
     public void EnableTimeText() {

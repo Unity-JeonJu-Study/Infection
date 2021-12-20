@@ -160,11 +160,6 @@ public class CharacterControls : MonoBehaviour {
 		StartCoroutine(Decrease(velocityF.magnitude, time));
 	}
 
-	public void LoadCheckPoint()
-	{
-		transform.position = checkPoint;
-	}
-
 	private IEnumerator Decrease(float value, float duration)
 	{
 		if (isStuned)

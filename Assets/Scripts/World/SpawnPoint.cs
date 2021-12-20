@@ -5,9 +5,11 @@ using UnityEngine;
 
 public class SpawnPoint : MonoBehaviour
 {
-   private void Awake()
+   public Vector3 LoadSpawnPoint()
    {
+       return transform.position;
    }
+   
    private void Start()
    {
        GameManager.Instance.player.transform.parent.gameObject.SetActive(true);

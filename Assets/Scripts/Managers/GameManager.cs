@@ -78,6 +78,8 @@ public class GameManager : SerializedMonoBehaviour
 
     private void Start()
     {
+        if(MySceneManager.instance.isInitial)
+            StartTutorialScene();       
         InitStage();    
     }
     
@@ -94,6 +96,9 @@ public class GameManager : SerializedMonoBehaviour
         InGameUIManager.instance.EnableAllInGameUIs();
         mainCam.SetActive(true);
         UpdateStage(GameStage.Laboratory);
+        
+        if(!player.gameObject.activeSelf)
+            player.gameObject.SetActive(true);
     }
 
     private void InitStage()
@@ -102,7 +107,6 @@ public class GameManager : SerializedMonoBehaviour
         {
             PoolManager.Instance.InitPool(stage.Value.gamePrefab, 1, roomParent);
         }
-        UpdateStage(currentStage);
     }
 
     [Button("Update Stage Info & Prefab")]
@@ -122,8 +126,6 @@ public class GameManager : SerializedMonoBehaviour
         }
         PoolManager.Instance.Spawn(stageData.data[currentStage].gamePrefab.name);
         SpawnPoint = stageData.data[currentStage].gamePrefab.GetComponentInChildren<SpawnPoint>();
-        if(!player.gameObject.activeSelf)
-            player.gameObject.SetActive(true);
         player.transform.position = SpawnPoint.transform.position;
         
         // switch BGM when stage changed

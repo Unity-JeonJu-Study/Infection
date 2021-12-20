@@ -77,13 +77,15 @@ public class GameManager : SerializedMonoBehaviour
 
     private void Start()
     {
-        StartTutorialScene();       
+        if(MySceneManager.instance.isInitial)
+            StartTutorialScene();       
     }
 
     [Button]
     public void StartTutorialScene()
     {
         InGameUIManager.instance.DisableAllInGameUIs();
+
         mainCam.SetActive(false);
         MySceneManager.instance.LoadCutScene("Tutorial");
     }
@@ -121,6 +123,8 @@ public class GameManager : SerializedMonoBehaviour
         SoundManager.Instance.PlayBGM(stageData.data[currentStage].bgm);
 
         InitInGameUIForCurrentStage();
+
+        MySceneManager.instance.DisableLoadingPopup();
     }
 
     [Button("Give me next Quest"),TabGroup("Quest Info")]
@@ -133,8 +137,8 @@ public class GameManager : SerializedMonoBehaviour
         }
         CurrentQuestList.Dequeue();
         currentGoal = CurrentQuestList.Peek();
-        InitInGameUIForCurrentStage();
 
+        InGameUIManager.instance.UpdateObjectiveText(currentGoal.description);
     }
 
     #region Click Event

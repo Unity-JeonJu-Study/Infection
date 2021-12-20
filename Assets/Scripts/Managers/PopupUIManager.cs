@@ -66,12 +66,12 @@ public class PopupUIManager : MonoBehaviour
     public void EnableSettingPopup() {
         popupSetting.gameObject.SetActive(true);
     }
-    
+
     public void EnableStageClearPopup(int curCount, int maxCount) {
         popupStageClear.gameObject.SetActive(true);
         popupStageClear.UpdateClearInfo(curCount, maxCount);
     }
-    
+
     public void EnableGameOverPopup() {
         popupGameOver.gameObject.SetActive(true);
     }

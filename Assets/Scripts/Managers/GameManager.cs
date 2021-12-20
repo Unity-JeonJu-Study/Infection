@@ -91,6 +91,11 @@ public class GameManager : SerializedMonoBehaviour
         mainCam.SetActive(false);
         MySceneManager.instance.LoadCutScene("Tutorial");
     }
+    public void SkipTutorialScene()
+    {
+        if(Input.GetKeyDown(KeyCode.Q))
+            EndTutorialScene();
+    }
     public void EndTutorialScene()
     {
         InGameUIManager.instance.EnableAllInGameUIs();
@@ -165,6 +170,7 @@ public class GameManager : SerializedMonoBehaviour
     private void Update() {
         if(Input.GetKeyDown(KeyCode.Escape))
             PopupUIManager.instance.EnablePausePopup();
+        SkipTutorialScene();
     }
 
     public void InitInGameUIForCurrentStage() {

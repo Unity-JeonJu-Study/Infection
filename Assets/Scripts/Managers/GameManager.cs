@@ -157,7 +157,7 @@ public class GameManager : SerializedMonoBehaviour
 
     public void ReSpawn()
     {
-        player.transform.position = SpawnPoint.transform.position;
+        UpdateStage(currentStage);
         InitInGameUIForCurrentStage();
     }
     

@@ -2,12 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class InGameUIManager : MonoBehaviour
 {
     [ReadOnly] public static InGameUIManager instance;
 
+    [ReadOnly, SerializeField] private GameObject gameObjectCanvas;
+    [ReadOnly, SerializeField] private GameObject gameObjectObjectiveTexts;
     [ReadOnly, SerializeField] private TextMeshProUGUI textMainObjective;
     [ReadOnly, SerializeField] private TextMeshProUGUI textSubObjective;
     [ReadOnly, SerializeField] private SlimSlots slimSlots;
@@ -25,6 +28,9 @@ public class InGameUIManager : MonoBehaviour
 
     private void Awake() {
         instance = this;
+
+        gameObjectCanvas = GetComponentInChildren<Canvas>().gameObject;
+        gameObjectObjectiveTexts = GetComponentInChildren<VerticalLayoutGroup>().gameObject;
 
         TextMeshProUGUI[] texts = GetComponentsInChildren<TextMeshProUGUI>();        
         textMainObjective = texts[0];
@@ -71,15 +77,23 @@ public class InGameUIManager : MonoBehaviour
         else
             textObjective = textMainObjective;
 
+        textObjective.gameObject.transform.SetParent(gameObjectCanvas.transform);
 
         textObjective.text = newObjective;
 
         textObjective.rectTransform.pivot = vectorCenter;
         textObjective.rectTransform.anchorMin = vectorCenter;
         textObjective.rectTransform.anchorMax = vectorCenter;
-        textObjective.fontSize = 100;
         textObjective.alignment = TextAlignmentOptions.Center;
 
+        if(isSubObjective) {
+            textObjective.fontSize = 100;
+            textObjective.transform.position = new Vector3(textObjective.transform.position.x, 100, textObjective.transform.position.z);
+        }
+        else {
+            textObjective.fontSize = 130;
+            textObjective.transform.position = new Vector3(textObjective.transform.position.x, 350, textObjective.transform.position.z);
+        }
         StartCoroutine(MoveObjectiveText(isSubObjective));
     }   
 
@@ -123,14 +137,16 @@ public class InGameUIManager : MonoBehaviour
             textObjective.fontSize = 70;
         else
             textObjective.fontSize = 36;
+
+        textObjective.gameObject.transform.SetParent(gameObjectObjectiveTexts.transform);
     }
 
-    public void ResetSlimSlots() {
-        slimSlots.ResetSlimSlots();
+    public void ResetSlimeSlots() {
+        slimSlots.ResetSlimeSlots();
     }
 
-    public void AddOneRescuedSlimSlot() {
-        slimSlots.AddOneRescuedSlimSlot();
+    public void AddOneRescuedSlimeSlot() {
+        slimSlots.AddOneRescuedSlimeSlot();
     }
 
     public void EnableTimeText() {

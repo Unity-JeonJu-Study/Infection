@@ -2,30 +2,30 @@ using UnityEngine;
 
 public class SlimSlots : MonoBehaviour
 {
-    [ReadOnly] public SlimSlot [] slots;
+    [ReadOnly] public SlimeSlot [] slots;
     [ReadOnly, SerializeField] private int maxSlotsCount;
     [ReadOnly, SerializeField] private int curSlotsCount;
 
     private void Awake() {
-        slots = GetComponentsInChildren<SlimSlot>();
+        slots = GetComponentsInChildren<SlimeSlot>();
         maxSlotsCount = 10;
         curSlotsCount = 0;
     }
 
-    public void ResetSlimSlots() {
+    public void ResetSlimeSlots() {
         curSlotsCount = 0;
-        foreach(SlimSlot curSlot in slots) {
+        foreach(SlimeSlot curSlot in slots) {
             curSlot.gameObject.SetActive(true);
-            curSlot.DisableRescuedSlimSlot();
+            curSlot.DisableRescuedSlimeSlot();
         }
 
         for(int curIndex = GameManager.Instance.stageData.data[GameManager.Instance.currentStage].maxSlimCount; curIndex < maxSlotsCount; curIndex++)
             slots[curIndex].gameObject.SetActive(false);
     }
 
-    public void AddOneRescuedSlimSlot() {
+    public void AddOneRescuedSlimeSlot() {
         if(curSlotsCount < 10) {
-            slots[curSlotsCount].EnableRescuedSlimSlot();
+            slots[curSlotsCount].EnableRescuedSlimeSlot();
             curSlotsCount++;
         }
     }

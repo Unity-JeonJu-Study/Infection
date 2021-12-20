@@ -161,10 +161,10 @@ public class GameManager : SerializedMonoBehaviour
     }
 
     public void InitInGameUIForCurrentStage() {
-        InGameUIManager.instance.UpdateObjectiveText("Rescue Slims", false);
+        InGameUIManager.instance.UpdateObjectiveText("Rescue Slimes", false);
         InGameUIManager.instance.UpdateObjectiveText(currentGoal.description, true);
 
-        InGameUIManager.instance.ResetSlimSlots();
+        InGameUIManager.instance.ResetSlimeSlots();
 
         if(GameManager.Instance.currentStage == GameStage.Laboratory)
             InGameUIManager.instance.DisableTimeText();

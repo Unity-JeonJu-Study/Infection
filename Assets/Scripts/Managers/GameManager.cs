@@ -12,7 +12,6 @@ public enum GameState
 public enum GameStage
 { 
     Laboratory,
-    Zoo,
     Stage1,
     Stage2,
     Stage3
@@ -193,7 +192,7 @@ public class GameManager : SerializedMonoBehaviour
             stageTimer = StartCoroutine("StartStageTimer");
         }
 
-        InGameUIManager.instance.UpdateItemIcons();
+        // InGameUIManager.instance.UpdateItemIcons();
     }
 
     public IEnumerator StartStageTimer() {

@@ -15,9 +15,10 @@ public class InGameUIManager : MonoBehaviour
     [ReadOnly, SerializeField] private TextMeshProUGUI textSubObjective;
     [ReadOnly, SerializeField] private SlimeSlots slimeSlots;
     [ReadOnly, SerializeField] private TextMeshProUGUI textTime;
-    [ReadOnly, SerializeField] private ItemSlots itemSlots;
 
-    [ReadOnly] public List<Sprite> itemIcons;
+
+    // [ReadOnly, SerializeField] private ItemSlots itemSlots;
+    // [ReadOnly] public List<Sprite> itemIcons;
 
     private Vector2 vectorCenter;
     private WaitForSeconds waitTime;
@@ -38,12 +39,13 @@ public class InGameUIManager : MonoBehaviour
         textTime = texts[2];
 
         slimeSlots = GetComponentInChildren<SlimeSlots>();
-        itemSlots = GetComponentInChildren<ItemSlots>();
 
 
-        // the order of loading is based on the Item enum type
-        itemIcons = new List<Sprite>();
-        // itemIcons.Add(Resources.Load<Sprite>("UIItemIcons/itemName"));
+
+        // itemSlots = GetComponentInChildren<ItemSlots>();
+        // // the order of loading is based on the Item enum type
+        // itemIcons = new List<Sprite>();
+        // // itemIcons.Add(Resources.Load<Sprite>("UIItemIcons/itemName"));
 
 
         vectorCenter = new Vector2(0.5f, 0.5f);
@@ -139,7 +141,7 @@ public class InGameUIManager : MonoBehaviour
             textObjective.fontSize = 36;
 
         textObjective.gameObject.transform.SetParent(gameObjectObjectiveTexts.transform);
-        gameObjectObjectiveTexts.transform.position = new Vector3(-50, 620, 0);
+        gameObjectObjectiveTexts.transform.position = new Vector3(-50, 600, 0);
     }
 
     public void ResetSlimeSlots() {
@@ -175,16 +177,16 @@ public class InGameUIManager : MonoBehaviour
             textTime.text += second;
     }
 
-    public void UpdateItemIcons() {
-        for(curSlotIndex = 0; curSlotIndex < 3; curSlotIndex++) 
-            itemSlots.slots[curSlotIndex].gameObject.SetActive(false);
+    // public void UpdateItemIcons() {
+    //     for(curSlotIndex = 0; curSlotIndex < 3; curSlotIndex++) 
+    //         itemSlots.slots[curSlotIndex].gameObject.SetActive(false);
 
-        curSlotIndex = 0;
-        foreach(Item curItem in GameManager.Instance.player.inventory) {
-            itemSlots.slots[curSlotIndex].gameObject.SetActive(true);
-            itemSlots.slots[curSlotIndex].UpdateItemIcon(itemIcons[(int)curItem]);
+    //     curSlotIndex = 0;
+    //     foreach(Item curItem in GameManager.Instance.player.inventory) {
+    //         itemSlots.slots[curSlotIndex].gameObject.SetActive(true);
+    //         itemSlots.slots[curSlotIndex].UpdateItemIcon(itemIcons[(int)curItem]);
 
-            curSlotIndex++;
-        }
-    }
+    //         curSlotIndex++;
+    //     }
+    // }
 }

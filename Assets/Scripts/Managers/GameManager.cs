@@ -160,7 +160,7 @@ public class GameManager : SerializedMonoBehaviour
         player.transform.position = SpawnPoint.transform.position;
         InitInGameUIForCurrentStage();
     }
-
+    
     #region Click Event
 
     public void OnClickPause() => currentState = GameState.PauseUI;

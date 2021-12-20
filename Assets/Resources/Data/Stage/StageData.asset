@@ -68,10 +68,10 @@ MonoBehaviour:
       Data: 0
     - Name: minSlimCount
       Entry: 3
-      Data: 0
+      Data: 4
     - Name: maxSlimCount
       Entry: 3
-      Data: 0
+      Data: 8
     - Name: 
       Entry: 8
       Data: 
@@ -98,7 +98,7 @@ MonoBehaviour:
       Data: Stage1
     - Name: limitTime
       Entry: 4
-      Data: 600
+      Data: 0
     - Name: minSlimCount
       Entry: 3
       Data: 0

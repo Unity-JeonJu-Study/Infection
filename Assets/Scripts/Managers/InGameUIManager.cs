@@ -177,6 +177,10 @@ public class InGameUIManager : MonoBehaviour
             textTime.text += second;
     }
 
+    public int GetRescuedSlimeCount() {
+        return slimeSlots.GetCurSlotsCount();
+    }
+
     // public void UpdateItemIcons() {
     //     for(curSlotIndex = 0; curSlotIndex < 3; curSlotIndex++) 
     //         itemSlots.slots[curSlotIndex].gameObject.SetActive(false);

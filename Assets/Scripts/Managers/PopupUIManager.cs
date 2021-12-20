@@ -13,6 +13,7 @@ public class PopupUIManager : MonoBehaviour
     [ReadOnly, SerializeField] private SavePopup popupSave;
     [ReadOnly, SerializeField] private PausePopup popupPause;
     [ReadOnly, SerializeField] private SettingPopup popupSetting;
+    [ReadOnly, SerializeField] private StageClearPopup popupStageClear;
     [ReadOnly, SerializeField] private GameOverPopup popupGameOver;
 
     private void Awake() {
@@ -31,6 +32,9 @@ public class PopupUIManager : MonoBehaviour
         
         popupSetting = GetComponentInChildren<SettingPopup>();
         popupSetting.gameObject.SetActive(false);
+
+        popupStageClear = GetComponentInChildren<StageClearPopup>();
+        popupStageClear.gameObject.SetActive(false);
 
         popupGameOver = GetComponentInChildren<GameOverPopup>();
         popupGameOver.gameObject.SetActive(false);
@@ -62,7 +66,12 @@ public class PopupUIManager : MonoBehaviour
     public void EnableSettingPopup() {
         popupSetting.gameObject.SetActive(true);
     }
-
+    
+    public void EnableStageClearPopup(int curCount, int maxCount) {
+        popupStageClear.gameObject.SetActive(true);
+        popupStageClear.UpdateClearInfo(curCount, maxCount);
+    }
+    
     public void EnableGameOverPopup() {
         popupGameOver.gameObject.SetActive(true);
     }

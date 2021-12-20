@@ -17,6 +17,7 @@ public class Stage1 : MonoBehaviour
         if (GameManager.Instance.stageData.data[GameStage.Stage1].minSlimeCount <= x)
         {
             finalDoor.SetActive(true);
+            GameManager.Instance.StartStageClear();
         }
     }
 }

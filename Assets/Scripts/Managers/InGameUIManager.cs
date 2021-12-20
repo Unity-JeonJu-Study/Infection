@@ -119,7 +119,7 @@ public class InGameUIManager : MonoBehaviour
         textObjective.alignment = TextAlignmentOptions.Center;
 
 
-        if(isSubObjective)
+        if(!isSubObjective)
             textObjective.fontSize = 70;
         else
             textObjective.fontSize = 36;

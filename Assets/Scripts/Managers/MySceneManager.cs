@@ -12,6 +12,7 @@ public class MySceneManager : MonoBehaviour
     [ReadOnly, SerializeField] private LoadingPopup loadingPopup;
     [ReadOnly, SerializeField] private bool isLoadingPopupDisabled;
     private WaitForSeconds waitTimeForLoading;
+    private int curProgress;
 
 
     private void Awake() {
@@ -41,7 +42,7 @@ public class MySceneManager : MonoBehaviour
         if(isRelatedToMainMenu)
             StartCoroutine(LoadAsynchronously(sceneName));
         else
-            ;
+            ShowLoadingPopupForTwoSeconds();
     }
 
     private IEnumerator LoadAsynchronously(string sceneName) {
@@ -57,11 +58,15 @@ public class MySceneManager : MonoBehaviour
         DisableLoadingPopup();
     }
 
-    private IEnumerator ShowLoadingPopupForSeconds(float time) {
+    private IEnumerator ShowLoadingPopupForTwoSeconds() {
         EnableLoadingPopup();
 
-        WaitForSeconds seconds = new WaitForSeconds(time);
-        yield return seconds;
+        curProgress = 0;
+        while(curProgress < 100) {
+            loadingPopup.progressBar.currentPercent = curProgress;
+            yield return waitTimeForLoading;
+            curProgress++;
+        }
 
         DisableLoadingPopup();
     }

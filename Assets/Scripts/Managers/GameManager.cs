@@ -90,6 +90,8 @@ public class GameManager : SerializedMonoBehaviour
     [Button("Update Stage Info & Prefab")]
     private void UpdateStage(GameStage stage)
     {
+        MySceneManager.instance.LoadScene("Main Play Scene", false);
+
         // Update stage information
         currentStage = stage;
         CurrentQuestList = new Queue<Quest>(stageData.data[currentStage].quest.questList); // copy queue

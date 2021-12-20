@@ -18,8 +18,5 @@ public class Stage1 : MonoBehaviour
         {
             finalDoor.SetActive(true);
         }
-        
     }
-    
-    
 }

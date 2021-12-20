@@ -31,7 +31,7 @@ public class StageData : SerializedScriptableObject
         public QuestList quest;
         public string bgm;
         public float limitTime;
-        public int minSlimCount;
-        public int maxSlimCount;
+        public int minSlimeCount;
+        public int maxSlimeCount;
     }
 }

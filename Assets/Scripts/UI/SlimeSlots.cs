@@ -29,4 +29,8 @@ public class SlimeSlots : MonoBehaviour
             curSlotsCount++;
         }
     }
+
+    public int GetCurSlotsCount() {
+        return curSlotsCount;
+    }
 }

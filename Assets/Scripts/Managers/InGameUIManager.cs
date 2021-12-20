@@ -80,7 +80,7 @@ public class InGameUIManager : MonoBehaviour
         textObjective.fontSize = 100;
         textObjective.alignment = TextAlignmentOptions.Center;
 
-        StartCoroutine("MoveObjectiveText");
+        StartCoroutine(MoveObjectiveText(isSubObjective));
     }   
 
     private IEnumerator MoveObjectiveText(bool isSubObjective) {
@@ -118,7 +118,11 @@ public class InGameUIManager : MonoBehaviour
         textObjective.rectTransform.anchorMax = Vector2.up;
         textObjective.alignment = TextAlignmentOptions.Center;
 
-        textObjective.fontSize = 36;
+
+        if(isSubObjective)
+            textObjective.fontSize = 70;
+        else
+            textObjective.fontSize = 36;
     }
 
     public void ResetSlimSlots() {

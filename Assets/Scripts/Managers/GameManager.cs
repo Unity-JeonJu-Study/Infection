@@ -224,7 +224,7 @@ public class GameManager : SerializedMonoBehaviour
             StopCoroutine("StartStageTimer");
     }
 
-    private void StartStageClear() {
+    public void StartStageClear() {
         PopupUIManager.instance.EnableStageClearPopup(InGameUIManager.instance.GetRescuedSlimeCount(), stageData.data[currentStage].maxSlimeCount);
     }
 

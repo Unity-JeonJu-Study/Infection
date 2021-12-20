@@ -61,6 +61,7 @@ public class GameManager : SerializedMonoBehaviour
     public GameObject mainCam;
     public Player player;
     private WaitForSeconds waitForOneSecond;
+    private WaitForSeconds waitForTwoSeconds;
 
     private void Awake() {
         Instance = this;
@@ -72,6 +73,7 @@ public class GameManager : SerializedMonoBehaviour
         player = FindObjectOfType<Player>();
         mainCam = GameObject.FindWithTag("MainCamera");
         waitForOneSecond = new WaitForSeconds(1f);
+        waitForTwoSeconds = new WaitForSeconds(2f);
     }
 
     private void Start()
@@ -225,7 +227,14 @@ public class GameManager : SerializedMonoBehaviour
     }
 
     public void StartStageClear() {
+        // if bgm exists, play it
         PopupUIManager.instance.EnableStageClearPopup(InGameUIManager.instance.GetRescuedSlimeCount(), stageData.data[currentStage].maxSlimeCount);
+        StartCoroutine("WarpPlayerToLab");
+    }
+
+    private IEnumerator WarpPlayerToLab() {
+        yield return waitForTwoSeconds;
+        UpdateStage(GameStage.Laboratory);
     }
 
     private void StartGameOver() {

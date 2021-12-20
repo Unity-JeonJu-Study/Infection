@@ -94,7 +94,10 @@ public class GameManager : SerializedMonoBehaviour
     public void SkipTutorialScene()
     {
         if(Input.GetKeyDown(KeyCode.Q))
+        {
+            MySceneManager.instance.UnLoadCutScene();
             EndTutorialScene();
+        }
     }
     public void EndTutorialScene()
     {
@@ -129,8 +132,8 @@ public class GameManager : SerializedMonoBehaviour
         {
             PoolManager.Instance.Despawn(roomParent.GetChild(i).gameObject);
         }
-        PoolManager.Instance.Spawn(stageData.data[currentStage].gamePrefab.name);
-        SpawnPoint = stageData.data[currentStage].gamePrefab.GetComponentInChildren<SpawnPoint>();
+        var newStage = PoolManager.Instance.Spawn(stageData.data[currentStage].gamePrefab.name);
+        SpawnPoint = newStage.GetComponentInChildren<SpawnPoint>();
         player.transform.position = SpawnPoint.transform.position;
         
         // switch BGM when stage changed
@@ -157,6 +160,7 @@ public class GameManager : SerializedMonoBehaviour
     public void ReSpawn()
     {
         player.transform.position = SpawnPoint.transform.position;
+        InitInGameUIForCurrentStage();
     }
 
     #region Click Event

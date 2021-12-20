@@ -19,6 +19,13 @@ public class Player : MonoBehaviour
     [HideInInspector] public AnimalData animalData;
 
 
+    private void Start()
+    {
+        sensor = GetComponent<Sensor>();
+        playerKinematics = GetComponent<PlayerKinematics>();
+        playerMovement = GetComponent<PlayerMovement>();
+    }
+
 
     public void InitMoveInformation(string animalName)
     {

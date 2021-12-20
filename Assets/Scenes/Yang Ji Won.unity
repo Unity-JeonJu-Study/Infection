@@ -1920,7 +1920,7 @@ MonoBehaviour:
   canJump: 0
   isInWater: 0
   cameraTransform: {fileID: 963194228}
-  cameraFollow: {fileID: 963194231}
+  cameraFollow: {fileID: 0}
   playerKinematics: {fileID: 0}
   _animator: {fileID: 0}
   playerInput: {fileID: 0}
@@ -4144,7 +4144,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1529969579509971
 GameObject:
   m_ObjectHideFlags: 0

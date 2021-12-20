@@ -12,9 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public bool canJump;
     public bool isInWater;
     public Movement movement;
-    public Transform cameraTransform;
     public CameraFollow cameraFollow;
-    [HideInInspector] public PlayerKinematics playerKinematics;
     [HideInInspector] public Animator _animator;
     [HideInInspector] public PlayerInput playerInput;
     [HideInInspector] public Rigidbody _rigidbody;
@@ -27,10 +25,10 @@ public class PlayerMovement : MonoBehaviour
     
     private void Start()
     {
+        cameraFollow = FindObjectOfType<CameraFollow>().GetComponent<CameraFollow>();
         player = GetComponent<Player>();
         _constantForce = GetComponent<ConstantForce>();
         sensor = GetComponent<Sensor>();
-        playerKinematics = GetComponent<PlayerKinematics>();
         playerInfect = GetComponent<PlayerInfect>();
         playerInput = GetComponent<PlayerInput>();
         _rigidbody = GetComponent<Rigidbody>();

@@ -141,7 +141,7 @@ public class InGameUIManager : MonoBehaviour
             textObjective.fontSize = 36;
 
         textObjective.gameObject.transform.SetParent(gameObjectObjectiveTexts.transform);
-        gameObjectObjectiveTexts.transform.position = new Vector3(-50, 620, 0);
+        gameObjectObjectiveTexts.transform.position = new Vector3(-50, 600, 0);
     }
 
     public void ResetSlimeSlots() {

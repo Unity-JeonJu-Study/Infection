@@ -19,7 +19,7 @@ public class SlimeSlots : MonoBehaviour
             curSlot.DisableRescuedSlimeSlot();
         }
 
-        for(int curIndex = GameManager.Instance.stageData.data[GameManager.Instance.currentStage].maxSlimCount; curIndex < maxSlotsCount; curIndex++)
+        for(int curIndex = GameManager.Instance.stageData.data[GameManager.Instance.currentStage].maxSlimeCount; curIndex < maxSlotsCount; curIndex++)
             slots[curIndex].gameObject.SetActive(false);
     }
 

@@ -160,7 +160,7 @@ public class GameManager : SerializedMonoBehaviour
         player.transform.position = SpawnPoint.transform.position;
         InitInGameUIForCurrentStage();
     }
-
+    
     #region Click Event
 
     public void OnClickPause() => currentState = GameState.PauseUI;
@@ -217,6 +217,11 @@ public class GameManager : SerializedMonoBehaviour
     public void StopStageTimer() {
         if(stageTimer != null)
             StopCoroutine("StartStageTimer");
+    }
+
+    private void StartStageClear() {
+        PopupUIManager.instance.EnableStageClearPopup(InGameUIManager.instance.GetRescuedSlimeCount(), stageData.data[currentStage].maxSlimeCount);
+
     }
 
     private void StartGameOver() {

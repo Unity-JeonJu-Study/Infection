@@ -53,17 +53,6 @@ public class InGameUIManager : MonoBehaviour
         waitTwoSeconds = new WaitForSeconds(2f);
     }
 
-    private void Update() {
-        // this code exists for debug purpose only
-        // if(Input.GetKeyDown(KeyCode.Escape))
-        //     PopupUIManager.instance.EnablePausePopup();
-        // if(Input.GetKeyDown(KeyCode.K))
-        //     ResetSlimSlots();
-
-        // if(Input.GetKeyDown(KeyCode.L))
-        //     AddOneRescuedSlimSlot();
-    }
-
     public void DisableAllInGameUIs() {
         gameObject.SetActive(false);
     }

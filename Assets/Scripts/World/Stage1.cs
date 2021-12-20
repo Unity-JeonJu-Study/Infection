@@ -14,12 +14,12 @@ public class Stage1 : MonoBehaviour
     {
         var x = InGameUIManager.instance.GetRescuedSlimeCount();
 
-        if (GameManager.Instance.stageData.data[GameStage.Stage1].minSlimCount <= x)
+        if (GameManager.Instance.stageData.data[GameStage.Stage1].minSlimeCount <= x)
         {
             finalDoor.SetActive(true);
         }
         
     }
-
-
+    
+    
 }

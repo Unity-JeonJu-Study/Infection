@@ -38,4 +38,9 @@ public class Player : MonoBehaviour
         playerKinematics.power = animalData.power;
         playerMovement.canJump = true;
     }
+
+    public void LoadCheckPoint()
+    {
+        transform.position = GameManager.Instance.SpawnPoint.transform.position;
+    }
 }

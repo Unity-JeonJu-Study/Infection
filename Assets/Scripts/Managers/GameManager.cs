@@ -149,6 +149,11 @@ public class GameManager : SerializedMonoBehaviour
         InGameUIManager.instance.UpdateObjectiveText(currentGoal.description, true);
     }
 
+    public void ReSpawn()
+    {
+        player.transform.position = SpawnPoint.transform.position;
+    }
+
     #region Click Event
 
     public void OnClickPause() => currentState = GameState.PauseUI;

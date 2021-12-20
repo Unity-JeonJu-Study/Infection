@@ -12,10 +12,12 @@ public enum GameState
 public enum GameStage
 { 
     Laboratory,
+    Zoo,
     Stage1,
     Stage2,
     Stage3
 }
+
 public enum BGMList
 {
     Intro,
@@ -38,8 +40,6 @@ public class GameManager : SerializedMonoBehaviour
     [TabGroup("Stage Info")]
     public GameStage currentStage;
     [TabGroup("Stage Info")]
-    public SpawnPoint SpawnPoint;
-    [TabGroup("Stage Info")]
     public Queue<Quest> CurrentQuestList;
     [TabGroup("Stage Info")]
     [ReadOnly, SerializeField] private int currentStageTime;
@@ -55,58 +55,40 @@ public class GameManager : SerializedMonoBehaviour
     public GameState currentState;
     
     // 맵 배치 상위 오브젝트
+    
     public Transform roomParent;
 
-    public GameObject mainCam;
     public Player player;
     private WaitForSeconds waitForOneSecond;
 
     private void Awake() {
         Instance = this;
-        
+
         stageData = Resources.Load<StageData>("Data/Stage/StageData");
         currentStage = GameStage.Laboratory;
         currentState = GameState.StartUI;
 
         player = FindObjectOfType<Player>();
-        player.transform.parent.gameObject.SetActive(false);
-        mainCam = GameObject.FindWithTag("MainCamera");
 
         waitForOneSecond = new WaitForSeconds(1f);
-        
-        InitStage();
     }
 
     private void Start()
     {
-        if(MySceneManager.instance.isInitial)
-            StartTutorialScene();       
+        InitStage();    
     }
 
-    [Button]
-    public void StartTutorialScene()
-    {
-        InGameUIManager.instance.DisableAllInGameUIs();
-
-        mainCam.SetActive(false);
-        MySceneManager.instance.LoadCutScene("Tutorial");
-    }
-    public void EndTutorialScene()
-    {
-        InGameUIManager.instance.EnableAllInGameUIs();
-        mainCam.SetActive(true);
-        UpdateStage(GameStage.Laboratory);
-    }
     private void InitStage()
     {
         foreach (var stage in stageData.data)
         {
-                PoolManager.Instance.InitPool(stage.Value.gamePrefab, 1, roomParent);
+            PoolManager.Instance.InitPool(stage.Value.gamePrefab, 1, roomParent);
         }
+        UpdateStage(currentStage);
     }
 
     [Button("Update Stage Info & Prefab")]
-    public void UpdateStage(GameStage stage)
+    private void UpdateStage(GameStage stage)
     {
         // Update stage information
         currentStage = stage;
@@ -119,14 +101,12 @@ public class GameManager : SerializedMonoBehaviour
             PoolManager.Instance.Despawn(roomParent.GetChild(i).gameObject);
         }
         PoolManager.Instance.Spawn(stageData.data[currentStage].gamePrefab.name);
-        SpawnPoint = stageData.data[currentStage].gamePrefab.GetComponentInChildren<SpawnPoint>();
+        
         // switch BGM when stage changed
         SoundManager.Instance.ClearBGM();
         SoundManager.Instance.PlayBGM(stageData.data[currentStage].bgm);
 
         InitInGameUIForCurrentStage();
-
-        MySceneManager.instance.DisableLoadingPopup();
     }
 
     [Button("Give me next Quest"),TabGroup("Quest Info")]
@@ -140,7 +120,7 @@ public class GameManager : SerializedMonoBehaviour
         CurrentQuestList.Dequeue();
         currentGoal = CurrentQuestList.Peek();
 
-        InGameUIManager.instance.UpdateObjectiveText(currentGoal.description);
+        InGameUIManager.instance.UpdateObjectiveText(currentGoal.description, true);
     }
 
     #region Click Event
@@ -157,7 +137,8 @@ public class GameManager : SerializedMonoBehaviour
     }
 
     public void InitInGameUIForCurrentStage() {
-        InGameUIManager.instance.UpdateObjectiveText(currentGoal.description);
+        InGameUIManager.instance.UpdateObjectiveText("Rescue Slims", false);
+        InGameUIManager.instance.UpdateObjectiveText(currentGoal.description, true);
 
         InGameUIManager.instance.ResetSlimSlots();
 

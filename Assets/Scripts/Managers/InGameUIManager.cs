@@ -8,7 +8,8 @@ public class InGameUIManager : MonoBehaviour
 {
     [ReadOnly] public static InGameUIManager instance;
 
-    [ReadOnly, SerializeField] private TextMeshProUGUI textObjective;
+    [ReadOnly, SerializeField] private TextMeshProUGUI textMainObjective;
+    [ReadOnly, SerializeField] private TextMeshProUGUI textSubObjective;
     [ReadOnly, SerializeField] private SlimSlots slimSlots;
     [ReadOnly, SerializeField] private TextMeshProUGUI textTime;
     [ReadOnly, SerializeField] private ItemSlots itemSlots;
@@ -26,8 +27,9 @@ public class InGameUIManager : MonoBehaviour
         instance = this;
 
         TextMeshProUGUI[] texts = GetComponentsInChildren<TextMeshProUGUI>();        
-        textObjective = texts[0];
-        textTime = texts[1];
+        textMainObjective = texts[0];
+        textSubObjective = texts[1];
+        textTime = texts[2];
 
         slimSlots = GetComponentInChildren<SlimSlots>();
         itemSlots = GetComponentInChildren<ItemSlots>();
@@ -62,9 +64,15 @@ public class InGameUIManager : MonoBehaviour
         gameObject.SetActive(true);
     }
 
-    public void UpdateObjectiveText(string newObjective) {
-        textObjective.text = newObjective;
+    public void UpdateObjectiveText(string newObjective, bool isSubObjective) {
+        TextMeshProUGUI textObjective;
+        if(isSubObjective)
+            textObjective = textSubObjective;
+        else
+            textObjective = textMainObjective;
 
+
+        textObjective.text = newObjective;
 
         textObjective.rectTransform.pivot = vectorCenter;
         textObjective.rectTransform.anchorMin = vectorCenter;
@@ -75,7 +83,13 @@ public class InGameUIManager : MonoBehaviour
         StartCoroutine("MoveObjectiveText");
     }   
 
-    private IEnumerator MoveObjectiveText() {
+    private IEnumerator MoveObjectiveText(bool isSubObjective) {
+        TextMeshProUGUI textObjective;
+        if(isSubObjective)
+            textObjective = textSubObjective;
+        else
+            textObjective = textMainObjective;
+
         yield return waitTwoSeconds;
 
         for(Vector2 vectorTemp = textObjective.rectTransform.pivot; textObjective.rectTransform.pivot.x > 0.1; vectorTemp.x -= 0.01f, vectorTemp.y += 0.01f) {
@@ -88,10 +102,17 @@ public class InGameUIManager : MonoBehaviour
             yield return waitTime;
         }
 
-        FinalizeObjectiveText(); 
+        FinalizeObjectiveText(isSubObjective); 
     }
 
-    private void FinalizeObjectiveText() {
+    private void FinalizeObjectiveText(bool isSubObjective) {
+        TextMeshProUGUI textObjective;
+        if(isSubObjective)
+            textObjective = textSubObjective;
+        else
+            textObjective = textMainObjective;
+
+
         textObjective.rectTransform.pivot = Vector2.up;
         textObjective.rectTransform.anchorMin = Vector2.up;
         textObjective.rectTransform.anchorMax = Vector2.up;

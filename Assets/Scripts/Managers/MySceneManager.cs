@@ -35,9 +35,13 @@ public class MySceneManager : MonoBehaviour
         isLoadingPopupDisabled = true;
     }
 
-    public void LoadScene(string sceneName) {
+    public void LoadScene(string sceneName, bool isRelatedToMainMenu = true) {
         curSceneName = sceneName;
-        StartCoroutine(LoadAsynchronously(sceneName));
+
+        if(isRelatedToMainMenu)
+            StartCoroutine(LoadAsynchronously(sceneName));
+        else
+            ;
     }
 
     private IEnumerator LoadAsynchronously(string sceneName) {
@@ -49,6 +53,15 @@ public class MySceneManager : MonoBehaviour
             loadingPopup.progressBar.currentPercent = operation.progress * 100f;
             yield return waitTimeForLoading;
         }
+
+        DisableLoadingPopup();
+    }
+
+    private IEnumerator ShowLoadingPopupForSeconds(float time) {
+        EnableLoadingPopup();
+
+        WaitForSeconds seconds = new WaitForSeconds(time);
+        yield return seconds;
 
         DisableLoadingPopup();
     }

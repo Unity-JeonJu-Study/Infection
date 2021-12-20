@@ -16,7 +16,6 @@ public enum GameStage
     Stage2,
     Stage3
 }
-
 public enum BGMList
 {
     Intro,

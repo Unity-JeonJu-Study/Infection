@@ -9266,6 +9266,8 @@ MonoBehaviour:
   horizontal: 1
   speed: 3
   offset: 0
+  isOnPlayer: 0
+  startPos: {x: 0, y: 0, z: 0}
 --- !u!1001 &2028706385156998452
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9391,6 +9393,8 @@ MonoBehaviour:
   horizontal: 0
   speed: 4
   offset: 0
+  isOnPlayer: 0
+  startPos: {x: 0, y: 0, z: 0}
 --- !u!1001 &4523074378582716174
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9608,6 +9612,8 @@ MonoBehaviour:
   horizontal: 1
   speed: 3
   offset: 0
+  isOnPlayer: 0
+  startPos: {x: 0, y: 0, z: 0}
 --- !u!1001 &7317808236863136098
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9720,6 +9726,8 @@ MonoBehaviour:
   horizontal: 1
   speed: 3
   offset: 0
+  isOnPlayer: 0
+  startPos: {x: 0, y: 0, z: 0}
 --- !u!1001 &7429184425774824551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9955,6 +9963,8 @@ MonoBehaviour:
   horizontal: 1
   speed: 3
   offset: 0
+  isOnPlayer: 0
+  startPos: {x: 0, y: 0, z: 0}
 --- !u!1001 &7616418305944903143
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12176,12 +12186,12 @@ PrefabInstance:
     - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
         type: 3}
       propertyPath: deepColor.g
-      value: 0.36671177
+      value: 0.36668047
       objectReference: {fileID: 0}
     - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
         type: 3}
       propertyPath: deepColor.r
-      value: 0.04156305
+      value: 0.041540727
       objectReference: {fileID: 0}
     - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
         type: 3}
@@ -12226,7 +12236,7 @@ PrefabInstance:
     - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
         type: 3}
       propertyPath: shoreColor.r
-      value: 0.04325092
+      value: 0.04322973
       objectReference: {fileID: 0}
     - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
         type: 3}
@@ -12261,7 +12271,7 @@ PrefabInstance:
     - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
         type: 3}
       propertyPath: horizonColor.g
-      value: 0.35406333
+      value: 0.35403204
       objectReference: {fileID: 0}
     - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
         type: 3}
@@ -12281,7 +12291,7 @@ PrefabInstance:
     - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
         type: 3}
       propertyPath: shallowColor.r
-      value: 0.090144895
+      value: 0.09011928
       objectReference: {fileID: 0}
     - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
         type: 3}
@@ -12381,12 +12391,12 @@ PrefabInstance:
     - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
         type: 3}
       propertyPath: underwaterColor.g
-      value: 0.41172042
+      value: 0.41168916
       objectReference: {fileID: 0}
     - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
         type: 3}
       propertyPath: underwaterColor.r
-      value: 0.32936752
+      value: 0.32933623
       objectReference: {fileID: 0}
     - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
         type: 3}
@@ -13217,10 +13227,10 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   colorGradientTexture: {fileID: 0}
-  shallowColor: {r: 0.08390913, g: 0.72384137, b: 0.7735849, a: 1}
-  deepColor: {r: 0, g: 0.24867162, b: 0.6784314, a: 1}
+  shallowColor: {r: 0.08389608, g: 0.72384137, b: 0.7735849, a: 1}
+  deepColor: {r: 0, g: 0.24865839, b: 0.6784314, a: 1}
   colorDepth: 2.59
-  horizonColor: {r: 0, g: 0.22743323, b: 0.8, a: 1}
+  horizonColor: {r: 0, g: 0.22742, b: 0.8, a: 1}
   horizonDistance: 20
   shoreFade: 0
   shoreColor: {r: 0, g: 0.831468, b: 0.98039216, a: 0}
@@ -16353,7 +16363,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4478677164199236, guid: 96ec3966e2e9e004086cf5209750e0b2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -44.82
+      value: -44.75
       objectReference: {fileID: 0}
     - target: {fileID: 4478677164199236, guid: 96ec3966e2e9e004086cf5209750e0b2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -17342,6 +17352,8 @@ MonoBehaviour:
   horizontal: 1
   speed: 3
   offset: 0
+  isOnPlayer: 0
+  startPos: {x: 0, y: 0, z: 0}
 --- !u!1001 &7616418307097029176
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20897,12 +20909,12 @@ PrefabInstance:
     - target: {fileID: 3571767707691462230, guid: b1b6a4a4712a0364bbffc21e45491ba2,
         type: 3}
       propertyPath: deepColor.g
-      value: 0.3667118
+      value: 0.3666805
       objectReference: {fileID: 0}
     - target: {fileID: 3571767707691462230, guid: b1b6a4a4712a0364bbffc21e45491ba2,
         type: 3}
       propertyPath: deepColor.r
-      value: 0.04156307
+      value: 0.04154075
       objectReference: {fileID: 0}
     - target: {fileID: 3571767707691462230, guid: b1b6a4a4712a0364bbffc21e45491ba2,
         type: 3}
@@ -20942,7 +20954,7 @@ PrefabInstance:
     - target: {fileID: 3571767707691462230, guid: b1b6a4a4712a0364bbffc21e45491ba2,
         type: 3}
       propertyPath: shoreColor.r
-      value: 0.043250933
+      value: 0.04322975
       objectReference: {fileID: 0}
     - target: {fileID: 3571767707691462230, guid: b1b6a4a4712a0364bbffc21e45491ba2,
         type: 3}
@@ -20977,7 +20989,7 @@ PrefabInstance:
     - target: {fileID: 3571767707691462230, guid: b1b6a4a4712a0364bbffc21e45491ba2,
         type: 3}
       propertyPath: horizonColor.g
-      value: 0.35406336
+      value: 0.35403207
       objectReference: {fileID: 0}
     - target: {fileID: 3571767707691462230, guid: b1b6a4a4712a0364bbffc21e45491ba2,
         type: 3}
@@ -20997,7 +21009,7 @@ PrefabInstance:
     - target: {fileID: 3571767707691462230, guid: b1b6a4a4712a0364bbffc21e45491ba2,
         type: 3}
       propertyPath: shallowColor.r
-      value: 0.090144925
+      value: 0.09011931
       objectReference: {fileID: 0}
     - target: {fileID: 3571767707691462230, guid: b1b6a4a4712a0364bbffc21e45491ba2,
         type: 3}
@@ -21097,12 +21109,12 @@ PrefabInstance:
     - target: {fileID: 3571767707691462230, guid: b1b6a4a4712a0364bbffc21e45491ba2,
         type: 3}
       propertyPath: underwaterColor.g
-      value: 0.41172048
+      value: 0.4116892
       objectReference: {fileID: 0}
     - target: {fileID: 3571767707691462230, guid: b1b6a4a4712a0364bbffc21e45491ba2,
         type: 3}
       propertyPath: underwaterColor.r
-      value: 0.32936755
+      value: 0.32933626
       objectReference: {fileID: 0}
     - target: {fileID: 3571767707691462230, guid: b1b6a4a4712a0364bbffc21e45491ba2,
         type: 3}

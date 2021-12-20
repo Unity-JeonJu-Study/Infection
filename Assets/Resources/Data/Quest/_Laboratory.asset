@@ -26,31 +26,16 @@ MonoBehaviour:
       Data: 0|System.Collections.Generic.Queue`1[[Quest, Assembly-CSharp]], System
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 7
       Data: 1|Quest, Assembly-CSharp
     - Name: questName
       Entry: 1
-      Data: Find MasterKey
+      Data: Go Stage1 Portal
     - Name: description
       Entry: 1
-      Data: Find MasterKey
-    - Name: isComplete
-      Entry: 5
-      Data: false
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 2|Quest, Assembly-CSharp
-    - Name: questName
-      Entry: 1
-      Data: Escape Lab
-    - Name: description
-      Entry: 1
-      Data: Escape Lab
+      Data: Go Stage1 Portal
     - Name: isComplete
       Entry: 5
       Data: false

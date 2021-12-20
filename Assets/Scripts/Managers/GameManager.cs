@@ -40,6 +40,8 @@ public class GameManager : SerializedMonoBehaviour
     [TabGroup("Stage Info")]
     public GameStage currentStage;
     [TabGroup("Stage Info")]
+    public SpawnPoint SpawnPoint;
+    [TabGroup("Stage Info")]
     public Queue<Quest> CurrentQuestList;
     [TabGroup("Stage Info")]
     [ReadOnly, SerializeField] private int currentStageTime;
@@ -58,6 +60,7 @@ public class GameManager : SerializedMonoBehaviour
     
     public Transform roomParent;
 
+    public GameObject mainCam;
     public Player player;
     private WaitForSeconds waitForOneSecond;
 
@@ -69,13 +72,28 @@ public class GameManager : SerializedMonoBehaviour
         currentState = GameState.StartUI;
 
         player = FindObjectOfType<Player>();
-
+        mainCam = GameObject.FindWithTag("MainCamera");
         waitForOneSecond = new WaitForSeconds(1f);
     }
 
     private void Start()
     {
         InitStage();    
+    }
+    
+    [Button]
+    public void StartTutorialScene()
+    {
+        InGameUIManager.instance.DisableAllInGameUIs();
+
+        mainCam.SetActive(false);
+        MySceneManager.instance.LoadCutScene("Tutorial");
+    }
+    public void EndTutorialScene()
+    {
+        InGameUIManager.instance.EnableAllInGameUIs();
+        mainCam.SetActive(true);
+        UpdateStage(GameStage.Laboratory);
     }
 
     private void InitStage()
@@ -88,7 +106,7 @@ public class GameManager : SerializedMonoBehaviour
     }
 
     [Button("Update Stage Info & Prefab")]
-    private void UpdateStage(GameStage stage)
+    public void UpdateStage(GameStage stage)
     {
         MySceneManager.instance.LoadScene("Main Play Scene", false);
 
@@ -103,6 +121,10 @@ public class GameManager : SerializedMonoBehaviour
             PoolManager.Instance.Despawn(roomParent.GetChild(i).gameObject);
         }
         PoolManager.Instance.Spawn(stageData.data[currentStage].gamePrefab.name);
+        SpawnPoint = stageData.data[currentStage].gamePrefab.GetComponentInChildren<SpawnPoint>();
+        if(!player.gameObject.activeSelf)
+            player.gameObject.SetActive(true);
+        player.transform.position = SpawnPoint.transform.position;
         
         // switch BGM when stage changed
         SoundManager.Instance.ClearBGM();

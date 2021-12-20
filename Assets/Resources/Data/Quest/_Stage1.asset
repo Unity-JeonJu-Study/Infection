@@ -32,10 +32,10 @@ MonoBehaviour:
       Data: 1|Quest, Assembly-CSharp
     - Name: questName
       Entry: 1
-      Data: Find friends
+      Data: Find Battery
     - Name: description
       Entry: 1
-      Data: FInd friens
+      Data: Find Battery
     - Name: isComplete
       Entry: 5
       Data: false

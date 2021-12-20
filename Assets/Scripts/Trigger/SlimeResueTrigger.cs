@@ -10,6 +10,7 @@ public class SlimeResueTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             InGameUIManager.instance.AddOneRescuedSlimeSlot();
+            Destroy(gameObject);
         }
     }
 }

@@ -11,6 +11,8 @@ TagManager:
   - HeavyObject
   - PressableObject
   - Slime(item)
+  - Wall
+  - Platform
   layers:
   - Default
   - TransparentFX

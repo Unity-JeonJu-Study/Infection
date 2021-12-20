@@ -193,7 +193,7 @@ public class GameManager : SerializedMonoBehaviour
             stageTimer = StartCoroutine("StartStageTimer");
         }
 
-        InGameUIManager.instance.UpdateItemIcons();
+        // InGameUIManager.instance.UpdateItemIcons();
     }
 
     public IEnumerator StartStageTimer() {

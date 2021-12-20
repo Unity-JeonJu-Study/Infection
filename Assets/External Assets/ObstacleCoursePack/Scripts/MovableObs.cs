@@ -8,9 +8,11 @@ public class MovableObs : MonoBehaviour
 	public bool horizontal = true; //If the movement is horizontal or vertical
 	public float speed = 3f;
 	public float offset = 0f; //If yo want to modify the position at the start 
+	public bool isOnPlayer;
 
 	private bool isForward = true; //If the movement is out
-	private Vector3 startPos;
+	public Vector3 startPos;
+	private Transform playerTransform;
    
     void Awake()
     {
@@ -24,22 +26,48 @@ public class MovableObs : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		Move(transform);
+		// if (isOnPlayer)
+		// {
+		// 	Move(playerTransform);
+		// }
+    }
+
+	private void OnTriggerEnter(Collider other) {
+		if (other.CompareTag("Player"))
+		{
+			playerTransform = other.transform;
+			isOnPlayer = true;
+			playerTransform.gameObject.transform.parent.transform.SetParent(this.gameObject.transform);
+		}
+	}
+
+	private void OnTriggerExit(Collider other) {
+		if (other.CompareTag("Player"))
+		{
+			playerTransform.gameObject.transform.parent.transform.SetParent(null);
+			isOnPlayer = false;
+		}
+	}
+
+	private void Move(Transform origin)
+	{
 		if (horizontal)
 		{
 			if (isForward)
 			{
-				if (transform.position.x < startPos.x + distance)
+				if (origin.position.x < startPos.x + distance)
 				{
-					transform.position += Vector3.right * Time.deltaTime * speed;
+					origin.position += Vector3.right * Time.deltaTime * speed;
 				}
 				else
 					isForward = false;
 			}
 			else
 			{
-				if (transform.position.x > startPos.x)
+				if (origin.position.x > startPos.x)
 				{
-					transform.position -= Vector3.right * Time.deltaTime * speed;
+					origin.position -= Vector3.right * Time.deltaTime * speed;
 				}
 				else
 					isForward = true;
@@ -49,22 +77,22 @@ public class MovableObs : MonoBehaviour
 		{
 			if (isForward)
 			{
-				if (transform.position.z < startPos.z + distance)
+				if (origin.position.z < startPos.z + distance)
 				{
-					transform.position += Vector3.forward * Time.deltaTime * speed;
+					origin.position += Vector3.forward * Time.deltaTime * speed;
 				}
 				else
 					isForward = false;
 			}
 			else
 			{
-				if (transform.position.z > startPos.z)
+				if (origin.position.z > startPos.z)
 				{
-					transform.position -= Vector3.forward * Time.deltaTime * speed;
+					origin.position -= Vector3.forward * Time.deltaTime * speed;
 				}
 				else
 					isForward = true;
 			}
 		}
-    }
+	}
 }

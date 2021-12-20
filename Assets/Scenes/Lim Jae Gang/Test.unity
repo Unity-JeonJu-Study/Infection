@@ -3162,28 +3162,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1437041712, guid: d4cbdb3a5068d044585f7f051659ace4, type: 3}
-      propertyPath: Damping.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1437041712, guid: d4cbdb3a5068d044585f7f051659ace4, type: 3}
-      propertyPath: Damping.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1437041712, guid: d4cbdb3a5068d044585f7f051659ace4, type: 3}
-      propertyPath: Damping.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1869339497978946338, guid: d4cbdb3a5068d044585f7f051659ace4,
-        type: 3}
-      propertyPath: m_Lens.FieldOfView
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 1869339498630934201, guid: d4cbdb3a5068d044585f7f051659ace4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6914573057225144514, guid: d4cbdb3a5068d044585f7f051659ace4,
         type: 3}
       propertyPath: m_RootOrder

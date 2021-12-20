@@ -8,7 +8,6 @@ public class MovableObs : MonoBehaviour
 	public bool horizontal = true; //If the movement is horizontal or vertical
 	public float speed = 3f;
 	public float offset = 0f; //If yo want to modify the position at the start 
-	public bool isOnPlayer;
 
 	private bool isForward = true; //If the movement is out
 	public Vector3 startPos;
@@ -27,26 +26,21 @@ public class MovableObs : MonoBehaviour
     void Update()
     {
 		Move(transform);
-		// if (isOnPlayer)
-		// {
-		// 	Move(playerTransform);
-		// }
+	
     }
 
 	private void OnTriggerEnter(Collider other) {
 		if (other.CompareTag("Player"))
 		{
 			playerTransform = other.transform;
-			isOnPlayer = true;
 			playerTransform.gameObject.transform.parent.transform.SetParent(this.gameObject.transform);
 		}
 	}
-
+	
 	private void OnTriggerExit(Collider other) {
 		if (other.CompareTag("Player"))
 		{
 			playerTransform.gameObject.transform.parent.transform.SetParent(null);
-			isOnPlayer = false;
 		}
 	}
 

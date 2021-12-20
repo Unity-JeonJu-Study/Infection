@@ -234,7 +234,7 @@ public class GameManager : SerializedMonoBehaviour
 
     private IEnumerator WarpPlayerToLab() {
         yield return waitForTwoSeconds;
-        UpdateStage(GameStage.Laboratory);
+        PopupUIManager.instance.DisableStageClearPopup();
     }
 
     private void StartGameOver() {

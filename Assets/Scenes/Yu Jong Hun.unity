@@ -5306,10 +5306,10 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   colorGradientTexture: {fileID: 0}
-  shallowColor: {r: 0.083896, g: 0.72384137, b: 0.7735849, a: 1}
-  deepColor: {r: 0, g: 0.24865833, b: 0.6784314, a: 1}
+  shallowColor: {r: 0.083895974, g: 0.72384137, b: 0.7735849, a: 1}
+  deepColor: {r: 0, g: 0.2486583, b: 0.6784314, a: 1}
   colorDepth: 2.59
-  horizonColor: {r: 0, g: 0.22741994, b: 0.8, a: 1}
+  horizonColor: {r: 0, g: 0.22741991, b: 0.8, a: 1}
   horizonDistance: 20
   shoreFade: 0
   shoreColor: {r: 0, g: 0.831468, b: 0.98039216, a: 0}
@@ -22138,7 +22138,7 @@ Transform:
   m_GameObject: {fileID: 748904516920230958}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -4.1800003, y: -0.09000015, z: 0.51999855}
-  m_LocalScale: {x: 5.6832, y: 5.6832, z: 5.6832}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 4544149984291027936}
   - {fileID: 4544149984291027954}
@@ -22248,7 +22248,7 @@ Transform:
   m_GameObject: {fileID: 748904517070178246}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -11.09, y: -0.09000015, z: 8.4}
-  m_LocalScale: {x: 5.6832, y: 5.6832, z: 5.6832}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 4544149984375961608}
   - {fileID: 4544149984375961626}

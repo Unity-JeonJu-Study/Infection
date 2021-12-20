@@ -78,6 +78,8 @@ public class GameManager : SerializedMonoBehaviour
 
     private void Start()
     {
+        if(MySceneManager.instance.isInitial)
+            StartTutorialScene();       
         InitStage();    
     }
     
@@ -89,11 +91,19 @@ public class GameManager : SerializedMonoBehaviour
         mainCam.SetActive(false);
         MySceneManager.instance.LoadCutScene("Tutorial");
     }
+    public void SkipTutorialScene()
+    {
+        if(Input.GetKeyDown(KeyCode.Q))
+            EndTutorialScene();
+    }
     public void EndTutorialScene()
     {
         InGameUIManager.instance.EnableAllInGameUIs();
         mainCam.SetActive(true);
         UpdateStage(GameStage.Laboratory);
+        
+        if(!player.gameObject.activeSelf)
+            player.gameObject.SetActive(true);
     }
 
     private void InitStage()
@@ -102,7 +112,6 @@ public class GameManager : SerializedMonoBehaviour
         {
             PoolManager.Instance.InitPool(stage.Value.gamePrefab, 1, roomParent);
         }
-        UpdateStage(currentStage);
     }
 
     [Button("Update Stage Info & Prefab")]
@@ -122,8 +131,6 @@ public class GameManager : SerializedMonoBehaviour
         }
         PoolManager.Instance.Spawn(stageData.data[currentStage].gamePrefab.name);
         SpawnPoint = stageData.data[currentStage].gamePrefab.GetComponentInChildren<SpawnPoint>();
-        if(!player.gameObject.activeSelf)
-            player.gameObject.SetActive(true);
         player.transform.position = SpawnPoint.transform.position;
         
         // switch BGM when stage changed
@@ -147,6 +154,11 @@ public class GameManager : SerializedMonoBehaviour
         InGameUIManager.instance.UpdateObjectiveText(currentGoal.description, true);
     }
 
+    public void ReSpawn()
+    {
+        player.transform.position = SpawnPoint.transform.position;
+    }
+
     #region Click Event
 
     public void OnClickPause() => currentState = GameState.PauseUI;
@@ -158,13 +170,14 @@ public class GameManager : SerializedMonoBehaviour
     private void Update() {
         if(Input.GetKeyDown(KeyCode.Escape))
             PopupUIManager.instance.EnablePausePopup();
+        SkipTutorialScene();
     }
 
     public void InitInGameUIForCurrentStage() {
-        InGameUIManager.instance.UpdateObjectiveText("Rescue Slims", false);
+        InGameUIManager.instance.UpdateObjectiveText("Rescue Slimes", false);
         InGameUIManager.instance.UpdateObjectiveText(currentGoal.description, true);
 
-        InGameUIManager.instance.ResetSlimSlots();
+        InGameUIManager.instance.ResetSlimeSlots();
 
         if(GameManager.Instance.currentStage == GameStage.Laboratory)
             InGameUIManager.instance.DisableTimeText();

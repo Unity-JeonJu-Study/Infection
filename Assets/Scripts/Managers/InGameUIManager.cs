@@ -2,15 +2,18 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class InGameUIManager : MonoBehaviour
 {
     [ReadOnly] public static InGameUIManager instance;
 
+    [ReadOnly, SerializeField] private GameObject gameObjectCanvas;
+    [ReadOnly, SerializeField] private GameObject gameObjectObjectiveTexts;
     [ReadOnly, SerializeField] private TextMeshProUGUI textMainObjective;
     [ReadOnly, SerializeField] private TextMeshProUGUI textSubObjective;
-    [ReadOnly, SerializeField] private SlimSlots slimSlots;
+    [ReadOnly, SerializeField] private SlimeSlots slimeSlots;
     [ReadOnly, SerializeField] private TextMeshProUGUI textTime;
     [ReadOnly, SerializeField] private ItemSlots itemSlots;
 
@@ -26,12 +29,15 @@ public class InGameUIManager : MonoBehaviour
     private void Awake() {
         instance = this;
 
+        gameObjectCanvas = GetComponentInChildren<Canvas>().gameObject;
+        gameObjectObjectiveTexts = GetComponentInChildren<VerticalLayoutGroup>().gameObject;
+
         TextMeshProUGUI[] texts = GetComponentsInChildren<TextMeshProUGUI>();        
         textMainObjective = texts[0];
         textSubObjective = texts[1];
         textTime = texts[2];
 
-        slimSlots = GetComponentInChildren<SlimSlots>();
+        slimeSlots = GetComponentInChildren<SlimeSlots>();
         itemSlots = GetComponentInChildren<ItemSlots>();
 
 
@@ -71,16 +77,24 @@ public class InGameUIManager : MonoBehaviour
         else
             textObjective = textMainObjective;
 
+        textObjective.gameObject.transform.SetParent(gameObjectCanvas.transform);
 
         textObjective.text = newObjective;
 
         textObjective.rectTransform.pivot = vectorCenter;
         textObjective.rectTransform.anchorMin = vectorCenter;
         textObjective.rectTransform.anchorMax = vectorCenter;
-        textObjective.fontSize = 100;
         textObjective.alignment = TextAlignmentOptions.Center;
 
-        StartCoroutine("MoveObjectiveText");
+        if(isSubObjective) {
+            textObjective.fontSize = 100;
+            textObjective.transform.position = new Vector3(textObjective.transform.position.x, 100, textObjective.transform.position.z);
+        }
+        else {
+            textObjective.fontSize = 130;
+            textObjective.transform.position = new Vector3(textObjective.transform.position.x, 350, textObjective.transform.position.z);
+        }
+        StartCoroutine(MoveObjectiveText(isSubObjective));
     }   
 
     private IEnumerator MoveObjectiveText(bool isSubObjective) {
@@ -118,15 +132,22 @@ public class InGameUIManager : MonoBehaviour
         textObjective.rectTransform.anchorMax = Vector2.up;
         textObjective.alignment = TextAlignmentOptions.Center;
 
-        textObjective.fontSize = 36;
+
+        if(!isSubObjective)
+            textObjective.fontSize = 70;
+        else
+            textObjective.fontSize = 36;
+
+        textObjective.gameObject.transform.SetParent(gameObjectObjectiveTexts.transform);
+        gameObjectObjectiveTexts.transform.position = new Vector3(-50, 620, 0);
     }
 
-    public void ResetSlimSlots() {
-        slimSlots.ResetSlimSlots();
+    public void ResetSlimeSlots() {
+        slimeSlots.ResetSlimeSlots();
     }
 
-    public void AddOneRescuedSlimSlot() {
-        slimSlots.AddOneRescuedSlimSlot();
+    public void AddOneRescuedSlimeSlot() {
+        slimeSlots.AddOneRescuedSlimeSlot();
     }
 
     public void EnableTimeText() {

@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 15, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &3164425448395014345
@@ -208,9 +208,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2064036234519219164}
   - component: {fileID: 2064036234519219163}
-  - component: {fileID: 2064036234519219162}
+  - component: {fileID: 6004303274127194817}
   m_Layer: 5
-  m_Name: RescuedSlims
+  m_Name: RescuedSlimes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -271,7 +271,7 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &2064036234519219162
+--- !u!114 &6004303274127194817
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -521,7 +521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e76516e585a2424f9b2f83c95295b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageRescuedSlim: {fileID: 0}
+  imageRescuedSlime: {fileID: 0}
 --- !u!1 &2064036234788808532
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,7 +607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e76516e585a2424f9b2f83c95295b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageRescuedSlim: {fileID: 0}
+  imageRescuedSlime: {fileID: 0}
 --- !u!1 &2064036234850778384
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,7 +1280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e76516e585a2424f9b2f83c95295b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageRescuedSlim: {fileID: 0}
+  imageRescuedSlime: {fileID: 0}
 --- !u!1 &2064036235133811950
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,7 +1331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e76516e585a2424f9b2f83c95295b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageRescuedSlim: {fileID: 0}
+  imageRescuedSlime: {fileID: 0}
 --- !u!1 &2064036235239512304
 GameObject:
   m_ObjectHideFlags: 0
@@ -1536,7 +1536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e76516e585a2424f9b2f83c95295b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageRescuedSlim: {fileID: 0}
+  imageRescuedSlime: {fileID: 0}
 --- !u!1 &2064036235456396224
 GameObject:
   m_ObjectHideFlags: 0
@@ -1587,7 +1587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e76516e585a2424f9b2f83c95295b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageRescuedSlim: {fileID: 0}
+  imageRescuedSlime: {fileID: 0}
 --- !u!1 &2064036235470549003
 GameObject:
   m_ObjectHideFlags: 0
@@ -2190,7 +2190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e76516e585a2424f9b2f83c95295b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageRescuedSlim: {fileID: 0}
+  imageRescuedSlime: {fileID: 0}
 --- !u!1 &2064036235802468910
 GameObject:
   m_ObjectHideFlags: 0
@@ -2739,7 +2739,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e76516e585a2424f9b2f83c95295b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageRescuedSlim: {fileID: 0}
+  imageRescuedSlime: {fileID: 0}
 --- !u!1 &2064036236138797439
 GameObject:
   m_ObjectHideFlags: 0
@@ -3125,7 +3125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e76516e585a2424f9b2f83c95295b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageRescuedSlim: {fileID: 0}
+  imageRescuedSlime: {fileID: 0}
 --- !u!1 &2064036236564971160
 GameObject:
   m_ObjectHideFlags: 0
@@ -3266,7 +3266,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Rescue Slims
+  m_text: Rescue Slimes
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3460,7 +3460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e76516e585a2424f9b2f83c95295b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imageRescuedSlim: {fileID: 0}
+  imageRescuedSlime: {fileID: 0}
 --- !u!1 &8913220749218057501
 GameObject:
   m_ObjectHideFlags: 0
@@ -3676,8 +3676,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93abac44653bd334892db4c97bf7c848, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textObjective: {fileID: 0}
-  slimSlots: {fileID: 0}
+  gameObjectCanvas: {fileID: 0}
+  gameObjectObjectiveTexts: {fileID: 0}
+  textMainObjective: {fileID: 0}
+  textSubObjective: {fileID: 0}
+  slimeSlots: {fileID: 0}
   textTime: {fileID: 0}
   itemSlots: {fileID: 0}
   itemIcons: []

@@ -229,7 +229,7 @@ public class GameManager : SerializedMonoBehaviour
     public void StartStageClear() {
         // if bgm exists, play it
         PopupUIManager.instance.EnableStageClearPopup(InGameUIManager.instance.GetRescuedSlimeCount(), stageData.data[currentStage].maxSlimeCount);
-        StartCoroutine("WarpPlayerToLab");
+        StartCoroutine("WarpPlayerToLab"); 
     }
 
     private IEnumerator WarpPlayerToLab() {

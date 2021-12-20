@@ -24,13 +24,12 @@ public class AnimalData : ScriptableObject
     [VerticalGroup("Data/Stats"), LabelWidth(150), Range(0f, 100f)][GUIColor(0.5f,1f,1f)]
     public float interactRayDistance;
     [VerticalGroup("Data/Stats"), LabelWidth(150), Range(0f, 200f)][GUIColor(1f,1f,0.5f)]
-    public float fov;
-    [VerticalGroup("Data/Stats"), LabelWidth(150)] [GUIColor(0.8f, 1f, 1f)]
-    public Vector3 cameraRotation;
-    [VerticalGroup("Data/Stats"), LabelWidth(150), Range(0f, 200f)][GUIColor(0.7f,1f,0.5f)]
-    public float power;
+    public float cameraHeight;
     [VerticalGroup("Data/Stats"), LabelWidth(150), Range(0f, 200f)][GUIColor(0.2f,1f,0.5f)]
     public float cameraDistance;
+    [VerticalGroup("Data/Stats"), LabelWidth(150), Range(0f, 200f)][GUIColor(0.7f,1f,0.5f)]
+    public float power;
+    
 
 }
 

@@ -8,6 +8,12 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] private float translateSpeed;
     [SerializeField] private float rotationSpeed;
 
+    public Vector3 Offset
+    {
+        get => offset;
+        set => offset = value;
+    }
+
     private void FixedUpdate()
     {
         HandleTranslation();

@@ -20,7 +20,6 @@ MonoBehaviour:
   jumpPower: 0.1
   groundRayDistance: 0.3
   interactRayDistance: 0.1
-  fov: 65
-  cameraRotation: {x: 30, y: 0, z: 0}
-  power: 0.2
+  cameraHeight: 1
   cameraDistance: 3
+  power: 0.2

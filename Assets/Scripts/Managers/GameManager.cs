@@ -38,6 +38,8 @@ public class GameManager : SerializedMonoBehaviour
     [TabGroup("Stage Info")]
     public GameStage currentStage;
     [TabGroup("Stage Info")]
+    public SpawnPoint SpawnPoint;
+    [TabGroup("Stage Info")]
     public Queue<Quest> CurrentQuestList;
     [TabGroup("Stage Info")]
     [ReadOnly, SerializeField] private int currentStageTime;
@@ -117,7 +119,7 @@ public class GameManager : SerializedMonoBehaviour
             PoolManager.Instance.Despawn(roomParent.GetChild(i).gameObject);
         }
         PoolManager.Instance.Spawn(stageData.data[currentStage].gamePrefab.name);
-        
+        SpawnPoint = stageData.data[currentStage].gamePrefab.GetComponentInChildren<SpawnPoint>();
         // switch BGM when stage changed
         SoundManager.Instance.ClearBGM();
         SoundManager.Instance.PlayBGM(stageData.data[currentStage].bgm);

@@ -202,9 +202,11 @@ public class GameManager : SerializedMonoBehaviour
                 currentStageTime--;
                 yield return waitForOneSecond;
             }
+            else
+                break;
         }
-
-        StartGameOver();
+        if(isTimerPaused == false)
+            StartGameOver();
     }
 
     public void PauseStageTimer() {
@@ -213,6 +215,7 @@ public class GameManager : SerializedMonoBehaviour
 
     public void ResumeStageTimer() {
         isTimerPaused = false;
+        stageTimer = StartCoroutine("StartStageTimer");
     }
 
     public void StopStageTimer() {

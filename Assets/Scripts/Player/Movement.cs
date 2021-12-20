@@ -51,6 +51,8 @@ public abstract class Movement
             playerMovement.transform.forward = moveDir.normalized;  
         _rigidbody.velocity = moveDir * playerMovement.movementSpeed;
         
+        
+        
         //_rigidbody.velocity = moveDir * playerMovement.movementSpeed;
         //playerMovement.transform.forward = moveDir;
         //Camera.main.transform.rotation = Quaternion.Euler(moveDir);
@@ -66,9 +68,6 @@ public abstract class Movement
         //     forward = 0;
         //     side = 0;
         // }
-
-
-
         // _rigidbody.velocity = new Vector3(side, 0f, forward);
         // _rigidbody.transform.forward = new Vector3(side, 0f, forward);
         //

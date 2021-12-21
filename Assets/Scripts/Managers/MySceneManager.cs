@@ -11,6 +11,7 @@ public class MySceneManager : MonoBehaviour
     [ReadOnly] public bool isInitial;
     [ReadOnly, SerializeField] private LoadingPopup loadingPopup;
     [ReadOnly, SerializeField] private bool isLoadingPopupDisabled;
+    private WaitForSeconds waitTimeForFiveSeconds;
     private WaitForSeconds waitTimeForLoading;
     private int curProgress;
 
@@ -25,6 +26,7 @@ public class MySceneManager : MonoBehaviour
             isInitial = true;
 
             waitTimeForLoading = new WaitForSeconds(0.01f);
+            waitTimeForFiveSeconds = new WaitForSeconds(5f);
 
             DontDestroyOnLoad(gameObject);
         }
@@ -54,6 +56,8 @@ public class MySceneManager : MonoBehaviour
             loadingPopup.progressBar.currentPercent = operation.progress * 100f;
             yield return waitTimeForLoading;
         }
+        loadingPopup.progressBar.currentPercent = 90;
+        yield return waitTimeForFiveSeconds;
 
         DisableLoadingPopup();
     }
@@ -62,8 +66,8 @@ public class MySceneManager : MonoBehaviour
         EnableLoadingPopup();
 
         curProgress = 0;
-        while(curProgress < 100) {
-            loadingPopup.progressBar.currentPercent = curProgress;
+        while(curProgress < 200) {
+            loadingPopup.progressBar.currentPercent = curProgress/2;
             yield return waitTimeForLoading;
             curProgress++;
         }

@@ -41,15 +41,11 @@ public class PopupUIManager : MonoBehaviour
     }
 
     private void Update() {
-        // this code exists for debug purpose only
         if(Input.GetKeyDown(KeyCode.Escape))
             EnablePausePopup();
-        if(Input.GetKeyDown(KeyCode.K))
-            EnableSettingPopup();
     }
 
     public void EnableTutorialPopup() {
-        GameManager.Instance.PauseStageTimer();
         popupTutorial.gameObject.SetActive(true);
     }
 

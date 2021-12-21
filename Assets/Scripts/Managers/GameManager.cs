@@ -228,6 +228,7 @@ public class GameManager : SerializedMonoBehaviour
 
     public void StartStageClear() {
         // if bgm exists, play it
+        SoundManager.Instance.PlaySound("ClearBGM"); // added clear bgm
         PopupUIManager.instance.EnableStageClearPopup(InGameUIManager.instance.GetRescuedSlimeCount(), stageData.data[currentStage].maxSlimeCount);
         StartCoroutine("WarpPlayerToLab"); 
     }

@@ -78,11 +78,16 @@ public class GameManager : SerializedMonoBehaviour
 
     private void Start()
     {
+        StartCoroutine(StartCutScene());
+    }
+
+    private IEnumerator StartCutScene()
+    {
+        yield return new WaitForSeconds(4f);
         if(MySceneManager.instance.isInitial)
             StartTutorialScene();       
-        InitStage();    
+        InitStage();   
     }
-    
     [Button]
     public void StartTutorialScene()
     {

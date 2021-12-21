@@ -28,37 +28,37 @@ public class Sensor : MonoBehaviour
         rayRadius = extents.y / 2.0f;
     }
     
-    private void OnDrawGizmos()
-    {
-        rayOriginPosition = meshRenderer.bounds.center;
-        if (CheckForward())
-        {
-            Gizmos.color = Color.blue;
-            Gizmos.DrawRay(rayOriginPosition, transform.forward * hitForward.distance * interactRayDistance);
-
-            // Hit된 지점에 박스를 그려준다.
-            Gizmos.DrawWireCube(rayOriginPosition + transform.forward * hitForward.distance * interactRayDistance, extents);
-        }
-        else
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawRay(rayOriginPosition, transform.forward * interactRayDistance);
-
-            // Hit된 지점에 박스를 그려준다.
-            Gizmos.DrawWireCube(rayOriginPosition + transform.forward * interactRayDistance, extents);
-        }
-
-        if (playerMovement.isGround)
-        {
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(rayOriginPosition +  Vector3.down * hitGround.distance, rayRadius);
-        }
-        else
-        {
-            Gizmos.color = Color.green;
-            Gizmos.DrawWireSphere(rayOriginPosition + Vector3.down * hitGround.distance, rayRadius);
-        }
-    }
+    // private void OnDrawGizmos()
+    // {
+    //     rayOriginPosition = meshRenderer.bounds.center;
+    //     if (CheckForward())
+    //     {
+    //         Gizmos.color = Color.blue;
+    //         Gizmos.DrawRay(rayOriginPosition, transform.forward * hitForward.distance * interactRayDistance);
+    //
+    //         // Hit된 지점에 박스를 그려준다.
+    //         Gizmos.DrawWireCube(rayOriginPosition + transform.forward * hitForward.distance * interactRayDistance, extents);
+    //     }
+    //     else
+    //     {
+    //         Gizmos.color = Color.red;
+    //         Gizmos.DrawRay(rayOriginPosition, transform.forward * interactRayDistance);
+    //
+    //         // Hit된 지점에 박스를 그려준다.
+    //         Gizmos.DrawWireCube(rayOriginPosition + transform.forward * interactRayDistance, extents);
+    //     }
+    //
+    //     if (playerMovement.isGround)
+    //     {
+    //         Gizmos.color = Color.yellow;
+    //         Gizmos.DrawWireSphere(rayOriginPosition +  Vector3.down * hitGround.distance, rayRadius);
+    //     }
+    //     else
+    //     {
+    //         Gizmos.color = Color.green;
+    //         Gizmos.DrawWireSphere(rayOriginPosition + Vector3.down * hitGround.distance, rayRadius);
+    //     }
+    // }
 
     public bool CheckForward()
     {

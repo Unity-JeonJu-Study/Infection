@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.03787119, g: 0.31041256, b: 0.5689608, a: 1}
+  m_IndirectSpecularColor: {r: 0.03813252, g: 0.3103877, b: 0.5689589, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1004,6 +1004,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 139189426273050138, guid: db89fe6103aff3e4ab3707be3d8ddf3b,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 139189426273050138, guid: db89fe6103aff3e4ab3707be3d8ddf3b,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 139189426273050139, guid: db89fe6103aff3e4ab3707be3d8ddf3b,
         type: 3}
       propertyPath: cameraFollow

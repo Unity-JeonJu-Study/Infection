@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -6,9 +5,7 @@ public class Stage1 : MonoBehaviour
 {
     public GameObject finalDoor;
     public bool flag;
-
-
-
+    
     private void Start()
     {
         InitSetting();
@@ -28,13 +25,12 @@ public class Stage1 : MonoBehaviour
 
     private void Update()
     {
-        StartCoroutine(Stage1Clear());
+        if(!flag)
+            StartCoroutine(Stage1Clear());
     }
 
     private IEnumerator Stage1Clear()
     {
-        if (flag)
-            yield break;
         var x = InGameUIManager.instance.GetRescuedSlimeCount();
         if (GameManager.Instance.stageData.data[GameStage.Stage1].minSlimeCount <= x)
         {
@@ -45,6 +41,4 @@ public class Stage1 : MonoBehaviour
             GameManager.Instance.NextQuest();
         }
     }
-
-
 }

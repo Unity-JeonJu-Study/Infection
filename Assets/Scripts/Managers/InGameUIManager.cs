@@ -79,11 +79,11 @@ public class InGameUIManager : MonoBehaviour
 
         if(isSubObjective) {
             textObjective.fontSize = 100;
-            textObjective.transform.position = new Vector3(textObjective.transform.position.x, 300, textObjective.transform.position.z);
+            textObjective.transform.position = new Vector3(textObjective.transform.position.x, 450, textObjective.transform.position.z);
         }
         else {
             textObjective.fontSize = 130;
-            textObjective.transform.position = new Vector3(textObjective.transform.position.x, 650, textObjective.transform.position.z);
+            textObjective.transform.position = new Vector3(textObjective.transform.position.x, 730, textObjective.transform.position.z);
         }
         StartCoroutine(MoveObjectiveText(isSubObjective));
     }   
@@ -131,7 +131,7 @@ public class InGameUIManager : MonoBehaviour
         else
             textObjective.fontSize = 36;
 
-        gameObjectObjectiveTexts.transform.position = new Vector3(-80, 885, 0);
+        gameObjectObjectiveTexts.transform.position = new Vector3(-80, 1030, 0);
     }
 
     public void ResetSlimeSlots() {

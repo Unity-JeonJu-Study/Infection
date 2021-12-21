@@ -79,11 +79,11 @@ public class InGameUIManager : MonoBehaviour
 
         if(isSubObjective) {
             textObjective.fontSize = 100;
-            textObjective.transform.position = new Vector3(textObjective.transform.position.x, 100, textObjective.transform.position.z);
+            textObjective.transform.position = new Vector3(textObjective.transform.position.x, 300, textObjective.transform.position.z);
         }
         else {
             textObjective.fontSize = 130;
-            textObjective.transform.position = new Vector3(textObjective.transform.position.x, 350, textObjective.transform.position.z);
+            textObjective.transform.position = new Vector3(textObjective.transform.position.x, 650, textObjective.transform.position.z);
         }
         StartCoroutine(MoveObjectiveText(isSubObjective));
     }   
@@ -97,7 +97,7 @@ public class InGameUIManager : MonoBehaviour
 
         yield return waitTwoSeconds;
 
-        for(Vector2 vectorTemp = textObjective.rectTransform.pivot; textObjective.rectTransform.pivot.x > 0.1; vectorTemp.x -= 0.01f, vectorTemp.y += 0.01f) {
+        for(Vector2 vectorTemp = textObjective.rectTransform.pivot; textObjective.rectTransform.pivot.x > 0.1; vectorTemp.x -= 0.015f, vectorTemp.y += 0.008f) {
             textObjective.rectTransform.pivot = vectorTemp;
             textObjective.rectTransform.anchorMin = vectorTemp;
             textObjective.rectTransform.anchorMax = vectorTemp;
@@ -117,6 +117,8 @@ public class InGameUIManager : MonoBehaviour
         else
             textObjective = textMainObjective;
 
+        textObjective.gameObject.transform.SetParent(gameObjectObjectiveTexts.transform);
+
 
         textObjective.rectTransform.pivot = Vector2.up;
         textObjective.rectTransform.anchorMin = Vector2.up;
@@ -129,8 +131,7 @@ public class InGameUIManager : MonoBehaviour
         else
             textObjective.fontSize = 36;
 
-        textObjective.gameObject.transform.SetParent(gameObjectObjectiveTexts.transform);
-        gameObjectObjectiveTexts.transform.position = new Vector3(-50, 600, 0);
+        gameObjectObjectiveTexts.transform.position = new Vector3(-95, 885, 0);
     }
 
     public void ResetSlimeSlots() {

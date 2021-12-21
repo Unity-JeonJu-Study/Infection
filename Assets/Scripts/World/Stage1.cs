@@ -15,11 +15,11 @@ public class Stage1 : MonoBehaviour
         if (flag)
             return;
         var x = InGameUIManager.instance.GetRescuedSlimeCount();
-
         if (GameManager.Instance.stageData.data[GameStage.Stage1].minSlimeCount <= x)
         {
             finalDoor.SetActive(true);
             GameManager.Instance.StartStageClear();
+            GameManager.Instance.NextQuest();
             flag = true;
         }
     }

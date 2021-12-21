@@ -7,11 +7,10 @@ public class KillZone : MonoBehaviour
 {
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "Player")
+        if (col.gameObject.CompareTag("Player"))
         {
 			GameManager.Instance.ReSpawn();
 			SoundManager.Instance.PlaySound("Respawn",0.5f);
-			col.GetComponent<PlayerMovement>().isInWater = false;
         }
 	}
 }

@@ -11,6 +11,8 @@ public class KillZone : MonoBehaviour
         {
 			GameManager.Instance.ReSpawn();
 			SoundManager.Instance.PlaySound("Respawn",0.5f);
+			col.transform.parent.GetComponent<PlayerMovement>().isInWater = false;
+
         }
 	}
 }

@@ -11,6 +11,7 @@ public class SlimeResueTrigger : MonoBehaviour
         {
             InGameUIManager.instance.AddOneRescuedSlimeSlot();
             Destroy(gameObject);
+            SoundManager.Instance.PlaySound("ItemGet");
         }
     }
 }

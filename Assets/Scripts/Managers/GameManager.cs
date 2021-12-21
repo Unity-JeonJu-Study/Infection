@@ -138,7 +138,7 @@ public class GameManager : SerializedMonoBehaviour
         
         // switch BGM when stage changed
         SoundManager.Instance.ClearBGM();
-        SoundManager.Instance.PlayBGM(stageData.data[currentStage].bgm);
+        SoundManager.Instance.PlayBGM(stageData.data[currentStage].bgm, 0.6f);
 
         InitInGameUIForCurrentStage();
     }

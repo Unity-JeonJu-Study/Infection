@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -10,8 +11,19 @@ public class Stage1 : MonoBehaviour
 
     private void Start()
     {
+        InitSetting();
+    }
+
+    private void OnEnable()
+    {
+        InitSetting();
+    }
+
+    public void InitSetting()       
+    {
         if (finalDoor != null)
             finalDoor.SetActive(false);
+        SoundManager.Instance.PlayBGM("jungle");
     }
 
     private void Update()

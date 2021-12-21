@@ -10,6 +10,8 @@ public class KillZone : MonoBehaviour
         if (col.gameObject.tag == "Player")
         {
 			GameManager.Instance.ReSpawn();
-		}
+			SoundManager.Instance.PlaySound("Respawn",0.5f);
+			
+        }
 	}
 }

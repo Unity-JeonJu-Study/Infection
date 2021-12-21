@@ -740,7 +740,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: {x: 0, y: 1, z: -2}
-  target: {fileID: 1869339498662151875}
+  target: {fileID: 1738312855878604965}
   translateSpeed: 10
   rotationSpeed: 10
 --- !u!1 &1546630421
@@ -1081,6 +1081,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db89fe6103aff3e4ab3707be3d8ddf3b, type: 3}
+--- !u!4 &1738312855878604965 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3744467621746122693, guid: db89fe6103aff3e4ab3707be3d8ddf3b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1738312855878604964}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1766628587662332882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1094,12 +1100,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textClearInfo: {fileID: 0}
---- !u!4 &1869339498662151875 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 139189426273050215, guid: db89fe6103aff3e4ab3707be3d8ddf3b,
-    type: 3}
-  m_PrefabInstance: {fileID: 1738312855878604964}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2207107733755363896
 RectTransform:
   m_ObjectHideFlags: 0

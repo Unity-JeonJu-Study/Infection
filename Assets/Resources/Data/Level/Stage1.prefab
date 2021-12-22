@@ -17264,20 +17264,12 @@ PrefabInstance:
     - target: {fileID: 3571767707691462230, guid: b1b6a4a4712a0364bbffc21e45491ba2,
         type: 3}
       propertyPath: deepColor.g
-<<<<<<< Updated upstream
       value: 0.36667138
-=======
-      value: 0.36667523
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 3571767707691462230, guid: b1b6a4a4712a0364bbffc21e45491ba2,
         type: 3}
       propertyPath: deepColor.r
-<<<<<<< Updated upstream
       value: 0.041534238
-=======
-      value: 0.041536972
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 3571767707691462230, guid: b1b6a4a4712a0364bbffc21e45491ba2,
         type: 3}
@@ -17317,11 +17309,7 @@ PrefabInstance:
     - target: {fileID: 3571767707691462230, guid: b1b6a4a4712a0364bbffc21e45491ba2,
         type: 3}
       propertyPath: shoreColor.r
-<<<<<<< Updated upstream
       value: 0.043223508
-=======
-      value: 0.043226138
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 3571767707691462230, guid: b1b6a4a4712a0364bbffc21e45491ba2,
         type: 3}
@@ -17356,11 +17344,7 @@ PrefabInstance:
     - target: {fileID: 3571767707691462230, guid: b1b6a4a4712a0364bbffc21e45491ba2,
         type: 3}
       propertyPath: horizonColor.g
-<<<<<<< Updated upstream
       value: 0.35402295
-=======
-      value: 0.3540268
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 3571767707691462230, guid: b1b6a4a4712a0364bbffc21e45491ba2,
         type: 3}
@@ -17380,11 +17364,7 @@ PrefabInstance:
     - target: {fileID: 3571767707691462230, guid: b1b6a4a4712a0364bbffc21e45491ba2,
         type: 3}
       propertyPath: shallowColor.r
-<<<<<<< Updated upstream
       value: 0.09011186
-=======
-      value: 0.09011499
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 3571767707691462230, guid: b1b6a4a4712a0364bbffc21e45491ba2,
         type: 3}
@@ -17484,20 +17464,12 @@ PrefabInstance:
     - target: {fileID: 3571767707691462230, guid: b1b6a4a4712a0364bbffc21e45491ba2,
         type: 3}
       propertyPath: underwaterColor.g
-<<<<<<< Updated upstream
       value: 0.41168007
-=======
-      value: 0.41168392
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 3571767707691462230, guid: b1b6a4a4712a0364bbffc21e45491ba2,
         type: 3}
       propertyPath: underwaterColor.r
-<<<<<<< Updated upstream
       value: 0.32932714
-=======
-      value: 0.32933098
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 3571767707691462230, guid: b1b6a4a4712a0364bbffc21e45491ba2,
         type: 3}
@@ -21643,17 +21615,17 @@ PrefabInstance:
     - target: {fileID: 1152590545475327431, guid: 7057cdd7de45595488a33e4bb6fe748e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -150.3914
+      value: 19.28
       objectReference: {fileID: 0}
     - target: {fileID: 1152590545475327431, guid: 7057cdd7de45595488a33e4bb6fe748e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.209999
+      value: -5.5
       objectReference: {fileID: 0}
     - target: {fileID: 1152590545475327431, guid: 7057cdd7de45595488a33e4bb6fe748e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.5600944
+      value: 5.54
       objectReference: {fileID: 0}
     - target: {fileID: 1152590545475327431, guid: 7057cdd7de45595488a33e4bb6fe748e,
         type: 3}
@@ -22361,11 +22333,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4080440661629114, guid: c4f78ff501084af4cb85dfc30db4a8c6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 139.51988
+      value: -30.300014
       objectReference: {fileID: 0}
     - target: {fileID: 4080440661629114, guid: c4f78ff501084af4cb85dfc30db4a8c6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 50.2
+      value: 46.91
       objectReference: {fileID: 0}
     - target: {fileID: 4080440661629114, guid: c4f78ff501084af4cb85dfc30db4a8c6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -25200,20 +25172,12 @@ PrefabInstance:
     - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
         type: 3}
       propertyPath: deepColor.g
-<<<<<<< Updated upstream
       value: 0.3666714
-=======
-      value: 0.3666752
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
         type: 3}
       propertyPath: deepColor.r
-<<<<<<< Updated upstream
       value: 0.041534252
-=======
-      value: 0.04153695
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
         type: 3}
@@ -25243,7 +25207,7 @@ PrefabInstance:
     - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
         type: 3}
       propertyPath: shoreColor.a
-      value: 0
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
         type: 3}
@@ -25258,11 +25222,7 @@ PrefabInstance:
     - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
         type: 3}
       propertyPath: shoreColor.r
-<<<<<<< Updated upstream
       value: 0.04322353
-=======
-      value: 0.043226115
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
         type: 3}
@@ -25297,11 +25257,7 @@ PrefabInstance:
     - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
         type: 3}
       propertyPath: horizonColor.g
-<<<<<<< Updated upstream
       value: 0.35402298
-=======
-      value: 0.35402676
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
         type: 3}
@@ -25321,11 +25277,7 @@ PrefabInstance:
     - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
         type: 3}
       propertyPath: shallowColor.r
-<<<<<<< Updated upstream
       value: 0.090111874
-=======
-      value: 0.09011497
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
         type: 3}
@@ -25425,20 +25377,12 @@ PrefabInstance:
     - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
         type: 3}
       propertyPath: underwaterColor.g
-<<<<<<< Updated upstream
       value: 0.4116801
-=======
-      value: 0.4116839
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
         type: 3}
       propertyPath: underwaterColor.r
-<<<<<<< Updated upstream
       value: 0.32932717
-=======
-      value: 0.32933095
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 2533760440387989058, guid: dc9bedbb650f5f9409c2161ad5f872f1,
         type: 3}
@@ -26262,17 +26206,10 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   colorGradientTexture: {fileID: 0}
-<<<<<<< Updated upstream
   shallowColor: {r: 0.08389159, g: 0.72384137, b: 0.7735849, a: 1}
   deepColor: {r: 0, g: 0.24865386, b: 0.6784314, a: 1}
   colorDepth: 2.59
   horizonColor: {r: 0, g: 0.22741547, b: 0.8, a: 1}
-=======
-  shallowColor: {r: 0.0838935, g: 0.72384137, b: 0.7735849, a: 1}
-  deepColor: {r: 0, g: 0.24865577, b: 0.6784314, a: 1}
-  colorDepth: 2.59
-  horizonColor: {r: 0, g: 0.22741741, b: 0.8, a: 1}
->>>>>>> Stashed changes
   horizonDistance: 20
   shoreFade: 0
   shoreColor: {r: 0, g: 0.831468, b: 0.98039216, a: 0}
@@ -28395,11 +28332,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4080440661629114, guid: c4f78ff501084af4cb85dfc30db4a8c6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 141
+      value: -28.819897
       objectReference: {fileID: 0}
     - target: {fileID: 4080440661629114, guid: c4f78ff501084af4cb85dfc30db4a8c6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 50.2
+      value: 46.91
       objectReference: {fileID: 0}
     - target: {fileID: 4080440661629114, guid: c4f78ff501084af4cb85dfc30db4a8c6, type: 3}
       propertyPath: m_LocalPosition.z
